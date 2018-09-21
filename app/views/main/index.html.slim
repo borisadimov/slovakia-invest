@@ -1,0 +1,24 @@
+- @facts = [{title: "Факт №1", description: 'о нашей компании'}, {title: "Факт №2", description: 'о нашей компании'}, {title: "Факт №3", description: 'о нашей компании'}, {title: "Факт №4", description: 'о нашей компании'}]
+
+= render 'partials/header'
+.cooperation
+  .container
+    .cooperation__title Предложение сотрудничества
+    .cooperation__facts
+      - @facts.each do |fact|
+        .cooperation__fact
+          .cooperation__fact-title 
+            = fact[:title]
+          .cooperation__fact-description
+            = fact[:description]
+.about-company
+  .about-company__tite Рассказ о компании
+  .about-company__description 
+    | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
+.services
+  .services-title что мы предлагаем
+  
+
+
+
+= render 'partials/footer'

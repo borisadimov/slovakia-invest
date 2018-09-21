@@ -39,6 +39,7 @@ gem 'activeadmin', '~> 1.0.0'
 # gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 gem 'metamagic'
 gem 'active_admin_theme'
+gem 'slim-rails'
 
 
 gem 'devise'

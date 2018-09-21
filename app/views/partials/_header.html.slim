@@ -1,0 +1,54 @@
+- @main_nav = ['Иммиграция', 'Бизнес', 'Образование', 'Инвестиции', 'Другие услуги', 'Новости', 'О нас', 'Контакты']
+- @submenu_immigration = ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для учебы', 'Виза', 'ПМЖ', 'Гражданство']
+- @submenu_busines = ['Учреждение фирмы', 'Банковский счет', 'Бухучет и отчетность', 'Начисление зарплаты', 'Аудит', 'Другие обязательства', 'Регистрация торговой марки']
+- @submenu_education = ['Образование в Словакии', 'Словацкий язык', 'Другие языки', 'Нострификация диплома']
+- @submenu_investments = ['Анализ инвестиционной среды', 'Холдинговая компания', 'Инвестиционные проекты', 'Исследование рынка', 'Инвестирование в промышленность', 'Объекты недвижимости', 'Тур по объектам недвижимости', 'Налогообложение недвижимости', 'Ипотечный кредит']
+- @submenu_other = ['Водительские права', 'Открытие банковского счета', 'Услуги переводчика ', 'Трансфер', 'Резервация гостиниц и апартаментов', 'Лизинг', 'Сбережения и пенсия']
+- @language = ['русский', 'украинский', 'английский']
+
+
+.header
+  .container
+    .logo.header__logo Logo
+    nav.header__nav
+      ul
+        - @main_nav.each_with_index do |name, index|
+          li.header__nav-item
+            a href="#" #{name}
+            - if name == 'Иммиграция'
+              ul.submenu.submenu__immigration
+                - @submenu_immigration.each_with_index do |name, index|
+                  li
+                    a href="#" #{name}
+
+            - if name == 'Бизнес'
+              ul.submenu.submenu__busines
+                - @submenu_busines.each_with_index do |name, index|
+                  li
+                    a href="#" #{name}
+
+            - if name == 'Образование'
+              ul.submenu.submenu__education
+                - @submenu_education.each_with_index do |name, index|
+                  li
+                    a href="#" #{name}
+            
+            - if name == 'Инвестиции'
+              ul.submenu.submenu__education
+                - @submenu_investments.each_with_index do |name, index|
+                  li
+                    a href="#" #{name}
+              
+            - if name == 'Другие услуги'
+              ul.submenu.submenu__other
+                - @submenu_other.each_with_index do |name, index|
+                  li
+                    a href="#" #{name}
+
+    .language
+      ul
+        - @language.each_with_index do |name, index|
+          li.language__item
+            a href="#" #{name}
+    .btn.contact-btn
+      a href="#" Свяжитесь с нами
