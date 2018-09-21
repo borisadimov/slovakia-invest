@@ -6,7 +6,7 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DB_NAME'] || 'appname_development' %>
+  database: <%= ENV['DB_NAME'] || 'slovakia_development' %>
 
 test:
   <<: *default
