@@ -1,0 +1,25 @@
+.profit {
+  background: #dfdfdf;
+}
+
+.profit__description {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profit__list {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 900px;
+  width: 100%;
+}
+
+.profit__item {
+  flex: 0 1 50%;
+  padding-right: 30px;
+}
+
+.profit__item:nth-last-child(n+3) {
+  padding-bottom: 20px;
+}

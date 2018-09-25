@@ -1,0 +1,36 @@
+.how-work__description {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.how-work__list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.how-work__item-title {
+  position: relative;
+
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+
+  font-size: 22px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 90%;
+    height: 1px;
+    background: #8b8b8b
+  }
+}
+
+.how-work__item {
+  flex: 0 1 33%;
+  padding: 0 10px 0 10px;
+}

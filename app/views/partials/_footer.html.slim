@@ -1,1 +1,52 @@
-footer footer
+- @contacts = [{title: "Адрес:", description: "Lazaretska 8, 81101, bratislava, Slovakia"},
+{title: "E-mail:", description: "slovakiainvest@slovakiainvest.sk"},
+{title: "Bratislava:", description: "+421 2 321 44 901"},
+{title: "Москва:", description: "+7-499-504-4421"},
+{title: "Київ:", description: "+38-044-361-07-72"},
+{title: "Fax:", description: "+421 2 5292 1319"}]
+
+- @pages = ['Новости', 'Персональные даные', 'Полезная информация', 'Контакты']
+
+footer.footer
+  .container
+    .footer__dispatch.footer__item-container
+      .footer__dispatch-title
+        | подпишись на рассылку
+      input.footer__dispatch-email type="email" placeholder="Электронная почта"/
+      label.footer__dispatch-checkbox-wrapper
+        input type="checkbox"
+        span.footer__custom-checkbox
+        span Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
+      .btn.btn__dispatch 
+        a href='#'
+          | Подписаться
+    .footer__contacts.footer__item-container
+      .footer__contacts-title
+        | Контакты
+      - @contacts.each do |item|
+        .footer__contacts-item
+          .footer__contacts-item-title
+            = item[:title]
+          .footer__contacts-item-description
+            = item[:description]
+    .footer__pages.footer__item-container
+      .footer__pages-title
+        | Страницы
+      - @pages.each do |item|
+        .footer__pages-item
+          a href="#" 
+            = item
+    .footer__socials.footer__item-container
+      .footer__socials-title
+        | Соцсети
+      .footer__socials-item.footer__socials-fb
+        a href="#"
+      .footer__socials-item.footer__socials-gp
+        a href="#"
+      .footer__socials-item.footer__socials-youtube
+        a href="#"
+      .footer__socials-item.footer__socials-vk
+        a href="#"
+
+
+          
