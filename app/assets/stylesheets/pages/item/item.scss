@@ -1,0 +1,23 @@
+.item-page__main-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+  max-width: 1164px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.item-page__main .container {
+  padding: 10px 40px 20px 0;
+}
+
+.item-page__main {
+  width: 73%;
+}
+
+.item-page__sidebar {
+  width: 27%;
+  font-size: 14px;
+}

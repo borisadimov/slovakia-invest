@@ -1,1 +1,137 @@
-h1 Immigration
+- @important = ['Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem iure commodi fuga odio odit, repellat, fugiat ipsa sapiente ullam eos doloribus itaque quis voluptates, id eligendi blanditiis nostrum non corporis.',
+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis, explicabo commodi quaerat dolorum exercitationem tenetur accusantium natus officia accusamus neque similique ex deleniti cum quis distinctio voluptatum necessitatibus facilis!',
+'loremLorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis, explicabo commodi quaerat dolorum exercitationem tenetur accusantium natus officia accusamus neque similique ex deleniti cum quis distinctio voluptatum necessitatibus facilis!',
+'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum ipsum adipisci quam ea ducimus dicta nesciunt, iure iusto, perspiciatis vel reprehenderit doloribus sunt doloremque excepturi. Voluptates, ea? Doloremque, aut saepe?'] 
+- @files = ['#', '#']
+- @links = ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для учебы', 'Виза', 'ПМЖ', 'Гражданство']
+- @price = [{name: 'Первый ВНЖ:', description: 'предпринимательская деятельность', package: '', cost: '1699 €'},
+{name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'ЛАЙТ Пакет', cost: '249 €'},
+{name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'МЕДИУМ Пакет', cost: '249 €'},
+{name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'ВИП Пакет', cost: '249 €'}]
+
+.item-page
+  = render 'partials/header'
+  .item-page__main-wrapper
+    .item-page__main
+      .item-page__service
+        .container
+          h1.item-page__service-title
+            | Иммиграция
+          .item-page__service-description
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius, ipsa nam blanditiis adipisci, molestias odit, eos corporis reiciendis ex eligendi omnis deleniti fugiat? Veritatis suscipit repellendus ipsa tempore voluptatem?
+      .item-page__links
+        .container
+          - @links.each do |item|
+            a[href="#"]
+              = item
+      .item-page__sub-service
+        .container
+          .item-page__sub-service-title
+            | Вид на жительство для бизнеса
+          .item-page__sub-service-description
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, at dicta et neque beatae, animi eum libero ad praesentium ab quas explicabo. Quam, tenetur! Pariatur eum id tempore tempora! Minima.
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque in aliquid quam sapiente suscipit dicta, odio perferendis nesciunt quos tempore reiciendis ut veniam maxime quisquam laudantium quaerat. Veniam, neque qui.
+      .item-page__important
+        .container
+          .item-page__important-photo-wrapper
+            .item-page__important-photo
+          .item-page__important-text-wrapper
+            .item-page__important-title
+              | Важно
+            .item-page__important-text
+              - @important.each do |item|
+                .item-page__important-text-item
+                  = item
+      .item-page__files
+        .container
+          - @files.each do |item|
+            a[href=item download]
+              .item-page__files-img
+              .item-page__files-text
+                | Список документов для гражлан третьих государств в Словакии
+      .item-page__video
+        .container
+          .item-page__video-wrapper
+            iframe[src="https://www.youtube.com/embed/tDoLUCKvLWk"]
+      .item-page__price
+        .container
+          .item-page__price-content-wrapper
+            .item-page__price-title
+              | Цены
+            .item-page__price-content
+              - @price.each do |item|
+                .item-page__price-item
+                  .item-page__price-item-title
+                    span
+                      = item[:name]
+                  div class=(['item-page__price-item-description', item[:package].empty? ? 'dots' : nil ])
+                    span
+                      = item[:description]  
+                    - if item[:package].empty?
+                      span.item-page__price-item-cost
+                        = item[:cost]
+                  - if !item[:package].empty?
+                    .item-page__price-item-package-wrapper
+                      span.item-page__price-item-package
+                        = item[:package]
+                      span.item-page__price-item-cost
+                        = item[:cost]
+          .share__wrapper
+            .share__item
+              a href="#"
+            .share__item
+              a href="#"
+            .share__item
+              a href="#"
+            .share__item
+              a href="#"
+            .share__item
+              a href="#"
+      .item-page__nav-links
+        .container
+          - @links.each do |item|
+            .item-page__nav-item
+              a href="#"
+                = item
+                
+    .item-page__sidebar
+      = render 'partials/sidebar'
+
+    .item-page__story
+      .container
+        .item-page__story-title
+          | Истории клиентов
+        .item-page__story-content
+          .item-page__story-content-item
+            .item-page__story-content-avatar
+            .item-page__story-content-text-wrapper
+              .item-page__story-content-text
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.
+              .item-page__story-content-name-wrapper
+                .item-page__story-content-name
+                  | Александр Илларионов
+                .name-links__wrapper
+                  .name-link
+                    a href="#"
+                  .name-link
+                    a href="#"
+                  .name-link
+                    a href="#"
+          .item-page__story-content-item
+            .item-page__story-content-avatar
+            .item-page__story-content-text-wrapper
+              .item-page__story-content-text
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.
+              .item-page__story-content-name-wrapper
+                .item-page__story-content-name
+                  | Александр Илларионов
+                .name-links__wrapper
+                  .name-link
+                    a href="#"
+                  .name-link
+                    a href="#"
+                  .name-link
+                    a href="#"
+        a.item-page__story-more href="#"
+  = render 'partials/footer'
+

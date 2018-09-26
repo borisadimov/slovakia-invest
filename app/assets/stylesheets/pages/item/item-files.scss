@@ -1,0 +1,30 @@
+.item-page__files .container {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.item-page__files a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  width: 50%;
+
+  color: #000000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.item-page__files-img {
+  flex: 0 0 auto;
+
+  display: block;
+  width: 25px;
+  height: 35px;
+  margin-right: 10px;
+
+  background: url('./pdf.svg') no-repeat center;
+}

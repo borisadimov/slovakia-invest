@@ -47,13 +47,10 @@
 .header__nav ul {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
 }
 
 .header__nav-item {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
 
   &:hover {
     background: #c7c7c7;
@@ -62,8 +59,10 @@
 
 .header__nav-item a {
   display: block;
+  width: 100%;
   padding: 10px 9px;
   padding-right: 23px;
+  white-space: nowrap;
 }
 
 .header__nav-item a:hover {
@@ -114,8 +113,7 @@
 .header__nav .submenu {
   top: 36px;
   left: 0;
-
-  width: 200px;
+  z-index: 10;
 }
 
 .submenu li {
@@ -125,6 +123,7 @@
 
 .submenu a {
   display: block;
+  padding: 10px 9px;
 }
 
 .language {

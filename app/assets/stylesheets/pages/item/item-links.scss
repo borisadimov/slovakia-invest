@@ -1,0 +1,15 @@
+.item-page__links .container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item-page__links a {
+  flex: 1 1 auto;
+  
+  padding: 10px;
+  background: #dfdfdf;
+  color: #000000;
+  text-align: center;
+  border: 2px solid #c4c4c4;
+}
+
