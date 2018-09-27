@@ -10,16 +10,13 @@
 }
 
 .header .container {
-  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 32px;
 }
 
 .header a {
   color: #9b9b9b;
-}
-
-.header .container {
-  display: flex;
-  flex-flow: row wrap;
 }
 
 .logo {

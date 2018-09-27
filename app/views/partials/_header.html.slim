@@ -9,13 +9,13 @@
 
 .header
   .container
-    a.logo.header__logo  href="#"
+    a.logo.header__logo  href="/"
       | Logo
     nav.header__nav
       ul
         - @main_nav.each_with_index do |item, index|
           li.header__nav-item
-            a href="#" 
+            a href="/pages/immigration.html" 
               = item[:title]
             - if !item[:submenu].empty?
               span

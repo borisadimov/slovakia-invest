@@ -76,23 +76,14 @@
                         = item[:package]
                       span.item-page__price-item-cost
                         = item[:cost]
-          .share__wrapper
-            .share__item
-              a href="#"
-            .share__item
-              a href="#"
-            .share__item
-              a href="#"
-            .share__item
-              a href="#"
-            .share__item
-              a href="#"
-      .item-page__nav-links
-        .container
-          - @links.each do |item|
-            .item-page__nav-item
-              a href="#"
-                = item
+          .item-page__share
+            = render 'partials/share'
+      / .item-page__nav-links
+      /   .container
+      /     - @links.each do |item|
+      /       .item-page__nav-item
+      /         a href="#"
+      /           = item
                 
     .item-page__sidebar
       = render 'partials/sidebar'
@@ -112,11 +103,13 @@
                   | Александр Илларионов
                 .name-links__wrapper
                   .name-link
-                    a href="#"
+                    a.fb href="#"
                   .name-link
-                    a href="#"
+                    a.od href="#"
                   .name-link
-                    a href="#"
+                    a.vk href="#"
+                .item-page__story-content-position
+                  | Предприниматель
           .item-page__story-content-item
             .item-page__story-content-avatar
             .item-page__story-content-text-wrapper
@@ -127,11 +120,14 @@
                   | Александр Илларионов
                 .name-links__wrapper
                   .name-link
-                    a href="#"
+                    a.fb href="#"
                   .name-link
-                    a href="#"
+                    a.od href="#"
                   .name-link
-                    a href="#"
-        a.item-page__story-more href="#"
+                    a.vk href="#"
+                .item-page__story-content-position
+                  | Предприниматель
+        a.item-page__story-more.more href="#"
+          | Еще отзывы
   = render 'partials/footer'
 
