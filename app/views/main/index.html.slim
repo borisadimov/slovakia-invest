@@ -1,0 +1,105 @@
+- @facts = [{title: "Факт №1", description: 'о нашей компании'}, {title: "Факт №2", description: 'о нашей компании'}, {title: "Факт №3", description: 'о нашей компании'}, {title: "Факт №4", description: 'о нашей компании'}]
+- @services_nav = [{title: 'Иммиграция', items: ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для учебы', 'Виза', 'ПМЖ', 'Гражданство']},
+ {title: 'Бизнес', items: ['Учреждение фирмы', 'Банковский счет', 'Бухучет и отчетность', 'Начисление зарплаты', 'Аудит', 'Другие обязательства', 'Регистрация торговой марки']},
+ {title: 'Образование', items: ['Образование в Словакии', 'Словацкий язык', 'Другие языки', 'Нострификация диплома']},
+ {title: 'Инвестиции', items: ['Анализ инвестиционной среды', 'Холдинговая компания', 'Инвестиционные проекты', 'Исследование рынка', 'Инвестирование в промышленность', 'Объекты недвижимости', 'Тур по объектам недвижимости', 'Налогообложение недвижимости', 'Ипотечный кредит']},
+ {title: 'Другие услуги', items: ['Водительские права', 'Открытие банковского счета', 'Услуги переводчика ', 'Трансфер', 'Резервация гостиниц и апартаментов', 'Лизинг', 'Сбережения и пенсия']}]
+- @how_work = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.']
+- @profit = [{title: 'Выгода 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Выгода 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Выгода 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Выгода 4', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
+- @rewiews = [{title: 'Иван', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
+
+
+.main-page
+  = render 'partials/header'
+  .cooperation
+    .container
+      h1.cooperation__title Предложение сотрудничества
+      .cooperation__facts
+        - @facts.each do |fact|
+          .cooperation__fact
+            .cooperation__fact-title 
+              = fact[:title]
+            .cooperation__fact-description
+              = fact[:description]
+  .about-company
+    .container
+      h2.about-company__tite Рассказ о компании
+      .about-company__description 
+        | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
+  .services
+    .container
+      h2.services-title Что мы предлагаем
+      .services-wrapper
+        - @services_nav.each_with_index do |item, index|
+          .services-item
+            .services-item__title
+              a href="#"
+                = item[:title]
+            ul.services-item__list
+              - item[:items].each_with_index do |item, index|
+                  li.services-item__item
+                    a href="#"
+                      = item
+  .how-work
+    .container
+      h2.how-work__title Как работаем
+      .how-work__description
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore et vero perspiciatis ipsam, eius exercitationem quo incidunt fugit nemo, officia perferendis quod officiis aperiam voluptate nulla eaque impedit consequuntur!
+      .how-work__list
+        - @how_work.each_with_index do |item, index|
+          .how-work__item
+            .how-work__item-title
+              = index + 1
+            .how-work__item-description
+              = item
+  .profit
+    .container
+      h2.profit__title
+        | Какие выгоды
+      .profit__description
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aspernatur dolorum iste saepe suscipit illum dolores expedita quaerat, sed aut inventore quas magnam aliquid aperiam ab maxime illo nemo. Adipisci.
+      .profit__list
+        - @profit.each do |item|
+          .profit__item
+            .profit__item-title
+              = item[:title]
+            .profit__item-description
+              = item[:description]
+  .for-whom
+    .container
+      h2.for-whom__title Для кого наши услуги
+      .for-whom__description
+        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur perspiciatis optio non inventore repudiandae eligendi aperiam tempora voluptates enim excepturi velit, voluptatibus quod nisi sit laudantium asperiores, et veniam. Ipsam.
+  .rewiews
+    .container
+      h2.rewiews__title Истории клиентов и отзывы
+      .rewiews__list
+        - @rewiews.each do |item|
+          .rewiews__item
+            .rewiews__item-title
+              = item[:title]
+            .rewiews__item-description
+              = item[:description]
+  .partners
+    .container
+      h2.partners__title Партнеры
+      .partners__wrapper
+        .partners__item
+          a href='#'
+            | LOGO
+        .partners__item
+          a href='#'
+            | LOGO
+        .partners__item
+          a href='#'
+            | LOGO
+        .partners__item
+          a href='#'
+            | LOGO
+        
+  = render 'partials/footer'

@@ -1,0 +1,94 @@
+.sidebar {
+  padding-top: 60px;
+}
+
+.sidebar-container {
+  background: #ebebeb;
+  padding: 40px 30px 60px 20px; 
+  margin-bottom: 30px;
+
+  border-radius: 3px;
+}
+
+.sidebar__title {
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.sidebar-contacts {
+  font-size: 14px;
+}
+
+.sidebar-contacts__avatar {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+
+  background: url(./user.svg) no-repeat center;
+}
+
+.sidebar-contacts__name {
+  margin-bottom: 5px;
+
+  font-size: 16px;
+}
+
+.sidebar-contacts__position {
+  margin-bottom: 18px;
+}
+
+.sidebar-contacts__connection span {
+  margin-right: 5px;
+}
+
+.sidebar-contacts__connection a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.sidebar-contacts__connection-item {
+  margin-bottom: 4px;
+}
+
+.sidebar-contacts__more {
+  margin-top: 20px;
+}
+
+.sidebar-see__list-item {
+  margin-bottom: 15px;
+}
+
+.sidebar-see__list-item a {
+  position: relative;
+  padding-left: 9px;
+  font-size: 14px;
+  color: #000000;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: #000000;
+    border-radius: 50%;
+  }
+}
+
+.sidebar-news__list {
+  list-style: none;
+}
+
+.sidebar-news__item {
+  margin-bottom: 15px;
+}
+
+.sidebar-news__item a {
+  color: #000000;
+  text-decoration: underline;
+}

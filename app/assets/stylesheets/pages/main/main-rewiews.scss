@@ -1,0 +1,19 @@
+.rewiews {
+  background: #dfdfdf;
+}
+
+.rewiews__list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.rewiews__item {
+  width: 33%;
+  padding-right: 20px
+}
+
+.rewiews__item-title {
+  margin-bottom: 10px;
+
+  font-size: 22px;
+}

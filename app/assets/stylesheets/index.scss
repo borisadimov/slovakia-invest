@@ -1,2 +1,27 @@
 @import "tools/*";
 @import "main";
+
+@import "pages/main/main-cooperation";
+@import "pages/main/main-about-company";
+@import "pages/main/main-services";
+@import "pages/main/main-how-work";
+@import "pages/main/main-profit";
+@import "pages/main/main-for-whom";
+@import "pages/main/main-rewiews";
+@import "pages/main/main-partners";
+
+@import "pages/item/item";
+@import "pages/item/item-files";
+@import "pages/item/item-important";
+@import "pages/item/item-links";
+@import "pages/item/item-nav-links";
+@import "pages/item/item-price";
+@import "pages/item/item-share";
+@import "pages/item/item-sevice";
+@import "pages/item/item-story";
+@import "pages/item/item-sub-service";
+@import "pages/item/item-video";
+
+@import "common/header";
+@import "common/footer";
+@import "common/sidebar";
