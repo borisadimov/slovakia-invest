@@ -11,6 +11,7 @@ body {
 
   font-family: OpenSans;
   font-size: 16px;
+  line-height: 1.5em;
 }
 
 .container {
@@ -33,10 +34,22 @@ a {
 
 h1 {
   font-size: 36px;
+  line-height: 1.2em;
 }
 
 h2 {
   font-size: 26px;
+}
+
+.page__main-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+  max-width: 1164px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .btn {
@@ -45,6 +58,14 @@ h2 {
   &:hover {
     background: #c7c7c7;
   }
+}
+
+.btn__dispatch {
+  cursor: pointer;
+  padding: 10px 20px;
+
+  border: 2px solid #888888;
+  background: #dfdfdf;
 }
 
 .btn a {

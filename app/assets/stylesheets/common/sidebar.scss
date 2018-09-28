@@ -18,7 +18,7 @@
 }
 
 .sidebar-contacts {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .sidebar-contacts__avatar {
@@ -91,4 +91,8 @@
 .sidebar-news__item a {
   color: #000000;
   text-decoration: underline;
+}
+
+.sidebar-contacts__mobile-email {
+  word-wrap: break-word;
 }
