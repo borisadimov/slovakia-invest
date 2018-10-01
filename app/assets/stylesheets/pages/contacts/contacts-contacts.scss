@@ -1,0 +1,79 @@
+.contacts-page__contacts .container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.contacts-page__contacts-title {
+  width: 100%;
+}
+
+.contacts-page__contacts-office {
+  width: 50%;
+  padding-right: 23px;
+  padding-left: 10px;
+
+  font-size: 13px;
+}
+
+.contacts-page__contacts-office-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contacts-page__contacts-map {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 50%;
+}
+
+.contacts-page__contacts-map-canvas-wrapper {
+  width: 100%;
+}
+
+
+#gmap_canvas {
+  height: 350px;
+}
+
+.contacts-page__contacts-office-item {
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin-bottom: 6px;
+}
+
+.contacts-page__contacts-office-type_text {
+  position: relative;
+  flex: 0 0 110px;
+  padding-left: 20px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    display: block;
+    width: 15px;
+    height: 15px;
+
+  }
+}
+
+.contacts-page__contacts-office-link {
+  padding-left: 6px;
+}
+
+.contacts-page__contacts-office-type_text.email::after {
+  background: url('./letter.svg') no-repeat center/contain;
+}
+
+.contacts-page__contacts-office-type_text.phone::after {
+  background: url('./phone.svg') no-repeat center/contain;
+}
+
+.contacts-page__contacts-office-type_text.fax::after {
+  background: url('./fax.svg') no-repeat center/contain;
+}

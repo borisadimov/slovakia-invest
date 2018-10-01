@@ -10,9 +10,9 @@
 .news-page
   = render 'partials/header'
   .page__main-wrapper
-    .item-page__main
+    .page__content
       .container
-        h1.news-page__title
+        h1.page__title
           | Новости из Словакии: все, что касается вашего бизнеса и проживания
         .news-page__content
           - @news.each do |item|
@@ -29,6 +29,5 @@
                   a href="#"
                     | подробнее
         = render 'partials/pagination'
-    .about-us__sidebar
-      = render 'partials/sidebar'
+    = render 'partials/sidebar'
   = render 'partials/footer'

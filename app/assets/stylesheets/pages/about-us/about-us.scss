@@ -12,27 +12,3 @@
   margin-top: 10px;
   margin-bottom: 15px;
 }
-
-.about-us__main ul {
-  margin-left: 20px;
-}
-
-.about-us__main li {
-  position: relative;
-  padding-left: 16px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    display: block;
-    width: 3px;
-    height: 3px;
-    background: #000000;
-    border-radius: 50%;
-  }
-}

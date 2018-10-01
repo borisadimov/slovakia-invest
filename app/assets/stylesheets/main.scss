@@ -118,3 +118,26 @@ h2 {
     border: 1px dashed #bebebe;
   }
 }
+
+.list {
+  padding-left: 20px;
+}
+
+.list li {
+  position: relative;
+  padding-left: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: #000000;
+    border-radius: 50%;
+  }
+}

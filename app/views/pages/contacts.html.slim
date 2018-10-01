@@ -1,93 +1,171 @@
 - @contacts_office = [{type: 'email', type_text: 'e-mail', link: 'slovakiainvest@slovakiainvest.sk'}, {type: 'email', type_text: 'e-mail', link: 'accounting@slovakiainvest.sk'}, {type: 'email', type_text: 'e-mail', link: 'investments@slovakiainvest.sk'},
 {type: 'email', type_text: 'e-mail', link: 'banks@slovakiainvest.sk'}, {type: 'phone', type_text: 'Тел', link: '+7-499-504-4421'}, {type: 'phone', type_text: 'Тел', link: '+38-044-361-07-72'}, {type: 'phone', type_text: 'Тел', link: '+421-2-321-44-901'}, {type: 'fax', type_text: 'Факс', link: '+421-2-5292-1319'},
 {type: '', type_text: 'Адрес', link: 'Lazaretská 8 (2 этаж) 811 01 Братислава, Словакия'}, {type: '', type_text: 'Юр. адрес', link: 'Špitalská 53 811 01 Братислава, Словакия'}]
+- @faces = [{name: 'Светлана Коновалова', img: 'manager.jpg', position: 'Офис-менеджер', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '', email: 'Office@SlovakiaInvest.sk'},
+{name: 'Татьяна Морозова', img: 'user.svg', position: 'Офис-менеджер', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '', email: 'Office@SlovakiaInvest.sk'},
+{name: 'Оксана Шаровская', img: 'manager.jpg', position: 'Менеджер по работе с клиентами', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '+421-905-777-402', email: 'Accounting@SlovakiaInvest.sk'},
+{name: 'Михаела Мелова', img: 'manager.jpg', position: 'Менеджер по работе с клиентами', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '+421-905-777-402', email: 'Accounting@SlovakiaInvest.sk'},
+{name: 'Светлана Коновалова', img: 'manager.jpg', position: 'Офис-менеджер', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '', email: 'Office@SlovakiaInvest.sk'},
+{name: 'Татьяна Морозова', img: 'user.svg', position: 'Офис-менеджер', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '', email: 'Office@SlovakiaInvest.sk'},
+{name: 'Оксана Шаровская', img: 'user.svg', position: 'Менеджер по работе с клиентами', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '+421-905-777-402', email: 'Accounting@SlovakiaInvest.sk'},
+{name: 'Михаела Мелова', img: 'manager.jpg', position: 'Менеджер по работе с клиентами', position_description: 'Вопросы по бухучету', skype: 'SlovakiaInvest6', phone: '+421-2-321-44-901', mobile: '+421-905-777-402', email: 'Accounting@SlovakiaInvest.sk'}]
 
 .contacts-page
   = render 'partials/header'
   .page__main-wrapper
-    .contacts-page__title
-      | Контакты: где нас найти и как с нами связаться
+    .page__content
+      h1.page__title
+        | Контакты: где нас найти и как с нами связаться
 
-    .contacts-page__write
-      h3.contacts-page__write-title
-        | Кому писать
-      ul
-        li.contacts-page__write-item
-          | По каким-либо вопросам по делу, пишите на наш общий мейл SlovakiaInvest@slovakiainvest.sk.
-        li.contacts-page__write-item
-          | С более конкретными вопросами, касающимися иммиграции в Словакию, получения ВНЖ, ПМЖ или гражданства, пишите Лидии на Lidia.Silanteva@SlovakiaInvest.sk или Карине на Karina.Ogandjanian@SlovakiaInvest.sk. 
-        li.contacts-page__write-item
-          | В случае, если у Вас уже имеется ВНЖ или ПМЖ, и Вас интересует продление ВНЖ или ПМЖ в Словакии, связывайтесь с Катей через Ekaterina.Pleshanova@SlovakiaInvest.sk.
-        li.contacts-page__write-item
-          | Относительно инвестиций пишите на Investments@SlovakiaInvest.sk.
-        li.contacts-page__write-item
-          | В случае интереса к открытию счета в банке, обращайтесь к нам по электронной почте Banks@SlovakiaInvest.sk.
-        li.contacts-page__write-item
-          | Если Вы хотите учить словацкий язык, или, например, английский, можете обратиться напрямую в нашу языковую школу iCan: iCan@iCanSchool.sk.
-        li.contacts-page__write-item
-          | Имея вопросы относительно бухгалтерского учета, налогов, отчетности, аудита, дивидендов или ведения бизнеса в Словакии, с радостью ответим на вопросы, отправленные на мейл Accounting@SlovakiaInvest.sk. 
-        li.contacts-page__write-item
-          | По поводу фирмы, ее регистрации, изменений в фирме и всего, что касается фирмы, пишите Михалу на Michal.Snopek@SlovakiaInvest.sk. 
-        li.contacts-page__write-item
-          | Если желаете приобрести, продать или сдавать в аренду недвижимость, ваши письма ждет Зореслава на Zoreslavask@gmail.com.
-        li.contacts-page__write-item
-          | По поводу нострификации диплома в Словакии, связывайтесь с Викторией на Viktoria.Savchenko@slovakiainvest.sk.
-        li.contacts-page__write-item
-          | В случае если Вам нужен какой-либо перевод, обращайтесь к Татьяне на Tatiana.Valentova@SlovakiaInvest.sk. 
-        li.contacts-page__write-item
-          | Желая получить информацию относительно подбора персонала в Словакии, обращайтесь к Юлии на SlovBusiness@mail.com.
-        li.contacts-page__write-item
-          | Если Вы вспомнили, что Вы нам должны заплатить и не совсем помните за что, пишите Марии на Maria.Surinova@SlovakiaInvest.sk, потому что если Вы не заплатите, с Вами свяжется Сергей с имейла Payments@SlovakiaInvest.sk.
-        li.contacts-page__write-item
-          | А если вдруг неожиданно произойдет такой вообще невероятный случай, что Вы будете немного недовольны работой наших сотрудников, срочно пишите Алене на Alona.Kurotova@SlovakiaInvest.sk. Спасибо.
-        li.contacts-page__write-item
-          | Ну и, конечно, если, как обычно, все будет ОК и Вам понравится наша работа, оставьте положительный комментарий в Гугле, напишите на Фейсбуке или скажите своим друзьям. 
+      .contacts-page__write
+        .container
+          h3.contacts-page__write-title
+            | Кому писать
+          ul.list
+            li.contacts-page__write-item
+              | По каким-либо вопросам по делу, пишите на наш общий мейл SlovakiaInvest@slovakiainvest.sk.
+            li.contacts-page__write-item
+              | С более конкретными вопросами, касающимися иммиграции в Словакию, получения ВНЖ, ПМЖ или гражданства, пишите Лидии на Lidia.Silanteva@SlovakiaInvest.sk или Карине на Karina.Ogandjanian@SlovakiaInvest.sk. 
+            li.contacts-page__write-item
+              | В случае, если у Вас уже имеется ВНЖ или ПМЖ, и Вас интересует продление ВНЖ или ПМЖ в Словакии, связывайтесь с Катей через Ekaterina.Pleshanova@SlovakiaInvest.sk.
+            li.contacts-page__write-item
+              | Относительно инвестиций пишите на Investments@SlovakiaInvest.sk.
+            li.contacts-page__write-item
+              | В случае интереса к открытию счета в банке, обращайтесь к нам по электронной почте Banks@SlovakiaInvest.sk.
+            li.contacts-page__write-item
+              | Если Вы хотите учить словацкий язык, или, например, английский, можете обратиться напрямую в нашу языковую школу iCan: iCan@iCanSchool.sk.
+            li.contacts-page__write-item
+              | Имея вопросы относительно бухгалтерского учета, налогов, отчетности, аудита, дивидендов или ведения бизнеса в Словакии, с радостью ответим на вопросы, отправленные на мейл Accounting@SlovakiaInvest.sk. 
+            li.contacts-page__write-item
+              | По поводу фирмы, ее регистрации, изменений в фирме и всего, что касается фирмы, пишите Михалу на Michal.Snopek@SlovakiaInvest.sk. 
+            li.contacts-page__write-item
+              | Если желаете приобрести, продать или сдавать в аренду недвижимость, ваши письма ждет Зореслава на Zoreslavask@gmail.com.
+            li.contacts-page__write-item
+              | По поводу нострификации диплома в Словакии, связывайтесь с Викторией на Viktoria.Savchenko@slovakiainvest.sk.
+            li.contacts-page__write-item
+              | В случае если Вам нужен какой-либо перевод, обращайтесь к Татьяне на Tatiana.Valentova@SlovakiaInvest.sk. 
+            li.contacts-page__write-item
+              | Желая получить информацию относительно подбора персонала в Словакии, обращайтесь к Юлии на SlovBusiness@mail.com.
+            li.contacts-page__write-item
+              | Если Вы вспомнили, что Вы нам должны заплатить и не совсем помните за что, пишите Марии на Maria.Surinova@SlovakiaInvest.sk, потому что если Вы не заплатите, с Вами свяжется Сергей с имейла Payments@SlovakiaInvest.sk.
+            li.contacts-page__write-item
+              | А если вдруг неожиданно произойдет такой вообще невероятный случай, что Вы будете немного недовольны работой наших сотрудников, срочно пишите Алене на Alona.Kurotova@SlovakiaInvest.sk. Спасибо.
+            li.contacts-page__write-item
+              | Ну и, конечно, если, как обычно, все будет ОК и Вам понравится наша работа, оставьте положительный комментарий в Гугле, напишите на Фейсбуке или скажите своим друзьям. 
 
-    .contacts-page__call
-      h3.contacts-page__sub-title
-        | Куда звонить
-      ul
-        li.contacts-page__call-item
-          | Предпочитая общение голосом, позвоните нам, пожалуйста, на наш словацкий номер +421-2-321-44-901, украинский номер +38-044-361-07-72, или российский: +7-499-504-4421.
-        li.contacts-page__call-item
-          | Конечно, мы рады звонкам и на мобильные телефоны, указаные ниже, связаться с нами можете и через Скайп, Вайбер или Ватсап.
-        li.contacts-page__call-item
-          | Если по каким-либо не совсем понятным причинам Вы нам хотите отправить факс, есть и такая возможность и используйте наш номер факса +421-2-321-44-901. Однако последний факс мы получили в 2011 году.
-        li.contacts-page__call-item
-          | Когда-то у нас была и Аська, но номер уже никто не помнит.
+      .contacts-page__call
+        .container
+          h3.contacts-page__sub-title
+            | Куда звонить
+          ul.list
+            li.contacts-page__call-item
+              | Предпочитая общение голосом, позвоните нам, пожалуйста, на наш словацкий номер +421-2-321-44-901, украинский номер +38-044-361-07-72, или российский: +7-499-504-4421.
+            li.contacts-page__call-item
+              | Конечно, мы рады звонкам и на мобильные телефоны, указаные ниже, связаться с нами можете и через Скайп, Вайбер или Ватсап.
+            li.contacts-page__call-item
+              | Если по каким-либо не совсем понятным причинам Вы нам хотите отправить факс, есть и такая возможность и используйте наш номер факса +421-2-321-44-901. Однако последний факс мы получили в 2011 году.
+            li.contacts-page__call-item
+              | Когда-то у нас была и Аська, но номер уже никто не помнит.
 
-    .contacts-page__find
-      h3.contacts-page__find-title
-        | Где нас найти
-      .contacts-page__find-text
-        | Ну и, конечно, ждем Вас у нас в офисе по адресу Lazaretská 8 (2 этаж), 811 01 Братислава, Словакия. Мы находимся в центре города.
+      .contacts-page__find
+        .container
+          h3.contacts-page__find-title
+            | Где нас найти
+          .contacts-page__find-text
+            | Ну и, конечно, ждем Вас у нас в офисе по адресу Lazaretská 8 (2 этаж), 811 01 Братислава, Словакия. Мы находимся в центре города.
 
-    .contacts-page__contacts
-      h3.contacts-page__contacts-title
-        | Контакты
-      .contacts-page__contacts-office
-        .contacts-page__contacts-office-title
-          | Офис SlovakiaInvest
-        ul
-          - @contacts_office.each do |item|
-            li.contacts-page__contacts-office-item
-                div(class="contacts-page__contacts-office-type_text #{item[:type]}")
-                  = item[:type_text]
-                div(class="contacts-page__contacts-office-link")
-                  = item[:link]
-        .contacts-page__contacts-map
-          script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByUg22uv5jdTNNL6lD50kut7Lyt8QAB0A" 
-          div style="overflow:hidden;height:440px;width:700px;" 
-            #gmap_canvas style="height:440px;width:700px;" 
-            css:
-              #gmap_canvas img max-width:none!important;background:none!important 
-          javascript:
-            function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(48.14745610000001,17.117556899999954),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.14745610000001,17.117556899999954)});infowindow = new google.maps.InfoWindow({content:'<strong>Lazaretská 6778/8</strong><br>Lazaretská 6778/8, 811 08 Bratislava, Словакия<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+      .contacts-page__contacts
+        .container
+          h3.contacts-page__contacts-title
+            | Контакты
+          .contacts-page__contacts-office
+            .contacts-page__contacts-office-title
+              | Офис SlovakiaInvest
+            ul
+              - @contacts_office.each do |item|
+                li.contacts-page__contacts-office-item
+                    div(class="contacts-page__contacts-office-type_text #{item[:type]}")
+                      = item[:type_text]
+                      | :
+                    div(class="contacts-page__contacts-office-link")
+                      = item[:link]
+          .contacts-page__contacts-map
+            script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByUg22uv5jdTNNL6lD50kut7Lyt8QAB0A" 
+            div.contacts-page__contacts-map-canvas-wrapper style="overflow:hidden;" 
+              #gmap_canvas 
+              css:
+                #gmap_canvas img max-width:none!important;background:none!important 
+            javascript:
+              function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(48.14745610000001,17.117556899999954),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.14745610000001,17.117556899999954)});infowindow = new google.maps.InfoWindow({content:'<strong>Lazaretská 6778/8</strong><br>Lazaretská 6778/8, 811 08 Bratislava, Словакия<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+      .contacts-page__faces
+        .container
+          h3.contacts-page__faces-title
+            | Мы в лицах
+          .contacts-page__faces-item-wrapper
+            - @faces.each do |item|
+              .contacts-page__faces-item
+                .contacts-page__faces-img-wrapper
+                  .contacts-page__faces-img-placeholder
+                  = image_tag item[:img]
+                .contacts-page__faces-name
+                  = item[:name]
+                .contacts-page__faces-position
+                  = item[:position]
+                .contacts-page__faces-position-description
+                  = item[:position_description]
+                .contacts-page__faces-skype
+                  | Skype:
+                  a href="#{item[:skype]}"
+                    = item[:skype]
+                .contacts-page__faces-phone
+                  | Тел.: 
+                  span
+                    = item[:phone]
+                .contacts-page__faces-mobile
+                  | Моб.: 
+                  span 
+                    = item[:mobile]
+                .contacts-page__faces-email
+                  = item[:email]
+      .container
+        form.contacts-page__form(method="post")
+          label.contacts-page__form-name
+            span 
+              | Ваше имя и фамилия*
+            input type="text" name="name"
+          label.contacts-page__form-email
+            span
+              | Ваш email*
+            input type="email" name="email"
+          label.contacts-page__form-phone
+            span
+              | Ваш телефон
+            input type="phone" name="phone"
+          label.contacts-page__form-about
+            span
+              | Как Вы узнали о нас
+            select name="About"
+              option value="none"
+                | Не указано
+              option value="Реклама"
+                | Реклама
+              option value="Search"
+                | Поисковая система
+              option value="Other"
+                | Другое
+          label.contacts-page__form-textarea
+            div.contacts-page__form-more
+              span
+                | Дополнительные пожелания,
+                br
+              span.no-bold
+                | сведения, или просто, сообщение/предложение
+            textarea name="more" cols="30" rows="10"
+          .contacts-page__form-btn-wrapper
+            span
+            button.btn.btn__dispatch.contacts-page__form-btn
+              | Отправить
 
-
-        
-
-  .contacts__sidebar
     = render 'partials/sidebar'
 
   = render 'partials/footer'
