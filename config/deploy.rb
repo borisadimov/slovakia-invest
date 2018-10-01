@@ -1,6 +1,6 @@
 require 'capistrano/bundler'
 set :application, "slovakia"
-set :repo_url, "git@gitlab.com:surkov/slovakia.git"
+set :repo_url, "git@gitlab.com:flywithmemsl/slovakia-invest.git"
 
 set :deploy_to, '/home/deploy/slovakia'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
