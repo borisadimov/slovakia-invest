@@ -1,20 +1,10 @@
-.item-page__main-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-
-  max-width: 1164px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.item-page__main .container {
+.page__content .container {
   padding: 10px 40px 20px 0;
 }
 
-.item-page__main {
+.page__content {
   width: 73%;
+  padding-bottom: 100px;
 }
 
 .item-page__sidebar {

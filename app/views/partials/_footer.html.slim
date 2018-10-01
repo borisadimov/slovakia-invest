@@ -5,11 +5,11 @@
 {title: "Київ:", description: "+38-044-361-07-72"},
 {title: "Fax:", description: "+421 2 5292 1319"}]
 
-- @pages = ['Новости', 'Персональные даные', 'Полезная информация', 'Контакты']
+- @pages = [{text: 'Новости', link: '/pages/news.html'}, {text:'Контакты', link: '/pages/contacts.html'}, {text:'О нас', link: '/pages/about-us.html'}]
 
 footer.footer
   .container
-    .footer__dispatch.footer__item-container
+    form.footer__dispatch.footer__item-container(method="post")
       .footer__dispatch-title
         | подпишись на рассылку
       input.footer__dispatch-email type="email" placeholder="Электронная почта"/
@@ -17,8 +17,7 @@ footer.footer
         input type="checkbox"
         span.footer__custom-checkbox
         span Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
-      .btn.btn__dispatch 
-        a href='#'
+      button.btn.btn__dispatch 
           | Подписаться
     .footer__contacts.footer__item-container
       .footer__contacts-title
@@ -34,8 +33,8 @@ footer.footer
         | Страницы
       - @pages.each do |item|
         .footer__pages-item
-          a href="#" 
-            = item
+          a href=item[:link] 
+            = item[:text]
     .footer__socials.footer__item-container
       .footer__socials-title
         | Соцсети

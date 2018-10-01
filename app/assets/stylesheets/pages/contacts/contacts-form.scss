@@ -1,0 +1,43 @@
+.contacts-page__form {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 14px;
+}
+
+.contacts-page__form label,
+.contacts-page__form-btn-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.contacts-page__form span {
+  display: block;
+  width: 270px;
+  padding-right: 30px;
+  
+  font-weight: bold;
+}
+
+.contacts-page__form input,
+.contacts-page__form select,
+.contacts-page__form textarea {
+  flex: 1 1 auto;
+  border: 1px solid #bbbbbb;
+}
+
+.contacts-page__form-more {
+  align-self: flex-start;
+}
+
+.contacts-page__form-more .no-bold {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.contacts-page__form-btn-wrapper {
+  margin-top: 30px;
+}
+

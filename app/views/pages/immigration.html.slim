@@ -11,11 +11,11 @@
 
 .item-page
   = render 'partials/header'
-  .item-page__main-wrapper
-    .item-page__main
+  .item-page__main-wrapper.page__main-wrapper
+    .page__content
       .item-page__service
         .container
-          h1.item-page__service-title
+          h1.page__title
             | Иммиграция
           .item-page__service-description
             | Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius, ipsa nam blanditiis adipisci, molestias odit, eos corporis reiciendis ex eligendi omnis deleniti fugiat? Veritatis suscipit repellendus ipsa tempore voluptatem?
@@ -85,8 +85,7 @@
       /         a href="#"
       /           = item
                 
-    .item-page__sidebar
-      = render 'partials/sidebar'
+    = render 'partials/sidebar'
 
     .item-page__story
       .container
