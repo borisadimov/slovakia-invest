@@ -1,0 +1,12 @@
+.item-page__facts
+  .container
+    .item-page__item-title
+      | Факты
+    .item-page__facts-list
+      - @facts.each do |item|
+        .item-page__facts-item
+          .item-page__facts-image-wrapper
+            .item-page__facts-image-placeholder
+            = image_tag item[:img]
+          .item-page__facts-text
+            = item[:text]

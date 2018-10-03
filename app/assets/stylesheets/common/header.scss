@@ -3,10 +3,11 @@
   padding-bottom: 20px;
 
   font-size: 12px;
-  color: #9b9b9b;
+  color: #ffffff;
   text-transform: uppercase;
 
   border-bottom: 1px solid #dad7d7 ;
+  background: #1e3685;
 }
 
 .header .container {
@@ -16,7 +17,7 @@
 }
 
 .header a {
-  color: #9b9b9b;
+  color: #ffffff;
 }
 
 .logo {
@@ -53,26 +54,30 @@
   position: relative;
 
   &:hover {
-    background: #c7c7c7;
+    background: #2344a4;
   }
+}
+
+.header__nav-item:last-child a {
+  padding-right: 9px;
 }
 
 .header__nav-item a {
   display: block;
   width: 100%;
   padding: 10px 9px;
-  padding-right: 23px;
+  padding-right: 20px;
   white-space: nowrap;
 }
 
 .header__nav-item a:hover {
-  background: #c7c7c7;
+  background: #2a4fb7;
 }
 
 .header__nav-item span {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 6px;
   transform: translateY(-50%);
 
   display: block;
@@ -89,7 +94,7 @@
     display: block;
     width: 6px;
     height: 1px;
-    background: grey;
+    background: #ffffff;
   }
 
   &:before {
@@ -102,7 +107,7 @@
     display: block;
     width: 6px;
     height: 1px;
-    background: grey;
+    background: #ffffff;
   }
 }
 
@@ -118,12 +123,21 @@
 
 .submenu li {
   display: block;
-  background: #dddddd;
+  background: #2344a4;
+
 }
 
 .submenu a {
   display: block;
-  padding: 10px 9px;
+  padding: 10px 15px;
+  
+  border-top: 1px solid #2344a4;
+  border-bottom: 1px solid #2344a4;
+}
+
+.submenu a:hover {
+  border-top: 1px solid #1e3685;
+  border-bottom: 1px solid #1e3685;
 }
 
 .language {
@@ -133,23 +147,23 @@
   flex-flow: row nowrap;
   align-items: center;
   margin-left: auto;
-  margin-right: 5%;
+  margin-right: 1%;
   cursor: pointer;
 }
 
 .language__title {
   padding: 10px 9px;
-  padding-right: 23px;
+  padding-right: 20px;
 }
 
 .language__title:hover {
-  background: #c7c7c7;
+  background: #2a4fb7;
 }
 
 .language__title span {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 6px;
   transform: translateY(-50%);
 
   display: block;
@@ -166,7 +180,7 @@
     display: block;
     width: 6px;
     height: 1px;
-    background: grey;
+    background: #ffffff;
   }
 
   &:before {
@@ -179,7 +193,7 @@
     display: block;
     width: 6px;
     height: 1px;
-    background: grey;
+    background: #ffffff;
   }
 }
 
@@ -198,5 +212,5 @@
 }
 
 .language__item a:hover {
-  background: #c7c7c7;
+  background: #2a4fb7;
 }

@@ -1,0 +1,16 @@
+- @important = ['Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem iure commodi fuga odio odit, repellat, fugiat ipsa sapiente ullam eos doloribus itaque quis voluptates, id eligendi blanditiis nostrum non corporis.',
+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis, explicabo commodi quaerat dolorum exercitationem tenetur accusantium natus officia accusamus neque similique ex deleniti cum quis distinctio voluptatum necessitatibus facilis!',
+'loremLorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis, explicabo commodi quaerat dolorum exercitationem tenetur accusantium natus officia accusamus neque similique ex deleniti cum quis distinctio voluptatum necessitatibus facilis!',
+'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum ipsum adipisci quam ea ducimus dicta nesciunt, iure iusto, perspiciatis vel reprehenderit doloribus sunt doloremque excepturi. Voluptates, ea? Doloremque, aut saepe?'] 
+
+.item-page__important
+  .container
+    .item-page__important-photo-wrapper
+      .item-page__important-photo
+    .item-page__important-text-wrapper
+      .item-page__item-title
+        | Важно
+      .item-page__important-text
+        - @important.each do |item|
+          .item-page__important-text-item
+            = item

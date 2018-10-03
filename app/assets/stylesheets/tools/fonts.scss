@@ -20,3 +20,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "HelveticaNeue";
+  src: local("☺"), font-url('HelveticaNeue.woff') format("woff"), font-url('HelveticaNeue.woff2') format("woff2"), font-url('HelveticaNeue.ttf') format("truetype"), font-url('HelveticaNeue.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: local("☺"), font-url('HelveticaNeue-Bold.woff') format("woff"), font-url('HelveticaNeue-Bold.woff2') format("woff2"), font-url('HelveticaNeue-Bold.ttf') format("truetype"), font-url('HelveticaNeue-Bold.svg') format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
