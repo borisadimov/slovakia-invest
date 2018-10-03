@@ -35,6 +35,7 @@
           - @prices.each_with_index do |element, index|
             div(class="price-page__item price-page__item-#{index}")
               .price-page__item-title.drop-down__title
+                = image_tag "down-button-black.svg"
                 = element[:title]
               .price-page__item-content
                 = render 'partials/item-price', locals: {price: element[:price]}

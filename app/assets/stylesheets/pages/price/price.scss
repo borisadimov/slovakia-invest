@@ -9,47 +9,24 @@
 
   font-size: 20px;
   text-transform: uppercase;
+}
 
-  &:after {
-    content: '';
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: rotate(45deg) translateY(-50%);
+.drop-down__title img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 
-    display: block;
-    width: 8px;
-    height: 2px;
-    background: #000000;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: rotate(-45deg) translateY(-50%);
-
-    display: block;
-    width: 8px;
-    height: 2px;
-    background: #000000;
-  }
+  width: 13px;
+  height: 13px;
 }
 
 .price-page__item {
   margin-bottom: 10px;
 }
 
-.price-page__item.active .price-page__item-title {
-  &:after {
-    transform: rotate(-45deg) translateY(-50%);
-  }
-
-  &:before {
-    transform: rotate(45deg) translateY(-50%);
-    right: 16px;
-  }
+.price-page__item.active .price-page__item-title img {
+  transform: rotate(180deg) translateY(50%);
 }
 
 .price-page__item-content {
