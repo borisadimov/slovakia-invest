@@ -1,5 +1,5 @@
-const dropDownMenu = (elements, buttonElementClass, dropContentClass, contentHeightClass) => {
-  elements.forEach((element) => {
+var dropDownMenu = function(elements, buttonElementClass, dropContentClass, contentHeightClass) {
+  elements.each(function(i, element) {
     const buttonElement = element.querySelector('.' + buttonElementClass)
     const dropContent = element.querySelector('.' + dropContentClass)
     const contentHeight = dropContent.querySelector('.' + contentHeightClass).offsetHeight
@@ -16,8 +16,8 @@ const dropDownMenu = (elements, buttonElementClass, dropContentClass, contentHei
   })
 }
 
-const prices = Array.from(document.querySelectorAll('.price-page__item'))
+var prices = $('.price-page__item')
 dropDownMenu(prices, 'price-page__item-title', 'price-page__item-content', 'item-page__price')
 
-const contacts = Array.from(document.querySelectorAll('.contacts-page__faces-item-dd'))
+var contacts = $(document.querySelectorAll('.contacts-page__faces-item-dd'))
 dropDownMenu(contacts, 'contacts-page__faces-item-dd-title', 'contacts-page__faces-item-dd-wrapper', 'contacts-page__faces-item-wrapper')
