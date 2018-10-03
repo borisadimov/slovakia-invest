@@ -58,6 +58,8 @@
               .contacts-page__faces-item-dd
                 .contacts-page__faces-item-dd-title.drop-down__title
                   = element[:title]
+                  = image_tag "down-button-black.svg"
+
                 .contacts-page__faces-item-dd-wrapper
                   .contacts-page__faces-item-wrapper
                     - element[:contacts].each do |item|
