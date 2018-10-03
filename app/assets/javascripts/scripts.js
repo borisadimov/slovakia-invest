@@ -4,7 +4,7 @@ var dropDownMenu = function(elements, buttonElementClass, dropContentClass, cont
     const dropContent = element.querySelector('.' + dropContentClass)
     const contentHeight = dropContent.querySelector('.' + contentHeightClass).offsetHeight
   
-    buttonElement.addEventListener('click', () => {
+    buttonElement.addEventListener('click', function() {
       if (element.classList.contains('active')) {
         element.classList.remove('active')
         dropContent.style.height = 0 + 'px'
