@@ -1,0 +1,61 @@
+.drop-down__title {
+  position: relative;
+
+  padding: 10px 15px;
+
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+
+  font-size: 20px;
+  text-transform: uppercase;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+
+    display: block;
+    width: 8px;
+    height: 2px;
+    background: #000000;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+
+    display: block;
+    width: 8px;
+    height: 2px;
+    background: #000000;
+  }
+}
+
+.price-page__item {
+  margin-bottom: 10px;
+}
+
+.price-page__item.active .price-page__item-title {
+  &:after {
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  &:before {
+    transform: rotate(45deg) translateY(-50%);
+    right: 16px;
+  }
+}
+
+.price-page__item-content {
+  height: 0;
+  transition: height 0.3s ease-in;
+
+  overflow: hidden;
+}
+

@@ -1,0 +1,9 @@
+- @files = ['#', '#']
+
+.item-page__files
+  .container
+    - @files.each do |item|
+      a[href=item download]
+        .item-page__files-img
+        .item-page__files-text
+          | Список документов для гражлан третьих государств в Словакии
