@@ -1,13 +1,19 @@
-.page__content .container {
-  padding: 10px 40px 20px 0;
-}
-
-.page__content {
-  width: 73%;
-  padding-bottom: 100px;
+.item-page .page__content {
+  padding-bottom: 30px;
 }
 
 .item-page__sidebar {
   width: 27%;
   font-size: 14px;
+}
+
+.item-page__item-title {
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.item-page .news__content {
+  padding-left: 15px;
 }

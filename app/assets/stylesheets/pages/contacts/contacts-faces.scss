@@ -3,10 +3,30 @@
   margin-bottom: 30px;
 }
 
+.contacts-page__faces-item-dd {
+  margin-bottom: 10px;
+}
+
+.contacts-page__faces-item-dd-wrapper {
+  height: 0;
+  overflow: hidden;
+
+  transition: height 0.3s ease-in;
+}
+
+.contacts-page__faces-item-dd-title {
+  cursor: pointer;
+}
+
+
 .contacts-page__faces-item-wrapper {
   display: flex;
   flex-flow: row wrap;
-  padding-left: 40px;
+  max-width: 890px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding-top: 20px
 }
 
 .contacts-page__faces-item {

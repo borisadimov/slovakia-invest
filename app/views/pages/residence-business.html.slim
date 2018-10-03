@@ -10,6 +10,11 @@
 - @stories = [{avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Илларионов', position: 'Предприниматель'}, {avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Николаенко', position: 'Предприниматель'}]
+- @price = [{name: 'Первый ВНЖ:', description: 'предпринимательская деятельность', package: '', cost: '1699 €'},
+ {name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'ЛАЙТ Пакет', cost: '249 €'},
+ {name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'МЕДИУМ Пакет', cost: '249 €'},
+ {name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'ВИП Пакет', cost: '249 €'},
+ {name: 'Продление ВНЖ:', description: 'деятельность', package: 'ВИП Пакет', cost: '19 €'}]
 
 
 .item-page
@@ -20,9 +25,7 @@
       .item-page__service
         .container
           h1.page__title
-            | Иммиграция
-
-      = render 'partials/item-links', locals={links: @links}
+            | ВНЖ для бизнеса
 
       .container
         .item-page__service-description
@@ -35,10 +38,15 @@
 
       = render 'partials/item-facts', locals={facts: @facts}
 
+      .item-page__price-wrapper
+        .item-page__item-title
+          | Цены
+        = render 'partials/item-price', locals: {price: @price}
+
       .item-page__news
         .container
           .item-page__item-title
-            | Полезная информация
+            | полезная информация
           = render 'partials/item-news', locals={news: @news}
 
       .item-page__share
@@ -47,6 +55,5 @@
     = render 'partials/sidebar' 
 
     = render 'partials/item-story', locals={stories: @stories}
-
+    
   = render 'partials/footer'
-

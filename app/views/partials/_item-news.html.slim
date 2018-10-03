@@ -1,0 +1,14 @@
+.news__content
+  - @news.each do |item|
+    .news__item
+      .news__item-text
+        .news__item-text-title
+          = item[:title]
+          span
+            | (
+            = item[:date]
+            | )
+        .news__item-text-description
+          =  item[:description]
+          a href=item[:link]
+            | подробнее
