@@ -7,7 +7,6 @@
 
 - @language = {title: 'Язык', items: [{text: 'русский', link: '#'}, {text: 'украинский', link: '#'}, {text: 'английский', link: '#'}]}
 
-
 .header
   .container
     a.logo.header__logo  href="/"
@@ -20,6 +19,7 @@
               = item[:title]
             - if !item[:submenu].empty?
               span
+                = image_tag "down-button-white.svg"
               ul.submenu
                 - item[:submenu].each_with_index do |item, index|
                   li

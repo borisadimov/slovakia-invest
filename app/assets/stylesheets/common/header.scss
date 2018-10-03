@@ -83,32 +83,12 @@
   display: block;
   width: 10px;
   height: 10px;
+}
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 4px;
-    transform: rotate(45deg);
-
-    display: block;
-    width: 6px;
-    height: 1px;
-    background: #ffffff;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 4px;
-    transform: rotate(-45deg);
-
-    display: block;
-    width: 6px;
-    height: 1px;
-    background: #ffffff;
-  }
+.header__nav-item span img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header__nav-item:hover .submenu {
