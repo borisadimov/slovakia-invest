@@ -154,6 +154,8 @@ ActiveAdmin.setup do |config|
   # https://github.com/svenfuchs/i18n/blob/master/lib%2Fi18n%2Fbackend%2Fbase.rb#L52
   #
   config.localize_format = :long
+  config.before_filter :set_admin_locale
+
 
   # == Setting a Favicon
   #

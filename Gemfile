@@ -41,8 +41,8 @@ gem 'metamagic'
 gem 'active_admin_theme'
 gem 'slim-rails'
 
-
 gem 'devise'
+gem 'traco'
 
 
 
