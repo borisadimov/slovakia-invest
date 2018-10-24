@@ -1,5 +1,5 @@
 .footer {
-  background: #e6ebec;
+  background: #D8DCF5;;
   font-size: 14px;
 }
 
@@ -35,9 +35,14 @@
 
 .footer__dispatch-title {
   margin-bottom: 20px;
+  max-width: 340px;
 
   text-transform: uppercase;
   font-weight: bold;
+  font-weight: bold;
+  line-height: 52px;
+  font-size: 44px;
+  color: #45445E;
 }
 
 .footer__dispatch-email {
@@ -45,8 +50,13 @@
   padding: 10px 10px 10px 0;
   margin-bottom: 20px;
 
+  font-weight: bold;
+  line-height: normal;
+  font-size: 22px;
+  color: #45445E;
+
   border: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(69, 68, 94, 0.2);
   background: none;
 }
 
@@ -54,7 +64,7 @@
   position: relative;
 
   display: block;
-  padding-left: 30px;
+  padding-left: 41px;
   margin-bottom: 20px;
 
   font-size: 14px;
@@ -64,6 +74,14 @@
 .footer__dispatch-checkbox-wrapper span {
   display: inline-block;
   vertical-align: top;
+
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.footer__custom-checkbox-text {
+  max-width: 365px;
+  width: 100%;
 }
 
 .footer__custom-checkbox {
@@ -72,32 +90,32 @@
   left: 0;
 
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 26px;
+  height: 26px;
   border: 1px solid #000000;
 
   &::after {
     content: '';
     position: absolute;
-    left: 3px;
-    top: 5px;
+    left: 7px;
+    top: 11px;
     transform: rotate(-45deg);
 
     display: block;
-    width: 7px;
-    height: 1px;
+    width: 17px;
+    height: 2px;
     background: #000000;
   }
   &::before {
     content: '';
     position: absolute;
-    left: 1px;
-    top: 6px;
+    left: 2px;
+    top: 13px;
     transform: rotate(45deg);
 
     display: block;
-    width: 4px;
-    height: 1px;
+    width: 9px;
+    height: 2px;
     background: #000000;
   }
 }

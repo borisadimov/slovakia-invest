@@ -68,3 +68,28 @@
 
   background: image-url('bunner-menu.svg') no-repeat center/contain;
 }
+
+.menu-item__soc {
+  position: relative;
+}
+
+.menu-item__soc .menu-item__link {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.socials-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 5px;
+}
+
+.menu-item__soc .socials {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
