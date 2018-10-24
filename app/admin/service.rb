@@ -1,8 +1,7 @@
-ActiveAdmin.register Article do
+ActiveAdmin.register Service do
   permit_params :title_ru, :text_ru,
                 :title_en, :text_en,
-                :title_uk, :text_uk,
-                :service_id
+                :title_uk, :text_uk
 
   form do |f|
     tabs do
@@ -20,10 +19,6 @@ ActiveAdmin.register Article do
         f.input :title_uk
         f.input :text_uk
       end
-    end
-
-    f.inputs 'Common' do
-      f.input :service_id, as: :select, collection: Service.all.map { |s| [s.title, s.id] }, include_blank: false
     end
 
     f.actions

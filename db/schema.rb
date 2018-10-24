@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181023102447) do
+ActiveRecord::Schema.define(version: 20181024123949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,19 @@ ActiveRecord::Schema.define(version: 20181023102447) do
   end
 
   create_table "articles", force: :cascade do |t|
+    t.integer  "service_id", null: false
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.string   "title_uk"
+    t.text     "text_ru"
+    t.text     "text_en"
+    t.text     "text_uk"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
+  end
+
+  create_table "services", force: :cascade do |t|
     t.string   "title_ru"
     t.string   "title_en"
     t.string   "title_uk"
@@ -57,4 +70,5 @@ ActiveRecord::Schema.define(version: 20181023102447) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "articles", "services"
 end

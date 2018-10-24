@@ -1,3 +1,5 @@
 class Article < ApplicationRecord
-  translates :title, :text
+  belongs_to :service
+
+  translates :title, :text, fallback: :any
 end
