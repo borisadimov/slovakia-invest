@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -7,13 +12,13 @@
   text-transform: uppercase;
 
   border-bottom: 1px solid #dad7d7 ;
-  background: #1e3685;
+  background: #ffffff;
 }
 
 .header .container {
   display: flex;
   flex-flow: row wrap;
-  padding: 0 32px;
+  align-items: center;
 }
 
 .header a {
@@ -21,11 +26,10 @@
 }
 
 .logo {
-  width: 150px;
-  height: 40px;
-  padding-top: 8px;
+  width: 295px;
+  height: 43px;
 
-  background: gray;
+  background: image-url('slovakiaInvest-logo.png') no-repeat center/contain;
 
   text-align: center;
   font-size: 26px; 
@@ -50,74 +54,10 @@
   flex-flow: row wrap;
 }
 
-.header__nav-item {
-  position: relative;
-
-  &:hover {
-    background: #2344a4;
-  }
-}
-
-.header__nav-item:last-child a {
-  padding-right: 9px;
-}
-
-.header__nav-item a {
-  display: block;
-  width: 100%;
-  padding: 10px 9px;
-  padding-right: 20px;
-  white-space: nowrap;
-}
-
-.header__nav-item a:hover {
-  background: #2a4fb7;
-}
-
-.header__nav-item span {
-  position: absolute;
-  top: 50%;
-  right: 6px;
-  transform: translateY(-50%);
-
-  display: block;
-  width: 10px;
-  height: 10px;
-}
-
-.header__nav-item span img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.header__nav-item:hover .submenu {
-  display: block;
-}
-
 .header__nav .submenu {
   top: 36px;
   left: 0;
   z-index: 10;
-}
-
-.submenu li {
-  display: block;
-  background: #2344a4;
-
-}
-
-.submenu a {
-  display: block;
-  padding: 10px 15px;
-  
-  border-top: 1px solid #2344a4;
-  border-bottom: 1px solid #2344a4;
-}
-
-.submenu a:hover {
-  border-top: 1px solid #1e3685;
-  border-bottom: 1px solid #1e3685;
 }
 
 .language {
@@ -128,69 +68,96 @@
   align-items: center;
   margin-left: auto;
   margin-right: 1%;
-  cursor: pointer;
 }
 
 .language__title {
-  padding: 10px 9px;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
-.language__title:hover {
-  background: #2a4fb7;
+.language__title-img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: image-url('russian.svg') no-repeat center;
+
+  border-radius: 50%;
 }
 
-.language__title span {
+.language__item {
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.language__item-img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding-right: 25px;
+
+  border-radius: 50%;
+  background: image-url('russian.svg') no-repeat center;
+}
+
+.language__title-bottom-arrow {
   position: absolute;
+  right: 0;
   top: 50%;
-  right: 6px;
   transform: translateY(-50%);
 
   display: block;
-  width: 10px;
-  height: 10px;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 4px;
-    transform: rotate(45deg);
-
-    display: block;
-    width: 6px;
-    height: 1px;
-    background: #ffffff;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 4px;
-    transform: rotate(-45deg);
-
-    display: block;
-    width: 6px;
-    height: 1px;
-    background: #ffffff;
-  }
+  width: 17px;
+  height: 17px;
+  background: image-url('icon-arrow-bottom.svg') no-repeat center;
 }
 
 .language .submenu {
-  top: 36px;
+  display: none;
+  padding-top: 7px;
+  padding-right: 25px;
+  top: 100%;
   left: 0;
-
 }
 
 .language:hover .submenu {
   display: block;
 }
 
-.language__item a {
-  padding: 10px 9px;
+.burger {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  width: 44px;
+  height: 31px;
+  margin-left: 40px;
+
+  cursor: pointer;
+
+  .burger-line:nth-child(1) {
+    transition: transform 0.3s ease-out
+  }
+  .burger-line:nth-child(3) {
+    transition: transform 0.3s ease-out
+  }
 }
 
-.language__item a:hover {
-  background: #2a4fb7;
+.burger-line {
+  width: 44px;
+  height: 4px;
+  background: #4C61F4;
+}
+
+.burger.active {
+  .burger-line:nth-child(2) {
+    display: none;
+  }
+
+  .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 10px);
+  }
+
+  .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -10px);
+  }
 }

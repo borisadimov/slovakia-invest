@@ -23,3 +23,12 @@ var contacts = $(document.querySelectorAll('.contacts-page__faces-item-dd'))
 contacts.each(function(i, element) {
   addDropDownMenuListener(element, 'contacts-page__faces-item-dd-title', 'contacts-page__faces-item-dd-wrapper', 'contacts-page__faces-item-wrapper')
 })
+
+
+var burger = $('.burger')
+var menu = $('.menu')
+
+burger.click(function() {
+  burger.toggleClass('active');
+  menu.toggleClass('active');
+})
