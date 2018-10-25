@@ -14,7 +14,8 @@ module Slovakia
     config.middleware.use Rack::Deflater
     config.assets.paths << "#{Rails.root}/app/assets/videos"
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.i18n.enforce_available_locales = true
     config.i18n.available_locales = [:en, :ru, :uk]
-    config.i18n.default_locale = :en
+    config.default_locale = :en
   end
 end

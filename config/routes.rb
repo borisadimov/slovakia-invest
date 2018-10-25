@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   root 'main#index'
 
   get 'pages/:id', to: 'pages#show', as: 'pages'
+  resources :services, only: :show do
+    resources :articles, only: :show
+  end
 end

@@ -12,7 +12,7 @@
     a.logo.header__logo  href="/"
     nav.header__nav
       ul
-        - @main_nav.each_with_index do |item, index|
+        - @menu_services.each do |service|
           li.header__nav-item
             a.header__nav-item-link(href=item[:link])
               = item[:title]

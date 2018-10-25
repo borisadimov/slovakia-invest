@@ -1,4 +1,12 @@
 ru:
+  available_locales:
+    ru: "Русский"
+    en: "Английский"
+    uk: "Украинский"
+  header_menu:
+    language: "Язык"
+    contact_us: "Свяжитесь с нами"
+    price_list: "Прайс"
   time:
     formats:
       long: "%H:%M:%S %d-%m-%Y "

@@ -20,4 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  available_locales:
+    ru: "Russian"
+    en: "English"
+    uk: "Ukranian"
+  header_menu:
+    language: "Language"
+    contact_us: "Contact us"
+    price_list: "Price List"
+    

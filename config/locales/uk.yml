@@ -1,0 +1,9 @@
+uk:
+  available_locales:
+    ru: "Російська"
+    en: "Англійська"
+    uk: "Українська"
+  header_menu:
+    language: "Мова"
+    contact_us: "Зв'яжіться з нами"
+    price_list: "Прайс"
