@@ -1,9 +1,4 @@
-- @contacts = [{title: "Адрес:", description: "Lazaretska 8, 81101, bratislava, Slovakia"},
-{title: "E-mail:", description: "slovakiainvest@slovakiainvest.sk"},
-{title: "Bratislava:", description: "+421 2 321 44 901"},
-{title: "Москва:", description: "+7-499-504-4421"},
-{title: "Київ:", description: "+38-044-361-07-72"},
-{title: "Fax:", description: "+421 2 5292 1319"}]
+
 
 - @pages = [{text: 'Полезная информация', link: '/pages/news.html'}, {text:'Контакты', link: '/pages/contacts.html'}, {text:'О нас', link: '/pages/about-us.html'}]
 
@@ -20,32 +15,45 @@ footer.footer
       button.btn.btn__dispatch 
           | Подписаться
     .footer__contacts.footer__item-container
-      .footer__contacts-title
-        | Контакты
-      - @contacts.each do |item|
-        .footer__contacts-item
-          .footer__contacts-item-title
-            = item[:title]
-          .footer__contacts-item-description
-            = item[:description]
-    .footer__pages.footer__item-container
-      .footer__pages-title
-        | Страницы
-      - @pages.each do |item|
-        .footer__pages-item
-          a href=item[:link] 
-            = item[:text]
-    .footer__socials.footer__item-container
-      .footer__socials-title
-        | Соцсети
-      .footer__socials-item.fb
-        a href="#"
-      .footer__socials-item.gp
-        a href="#"
-      .footer__socials-item.youtube
-        a href="#"
-      .footer__socials-item.vk
-        a href="#"
-
+      .footer__contacts-item
+        .footer__contacts-item-title
+          | Адрес
+        .footer__contacts-item-description
+          | Lazaretska 8, 81101, bratislava, Slovakia
+      .footer__contacts-item
+        .footer__contacts-item-title
+          | E-mail
+        a.footer__contacts-item-description(href="mailto:slovakiainvest@slovakiainvest.sk")
+          | slovakiainvest@slovakiainvest.sk
+      .footer__contacts-item
+        .footer__contacts-item-title
+          | Bratislava
+        a.footer__contacts-item-description(href="tel:421232144901")
+          | +421 2 321 44 901
+      .footer__contacts-item
+        .footer__contacts-item-title
+          | Москва
+        a.footer__contacts-item-description(href="tel:74995044421")
+          | +7-499-504-4421
+      .footer__contacts-item
+        .footer__contacts-item-title
+          | Київ
+        a.footer__contacts-item-description(href="tel:380443610772")
+          | +38-044-361-07-72
+      .footer__contacts-item
+        .footer__contacts-item-title
+          | Fax
+        a.footer__contacts-item-description(href="tel:421252921319")
+          | +421 2 5292 1319
+      .footer__contacts-item.footer__contacts-socials
+        .footer__contacts-item-title
+          | Мы в сети
+        .footer__contacts-item-description
+          = render 'partials/socials'
+      .footer__pages
+        - @pages.each do |item|
+          .footer__pages-item
+            a href=item[:link] 
+              = item[:text]
 
           

@@ -47,3 +47,17 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), font-url('Montserrat-Regular.woff') format("woff"), font-url('Montserrat-Regular.woff2') format("woff2"), font-url('Montserrat-Regular.ttf') format("truetype"), font-url('Montserrat-Regular.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), font-url('Montserrat-Bold.woff') format("woff"), font-url('Montserrat-Bold.woff2') format("woff2"), font-url('Montserrat-Bold.ttf') format("truetype"), font-url('Montserrat-Bold.svg') format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
