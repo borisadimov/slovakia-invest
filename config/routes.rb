@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   get 'pages/:id', to: 'pages#show', as: 'pages'
   resources :services, only: :show do
-    resources :articles, only: :show
+    resources :articles, only: :show, shallow: true
   end
 end

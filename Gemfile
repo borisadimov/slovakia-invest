@@ -44,6 +44,7 @@ gem 'slim-rails'
 gem 'devise'
 gem 'traco'
 gem 'subdomain_locale'
+gem 'friendly_id'
 
 
 

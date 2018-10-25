@@ -4,6 +4,12 @@ ActiveAdmin.register Article do
                 :title_uk, :text_uk,
                 :service_id
 
+  controller do
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
+  end
+
   form do |f|
     tabs do
       tab 'Russian' do
