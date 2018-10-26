@@ -18,19 +18,22 @@
 .item-page__main-wrapper.page__main-wrapper
   .page__content
 
-    .item-page__service
-      .container
-        h1.page__title
-          = @article.title
+    - if @article.title.present?
+      .item-page__service
+        .container
+          h1.page__title
+            = @article.title
 
-    .container
-      .item-page__service-description
-        = @article.text
-
-    .item-page__video
+    - if @article.text.present?
       .container
-        .item-page__video-wrapper
-          iframe[src="https://www.youtube.com/embed/tDoLUCKvLWk"]
+        .item-page__service-description
+          = @article.text
+
+    - if @article.videolink.present?
+      .item-page__video
+        .container
+          .item-page__video-wrapper
+            iframe[src=(@article.videolink)]
 
     = render 'partials/item-facts', locals={facts: @facts}
 
