@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181026113217) do
+ActiveRecord::Schema.define(version: 20181026204638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,18 @@ ActiveRecord::Schema.define(version: 20181026113217) do
     t.string   "videolink_en"
     t.string   "videolink_uk"
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
+  end
+
+  create_table "facts", force: :cascade do |t|
+    t.string   "text_ru"
+    t.string   "text_en"
+    t.string   "text_uk"
+    t.string   "logo"
+    t.string   "page_type"
+    t.integer  "page_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_type", "page_id"], name: "index_facts_on_page_type_and_page_id", using: :btree
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

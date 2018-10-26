@@ -1,12 +1,12 @@
 .item-page__facts
   .container
     .item-page__item-title
-      | Факты
+      = I18n.t('pages.facts')
     .item-page__facts-list
-      - @facts.each do |item|
+      - facts.each do |fact|
         .item-page__facts-item
           .item-page__facts-image-wrapper
             .item-page__facts-image-placeholder
-            = image_tag item[:img]
+            = image_tag fact.logo.url || 'user.svg'
           .item-page__facts-text
-            = item[:text]
+            = fact.text

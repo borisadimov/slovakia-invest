@@ -2,7 +2,8 @@ ActiveAdmin.register Article do
   permit_params :title_ru, :text_ru, :videolink_ru,
                 :title_en, :text_en, :videolink_en,
                 :title_uk, :text_uk, :videolink_uk,
-                :service_id
+                :service_id,
+                facts_attributes: [:id, :text_ru, :text_en, :text_uk, :logo, :_destroy]
 
   controller do
     def find_resource
@@ -31,7 +32,18 @@ ActiveAdmin.register Article do
       end
     end
 
-    f.inputs 'Common' do
+    f.inputs 'Facts' do
+      f.has_many :facts,
+                 new_record: 'Add Fact',
+                 allow_destroy: true do |b|
+        b.input :logo, as: :file, hint: b.object.logo.present? ? image_tag(b.object.logo.url) : content_tag(:span, 'no logo yet')
+        b.input :text_ru
+        b.input :text_en
+        b.input :text_uk
+      end
+    end
+
+    f.inputs do
       f.input :service_id, as: :select, collection: Service.all.map { |s| [s.title, s.id] }, include_blank: false
     end
 

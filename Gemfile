@@ -45,6 +45,8 @@ gem 'devise'
 gem 'traco'
 gem 'subdomain_locale'
 gem 'friendly_id'
+gem 'carrierwave-base64'
+gem 'mini_magick'
 
 
 
