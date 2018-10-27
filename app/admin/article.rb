@@ -3,7 +3,15 @@ ActiveAdmin.register Article do
                 :title_en, :text_en, :videolink_en,
                 :title_uk, :text_uk, :videolink_uk,
                 :service_id,
-                facts_attributes: [:id, :text_ru, :text_en, :text_uk, :logo, :_destroy]
+                facts_attributes: [:id, :text_ru, :text_en, :text_uk, :logo, :_destroy],
+                prices_attributes: [
+                  :id,
+                  :title_ru, :title_en, :title_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :package,
+                  :value,
+                  :_destroy
+                ]
 
   controller do
     def find_resource
@@ -40,6 +48,21 @@ ActiveAdmin.register Article do
         b.input :text_ru
         b.input :text_en
         b.input :text_uk
+      end
+    end
+
+    f.inputs 'Prices' do
+      f.has_many :prices,
+                 new_record: 'Add Price',
+                 allow_destroy: true do |b|
+        b.input :title_ru
+        b.input :description_ru
+        b.input :title_en
+        b.input :description_en
+        b.input :title_uk
+        b.input :description_uk
+        b.input :package
+        b.input :value
       end
     end
 

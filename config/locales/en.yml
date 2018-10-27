@@ -30,4 +30,10 @@ en:
     price_list: "Price List"
   pages:
     facts: "Facts"
+  prices:
+    title: "Prices"
+    packages:
+      lite: "LITE Package"
+      medium: "MEDIUM Package"
+      vip: "VIP Package"
     

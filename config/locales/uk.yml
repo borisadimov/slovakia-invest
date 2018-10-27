@@ -9,3 +9,9 @@ uk:
     price_list: "Прайс"
   pages:
     facts: "Факти"
+  prices:
+    title: "Ціни"
+    packages:
+      lite: "ЛАЙТ Пакет"
+      medium: "МЕДIУМ Пакет"
+      vip: "ВIП Пакет"

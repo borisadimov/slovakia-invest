@@ -9,6 +9,12 @@ ru:
     price_list: "Прайс"
   pages:
     facts: "Факты"
+  prices:
+    title: "Цены"
+    packages:
+      lite: "ЛАЙТ Пакет"
+      medium: "МЕДИУМ Пакет"
+      vip: "ВИП Пакет"
   time:
     formats:
       long: "%H:%M:%S %d-%m-%Y "

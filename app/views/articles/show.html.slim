@@ -7,11 +7,6 @@
 - @stories = [{avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Илларионов', position: 'Предприниматель'}, {avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Николаенко', position: 'Предприниматель'}]
-- @price = [{name: 'Первый ВНЖ:', description: 'предпринимательская деятельность', package: '', cost: '1699 €'},
- {name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'ЛАЙТ Пакет', cost: '249 €'},
- {name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'МЕДИУМ Пакет', cost: '249 €'},
- {name: 'Продление ВНЖ:', description: 'предпринимательская деятельность', package: 'ВИП Пакет', cost: '249 €'},
- {name: 'Продление ВНЖ:', description: 'деятельность', package: 'ВИП Пакет', cost: '19 €'}]
 
 .item-page__main-wrapper.page__main-wrapper
   .page__content
@@ -36,10 +31,11 @@
     - unless @article.facts.blank?
       = render 'partials/item-facts', facts: @article.facts
 
-    .item-page__price-wrapper
-      .item-page__item-title
-        | Цены
-      = render 'partials/item-price', locals: {price: @price}
+    - unless @article.prices.blank?
+      .item-page__price-wrapper
+        .item-page__item-title
+          = I18n.t('prices.title')
+        = render 'partials/item-price', prices: @article.prices
 
     .item-page__news
       .container

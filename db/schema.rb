@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181026204638) do
+ActiveRecord::Schema.define(version: 20181027103146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,21 @@ ActiveRecord::Schema.define(version: 20181026204638) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "prices", force: :cascade do |t|
+    t.integer  "article_id"
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.string   "title_uk"
+    t.string   "description_ru"
+    t.string   "description_en"
+    t.string   "description_uk"
+    t.integer  "package"
+    t.integer  "value"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["article_id"], name: "index_prices_on_article_id", using: :btree
+  end
+
   create_table "services", force: :cascade do |t|
     t.string   "title_ru"
     t.string   "title_en"
@@ -103,4 +118,5 @@ ActiveRecord::Schema.define(version: 20181026204638) do
   end
 
   add_foreign_key "articles", "services"
+  add_foreign_key "prices", "articles"
 end
