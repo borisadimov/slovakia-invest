@@ -30,10 +30,28 @@ en:
     price_list: "Price List"
   pages:
     facts: "Facts"
+    additional_info: "Additional Info"
   prices:
     title: "Prices"
     packages:
       lite: "LITE Package"
       medium: "MEDIUM Package"
       vip: "VIP Package"
+  posts:
+    headline: "News from Slovakia: everything related to your business and residence"
+    tags: "Tags"
+    more: "more"
+    author: "Post Author"
+    copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
+    comments:
+      headline: "Comments"
+      form:
+        headline: "Add comment"
+        name: "Your name"
+        email: "Your e-mail (will be visible only to site administrators)"
+        comment: "Comment"
+        submit: "Add"
+  time:
+    formats:
+      default: "%Y.%m.%d %H:%M:%S"
     

@@ -2,6 +2,7 @@ class Article < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  has_and_belongs_to_many :posts
   belongs_to :service
   has_many :facts, as: :page
   has_many :prices

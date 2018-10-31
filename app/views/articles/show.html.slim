@@ -1,9 +1,3 @@
-- @news = [{url: 'vk.png', title: 'Стипендиальная программа «Я уже здесь!»', date: '27.09.2018 6:51:51', link: '/pages/blog-post.html',
- description: 'Фонд Алёны Куротовой предоставляет уникальную возможность подать заявление об оплате полуинтенсивного курса словацкого или английского языков в языковой школе iCan (даты проведения курсов: 17.09.2018 – 19.12.2018), если вы соответствуете следующим условиям:'},
- {url: 'google-plus.png', title: 'Интенсивный курс английского в школе iCan', date: '16.09.2018 12:45:30', link: '#',
- description: 'В наши дни сложно обойтись без знаний английского языка. Тем более, иммигрантам, приезжающим в Европу. Кто-то тратит на него изучение долгие годы, другие же – баснословные суммы, проходя языковые курсы в англоговорящих странах. Словакия же, расположенная в центре Европы, может приятно удивит.'},
- {url: 'youtube.png', title: 'Праздники и мероприятия в Братиславе и окрестностях – осень 2018 ', date: '10.09.2018 7:30:34', link: '#',
- description: 'Недавно мы напоминали вам об обязанности, действующей с 1 мая 2018:– для всех иностранцев с ВНЖ проживать в Словакии большую часть года, для тех, кто не был в Словакии с мая, последней возможностью приехать и сохранить ВНЖ в Словакии было 31 августа.  Как раз тем, кто решился'}]
 - @stories = [{avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Илларионов', position: 'Предприниматель'}, {avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Николаенко', position: 'Предприниматель'}]
@@ -40,8 +34,8 @@
     .item-page__news
       .container
         .item-page__item-title
-          | полезная информация
-        = render 'partials/item-news', locals={news: @news}
+          = I18n.t('pages.additional_info')
+        = render 'partials/item-news', posts: @article.posts.first(3)
 
     .item-page__share
       = render 'partials/share'

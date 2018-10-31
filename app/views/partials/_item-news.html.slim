@@ -1,9 +1,9 @@
 .news__content
-  - @news.each do |item|
+  - posts.each do |post|
     .news__item
       .news__item-text
         .news__item-text-title
-          = item[:title]
+          = post.title
           span
             | 
             = item[:name]

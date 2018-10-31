@@ -3,6 +3,7 @@ ActiveAdmin.register Article do
                 :title_en, :text_en, :videolink_en,
                 :title_uk, :text_uk, :videolink_uk,
                 :service_id,
+                post_ids: [],
                 facts_attributes: [:id, :text_ru, :text_en, :text_uk, :logo, :_destroy],
                 prices_attributes: [
                   :id,
@@ -66,8 +67,9 @@ ActiveAdmin.register Article do
       end
     end
 
-    f.inputs do
+    f.inputs 'Associations' do
       f.input :service_id, as: :select, collection: Service.all.map { |s| [s.title, s.id] }, include_blank: false
+      f.input :post_ids, as: :check_boxes, collection: Post.all
     end
 
     f.actions

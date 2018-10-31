@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   resources :services, only: :show do
     resources :articles, only: :show, shallow: true
   end
+
+  resources :posts, only: [:index, :show] do
+    resources :comments, only: [:create]
+  end
 end
