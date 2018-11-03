@@ -37,10 +37,9 @@
           .services-item__card
             div(class="services-item__icon services-item__icon-#{index}")
             .services-item__title
-              a href="#"
-                = item[:title]
+              = link_to service.title, service_path(service)
             ul.services-item__list
-              - item[:items].each_with_index do |item, index|
+              - service.articles.each do |article|
                   li.services-item__item
                     a href="#"
                       = item

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+  namespace :admin do
+    resource :landing_page, only: [:show, :edit, :update]
+  end
   ActiveAdmin.routes(self)
 
   root 'main#index'

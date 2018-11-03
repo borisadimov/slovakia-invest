@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181031115844) do
+ActiveRecord::Schema.define(version: 20181101133103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,6 +104,73 @@ ActiveRecord::Schema.define(version: 20181031115844) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "landing_page_items", force: :cascade do |t|
+    t.integer  "block_type"
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.string   "title_uk"
+    t.string   "description_ru"
+    t.string   "description_en"
+    t.string   "description_uk"
+    t.string   "logo"
+    t.integer  "landing_page_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["landing_page_id"], name: "index_landing_page_items_on_landing_page_id", using: :btree
+  end
+
+  create_table "landing_pages", force: :cascade do |t|
+    t.integer  "singleton_guard"
+    t.string   "cooperation_title_ru"
+    t.string   "cooperation_title_en"
+    t.string   "cooperation_title_uk"
+    t.string   "about_title_ru"
+    t.string   "about_title_en"
+    t.string   "about_title_uk"
+    t.text     "about_text_ru"
+    t.text     "about_text_en"
+    t.text     "about_text_uk"
+    t.string   "services_title_ru"
+    t.string   "services_title_en"
+    t.string   "services_title_uk"
+    t.text     "services_text_ru"
+    t.text     "services_text_en"
+    t.text     "services_text_uk"
+    t.string   "how_work_title_ru"
+    t.string   "how_work_title_en"
+    t.string   "how_work_title_uk"
+    t.text     "how_work_text_ru"
+    t.text     "how_work_text_en"
+    t.text     "how_work_text_uk"
+    t.string   "profits_title_ru"
+    t.string   "profits_title_en"
+    t.string   "profits_title_uk"
+    t.text     "profits_text_ru"
+    t.text     "profits_text_en"
+    t.text     "profits_text_uk"
+    t.string   "for_whom_title_ru"
+    t.string   "for_whom_title_en"
+    t.string   "for_whom_title_uk"
+    t.text     "for_whom_text_ru"
+    t.text     "for_whom_text_en"
+    t.text     "for_whom_text_uk"
+    t.string   "reviews_title_ru"
+    t.string   "reviews_title_en"
+    t.string   "reviews_title_uk"
+    t.text     "reviews_text_ru"
+    t.text     "reviews_text_en"
+    t.text     "reviews_text_uk"
+    t.string   "partners_title_ru"
+    t.string   "partners_title_en"
+    t.string   "partners_title_uk"
+    t.text     "partners_text_ru"
+    t.text     "partners_text_en"
+    t.text     "partners_text_uk"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title_ru"
     t.string   "title_en"
@@ -150,5 +217,6 @@ ActiveRecord::Schema.define(version: 20181031115844) do
 
   add_foreign_key "articles", "services"
   add_foreign_key "comments", "posts"
+  add_foreign_key "landing_page_items", "landing_pages"
   add_foreign_key "prices", "articles"
 end
