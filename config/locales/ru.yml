@@ -16,10 +16,25 @@ ru:
       lite: "ЛАЙТ Пакет"
       medium: "МЕДИУМ Пакет"
       vip: "ВИП Пакет"
-  time:
-    formats:
-      long: "%H:%M:%S %d-%m-%Y "
-      default: "%d.%m.%Y %H:%M:%S"
+  contacts:
+    types:
+      phone: "Тел"
+      email: "E-mail"
+      fax: "Факс"
+      address: "Адрес"
+      skype: "Skype"
+    form:
+      name: "Ваше имя и фамилия"
+      email: "Ваш email"
+      phone: "Ваш телефон"
+      source: "Как Вы узнали о нас"
+      source_types:
+        not_specified: "Не указано"
+        advertising: "Реклама"
+        search_system: "Поисковая система"
+        other: "Другое"
+      text: "Дополнительные пожелания"
+      submit: "Отправить"
   posts:
     headline: "Новости из Словакии: все, что касается вашего бизнеса и проживания"
     tags: "Метки"
@@ -34,6 +49,10 @@ ru:
         email: "Ваш e-mail (будет виден только администраторам сайта)"
         comment: "Комментарий"
         submit: "Добавить"
+  time:
+    formats:
+      long: "%H:%M:%S %d-%m-%Y "
+      default: "%d.%m.%Y %H:%M:%S"
   activerecord:
     models:
       user:
@@ -60,11 +79,11 @@ ru:
         created_at: "Создан"
         updated_at: "Обновлен"
       program:
-        main_heading: 'Название'
-        sub_heading: 'Подзаголовок'
-        desc: 'основной текст'
-        dark_background: 'Сделать текст белым цветом'
-        left_side_content: 'Расположить текст слева'
+        main_heading: "Название"
+        sub_heading: "Подзаголовок"
+        desc: "основной текст"
+        dark_background: "Сделать текст белым цветом"
+        left_side_content: "Расположить текст слева"
         image: "Изображение"
         mobile_image: "Изображение для мобильной версии"
         link: "Ссылка кнопки #1"

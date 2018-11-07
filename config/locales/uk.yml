@@ -30,6 +30,25 @@ uk:
         email: "Ваш e-mail (буде видно тільки адміністраторам сайту)"
         comment: "Коментар"
         submit: "Додати"
+  contacts:
+    types:
+      phone: "Тел"
+      email: "E-mail"
+      fax: "Факс"
+      address: "Адреса"
+      skype: "Skype"
+    form:
+      name: "Ваше ім'я та прізвище"
+      email: "Ваш email"
+      phone: "Ваш телефон"
+      source: "Як Ви дізналися про нас"
+      source_types:
+        not_specified: "Не вказано"
+        advertising: "Реклама"
+        search_system: "Пошукова система"
+        other: "Iнше"
+      text: "Додаткові побажання"
+      submit: "Надіслати"
   time:
     formats:
       long: "%H:%M:%S %d-%m-%Y "

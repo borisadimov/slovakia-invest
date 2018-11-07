@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181101133103) do
+ActiveRecord::Schema.define(version: 20181106152627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,50 @@ ActiveRecord::Schema.define(version: 20181101133103) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.integer  "contact_type"
+    t.string   "value"
+    t.integer  "has_contacts_id"
+    t.string   "has_contacts_type"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["has_contacts_type", "has_contacts_id"], name: "index_contacts_on_has_contacts_type_and_has_contacts_id", using: :btree
+  end
+
+  create_table "contacts_pages", force: :cascade do |t|
+    t.integer  "singleton_guard"
+    t.string   "page_title_ru"
+    t.string   "page_title_en"
+    t.string   "page_title_uk"
+    t.string   "employees_title_ru"
+    t.string   "employees_title_en"
+    t.string   "employees_title_uk"
+    t.string   "contacts_title_ru"
+    t.string   "contacts_title_en"
+    t.string   "contacts_title_uk"
+    t.string   "map_coords"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["singleton_guard"], name: "index_contacts_pages_on_singleton_guard", unique: true, using: :btree
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "name_ru"
+    t.string   "name_en"
+    t.string   "name_uk"
+    t.string   "position_ru"
+    t.string   "position_en"
+    t.string   "position_uk"
+    t.string   "description_ru"
+    t.string   "description_en"
+    t.string   "description_uk"
+    t.string   "avatar"
+    t.integer  "service_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["service_id"], name: "index_employees_on_service_id", using: :btree
   end
 
   create_table "facts", force: :cascade do |t|
@@ -215,8 +259,19 @@ ActiveRecord::Schema.define(version: 20181101133103) do
     t.string   "videolink_uk"
   end
 
+  create_table "user_callbacks", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.string   "phone"
+    t.integer  "source"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "articles", "services"
   add_foreign_key "comments", "posts"
+  add_foreign_key "employees", "services"
   add_foreign_key "landing_page_items", "landing_pages"
   add_foreign_key "prices", "articles"
 end

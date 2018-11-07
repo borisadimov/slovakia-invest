@@ -3,6 +3,7 @@ class Service < ApplicationRecord
   friendly_id :title, use: :slugged
 
   has_many :articles
+  has_many :employees
   has_many :facts, as: :page
   has_many :posts, through: :articles
   has_many :prices, through: :articles
