@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resource :landing_page, only: [:show, :edit, :update]
     resource :contacts_page, only: [:show, :edit, :update]
     resource :about_us_page, only: [:show, :edit, :update]
+    resource :footer, only: [:show, :edit, :update]
   end
   ActiveAdmin.routes(self)
 

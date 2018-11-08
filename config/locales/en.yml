@@ -70,6 +70,21 @@ en:
         other: "Other"
       text: "Additional suggestions"
       submit: "Submit"
+  footer:
+    form:
+      title: "Sign up for the newsletter"
+      email: "Email"
+      terms: "I accept the terms of the personal data processing policy and hereby I consent to the processing of my personal data"
+      submit: "Subscribe"
+    contacts:
+      title: "Contacts"
+    social:
+      title: "Social network"
+    pages:
+      title: "Pages"
+      about_us: "About us"
+      news: "Useful information"
+      contacts: "Contacts"
   time:
     formats:
       default: "%Y.%m.%d %H:%M:%S"

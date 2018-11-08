@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181107141604) do
+ActiveRecord::Schema.define(version: 20181108130903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -147,6 +147,11 @@ ActiveRecord::Schema.define(version: 20181107141604) do
     t.index ["page_type", "page_id"], name: "index_facts_on_page_type_and_page_id", using: :btree
   end
 
+  create_table "footers", force: :cascade do |t|
+    t.integer "singleton_guard"
+    t.index ["singleton_guard"], name: "index_footers_on_singleton_guard", unique: true, using: :btree
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -270,6 +275,13 @@ ActiveRecord::Schema.define(version: 20181107141604) do
     t.string   "videolink_uk"
   end
 
+  create_table "social_network_links", force: :cascade do |t|
+    t.string  "url"
+    t.string  "logo"
+    t.integer "footer_id"
+    t.index ["footer_id"], name: "index_social_network_links_on_footer_id", using: :btree
+  end
+
   create_table "user_callbacks", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "email",      null: false
@@ -285,4 +297,5 @@ ActiveRecord::Schema.define(version: 20181107141604) do
   add_foreign_key "employees", "services"
   add_foreign_key "landing_page_items", "landing_pages"
   add_foreign_key "prices", "articles"
+  add_foreign_key "social_network_links", "footers"
 end
