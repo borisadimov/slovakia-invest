@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resource :landing_page, only: [:show, :edit, :update]
     resource :contacts_page, only: [:show, :edit, :update]
+    resource :about_us_page, only: [:show, :edit, :update]
   end
   ActiveAdmin.routes(self)
 
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
   end
 
   resources :prices, only: [:index]
+
+  resources :about_us, only: [:index]
 
   resources :contacts, only: [:index, :create]
 end

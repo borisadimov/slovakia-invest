@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181106152627) do
+ActiveRecord::Schema.define(version: 20181107141604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "about_us_pages", force: :cascade do |t|
+    t.integer "singleton_guard"
+    t.string  "title_ru"
+    t.string  "title_en"
+    t.string  "title_uk"
+    t.text    "text_ru"
+    t.text    "text_en"
+    t.text    "text_uk"
+    t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
