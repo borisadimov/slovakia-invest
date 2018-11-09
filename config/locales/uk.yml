@@ -10,6 +10,7 @@ uk:
   pages:
     facts: "Факти"
     additional_info: "Корисна інформація"
+    stories: "Iсторії клієнтів"
   prices:
     title: "Ціни"
     packages:

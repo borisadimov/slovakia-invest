@@ -1,7 +1,3 @@
-- @stories = [{avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
- name: 'Александр Илларионов', position: 'Предприниматель'}, {avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
- name: 'Александр Николаенко', position: 'Предприниматель'}]
-
 .item-page__main-wrapper.page__main-wrapper
   .page__content
 
@@ -36,10 +32,8 @@
         .item-page__item-title
           = I18n.t('pages.additional_info')
         = render 'partials/item-news', posts: @article.posts.first(3)
-
-    .item-page__share
-      = render 'partials/share'
               
   = render 'partials/sidebar' 
 
-  = render 'partials/item-story', locals={stories: @stories}
+  - unless @article.reviews.blank?
+    = render 'partials/item-story', reviews: @article.reviews

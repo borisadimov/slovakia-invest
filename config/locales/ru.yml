@@ -10,6 +10,7 @@ ru:
   pages:
     facts: "Факты"
     additional_info: "Полезная информация"
+    storites: "Истории клиентов"
   prices:
     title: "Цены"
     packages:

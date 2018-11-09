@@ -12,6 +12,14 @@ ActiveAdmin.register Article do
                   :package,
                   :value,
                   :_destroy
+                ],
+                reviews_attributes: [
+                  :id,
+                  :avatar,
+                  :name_ru, :name_en, :name_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :text_ru, :text_en, :text_uk,
+                  :_destroy
                 ]
 
   controller do
@@ -64,6 +72,23 @@ ActiveAdmin.register Article do
         b.input :description_uk
         b.input :package
         b.input :value
+      end
+    end
+
+    f.inputs 'Reviews' do
+      f.has_many :reviews,
+                  new_record: 'Add Review',
+                  allow_destroy: true do |b|
+        b.input :avatar, as: :file, hint: b.object.avatar.present? ? image_tag(b.object.avatar.url) : content_tag(:span, 'no avatar yet')
+        b.input :name_ru
+        b.input :name_en
+        b.input :name_uk
+        b.input :description_ru
+        b.input :description_en
+        b.input :description_uk
+        b.input :text_ru
+        b.input :text_en
+        b.input :text_uk
       end
     end
 
