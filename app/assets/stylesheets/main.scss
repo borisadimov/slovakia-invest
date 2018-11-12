@@ -13,13 +13,16 @@ body {
 
   font-family: 'Roboto', 'OpenSans', 'Trebuchet MS', 'Verdana';
   font-size: 16px;
+  color: #333333;
+
   line-height: 1.5em;
 }
 
 .container {
-  max-width: 1164px;
+  max-width: 1440px;
   width: 100%;
-  padding: 20px 32px 40px 32px;
+  padding-left: 52/1440 * 100%;
+  padding-right: 52/1440 * 100%;
   margin: 0 auto;
 }
 
@@ -39,7 +42,10 @@ h1 {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 48px;
+  line-height: 62px;
+  font-family: $font-montserrat;
+  margin: 0;
 }
 
 .page__content .container {
@@ -73,20 +79,22 @@ h2 {
 
 .btn {
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 33px;
+  background: $primary-color;
 
-  &:hover {
-    background: #ffffff;
-    color: #1e3685;
-  }
+  font-weight: bold;
+  line-height: normal;
+  font-size: 24px;
+  color: #ffffff;
+
+  cursor: pointer;
 }
 
 .btn__dispatch {
   cursor: pointer;
-  padding: 10px 20px;
+  margin-top: 50px;
+  padding: 13px 54px;
 
-  border: 2px solid #0063b0;
-  background: #0063b0;
   color: #ffffff;
 }
 
@@ -102,28 +110,32 @@ h2 {
   }
 }
 
-.fb {
-  background: image-url('facebook.png') no-repeat center/contain;
+.socials {
+  display: flex;
+  flex-flow: row nowrap
 }
 
-.gp {
-  background: image-url('google-plus.png') no-repeat center/contain;
+.socials-item a {
+  display: block;
+
+  width: 31px;
+  height: 26px;
 }
 
-.youtube {
-  background: image-url('youtube.png') no-repeat center/contain;
+.socials-item.fb a {
+  background: image-url('soc-fb.svg') no-repeat center/contain;
 }
 
-.vk {
-  background: image-url('vk.png') no-repeat center/contain;
+.socials-item.gp a {
+  background: image-url('soc-gplus.svg') no-repeat center/contain;
 }
 
-.od {
-  background: image-url('odnoklassniki.png') no-repeat center/contain;
+.socials-item.youtube a {
+  background: image-url('soc-youtube.svg') no-repeat center/contain;
 }
 
-.tw {
-  background: image-url('twitter.png') no-repeat center/contain;
+.socials-item.vk a {
+  background: image-url('soc-vk.svg') no-repeat center/contain;
 }
 
 .more {
