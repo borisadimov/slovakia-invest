@@ -1,0 +1,30 @@
+.item-page__important .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.item-page__important-photo {
+  width: 60px;
+  height: 60px;
+  background: #dfdfdf;
+}
+
+.item-page__important-text-wrapper {
+  padding-left: 20px;
+}
+
+.item-page__important-title {
+  padding-top: 15px;
+  padding-bottom: 16px;
+  font-size: 22px;
+}
+
+.item-page__important-text-item {
+  margin-bottom: 8px;
+}
+/*# sourceMappingURL=item-important.css.map */

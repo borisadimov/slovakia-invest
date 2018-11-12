@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,sBAAsB,CAAC;EACrB,SAAS,EAAE,KAAK;EAChB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "main-for-whom.scss"
+    ],
+    "names": [],
+    "file": "main-for-whom.css"
+}

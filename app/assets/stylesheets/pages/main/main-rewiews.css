@@ -1,0 +1,24 @@
+.rewiews {
+  background: #f2f8fc;
+}
+
+.rewiews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.rewiews__item {
+  width: 33%;
+  padding-right: 20px;
+}
+
+.rewiews__item-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+/*# sourceMappingURL=main-rewiews.css.map */

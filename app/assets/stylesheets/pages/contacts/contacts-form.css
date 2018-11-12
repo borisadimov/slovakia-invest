@@ -1,0 +1,56 @@
+.contacts-page__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  font-size: 14px;
+}
+
+.contacts-page__form label,
+.contacts-page__form-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.contacts-page__form span {
+  display: block;
+  width: 270px;
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.contacts-page__form input,
+.contacts-page__form select,
+.contacts-page__form textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: 1px solid #bbbbbb;
+}
+
+.contacts-page__form-more {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.contacts-page__form-more .no-bold {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.contacts-page__form-btn-wrapper {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=contacts-form.css.map */
