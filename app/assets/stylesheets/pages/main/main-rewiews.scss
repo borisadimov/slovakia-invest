@@ -10,13 +10,17 @@
   flex-flow: row wrap;
   padding-top: 63px;
   padding-bottom: 194px;
+<<<<<<< HEAD
   padding-left: 40px;
   padding-right: 40px;
+=======
+>>>>>>> add rewiew slider
 }
 
 .rewiews__item {
   position: relative;
   width: 50%;
+<<<<<<< HEAD
   padding-top: 20px;
   padding-bottom: 35px;
 }
@@ -29,12 +33,21 @@
 .slick-slide:nth-child(2n) .rewiews__item {
   padding-left: 20px;
   padding-right: 40px;
+=======
+  padding-right: 20px;
+  padding-top: 20px;
+>>>>>>> add rewiew slider
 }
 
 .rewiews__item-img {
   position: absolute;
+<<<<<<< HEAD
   left: 30px;
   top: 15px;
+=======
+  left: 58px;
+  top: 0;
+>>>>>>> add rewiew slider
   z-index: 1;
 
   width: 220px;
@@ -59,9 +72,12 @@
   padding: 15px 20px;
 
   background: #ffffff;
+<<<<<<< HEAD
   border-radius: 8px;
 
   box-shadow: 5px 10px 40px rgba(69, 68, 94, 0.3);
+=======
+>>>>>>> add rewiew slider
 }
 
 .rewiews__item-title {
@@ -75,6 +91,7 @@
 .rewiews__item-description {
   font-size: 14px;
   line-height: 24px;
+<<<<<<< HEAD
 }
 
 .rewiews .slick-prev,
@@ -99,4 +116,6 @@
 .rewiews .slick-prev:before,
 .rewiews .slick-next:before {
   display: none;
+=======
+>>>>>>> add rewiew slider
 }
