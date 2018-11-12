@@ -2,8 +2,7 @@
 - @services_nav = [{title: 'Иммиграция', items: ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для учебы', 'Виза', 'ПМЖ', 'Гражданство']},
  {title: 'Бизнес', items: ['Учреждение фирмы', 'Банковский счет', 'Бухучет и отчетность', 'Начисление зарплаты', 'Аудит', 'Другие обязательства', 'Регистрация торговой марки']},
  {title: 'Образование', items: ['Образование в Словакии', 'Словацкий язык', 'Другие языки', 'Нострификация диплома']},
- {title: 'Инвестиции', items: ['Анализ инвестиционной среды', 'Холдинговая компания', 'Инвестиционные проекты', 'Исследование рынка', 'Инвестирование в промышленность', 'Объекты недвижимости', 'Тур по объектам недвижимости', 'Налогообложение недвижимости', 'Ипотечный кредит']},
- {title: 'Другие услуги', items: ['Водительские права', 'Открытие банковского счета', 'Услуги переводчика ', 'Трансфер', 'Резервация гостиниц и апартаментов', 'Лизинг', 'Сбережения и пенсия']}]
+ {title: 'Инвестиции', items: ['Анализ инвестиционной среды', 'Холдинговая компания', 'Инвестиционные проекты', 'Исследование рынка', 'Инвестирование в промышленность', 'Объекты недвижимости', 'Тур по объектам недвижимости', 'Налогообложение недвижимости', 'Ипотечный кредит']}]
 - @how_work = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.']
 - @profit = [{title: 'Выгода 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
@@ -16,27 +15,24 @@
 
 .main-page
   = render 'partials/header'
-  .cooperation
-    .container
-      h1.cooperation__title Предложение сотрудничества
-      .cooperation__facts
-        - @facts.each do |fact|
-          .cooperation__fact
-            .cooperation__fact-title 
-              = fact[:title]
-            .cooperation__fact-description
-              = fact[:description]
-  .about-company
-    .container
-      h2.about-company__tite Рассказ о компании
-      .about-company__description 
-        | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
+  .main-header
+    .main-header__placeholder
+      video(autoplay muted loop class="main-header__video")
+        source(src="assets/video.mp4" type="video/mp4")
+    .main-header__container.container
+      .main-header__title
+        | Добро пожаловать в Словакию
+      .main-header__sub-title
+        | Иммиграция. Бизнес. Инвестиции. Образование.
+      .btn.main-header__btn
+        | Связаться с нами
   .services
     .container
       h2.services-title Что мы предлагаем
       .services-wrapper
         - @services_nav.each_with_index do |item, index|
-          .services-item
+          .services-item__card
+            div(class="services-item__icon services-item__icon-#{index}")
             .services-item__title
               a href="#"
                 = item[:title]
@@ -45,6 +41,13 @@
                   li.services-item__item
                     a href="#"
                       = item
+  .about-company
+    .container
+      .about-company__text
+        h2.about-company__tite О компании:
+        .about-company__description 
+          | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
+      .about-company__img
   .how-work
     .container
       h2.how-work__title Как работаем
@@ -103,3 +106,4 @@
             | LOGO
         
   = render 'partials/footer'
+  = render 'partials/menu'
