@@ -1,0 +1,58 @@
+.blog-page__title {
+  font-size: 32px;
+}
+
+.blog-page__date {
+  font-size: 16px;
+  color: #a1a1a1;
+  font-weight: normal;
+}
+
+.blog-page__autor {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.blog-page_form {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.blog-page__form-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.news-page__img-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-page__form-title-comment {
+  margin-bottom: 20px;
+}
+
+.blog-page__form-title-add {
+  margin-bottom: 15px;
+}
+
+.blog-page__form-input-text {
+  margin-bottom: 5px;
+}
+
+.blog-page__form-input-wrapper {
+  margin-bottom: 15px;
+}
+
+.blog-page__form-input-wrapper input,
+.blog-page__form-input-wrapper textarea {
+  width: 100%;
+  border: 1px solid #bbbbbb;
+}
+
+.blog-page__form-input-wrapper textarea {
+  height: 200px;
+}
+/*# sourceMappingURL=blog.css.map */
