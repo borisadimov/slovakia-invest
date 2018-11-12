@@ -16,11 +16,11 @@
           li.header__nav-item
             a.header__nav-item-link(href=item[:link])
               = item[:title]
-              ul.submenu
-                - item[:submenu].each do |sub_item|
-                  li
-                    a href=sub_item[:link]
-                      = sub_item[:text]
+            ul.submenu
+              - item[:submenu].each do |sub_item|
+                li
+                  a href=sub_item[:link]
+                    = sub_item[:text]
     .language
       .language__title
         div.language__title-img
