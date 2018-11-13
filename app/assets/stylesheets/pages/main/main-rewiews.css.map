@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,OAAO;CACpB;;AAED,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,QAAQ;CACpB;;AAED,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,GAAG;EACV,aAAa,EAAE,IACjB;CAAC;;AAED,AAAA,oBAAoB,CAAC;EACnB,aAAa,EAAE,IAAI;EAEnB,SAAS,EAAE,IAAI;CAChB",
-    "sources": [
-        "main-rewiews.scss"
-    ],
-    "names": [],
-    "file": "main-rewiews.css"
-}
