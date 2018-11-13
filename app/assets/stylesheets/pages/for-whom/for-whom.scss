@@ -1,0 +1,31 @@
+.for-whom {
+ max-width: 1400px;
+ width: 100%;
+}
+.for-whom__title {
+ margin-top: 92px;
+}
+.for-whom_line1 {
+ display: flex;
+ justify-content: space-around;
+ margin-top: 118px;
+ width: 100%;
+}
+.for-whom_line2 {
+ width: 100%;
+ display: flex;
+ justify-content: space-around;
+ margin-top: 127px; 
+}
+
+.for-whom_block {
+ display: flex;
+ max-width: 295px;
+ width: 100%;
+}
+span.number {
+ display: block;
+ font-size: 100px;
+ margin-top: 30px;
+ margin-right: 20px;
+}

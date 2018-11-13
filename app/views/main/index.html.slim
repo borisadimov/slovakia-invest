@@ -48,18 +48,120 @@
         .about-company__description 
           | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
       .about-company__img
+  section.features 
+    .container
+      .features-wrap
+        .features-item
+          h2 100%
+          p Гарантия получения ВНЖ в Словакии или полный возврат денег
+        .features-item
+          h2 25 лет
+          p На рынке бухгалтерских услуг
+        .features-item
+          h2  10 лет
+          p Оказываем миграционные услуги в Словакию
+        .features-item
+          h2  0 €
+          p Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции   
+      
+      h2.guarantee-title Мы гарантируем:
+      .guarantee-wrapper
+        .guarantee-block
+          = image_tag("house.png")
+          h3.guarantee-block_title 
+            | Безотказное получение ВНЖ
+          .guarantee-block_descr
+            | За десять лет наши клиенты не получили ни одного отказа в миграционной службе.  
+
+      
+        .guarantee-block
+          = image_tag("shield.png")
+          h3.guarantee-block_title 
+            | Честность и порядочность
+          .guarantee-block_descr
+            | Мы открыто предоставляем всю информацию, не утаивая деталей и будущих обязательств.
+
+      
+        .guarantee-block
+          = image_tag("human.png")
+          h3.guarantee-block_title 
+            | Индивидуальный подход
+          .guarantee-block_descr
+            | Решим любой нестандартный вопрос или проблему, исходя из Ваших потребностей.
+
+      
+        .guarantee-block
+          = image_tag("star.png")
+          h3.guarantee-block_title 
+            | Доступность 
+          br/  
+          .guarantee-block_descr
+            | Мы всегда рядом, Вы можете связаться любым удобным Вам способом.
+  section
+    .container
+      h2.for-whom__title
+        | Для кого наши услуги:
+      .for-whom
+        .for-whom_line1
+          .for-whom_block
+            span.number
+              | 1
+            .for-whom__description
+              | Оформление внж в Словакии для бизнеса, работы учебы или воссоединения семьи, с перспективой получения пмж и гражданства.
+          .for-whom_block
+            span.number
+              | 2
+            .for-whom__description
+              | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
+          .for-whom_block
+            span.number
+              | 3
+            .for-whom__description
+              | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
+
+
+        .for-whom_line2
+          .for-whom_block
+            span.number
+              | 4
+            .for-whom__description
+              | Помощь в покупке недвижимости и получении ипотечного кредита.
+          .for-whom_block
+            span.number
+              | 5
+            .for-whom__description
+              | Инвестиции и исследование рынка.
+          .for-whom_block
+            span.number
+              | 6
+            .for-whom__description
+              | Инвестиции и исследование рынка.
+            
+
   .how-work
     .container
-      h2.how-work__title Как работаем
-      .how-work__description
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore et vero perspiciatis ipsam, eius exercitationem quo incidunt fugit nemo, officia perferendis quod officiis aperiam voluptate nulla eaque impedit consequuntur!
-      .how-work__list
-        - @how_work.each_with_index do |item, index|
-          .how-work__item
-            .how-work__item-title
-              = index + 1
-            .how-work__item-description
-              = item
+      h2.how-work__title Как мы работаем
+      .how-work__items
+        .how-work__items-line1
+          .how-work__item.how-work__item1
+            .how-work__item_title
+              | Свяжитесь с нами
+          .how-work__item.how-work__item2
+            .how-work__item_title
+              | Получите варианты
+          .how-work__item.how-work__item3
+            .how-work__item_title
+              | Пользуйтесь нашей поддержкой
+
+        .how-work__items-line2      
+          .how-work__item.how-work__item4
+            .how-work__item_title
+              | Поставьте конечную цель
+          .how-work__item.how-work__item5
+            .how-work__item_title
+              | Вместе добъемся результатов
+                               
+        
   .profit
     .container
       h2.profit__title
@@ -73,11 +175,7 @@
               = item[:title]
             .profit__item-description
               = item[:description]
-  .for-whom
-    .container
-      h2.for-whom__title Для кого наши услуги
-      .for-whom__description
-        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur perspiciatis optio non inventore repudiandae eligendi aperiam tempora voluptates enim excepturi velit, voluptatibus quod nisi sit laudantium asperiores, et veniam. Ipsam.
+  
   .rewiews
     .container
       h2.rewiews__title Истории клиентов и отзывы
@@ -107,3 +205,5 @@
         
   = render 'partials/footer'
   = render 'partials/menu'
+
+  
