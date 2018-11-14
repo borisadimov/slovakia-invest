@@ -22,7 +22,7 @@
                         .contacts-page__faces-item
                           .contacts-page__faces-img-wrapper
                             .contacts-page__faces-img-placeholder
-                            = image_tag employee.avatar.url
+                            = image_tag employee.avatar.url || 'user.svg'
                           .contacts-page__faces-name
                             = employee.name
                           .contacts-page__faces-position

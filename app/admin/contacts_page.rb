@@ -44,10 +44,6 @@ ActiveAdmin.register ContactsPage do
       end
     end
 
-    f.inputs do
-      f.input :map_coords
-    end
-
     f.inputs 'Contacts' do
       f.has_many :contacts,
                   new_record: 'Add Contact',
