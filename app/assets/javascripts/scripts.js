@@ -32,3 +32,18 @@ burger.click(function() {
   burger.toggleClass('active');
   menu.toggleClass('active');
 })
+
+var languageArrowBtn = $('.language-arrow__img')
+var languageArrowBoard = $('.language-arrow')
+
+languageArrowBtn.click(function() {
+  languageArrowBoard.toggleClass('active')
+})
+
+var rewiewSlider = $('.rewiews__list')
+
+rewiewSlider.slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 2
+});

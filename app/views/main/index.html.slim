@@ -8,9 +8,12 @@
 {title: 'Выгода 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 4', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
-- @rewiews = [{title: 'Иван', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Александр', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Чак', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
+- @rewiews = [{title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
 
 
 .main-page
@@ -28,7 +31,6 @@
         | Связаться с нами
   .services
     .container
-      h2.services-title Что мы предлагаем
       .services-wrapper
         - @services_nav.each_with_index do |item, index|
           .services-item__card
@@ -178,14 +180,17 @@
   
   .rewiews
     .container
-      h2.rewiews__title Истории клиентов и отзывы
+      h2.rewiews__title Отзывы
       .rewiews__list
         - @rewiews.each do |item|
           .rewiews__item
-            .rewiews__item-title
-              = item[:title]
-            .rewiews__item-description
-              = item[:description]
+            .rewiews__item-img
+              = image_tag item[:img]
+            .rewiews__item-card
+              .rewiews__item-title
+                = item[:title]
+              .rewiews__item-description
+                = item[:description]
   .partners
     .container
       h2.partners__title Партнеры
