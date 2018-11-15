@@ -3,17 +3,21 @@
  justify-content: space-around;
  max-width: 1400px;
  width: 100%;
- align-items: center;
+ align-items: baseline;
+ margin-top: 37px;
 }
 
 .guarantee-block {
  max-width: 280px;
  width: 100%;
- margin-top: 37px;
+ 
+ 
 }
 .guarantee-block_title {
+ display: block;
  font-size: 28px;
  line-height: 36px;
+ min-height: 73px;
 }
 
 .guarantee-block_descr {

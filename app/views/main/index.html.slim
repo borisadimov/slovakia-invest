@@ -96,7 +96,7 @@
           = image_tag("star.png")
           h3.guarantee-block_title 
             | Доступность 
-          br/  
+      
           .guarantee-block_descr
             | Мы всегда рядом, Вы можете связаться любым удобным Вам способом.
   section
@@ -191,22 +191,44 @@
                 = item[:title]
               .rewiews__item-description
                 = item[:description]
-  .partners
+
+
+   
+
+  .partners-header
     .container
+      h2.partners-header__title
+        | Первая консультация бесплатно
+      .btn.partners-header__btn
+        | Связаться с нами  
+  .partners-content  
+    .container  
       h2.partners__title Партнеры
       .partners__wrapper
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+             = image_tag("partner_1")
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+             = image_tag("partner_2")
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+              = image_tag("partner_3")
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+              = image_tag("partner_4")
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_5")   
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_6")      
         
   = render 'partials/footer'
   = render 'partials/menu'
