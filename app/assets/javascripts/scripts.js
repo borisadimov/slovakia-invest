@@ -47,3 +47,15 @@ rewiewSlider.slick({
   slidesToShow: 2,
   slidesToScroll: 2
 });
+
+// scroll magic
+
+var controller = new ScrollMagic.Controller();
+
+var scene = new ScrollMagic.Scene({triggerElement: ".services"})
+  .addTo(controller)
+  .addIndicators()
+  .setClassToggle(".services", "active")
+  .on('enter', function(e) {
+    scene.remove()
+  })
