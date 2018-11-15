@@ -52,10 +52,35 @@ rewiewSlider.slick({
 
 var controller = new ScrollMagic.Controller();
 
-var scene = new ScrollMagic.Scene({triggerElement: ".services"})
+var sceneServices = new ScrollMagic.Scene({triggerElement: ".services"})
+  .offset(-100)
   .addTo(controller)
   .addIndicators()
   .setClassToggle(".services", "active")
   .on('enter', function(e) {
-    scene.remove()
+    sceneServices.remove()
+  })
+
+var sceneFeatures = new ScrollMagic.Scene({triggerElement: ".features"})
+  .offset(-200)
+  .addTo(controller)
+  .addIndicators()
+  .setClassToggle(".features", "active")
+  .on('enter', function(e) {
+    $('.features-item:nth-child(1) h2 span').spincrement({
+      from: 0,
+      to: 100,
+      duration: 2000
+    })
+    $('.features-item:nth-child(2) h2 span').spincrement({
+      from: 0,
+      to: 25,
+      duration: 2000
+    })
+    $('.features-item:nth-child(3) h2 span').spincrement({
+      from: 0,
+      to: 10,
+      duration: 2000
+    })
+    sceneFeatures.remove()
   })
