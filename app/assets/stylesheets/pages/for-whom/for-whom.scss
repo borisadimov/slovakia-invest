@@ -29,3 +29,11 @@ span.number {
  margin-top: 30px;
  margin-right: 20px;
 }
+.number:hover {
+ color: #9598AE;
+ transition: all 0.5s;
+ -webkit-transition: all 0.5s;
+ -moz-transition: all 0.5s;
+ -ms-transition: all 0.5s;
+ -o-transition: all 0.5s;
+}
