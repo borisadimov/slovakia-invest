@@ -84,3 +84,9 @@ var sceneFeatures = new ScrollMagic.Scene({triggerElement: ".features"})
     })
     sceneFeatures.remove()
   })
+
+
+// submenu
+$('.submenu').each(function(i, item) {
+  console.log(item, $(item).height())
+})
