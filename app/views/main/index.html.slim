@@ -15,7 +15,6 @@
 {title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
 
-
 .main-page
   = render 'partials/header'
   .main-header
@@ -94,7 +93,6 @@
           .guarantee-block_descr
             | Мы открыто предоставляем всю информацию, не утаивая деталей и будущих обязательств.
 
-      
         .guarantee-block
           = image_tag("human.png")
           h3.guarantee-block_title 
@@ -102,7 +100,6 @@
           .guarantee-block_descr
             | Решим любой нестандартный вопрос или проблему, исходя из Ваших потребностей.
 
-      
         .guarantee-block
           = image_tag("star.png")
           h3.guarantee-block_title 
@@ -132,7 +129,6 @@
             .for-whom__description
               | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
 
-
         .for-whom_line2
           .for-whom_block
             span.number
@@ -150,7 +146,6 @@
             .for-whom__description
               | Инвестиции и исследование рынка.
             
-
   .how-work
     .container
       h2.how-work__title Как мы работаем
@@ -173,22 +168,7 @@
           .how-work__item.how-work__item5
             .how-work__item_title
               | Вместе добъемся результатов
-                               
-        
-  .profit
-    .container
-      h2.profit__title
-        | Какие выгоды
-      .profit__description
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aspernatur dolorum iste saepe suscipit illum dolores expedita quaerat, sed aut inventore quas magnam aliquid aperiam ab maxime illo nemo. Adipisci.
-      .profit__list
-        - @profit.each do |item|
-          .profit__item
-            .profit__item-title
-              = item[:title]
-            .profit__item-description
-              = item[:description]
-  
+
   .rewiews
     .container
       h2.rewiews__title Отзывы
@@ -202,9 +182,6 @@
                 = item[:title]
               .rewiews__item-description
                 = item[:description]
-
-
-   
 
   .partners-header
     .container
