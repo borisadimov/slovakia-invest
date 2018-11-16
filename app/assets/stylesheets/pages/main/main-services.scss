@@ -22,6 +22,7 @@
 
 .services-item__card {
   position: relative;
+  top: 0;
 
   max-width: 23.5%;
   width: 100%;
@@ -31,11 +32,14 @@
   background: image-url('card-bg.png') no-repeat center/cover;
   border-radius: 8px;
 
-  transition: box-shadow 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: top 0.3s linear, box-shadow 0.3s linear;
 }
 
-.services-item__card:hover {
-  transform: translate(0, -10px);
+.services.active .services-item__card:hover {
+  top: -10px;
   box-shadow: 10px 12px 44px rgba(76, 97, 244, 0.7);
 }
 
@@ -117,4 +121,28 @@
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
+}
+
+
+.services.active {
+  @for $i from 1 through 4 {
+    .services-item__card:nth-child(#{$i}) {
+      animation-delay: calc(#{$i} * 0.3s);
+    }
+  }
+  .services-item__card {
+    animation: fadein 0.3s forwards ease-in;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
