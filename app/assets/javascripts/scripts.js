@@ -84,6 +84,3 @@ var sceneFeatures = new ScrollMagic.Scene({triggerElement: ".features"})
     })
     sceneFeatures.remove()
   })
-
-  console.log($('.main-header__video'))
-// $('.main-header__video').get(0).play()
