@@ -16,13 +16,15 @@ ActiveRecord::Schema.define(version: 20181109102226) do
   enable_extension "plpgsql"
 
   create_table "about_us_pages", force: :cascade do |t|
-    t.integer "singleton_guard"
-    t.string  "title_ru"
-    t.string  "title_en"
-    t.string  "title_uk"
-    t.text    "text_ru"
-    t.text    "text_en"
-    t.text    "text_uk"
+    t.integer  "singleton_guard"
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.string   "title_uk"
+    t.text     "text_ru"
+    t.text     "text_en"
+    t.text     "text_uk"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
   end
 

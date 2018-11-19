@@ -5,7 +5,7 @@ ActiveAdmin.register LandingPage do
     :description_ru, :description_en, :description_uk,
     :block_type,
     :_destroy
-  ].freeze
+  ]
 
   permit_params :cooperation_title_ru, :cooperation_title_en, :cooperation_title_uk,
                 :about_title_ru, :about_title_en, :about_title_uk,

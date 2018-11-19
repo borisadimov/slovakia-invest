@@ -1,6 +1,6 @@
 class Employee < ApplicationRecord
   belongs_to :service
-  has_many :contacts, as: :has_contacts
+  has_many :contacts, as: :has_contacts, dependent: :destroy
 
   accepts_nested_attributes_for :contacts, allow_destroy: true
 

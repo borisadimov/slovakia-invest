@@ -4,6 +4,8 @@ class CreateAboutUsPage < ActiveRecord::Migration[5.0]
       t.integer :singleton_guard
       t.string :title_ru, :title_en, :title_uk
       t.text :text_ru, :text_en, :text_uk
+
+      t.timestamps
     end
 
     add_index :about_us_pages, :singleton_guard, unique: true
