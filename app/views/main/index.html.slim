@@ -19,8 +19,10 @@
   = render 'partials/header'
   .main-header
     .main-header__placeholder
-      video(autoplay muted loop class="main-header__video")
-        source(src="assets/video.mp4" type="video/mp4")
+      video(muted loop playsinline autoplay poster="/assets/top.jpg" class="main-header__video")
+        source(src="/assets/video.mp4" type="video/mp4")
+        / source(src="/assets/video.webm" type="video/webm")
+        / source(src="/assets/video.ogv" type="video/ogg")
     .main-header__container.container
       .main-header__title
         | Добро пожаловать в Словакию
