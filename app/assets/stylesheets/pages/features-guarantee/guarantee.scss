@@ -1,0 +1,27 @@
+.guarantee-wrapper {
+ display: flex;
+ justify-content: space-between;
+ max-width: 1400px;
+ width: 100%;
+ align-items: baseline;
+ margin-top: 70px;
+}
+
+.guarantee-block {
+ max-width: 280px;
+ width: 100%;
+ 
+ 
+}
+.guarantee-block_title {
+ display: block;
+ font-size: 28px;
+ line-height: 36px;
+ min-height: 73px;
+}
+
+.guarantee-block_descr {
+ font-size: 14px;
+ line-height: 24px;
+}
+

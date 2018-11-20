@@ -8,17 +8,18 @@
 {title: 'Выгода 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 4', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
-- @rewiews = [{title: 'Иван', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Александр', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Чак', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
-
+- @rewiews = [{title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
 
 .main-page
   = render 'partials/header'
   .main-header
     .main-header__placeholder
-      video(autoplay muted loop class="main-header__video")
-        source(src="assets/video.mp4" type="video/mp4")
+      = video_tag("video.mp4", "video.ogv", autoplay: "true", loop: "true", muted: "true", class: 'main-header__video', poster: "top.jpg")
     .main-header__container.container
       .main-header__title
         | Добро пожаловать в Словакию
@@ -28,7 +29,6 @@
         | Связаться с нами
   .services
     .container
-      h2.services-title Что мы предлагаем
       .services-wrapper
         - @services_nav.each_with_index do |item, index|
           .services-item__card
@@ -48,62 +48,187 @@
         .about-company__description 
           | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
       .about-company__img
+  section.features 
+    .container
+      .features-wrap
+        .features-item
+          h2
+            span 0 
+            | % 
+          p Гарантия получения ВНЖ в Словакии или полный возврат денег
+        .features-item
+          h2 
+            span 0
+            = ' '
+            | лет
+          p На рынке бухгалтерских услуг
+        .features-item
+          h2 
+            span 0
+            = ' '
+            | лет
+          p Оказываем миграционные услуги в Словакию
+        .features-item
+          h2 
+            span 0
+            = ' '
+            | €
+          p Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции   
+      
+      h2.guarantee-title Мы гарантируем:
+      .guarantee-wrapper
+        .guarantee-block
+          = image_tag("house.png")
+          h3.guarantee-block_title 
+            | Безотказное получение ВНЖ
+          .guarantee-block_descr
+            | За десять лет наши клиенты не получили ни одного отказа в миграционной службе.  
+
+        .guarantee-block
+          = image_tag("shield.png")
+          h3.guarantee-block_title 
+            | Честность и порядочность
+          .guarantee-block_descr
+            | Мы открыто предоставляем всю информацию, не утаивая деталей и будущих обязательств.
+
+        .guarantee-block
+          = image_tag("human.png")
+          h3.guarantee-block_title 
+            | Индивидуальный подход
+          .guarantee-block_descr
+            | Решим любой нестандартный вопрос или проблему, исходя из Ваших потребностей.
+
+        .guarantee-block
+          = image_tag("star.png")
+          h3.guarantee-block_title 
+            | Доступность 
+      
+          .guarantee-block_descr
+            | Мы всегда рядом, Вы можете связаться любым удобным Вам способом.
+  section
+    .container
+      h2.for-whom__title
+        | Для кого наши услуги:
+      .for-whom
+        .for-whom_line1
+          .for-whom_block
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
+            .for-whom__description
+              | Оформление внж в Словакии для бизнеса, работы учебы или воссоединения семьи, с перспективой получения пмж и гражданства.
+          .for-whom_block
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
+            .for-whom__description
+              | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
+          .for-whom_block
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
+            .for-whom__description
+              | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
+
+        .for-whom_line2
+          .for-whom_block
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
+            .for-whom__description
+              | Помощь в покупке недвижимости и получении ипотечного кредита.
+          .for-whom_block
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
+            .for-whom__description
+              | Инвестиции и исследование рынка.
+          .for-whom_block
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color 
+            .for-whom__description
+              | Инвестиции и исследование рынка.
+            
   .how-work
     .container
-      h2.how-work__title Как работаем
-      .how-work__description
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore et vero perspiciatis ipsam, eius exercitationem quo incidunt fugit nemo, officia perferendis quod officiis aperiam voluptate nulla eaque impedit consequuntur!
-      .how-work__list
-        - @how_work.each_with_index do |item, index|
-          .how-work__item
-            .how-work__item-title
-              = index + 1
-            .how-work__item-description
-              = item
-  .profit
-    .container
-      h2.profit__title
-        | Какие выгоды
-      .profit__description
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aspernatur dolorum iste saepe suscipit illum dolores expedita quaerat, sed aut inventore quas magnam aliquid aperiam ab maxime illo nemo. Adipisci.
-      .profit__list
-        - @profit.each do |item|
-          .profit__item
-            .profit__item-title
-              = item[:title]
-            .profit__item-description
-              = item[:description]
-  .for-whom
-    .container
-      h2.for-whom__title Для кого наши услуги
-      .for-whom__description
-        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur perspiciatis optio non inventore repudiandae eligendi aperiam tempora voluptates enim excepturi velit, voluptatibus quod nisi sit laudantium asperiores, et veniam. Ipsam.
+      h2.how-work__title Как мы работаем
+      .how-work__items
+        .how-work__items-line1
+          .how-work__item.how-work__item1
+            .how-work__item_title
+              | Свяжитесь с нами
+          .how-work__item.how-work__item2
+            .how-work__item_title
+              | Получите варианты
+          .how-work__item.how-work__item3
+            .how-work__item_title
+              | Пользуйтесь нашей поддержкой
+
+        .how-work__items-line2      
+          .how-work__item.how-work__item4
+            .how-work__item_title
+              | Поставьте конечную цель
+          .how-work__item.how-work__item5
+            .how-work__item_title
+              | Вместе добъемся результатов
+
   .rewiews
     .container
-      h2.rewiews__title Истории клиентов и отзывы
+      h2.rewiews__title Отзывы
       .rewiews__list
         - @rewiews.each do |item|
           .rewiews__item
-            .rewiews__item-title
-              = item[:title]
-            .rewiews__item-description
-              = item[:description]
-  .partners
+            .rewiews__item-img
+              = image_tag item[:img]
+            .rewiews__item-card
+              .rewiews__item-title
+                = item[:title]
+              .rewiews__item-description
+                = item[:description]
+
+  .partners-header
     .container
+      h2.partners-header__title
+        | Первая консультация бесплатно
+      .btn.partners-header__btn
+        | Связаться с нами  
+  .partners-content  
+    .container  
       h2.partners__title Партнеры
       .partners__wrapper
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+             = image_tag("partner_1")
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+             = image_tag("partner_2")
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+              = image_tag("partner_3")
         .partners__item
           a href='#'
-            | LOGO
+            .partners__item-img
+              = image_tag("partner_4")
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_5")   
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_6")      
         
   = render 'partials/footer'
   = render 'partials/menu'
+
+  

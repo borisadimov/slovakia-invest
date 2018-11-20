@@ -1,24 +1,36 @@
-/ - @main_nav = [{title: 'Иммиграция', link: '/pages/immigration.html', submenu: [{text: 'ВНЖ для бизнеса', link: '/pages/residence-business.html'}, {text: 'ВНЖ для работы', link: '#'}, {text: 'ВНЖ для учебы', link: '#'}, {text: 'Виза', link: '#'}, {text: 'ПМЖ', link: '#'}, {text: 'Гражданство', link: '#'}]},
-/  {title: 'Бизнес', link: '#', submenu: [{text: 'Учреждение фирмы', link: '#'}, {text: 'Банковский счет', link: '#'}, {text: 'Бухучет и отчетность', link: '#'}, {text: 'Начисление зарплаты', link: '#'}, {text: 'Аудит', link: '#'}, {text: 'Другие обязательства', link: '#'}, {text: 'Регистрация торговой марки', link: '#'}]},
-/  {title: 'Образование', link: '#', submenu: [{text: 'Образование в Словакии', link: '#'}, {text: 'Словацкий язык', link: '#'}, {text: 'Другие языки', link: '#'}, {text: 'Нострификация диплома', link: '#'}]},
-/  {title: 'Инвестиции', link: '#', submenu: [{text: 'Анализ инвестиционной среды', link: '#'}, {text: 'Холдинговая компания', link: '#'}, {text: 'Инвестиционные проекты', link: '#'}, {text: 'Исследование рынка', link: '#'}, {text: 'Инвестирование в промышленность', link: '#'}, {text: 'Объекты недвижимости', link: '#'}, {text: 'Тур по объектам недвижимости', link: '#'}, {text: 'Налогообложение недвижимости', link: '#'}, {text: 'Ипотечный кредит', link: '#'}]},
-/  {title: 'Другие услуги', link: '#', submenu: [{text: 'Водительские права', link: '#'}, {text: 'Открытие банковского счета', link: '#'}, {text: 'Услуги переводчика', link: '#'}, {text: 'Трансфер', link: '#'}, {text: 'Резервация гостиниц и апартаментов', link: '#'}, {text: 'Лизинг', link: '#'}, {text: 'Сбережения и пенсия', link: '#'}]},
-/  {title: 'Прайс', link: '/pages/price.html', submenu: []}]
+- @main_nav = [{title: 'Иммиграция', link: '/pages/immigration.html', submenu: [{text: 'ВНЖ для бизнеса', link: '/pages/residence-business.html'}, {text: 'ВНЖ для работы', link: '#'}, {text: 'ВНЖ для учебы', link: '#'}, {text: 'Виза', link: '#'}, {text: 'ПМЖ', link: '#'}, {text: 'Гражданство', link: '#'}]},
+ {title: 'Бизнес', link: '#', submenu: [{text: 'Учреждение фирмы', link: '#'}, {text: 'Банковский счет', link: '#'}, {text: 'Бухучет и отчетность', link: '#'}, {text: 'Начисление зарплаты', link: '#'}, {text: 'Аудит', link: '#'}, {text: 'Другие обязательства', link: '#'}, {text: 'Регистрация торговой марки', link: '#'}]},
+ {title: 'Образование', link: '#', submenu: [{text: 'Образование в Словакии', link: '#'}, {text: 'Словацкий язык', link: '#'}, {text: 'Другие языки', link: '#'}, {text: 'Нострификация диплома', link: '#'}]},
+ {title: 'Инвестиции', link: '#', submenu: [{text: 'Анализ инвестиционной среды', link: '#'}, {text: 'Холдинговая компания', link: '#'}, {text: 'Инвестиционные проекты', link: '#'}, {text: 'Исследование рынка', link: '#'}, {text: 'Инвестирование в промышленность', link: '#'}, {text: 'Объекты недвижимости', link: '#'}, {text: 'Тур по объектам недвижимости', link: '#'}, {text: 'Налогообложение недвижимости', link: '#'}, {text: 'Ипотечный кредит', link: '#'}]},
+ {title: 'Другие услуги', link: '#', submenu: [{text: 'Водительские права', link: '#'}, {text: 'Открытие банковского счета', link: '#'}, {text: 'Услуги переводчика', link: '#'}, {text: 'Трансфер', link: '#'}, {text: 'Резервация гостиниц и апартаментов', link: '#'}, {text: 'Лизинг', link: '#'}, {text: 'Сбережения и пенсия', link: '#'}]},
+ {title: 'Цены', link: '/pages/price.html', submenu: []}]
 
-- @language = {current: 'русский', currentLink: '#', items: [{text: 'russian', link: '#'}, {text: 'ukrainian', link: '#'}, {text: 'english', link: '#'}]}
+- @language = [{text: 'russian', link: '#'}, {text: 'ukrainian', link: '#'}, {text: 'english', link: '#'}, {text: 'slovak', link: '#'}]
 
 .header
   .container
     a.logo.header__logo  href="/"
     nav.header__nav
+      ul
+        - @main_nav.each_with_index do |item, index|
+          li.header__nav-item
+            a.header__nav-item-link(href=item[:link])
+              = item[:title]
+            - if !item[:submenu].empty?
+              .submenu-wrapper
+                ul.submenu
+                  - item[:submenu].each do |sub_item|
+                    li
+                      a href=sub_item[:link]
+                        = sub_item[:text]
+                .submenu-background
     .language
       .language__title
-        div.language__title-img
-        span.language__title-bottom-arrow
-        ul.submenu
-          - @language[:items].each do |name|
-            li.language__item(class=name[:text])
-              a.language__item-img href=name[:link]
+        .language-arrow
+          .language-arrow__img
+        - @language.each do |name|
+          li.language__item(class=name[:text])
+            a.language__item-img href=name[:link]
     .burger
       .burger-line
       .burger-line

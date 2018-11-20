@@ -1,0 +1,49 @@
+
+.partners-header {
+ background: rgba(69, 68, 94, 0.7);
+ padding-top: 46px;
+ padding-bottom: 86px;
+}
+
+h2.partners-header__title {
+ width: 789px;
+ color: #ffffff;
+ font-family: Montserrat;
+ font-style: normal;
+ font-weight: bold;
+ line-height: 62px;
+ font-size: 60px;
+ 
+}
+
+.partners-header__btn {
+ max-width: 342px;
+ width: 100%;
+ padding: 18px 63px;
+ margin-top: 73px;
+}
+.partners__title {
+padding-top: 50px;
+}
+
+.partners-content {
+ background: #D8DCF5;
+}
+
+.partners__wrapper {
+ display: flex;
+ margin-top: 100px;
+ 
+}
+
+.partners__item {
+ display: block;
+ padding-right: 70px;
+}
+
+.partners__item a {
+ display: flex;
+ flex-flow: row nowrap;
+ align-items: center;
+ justify-content: flex-start;
+}
