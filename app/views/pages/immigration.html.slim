@@ -1,6 +1,5 @@
 - @links = ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для семьи', 'ВНЖ для учебы', 'Другие ВНЖ', 'Виза', 'ПМЖ', 'Гражданство']
-- @facts = [{img: 'user.svg', text: 'Факт номер 1'}, {img: 'user.svg', text: 'Факт номер 2'}, {img: 'user.svg', text: 'Факт номер 3'},
-{img: 'user.svg', text: 'Факт номер 4'}]
+
 - @news = [{url: 'vk.png', title: 'Стипендиальная программа «Я уже здесь!»', date: '27.09.2018 6:51:51', link: '/pages/blog-post.html',
  description: 'Фонд Алёны Куротовой предоставляет уникальную возможность подать заявление об оплате полуинтенсивного курса словацкого или английского языков в языковой школе iCan (даты проведения курсов: 17.09.2018 – 19.12.2018), если вы соответствуете следующим условиям:'},
  {url: 'google-plus.png', title: 'Интенсивный курс английского в школе iCan', date: '16.09.2018 12:45:30', link: '#',
@@ -39,14 +38,8 @@
         .container
           .item-page__video-wrapper
             iframe[src="https://www.youtube.com/embed/tDoLUCKvLWk"]
-    
-    
-    
-    
-
-      = render 'partials/item-facts', locals={facts: @facts}
-            = render 'partials/sidebar' 
-        
+      .container
+        = render 'partials/features'
 
       .item-page__news
         .container
@@ -56,13 +49,7 @@
 
       .item-page__share
         = render 'partials/share'
-                
-      
-
     = render 'partials/item-story', locals={stories: @stories}
-
-    
-
   = render 'partials/footer'
 
   
