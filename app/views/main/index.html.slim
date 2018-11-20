@@ -19,8 +19,7 @@
   = render 'partials/header'
   .main-header
     .main-header__placeholder
-      video(autoplay muted loop class="main-header__video")
-        source(src="assets/video.mp4" type="video/mp4")
+      = video_tag("video.mp4", "video.ogv", autoplay: "true", loop: "true", muted: "true", class: 'main-header__video', poster: "top.jpg")
     .main-header__container.container
       .main-header__title
         | Добро пожаловать в Словакию
@@ -85,7 +84,6 @@
           .guarantee-block_descr
             | За десять лет наши клиенты не получили ни одного отказа в миграционной службе.  
 
-      
         .guarantee-block
           = image_tag("shield.png")
           h3.guarantee-block_title 
@@ -114,35 +112,47 @@
       .for-whom
         .for-whom_line1
           .for-whom_block
-            span.number
-              | 1
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
             .for-whom__description
               | Оформление внж в Словакии для бизнеса, работы учебы или воссоединения семьи, с перспективой получения пмж и гражданства.
           .for-whom_block
-            span.number
-              | 2
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
             .for-whom__description
               | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
           .for-whom_block
-            span.number
-              | 3
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
             .for-whom__description
               | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
 
         .for-whom_line2
           .for-whom_block
-            span.number
-              | 4
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
             .for-whom__description
               | Помощь в покупке недвижимости и получении ипотечного кредита.
           .for-whom_block
-            span.number
-              | 5
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color
             .for-whom__description
               | Инвестиции и исследование рынка.
           .for-whom_block
-            span.number
-              | 6
+            a.circle href="#"
+              .circle-1
+                .circle-2
+                  .circle-color 
             .for-whom__description
               | Инвестиции и исследование рынка.
             

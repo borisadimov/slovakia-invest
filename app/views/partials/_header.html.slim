@@ -17,11 +17,13 @@
             a.header__nav-item-link(href=item[:link])
               = item[:title]
             - if !item[:submenu].empty?
-              ul.submenu
-                - item[:submenu].each do |sub_item|
-                  li
-                    a href=sub_item[:link]
-                      = sub_item[:text]
+              .submenu-wrapper
+                ul.submenu
+                  - item[:submenu].each do |sub_item|
+                    li
+                      a href=sub_item[:link]
+                        = sub_item[:text]
+                .submenu-background
     .language
       .language__title
         .language-arrow
@@ -33,4 +35,3 @@
       .burger-line
       .burger-line
       .burger-line
-  .dropdown
