@@ -14,26 +14,42 @@
 
 .item-page
   = render 'partials/header'
-  .item-page__main-wrapper.page__main-wrapper
-    .page__content
-
-      .item-page__service
-        .container
+  .item-page__header
+      .container
+        .item-page__header-logo
+            = image_tag("immigration-header-logo")
+        .item-page__header-content
           h1.page__title
             | Иммиграция
+          p.page-description
+            | ВНЖ позволяет иммигрировать и проживать в какой-либо стране дольше, чем это возможно по визе. Тогда как шенгенская виза дает возможность находиться на территории  Словакии и Шенгенского пространства не больше, чем 90 дней в течение шести месяцев. Получение вида на жительство позволяет его владельцу проживать в Словакии непрерывно в течение всего срока его действия, а также беспрепятственно находится в странах Шенгена до 90 дней. 
+  .item-page__header-nav       
+    = render 'partials/item-links', locals={links: @links}   
+          
+  .item-page__main-wrapper.page__main-wrapper
+    
+    
 
-      = render 'partials/item-links', locals={links: @links}
+    .page__content
 
-      .container
-        .item-page__service-description
-          | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
+      
 
+
+      
+
+      
       .item-page__video
         .container
           .item-page__video-wrapper
             iframe[src="https://www.youtube.com/embed/tDoLUCKvLWk"]
+    
+    
+    
+    
 
       = render 'partials/item-facts', locals={facts: @facts}
+            = render 'partials/sidebar' 
+        
 
       .item-page__news
         .container
@@ -44,9 +60,13 @@
       .item-page__share
         = render 'partials/share'
                 
-    = render 'partials/sidebar' 
+      
 
     = render 'partials/item-story', locals={stories: @stories}
 
+    
+
   = render 'partials/footer'
+
+  
 

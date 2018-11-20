@@ -1,15 +1,24 @@
+.item-page__header-nav {
+  background: linear-gradient(rgba(2, 63, 255, 0.43) 0% #4E6CCB 100%);
+}
 .item-page__links .container {
   display: flex;
-  flex-flow: row wrap;
+  justify-content: end;
+  padding-left: 175px;
+  
 }
 
 .item-page__links a {
-  flex: 1 1 auto;
-  
+  font-style: Semibold, Regular, Bold;
+  font-size: 14px;
+  margin-right: 10px;
   padding: 10px;
-  background: #dfdfdf;
-  color: #000000;
+  
+  color: #ffffff;
   text-align: center;
-  border: 2px solid #c4c4c4;
+  
+}
+.item-page__links a:hover {
+  background: rgba(246, 246, 246, 0.2);
 }
 
