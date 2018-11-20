@@ -14,10 +14,19 @@
  margin-top: 49px;
  width: 100%;
 }
+
+.how-work__items-line1  .how-work__item-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  width: 33.3%;
+}
+
 .how-work__items-line2 {
  display: flex;
  justify-content: space-around;
- padding-bottom: 120px;
+ padding: 0 112px;
  width: 100%;
 }
 .how-work__item_title {
@@ -31,6 +40,7 @@
 
 .how-work__item {
  display: flex;
+ flex: 1 0 auto;
  justify-content: center;
  align-items: center;
  border-radius: 50%;

@@ -7,130 +7,142 @@
 }
 .for-whom_line1 {
  display: flex;
- justify-content: space-around;
+ justify-content: space-between;
  margin-top: 118px;
  width: 100%;
 }
 .for-whom_line2 {
  width: 100%;
  display: flex;
- justify-content: space-around;
+ justify-content: space-between;
  margin-top: 127px; 
 }
 
 .for-whom_block {
  display: flex;
- max-width: 300px;
+ max-width: 320px;
  width: 100%;
 }
 .for-whom__description {
  max-width: 900px;
  width: 100%;
- margin-left: 73px;
+ margin-left: 25px;
 }
 a.circle {
- display: flex;
- justify-content: center;
- 
+  position: relative;
+  flex: 1 0 auto;
+
+  display: block;
+  width: 74px;
+  height: 74px;
 }
 
 .circle-1 {
- position: absolute;
- width: 91px;
- height: 91px;
- border-radius: 50%;
- border: 1px solid #9598AE;
- box-sizing: border-box;
- -webkit-border-radius: 50%;
- -moz-border-radius: 50%;
- -ms-border-radius: 50%;
- -o-border-radius: 50%;
- -webkit-transform: translate(-50% -50%);
- -moz-transform: translate(-50% -50%);
- -ms-transform: translate(-50% -50%);
- -o-transform: translate(-50% -50%);
- 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 91px;
+  height: 91px;
+
+  border-radius: 50%;
+  border: 1px solid #9598AE;
+  box-sizing: border-box;
+
+  transition: width 0.4s linear, height 0.4s linear;
 }
 .circle-2 {
  position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+
  width: 83px;
  height: 83px;
- margin: 3px;
  border-radius: 50%;
  border: 1px solid #9598AE;
  box-sizing: border-box;
- -webkit-border-radius: 50%;
- -moz-border-radius: 50%;
- -ms-border-radius: 50%;
- -o-border-radius: 50%;
+
+ transition: width 0.4s linear, height 0.4s linear;
 }
 .circle-color {
- position: relative;
- top: 0;
- left: 0;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ 
  display: flex;
  justify-content: center;
  align-items: center;
  width: 74px;
  height: 74px;
- margin: 3px;
  border-radius: 50%;
  background: #AE1926;
  box-sizing: border-box;
- -webkit-border-radius: 50%;
- -moz-border-radius: 50%;
- -ms-border-radius: 50%;
- -o-border-radius: 50%;
- -webkit-animation: color 0.3;
-}
 
-a.circle:hover .circle-1 {
- animation: outside 0.3s linear;
- -webkit-animation: outside 0.3s linear;
-}
-
-a.circle:hover .circle-2 {
- animation: inside 0.3s linear;
- -webkit-animation: inside 0.3s linear;
+ transition: width 0.4s linear, height 0.4s linear;
 }
 
 a.circle:hover .circle-color {
- animation: round 0.3s linear;
- -webkit-animation: round 0.3s linear;
+  width: 71px;
+  height: 71px;
 }
 
-@keyframes outside {
- from {
-  width: 91px;
-  height: 91px;
- }
- to {
-  width: 95px;
-  height: 95px;
- }
+a.circle:hover .circle-1 {
+  width: 98px;
+  height: 98px;
 }
 
-@keyframes inside {
- from {
-  width: 83px;
-  height: 83px;
- }
-
- to {
+a.circle:hover .circle-2 {
   width: 86px;
   height: 86px;
- }
 }
 
-@keyframes round {
- from {
-  width: 74px;
-  height: 74px;
- }
+// a.circle:hover .circle-1 {
+//  animation: outside 0.3s linear;
+// }
 
- to {
-  width: 69px;
-  height: 69px;
- }
-}
+// a.circle:hover .circle-2 {
+//  animation: inside 0.3s linear;
+// }
+
+// a.circle:hover .circle-color {
+//  animation: round 0.3s linear;
+// }
+
+// @keyframes outside {
+//  from {
+//   width: 91px;
+//   height: 91px;
+//  }
+//  to {
+//   width: 95px;
+//   height: 95px;
+//  }
+// }
+
+// @keyframes inside {
+//  from {
+//   width: 83px;
+//   height: 83px;
+//  }
+
+//  to {
+//   width: 86px;
+//   height: 86px;
+//  }
+// }
+
+// @keyframes round {
+//  from {
+//   width: 74px;
+//   height: 74px;
+//  }
+
+//  to {
+//   width: 69px;
+//   height: 69px;
+//  }
+// }
 
