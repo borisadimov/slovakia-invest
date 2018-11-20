@@ -19,10 +19,7 @@
   = render 'partials/header'
   .main-header
     .main-header__placeholder
-      video(muted loop autoplay playsinline poster="/assets/top.jpg" class="main-header__video")
-        source(src="/assets/video.mp4" type="video/mp4")
-        / source(src="/assets/video.webm" type="video/webm")
-        / source(src="/assets/video.ogv" type="video/ogg")
+      = video_tag("video.mp4", "video.ogv", autoplay: "true", loop: "true", muted: "true", class: 'main-header__video', poster: "top.jpg")
     .main-header__container.container
       .main-header__title
         | Добро пожаловать в Словакию
@@ -87,7 +84,6 @@
           .guarantee-block_descr
             | За десять лет наши клиенты не получили ни одного отказа в миграционной службе.  
 
-      
         .guarantee-block
           = image_tag("shield.png")
           h3.guarantee-block_title 
