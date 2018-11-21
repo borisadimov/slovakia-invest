@@ -22,6 +22,7 @@
 
 #### Deployment instructions
 * cap production deploy
+* bundle exec cap production deploy
 
 #### Server start
 * rails s

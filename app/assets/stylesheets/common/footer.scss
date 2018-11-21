@@ -14,7 +14,7 @@
   text-decoration: underline;
 }
 
-.footer .container {
+.footer__top-wrapper {
   display: flex;
   flex-flow: row wrap;
 
@@ -23,7 +23,7 @@
 
 .footer__item-container {
   flex: 0 1 50%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .footer__dispatch,
@@ -190,4 +190,14 @@
 
 .footer__pages-item a {
   color: #3A519A;
+}
+
+.footer__autor {
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: normal;
+
+  color: #3A519A;
+
+  opacity: 0.5;
 }

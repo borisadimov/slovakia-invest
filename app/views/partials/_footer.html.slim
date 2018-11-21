@@ -32,56 +32,60 @@ footer.footer
             .partners__item-img
               = image_tag("partner_6") 
   .container
-    form.footer__dispatch.footer__item-container(method="post")
-      .footer__dispatch-title
-        | подпишись на рассылку
-      input.footer__dispatch-email type="email" placeholder="Электронная почта"/
-      label.footer__dispatch-checkbox-wrapper
-        input type="checkbox"
-        span.footer__custom-checkbox
-        span.footer__custom-checkbox-text Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
-      button.btn.btn__dispatch 
-          | Подписаться
-    .footer__contacts.footer__item-container
-      .footer__contacts-item
-        .footer__contacts-item-title
-          | Адрес
-        .footer__contacts-item-description
-          | Lazaretska 8, 81101, bratislava, Slovakia
-      .footer__contacts-item
-        .footer__contacts-item-title
-          | E-mail
-        a.footer__contacts-item-description(href="mailto:slovakiainvest@slovakiainvest.sk")
-          | slovakiainvest@slovakiainvest.sk
-      .footer__contacts-item
-        .footer__contacts-item-title
-          | Bratislava
-        a.footer__contacts-item-description(href="tel:421232144901")
-          | +421 2 321 44 901
-      .footer__contacts-item
-        .footer__contacts-item-title
-          | Москва
-        a.footer__contacts-item-description(href="tel:74995044421")
-          | +7-499-504-4421
-      .footer__contacts-item
-        .footer__contacts-item-title
-          | Київ
-        a.footer__contacts-item-description(href="tel:380443610772")
-          | +38-044-361-07-72
-      .footer__contacts-item
-        .footer__contacts-item-title
-          | Fax
-        a.footer__contacts-item-description(href="tel:421252921319")
-          | +421 2 5292 1319
-      .footer__contacts-item.footer__contacts-socials
-        .footer__contacts-item-title
-          | Мы в сети
-        .footer__contacts-item-description
-          = render 'partials/socials'
-      .footer__pages
-        - @pages.each do |item|
-          .footer__pages-item
-            a href=item[:link] 
-              = item[:text]
+    .footer__top-wrapper
+      form.footer__dispatch.footer__item-container(method="post")
+        .footer__dispatch-title
+          | подпишись на рассылку
+        input.footer__dispatch-email type="email" placeholder="Электронная почта"/
+        label.footer__dispatch-checkbox-wrapper
+          input type="checkbox"
+          span.footer__custom-checkbox
+          span.footer__custom-checkbox-text Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
+        button.btn.btn__dispatch 
+            | Подписаться
+      .footer__contacts.footer__item-container
+        .footer__contacts-item
+          .footer__contacts-item-title
+            | Адрес
+          .footer__contacts-item-description
+            | Lazaretska 8, 81101, bratislava, Slovakia
+        .footer__contacts-item
+          .footer__contacts-item-title
+            | E-mail
+          a.footer__contacts-item-description(href="mailto:slovakiainvest@slovakiainvest.sk")
+            | slovakiainvest@slovakiainvest.sk
+        .footer__contacts-item
+          .footer__contacts-item-title
+            | Bratislava
+          a.footer__contacts-item-description(href="tel:421232144901")
+            | +421 2 321 44 901
+        .footer__contacts-item
+          .footer__contacts-item-title
+            | Москва
+          a.footer__contacts-item-description(href="tel:74995044421")
+            | +7-499-504-4421
+        .footer__contacts-item
+          .footer__contacts-item-title
+            | Київ
+          a.footer__contacts-item-description(href="tel:380443610772")
+            | +38-044-361-07-72
+        .footer__contacts-item
+          .footer__contacts-item-title
+            | Fax
+          a.footer__contacts-item-description(href="tel:421252921319")
+            | +421 2 5292 1319
+        .footer__contacts-item.footer__contacts-socials
+          .footer__contacts-item-title
+            | Мы в сети
+          .footer__contacts-item-description
+            = render 'partials/socials'
+        .footer__pages
+          - @pages.each do |item|
+            .footer__pages-item
+              a href=item[:link] 
+                = item[:text]
+    .footer__autor
+      | Все тексты, изображения, знаки, сведения и другая информация подчиняются словацкому закону № 618/2003 об авторском праве и смежных правах (Авторский закон). Использование текстов, изображений, знаков, сведений и другой информации возможно только с письменного согласия группы компаний SlovakiaInvest.
+    
 
           

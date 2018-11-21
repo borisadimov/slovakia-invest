@@ -50,7 +50,7 @@ a.circle {
   border: 1px solid #9598AE;
   box-sizing: border-box;
 
-  transition: width 0.4s linear, height 0.4s linear;
+  transition: width 0.3s linear, height 0.3s linear;
 }
 .circle-2 {
  position: absolute;
@@ -64,7 +64,7 @@ a.circle {
  border: 1px solid #9598AE;
  box-sizing: border-box;
 
- transition: width 0.4s linear, height 0.4s linear;
+ transition: width 0.3s linear, height 0.3s linear;
 }
 .circle-color {
  position: absolute;
@@ -81,12 +81,12 @@ a.circle {
  background: #AE1926;
  box-sizing: border-box;
 
- transition: width 0.4s linear, height 0.4s linear;
+ transition: width 0.3s linear, height 0.3s linear;
 }
 
 a.circle:hover .circle-color {
-  width: 71px;
-  height: 71px;
+  width: 68px;
+  height: 68px;
 }
 
 a.circle:hover .circle-1 {

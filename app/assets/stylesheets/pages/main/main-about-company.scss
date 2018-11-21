@@ -33,3 +33,14 @@
   height: 491px;
   background: image-url('about-us.png') no-repeat center/cover;
 }
+
+.about-company__link {
+  margin-top: 40px;
+
+  color: #FA1E4A;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

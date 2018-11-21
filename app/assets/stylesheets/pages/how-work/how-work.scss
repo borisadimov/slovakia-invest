@@ -117,22 +117,26 @@
 }
 
 .how-work__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  max-width: 250px;
-  width: 100%;
-  height: 250px;
+ display: flex;
+ flex: 1 0 auto;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+ max-width: 250px;
+ width: 100%;
+ height: 250px;
+
+ transition: all 0.5s ease-out;
 }
 
 .how-work__item:hover {
-  box-shadow: 10px 12px 44px rgba(76, 97, 244, 0.7);
-  transition: all 0.5s;
+  transform: scale(0.93);
+
+  box-shadow: 0px 0px 44px rgba(76, 97, 244, 0.7);
 }
 
 .how-work__item1 {
