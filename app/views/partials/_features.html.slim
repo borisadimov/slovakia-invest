@@ -1,0 +1,11 @@
+
+.features-wrap
+  - @features.each do |item|
+    .features-item data-to=item[:number_to]
+      h2
+        span 
+          = item[:number_from]
+        = ' '
+        = item[:value]
+      p 
+        = item[:text]
