@@ -249,13 +249,16 @@
 }
 
 .language__item-img {
+  position: relative;
+
   display: block;
   width: 25px;
   height: 25px;
   padding-right: 25px;
 
   border-radius: 50%;
-  background: image-url('russian.svg') no-repeat center;
+  background: image-url('russian.svg') no-repeat center/cover;
+  border: 1px solid #CBD6E9;
 }
 
 .burger {
