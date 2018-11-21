@@ -69,7 +69,7 @@ h2 {
 .btn {
   display: inline-block;
   border-radius: 33px;
-  background: $primary-color;
+  background-color: $primary-color;
 
   font-weight: bold;
   line-height: normal;
@@ -77,6 +77,12 @@ h2 {
   color: #ffffff;
 
   cursor: pointer;
+
+  transition: background-color 0.3s linear;
+}
+
+.btn:hover {
+  background-color: $link-color;
 }
 
 .btn__dispatch {
