@@ -1,5 +1,4 @@
 - @links = ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для семьи', 'ВНЖ для учебы', 'Другие ВНЖ', 'Виза', 'ПМЖ', 'Гражданство']
-
 - @news = [{url: 'vk.png', title: 'Стипендиальная программа «Я уже здесь!»', date: '27.09.2018 6:51:51', link: '/pages/blog-post.html',
  description: 'Фонд Алёны Куротовой предоставляет уникальную возможность подать заявление об оплате полуинтенсивного курса словацкого или английского языков в языковой школе iCan (даты проведения курсов: 17.09.2018 – 19.12.2018), если вы соответствуете следующим условиям:'},
  {url: 'google-plus.png', title: 'Интенсивный курс английского в школе iCan', date: '16.09.2018 12:45:30', link: '#',
@@ -9,7 +8,10 @@
 - @stories = [{avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Илларионов', position: 'Предприниматель'}, {avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Николаенко', position: 'Предприниматель'}]
-
+- @features = [{number_from: '0', number_to: '100', value: '%', text: 'Гарантия получения ВНЖ в Словакии или полный возврат денег'},
+{number_from: '0', number_to: '25', value: 'лет', text: 'На рынке бухгалтерских услуг'},
+{number_from: '0', number_to: '10', value: 'лет', text: 'Оказываем миграционные услуги в Словакию'},
+{number_from: '0', number_to: '0', value: '€', text: 'Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции'}]
 
 .item-page
   = render 'partials/header'
@@ -39,8 +41,7 @@
           .item-page__video-wrapper
             iframe[src="https://www.youtube.com/embed/tDoLUCKvLWk"]
       .container
-        = render 'partials/features'
-
+        = render 'partials/features', locals={features: @features}
       .item-page__news
         .container
           .item-page__item-title

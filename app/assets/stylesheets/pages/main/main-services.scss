@@ -47,12 +47,12 @@
 
 .services.active .services-item__card:nth-child(3):hover {
   top: -10px;
-  box-shadow: 10px 12px 44px rgba(203, 78, 78, 0.7);
+  box-shadow: 10px 12px 44px rgba(246, 139, 49, 0.7);
 }
 
 .services.active .services-item__card:nth-child(4):hover {
   top: -10px;
-  box-shadow: 10px 12px 44px rgba(203, 131, 78, 0.7);
+  box-shadow: 10px 12px 44px rgba(49, 192, 123, 1);
 }
 
 .services-item__card:after {
@@ -80,11 +80,11 @@
 }
 
 .services-item__card:nth-child(3):after {
-  background: linear-gradient(257.92deg, rgba(203, 78, 78, 0.43) 14.29%, #CB4E4E 74.04%);
+  background: linear-gradient(257.92deg, rgba(246, 139, 49, 0.43) 14.29%, #F68B31 74.04%);
 }
 
 .services-item__card:nth-child(4):after {
-  background: linear-gradient(257.92deg, rgba(209, 130, 75, 0.43) 14.29%, #CB834E 74.04%);
+  background: linear-gradient(257.92deg, rgba(49, 192, 123, 0.43) 14.29%, #31C07B 74.04%);
 }
 
 .services-item__icon {

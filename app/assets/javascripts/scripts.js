@@ -56,7 +56,7 @@ $( document ).ready(function() {
   var sceneServices = new ScrollMagic.Scene({triggerElement: ".services"})
     .offset(-100)
     .addTo(controller)
-    .addIndicators()
+    // .addIndicators()
     .setClassToggle(".services", "active")
     .on('enter', function(e) {
       sceneServices.remove()
@@ -65,22 +65,34 @@ $( document ).ready(function() {
   var sceneFeatures = new ScrollMagic.Scene({triggerElement: ".features"})
     .offset(-200)
     .addTo(controller)
-    .addIndicators()
+    // .addIndicators()
     .setClassToggle(".features", "active")
     .on('enter', function(e) {
+      var item1To =  parseFloat($('.features-item:nth-child(1)').attr('data-to'))
       $('.features-item:nth-child(1) h2 span').spincrement({
         from: 0,
-        to: 100,
+        to: item1To,
         duration: 2000
       })
+
+      var item2To =  parseFloat($('.features-item:nth-child(2)').attr('data-to'))
       $('.features-item:nth-child(2) h2 span').spincrement({
         from: 0,
-        to: 25,
+        to: item2To,
         duration: 2000
       })
+
+      var item3To =  parseFloat($('.features-item:nth-child(3)').attr('data-to'))
       $('.features-item:nth-child(3) h2 span').spincrement({
         from: 0,
-        to: 10,
+        to: item3To,
+        duration: 2000
+      })
+
+      var item4To = parseFloat($('.features-item:nth-child(4)').attr('data-to'))
+      $('.features-item:nth-child(4) h2 span').spincrement({
+        from: 0,
+        to: item4To,
         duration: 2000
       })
       sceneFeatures.remove()

@@ -1,25 +1,11 @@
 
 .features-wrap
-  .features-item
-    h2
-      span 0 
-      | % 
-    p Гарантия получения ВНЖ в Словакии или полный возврат денег
-  .features-item
-    h2 
-      span 0
-      = ' '
-      | лет
-    p На рынке бухгалтерских услуг
-  .features-item
-    h2 
-      span 0
-      = ' '
-      | лет
-    p Оказываем миграционные услуги в Словакию
-  .features-item
-    h2 
-      span 0
-      = ' '
-      | €
-    p Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции 
+  - @features.each do |item|
+    .features-item data-to=item[:number_to]
+      h2
+        span 
+          = item[:number_from]
+        = ' '
+        = item[:value]
+      p 
+        = item[:text]
