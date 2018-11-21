@@ -99,5 +99,8 @@ $( document ).ready(function() {
     })
   
   //video
-  $('.main-header__video').get(0).play()
+  var headerVideo = $('.main-header__video')
+  if (headerVideo.length > 0) {
+    $('.main-header__video').get(0).play()
+  }
 })
