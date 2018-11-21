@@ -106,12 +106,13 @@ $( document ).ready(function() {
 
   //menu
   var timerId
-  var submenu = $('.submenu-wrapper')
   var submenuBackground = $('.submenu-background')
   var navItems = $('.header__nav-item')
   navItems.each(function(i, item) {
+
     $(item).mouseenter(function(evt) {
       clearTimeout(timerId)
+      var submenu = $(item).find('.submenu-wrapper')
       if (evt.currentTarget.childNodes[1]) {
         var heightSubmenu = $(item).find(".submenu").innerHeight()
       } else {
@@ -121,10 +122,12 @@ $( document ).ready(function() {
       submenu.height(heightSubmenu)
     })
     $(item).mouseleave(function(evt) {
+      var submenu = $(item).find('.submenu-wrapper')
+
       timerId = setTimeout(function() {
         submenuBackground.height(0)
-        submenu.height(0)
       }, 400)
+      submenu.height(0)
     })
   })
 })
