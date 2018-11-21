@@ -103,4 +103,28 @@ $( document ).ready(function() {
   if (headerVideo.length > 0) {
     $('.main-header__video').get(0).play()
   }
+
+  //menu
+  var timerId
+  var submenu = $('.submenu-wrapper')
+  var submenuBackground = $('.submenu-background')
+  var navItems = $('.header__nav-item')
+  navItems.each(function(i, item) {
+    $(item).mouseenter(function(evt) {
+      clearTimeout(timerId)
+      if (evt.currentTarget.childNodes[1]) {
+        var heightSubmenu = $(item).find(".submenu").innerHeight()
+      } else {
+        var heightSubmenu = 0
+      }
+      submenuBackground.height(heightSubmenu)
+      submenu.height(heightSubmenu)
+    })
+    $(item).mouseleave(function(evt) {
+      timerId = setTimeout(function() {
+        submenuBackground.height(0)
+        submenu.height(0)
+      }, 400)
+    })
+  })
 })
