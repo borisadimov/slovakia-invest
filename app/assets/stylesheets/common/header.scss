@@ -250,8 +250,23 @@
   padding-right: 25px;
 
   border-radius: 50%;
-  background: image-url('russian.svg') no-repeat center/cover;
   border: 1px solid #CBD6E9;
+}
+
+.russian .language__item-img {
+  background: image-url('lang-russian.svg') no-repeat center/cover;
+}
+
+.ukrainian .language__item-img {
+  background: image-url('lang-ukrainian.svg') no-repeat center/cover;
+}
+
+.english .language__item-img {
+  background: image-url('lang-english.svg') no-repeat center/cover;
+}
+
+.slovak .language__item-img {
+  background: image-url('lang-slovak.svg') no-repeat center/cover;
 }
 
 .burger {
@@ -292,3 +307,13 @@
     transform: rotate(-45deg) translate(9px, -10px);
   }
 }
+
+@media (max-width: 1024px) {
+  .header__nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+} 
