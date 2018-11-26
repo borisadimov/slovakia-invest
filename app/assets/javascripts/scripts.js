@@ -36,9 +36,11 @@ $( document ).ready(function() {
   
   var languageArrowBtn = $('.language-arrow__img')
   var languageArrowBoard = $('.language-arrow')
+  var language = $('.language')
   
   languageArrowBtn.click(function() {
     languageArrowBoard.toggleClass('active')
+    language.toggleClass('active')
   })
   
   var rewiewSlider = $('.rewiews__list')
