@@ -3,6 +3,34 @@
 - @pages = [{text: 'Полезная информация', link: '/pages/news.html'}, {text:'Контакты', link: '/pages/contacts.html'}, {text:'О нас', link: '/pages/about-us.html'}]
 
 footer.footer
+  .partners-content  
+    .container  
+      h2.partners__title Партнеры
+      .partners__wrapper
+        .partners__item
+          a href='#'
+            .partners__item-img
+             = image_tag("partner_1")
+        .partners__item
+          a href='#'
+            .partners__item-img
+             = image_tag("partner_2")
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_3")
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_4")
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_5")   
+        .partners__item
+          a href='#'
+            .partners__item-img
+              = image_tag("partner_6") 
   .container
     .footer__top-wrapper
       form.footer__dispatch.footer__item-container(method="post")

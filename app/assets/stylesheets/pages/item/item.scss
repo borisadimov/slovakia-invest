@@ -13,7 +13,6 @@
 
 .item-page__item-title {
   margin-bottom: 20px;
-
   font-size: 48px;
   line-height: 62px;
   font-weight: bold;
@@ -23,4 +22,12 @@
 
 .item-page .news__content {
   padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.news__item {
+  max-width: 336px;
+}
+.item-page .features-item h2{
+  color: #023FFF;
 }
