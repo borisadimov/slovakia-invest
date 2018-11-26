@@ -317,3 +317,23 @@
     display: flex;
   }
 } 
+
+@media (max-width: 600px) {
+  .language__title {
+    flex-flow: column nowrap;
+    width: 60px;
+  }
+
+  .language-arrow {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: transparent
+
+  }
+
+  .language-arrow__img {
+    position: static;
+    transform: none;
+  }
+} 
