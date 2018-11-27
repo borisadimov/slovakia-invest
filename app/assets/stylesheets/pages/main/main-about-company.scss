@@ -44,17 +44,21 @@
     text-decoration: underline;
   }
 }
-@media (max-width: 767px) {
-  .about-company {
-    padding-top: 47px;
 
-  }
+@media (max-width: 800px) {
   .about-company__img {
     display: none;
   }
+
   .about-company__text {
     margin: 0 auto;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-company {
+    padding-top: 0;
   }
 }
 @media (max-width: 576px) {

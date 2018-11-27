@@ -45,21 +45,34 @@ h2.guarantee-title {
 	}
 }
 
-@media (max-width: 767px) {
-	.features-item h2 {
-		font-size: 39px;
-		text-align: center;
+@media (max-width: 768px) {
+	.features {
+		padding-bottom: 40px;
 	}
+
 	.features-wrap {
-		display: block;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		padding-top: 40px;
 	}
+
 	.features-item {
-		max-width: 1000px;
+		max-width: 280px;
 		width: 100%;
+		margin-bottom: 20px;
 	}
+
 	.features-item p {
 		width: 100%;
-		max-width: 1000px;
+		max-width: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 602px) {
+	.features-item {
 		text-align: center;
 	}
 }

@@ -129,8 +129,11 @@ a.circle:hover .circle-2 {
 }
 @media (max-width: 576px) {
   h2.for-whom__title {
+    margin-top: 40px;
+
     font-size: 37px;
     text-align: center;
+    line-height: 40px;
   }
 
   .for-whom_line1 {

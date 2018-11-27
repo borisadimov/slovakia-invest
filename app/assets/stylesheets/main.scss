@@ -72,6 +72,7 @@ h2 {
   line-height: normal;
   font-size: 24px;
   color: #ffffff;
+  border: none;
 
   cursor: pointer;
 
@@ -171,4 +172,8 @@ h2 {
     background: #000000;
     border-radius: 50%;
   }
+}
+
+@media (max-width: 576px) {
+  font-size: 20px;
 }

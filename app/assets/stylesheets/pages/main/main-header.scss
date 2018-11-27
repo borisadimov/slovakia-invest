@@ -82,8 +82,15 @@
   align-self: flex-start;
 }
 
+@media (max-width: 768px) {
+  .main-header__video {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .main-header__title {
     font-size: 37px;
+    line-height: 40px;
   }
 }

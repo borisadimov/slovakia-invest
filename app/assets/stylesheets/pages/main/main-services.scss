@@ -152,9 +152,6 @@
   }
 }
 
-
-
-
 .services.active {
   @for $i from 1 through 4 {
     .services-item__card:nth-child(#{$i}) {
@@ -178,10 +175,11 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .services-wrapper {
     justify-content: space-around;
   }
+
   .services-item__card {
     padding: 22px 25px 0px 30px;
     max-width: 350px;
@@ -194,6 +192,12 @@
 @media (max-width: 991px) {
   .services-item__title a {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services {
+    padding-top: 20px;
   }
 }
 
