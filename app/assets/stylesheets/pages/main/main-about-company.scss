@@ -33,3 +33,33 @@
   height: 491px;
   background: image-url('about-us.png') no-repeat center/cover;
 }
+
+.about-company__link {
+  margin-top: 40px;
+
+  color: #FA1E4A;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 767px) {
+  .about-company {
+    padding-top: 47px;
+
+  }
+  .about-company__img {
+    display: none;
+  }
+  .about-company__text {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .about-company__tite {
+    font-size: 37px;
+  }
+  
+}

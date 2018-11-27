@@ -117,7 +117,7 @@
   position: relative;
   z-index: 21;
   margin-top: 44px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .services-item__list {
@@ -133,7 +133,7 @@
 }
 
 .services-item__item {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .services-item__item a {
@@ -142,7 +142,17 @@
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
+  font-weight: bold;
+  opacity: 1;
+
+  transition: opacity 0.3s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
+
+
 
 
 .services.active {
@@ -165,5 +175,30 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-wrapper {
+    justify-content: space-around;
+  }
+  .services-item__card {
+    padding: 22px 25px 0px 30px;
+    max-width: 350px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+}
+
+@media (max-width: 991px) {
+  .services-item__title a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-item__card {
+    margin-top: 25px;
   }
 }

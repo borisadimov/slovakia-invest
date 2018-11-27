@@ -11,12 +11,12 @@
 {title: 'Выгода 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
 {title: 'Выгода 4', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
-- @rewiews = [{title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Александр', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Александр', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Иван', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Чак', img: 'manager.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
+- @rewiews = [{title: 'Иван', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Иван', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
 
 .main-page
   = render 'partials/header'
@@ -50,6 +50,8 @@
         h2.about-company__tite О компании:
         .about-company__description 
           | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
+        a.about-company__link(href="#")
+          | Узнайте подробнее о нас
       .about-company__img
   section.features 
     .container
@@ -135,31 +137,8 @@
                   .circle-color 
             .for-whom__description
               | Инвестиции и исследование рынка.
-            
+
   / .how-work
-  /   .container
-  /     h2.how-work__title Как мы работаем
-  /     .how-work__items
-  /       .how-work__items-line1
-  /         .how-work__item.how-work__item1
-  /           .how-work__item_title
-  /             | Свяжитесь с нами
-  /         .how-work__item.how-work__item2
-  /           .how-work__item_title
-  /             | Получите варианты
-  /         .how-work__item.how-work__item3
-  /           .how-work__item_title
-  /             | Пользуйтесь нашей поддержкой
-
-  /       .how-work__items-line2      
-  /         .how-work__item.how-work__item4
-  /           .how-work__item_title
-  /             | Поставьте конечную цель
-  /         .how-work__item.how-work__item5
-  /           .how-work__item_title
-  /             | Вместе добъемся результатов
-
-  .how-work
     .container
       h2.how-work__title Как мы работаем
       .how-work__items
@@ -179,8 +158,6 @@
           .how-work__item_title
             | Вместе добъемся результатов      
 
-
-
   .rewiews
     .container
       h2.rewiews__title Отзывы
@@ -192,6 +169,8 @@
             .rewiews__item-card
               .rewiews__item-title
                 = item[:title]
+              .rewiews__item-profession
+                = item[:profession]
               .rewiews__item-description
                 = item[:description]
 
@@ -200,7 +179,7 @@
       h2.partners-header__title
         | Первая консультация бесплатно
       .btn.partners-header__btn
-        | Связаться с нами     
+        | Связаться с нами       
         
   = render 'partials/footer'
   = render 'partials/menu'

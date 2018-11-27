@@ -81,3 +81,9 @@
   padding: 13px 54px;
   align-self: flex-start;
 }
+
+@media (max-width: 576px) {
+  .main-header__title {
+    font-size: 37px;
+  }
+}

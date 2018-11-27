@@ -36,9 +36,11 @@ $( document ).ready(function() {
   
   var languageArrowBtn = $('.language-arrow__img')
   var languageArrowBoard = $('.language-arrow')
+  var language = $('.language')
   
   languageArrowBtn.click(function() {
     languageArrowBoard.toggleClass('active')
+    language.toggleClass('active')
   })
   
   var rewiewSlider = $('.rewiews__list')
@@ -99,5 +101,35 @@ $( document ).ready(function() {
     })
   
   //video
-  $('.main-header__video').get(0).play()
+  var headerVideo = $('.main-header__video')
+  if (headerVideo.length > 0) {
+    $('.main-header__video').get(0).play()
+  }
+
+  //menu
+  var timerId
+  var submenuBackground = $('.submenu-background')
+  var navItems = $('.header__nav-item')
+  navItems.each(function(i, item) {
+
+    $(item).mouseenter(function(evt) {
+      clearTimeout(timerId)
+      var submenu = $(item).find('.submenu-wrapper')
+      if (evt.currentTarget.childNodes[1]) {
+        var heightSubmenu = $(item).find(".submenu").innerHeight()
+      } else {
+        var heightSubmenu = 0
+      }
+      submenuBackground.height(heightSubmenu)
+      submenu.height(heightSubmenu)
+    })
+    $(item).mouseleave(function(evt) {
+      var submenu = $(item).find('.submenu-wrapper')
+
+      timerId = setTimeout(function() {
+        submenuBackground.height(0)
+      }, 400)
+      submenu.height(0)
+    })
+  })
 })
