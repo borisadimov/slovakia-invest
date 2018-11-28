@@ -1,6 +1,8 @@
 .item-page__header {
  /* Rectangle 2.3 */
-
+.container-relative {
+ position: relative;
+}
 
 
  background: linear-gradient(222.02deg, rgba(2, 63, 255, 0.43) 14.29%, #4E6CCB 74.04%);
@@ -10,7 +12,7 @@
 .item-page__header-logo {
  position: absolute;
  left: 20px;
- top: -0;
+ top: -69px;
  z-index: 0;
 }
 .item-page__header-logo img {
@@ -18,9 +20,8 @@
 
 }
 .item-page__header-content {
- position: relative;
  padding-top: 27px;
- margin-left: 152px;
+ margin-left: 131px;
 .item-page__header-content .item-page__links .container {
  margin-left: 0;
 }
@@ -103,9 +104,12 @@ h2.more-articles-title {
 }
 .more-articles-item a {
  display: block;
- font-family: SF Pro Text;
  line-height: 30px;
  font-size: 14px;
  color: #8A9FC2;
 
+}
+
+@media (max-width: 1284px) {
+ 
 }
