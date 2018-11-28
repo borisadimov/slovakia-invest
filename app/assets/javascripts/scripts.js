@@ -131,6 +131,7 @@ $( document ).ready(function() {
       submenuBackground.height(heightSubmenu)
       submenu.height(heightSubmenu)
     })
+    
     $(item).mouseleave(function(evt) {
       var submenu = $(item).find('.submenu-wrapper')
 
