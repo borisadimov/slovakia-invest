@@ -5,13 +5,32 @@
  description: 'В наши дни сложно обойтись без знаний английского языка. Тем более, иммигрантам, приезжающим в Европу. Кто-то тратит на него изучение долгие годы...'},
  {url: 'youtube.png', title: 'Праздники и мероприятия в Братиславе и окрестностях – ', name: ' осень 2018', link: '#',
  description: 'Недавно мы напоминали вам об обязанности, действующей с 1 мая 2018:– для всех иностранцев с ВНЖ проживать в Словакии большую часть года, для тех, кто не был в Словакии с мая...'}]
+
 - @stories = [{avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Илларионов', position: 'Предприниматель'}, {avatar: 'user.svg', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident assumenda facilis voluptatum in incidunt enim vero pariatur molestiae, ipsum nulla illum molestias. Vel laudantium aspernatur error voluptates illum, blanditiis quis.',
  name: 'Александр Николаенко', position: 'Предприниматель'}]
+
 - @features = [{number_from: '0', number_to: '100', value: '%', text: 'Гарантия получения ВНЖ в Словакии или полный возврат денег'},
 {number_from: '0', number_to: '25', value: 'лет', text: 'На рынке бухгалтерских услуг'},
 {number_from: '0', number_to: '10', value: 'лет', text: 'Оказываем миграционные услуги в Словакию'},
 {number_from: '0', number_to: '0', value: '€', text: 'Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции'}]
+
+- @rewiews = [{title: 'Иван', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Александр', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Иван', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+{title: 'Чак', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
+
+- @contacts = [{name: "Екатерина Деменкова", profession: "Зам. директора по иммиграции", img: 'manager.jpg',
+ contacts_item: [{name: "Skype:", type: 'phone', text: 'slovakiainvest.ru', link: 'slovakiainvest.ru'}, {name: "Тел.:", type: 'phone', text: '+421-2-321-44-901', link: '421232144901'}, {name: "Моб.:", type: 'phone', text: '+421-908-292-115', link: '421232144901'}, {name: "email", type: 'email', text: 'Ekaterina.Pleshanova@slovakiainvest.sk'}]},
+  {name: "Екатерина Деменкова", profession: "Зам. директора по иммиграции", img: 'manager.jpg',
+ contacts_item: [{name: "Skype:", type: 'phone', text: 'slovakiainvest.ru', link: 'slovakiainvest.ru'}, {name: "Тел.:", type: 'phone', text: '+421-2-321-44-901', link: '421232144901'}, {name: "Моб.:", type: 'phone', text: '+421-908-292-115', link: '421232144901'}, {name: "email", type: 'email', text: 'Ekaterina.Pleshanova@slovakiainvest.sk'}]},
+  {name: "Екатерина Деменкова", profession: "Зам. директора по иммиграции", img: 'manager.jpg',
+ contacts_item: [{name: "Skype:", type: 'phone', text: 'slovakiainvest.ru', link: 'slovakiainvest.ru'}, {name: "Тел.:", type: 'phone', text: '+421-2-321-44-901', link: '421232144901'}, {name: "Моб.:", type: 'phone', text: '+421-908-292-115', link: '421232144901'}, {name: "email", type: 'email', text: 'Ekaterina.Pleshanova@slovakiainvest.sk'}]},
+  {name: "Екатерина Деменкова", profession: "Зам. директора по иммиграции", img: 'manager.jpg',
+ contacts_item: [{name: "Skype:", type: 'phone', text: 'slovakiainvest.ru', link: 'slovakiainvest.ru'}, {name: "Тел.:", type: 'phone', text: '+421-2-321-44-901', link: '421232144901'}, {name: "Моб.:", type: 'phone', text: '+421-908-292-115', link: '421232144901'}, {name: "email", type: 'email', text: 'Ekaterina.Pleshanova@slovakiainvest.sk'}]}]
+
 
 .item-page
   = render 'partials/header'
@@ -48,19 +67,7 @@
             | Программы
           = render 'partials/item-news', locals={news: @news}
           
-      / .rewiews
-      /     .container
-      /       h2.rewiews__title Отзывы
-      /       .rewiews__list
-      /         - @rewiews.each do |item|
-      /           .rewiews__item
-      /             .rewiews__item-img
-      /               = image_tag item[:img]
-      /             .rewiews__item-card
-      /               .rewiews__item-title
-      /                 = item[:title]
-      /               .rewiews__item-description
-      /                 = item[:description]
+      = render 'partials/rewiews', locals={rewiews: @rewiews}
       
       .any-questions
         .container
@@ -109,8 +116,9 @@
 
       .item-page__share
         = render 'partials/share'
-    = render 'partials/item-story', locals={stories: @stories}
+    / = render 'partials/item-story', locals={stories: @stories}
   = render 'partials/footer'
-
+  / .overlay
+  / = render 'partials/popup', locals={contacts: @contacts}
   
 
