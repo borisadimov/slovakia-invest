@@ -138,29 +138,34 @@
             .for-whom__description
               | Инвестиции и исследование рынка.
 
-  / .how-work
+  .how-work
     .container
-      h2.how-work__title Как мы работаем
+      h2.how-work__title Как мы работаем:
       .how-work__items
-        .how-work__item.how-work__item1
-          .how-work__item_title
-            | Свяжитесь с нами
-        .how-work__item.how-work__item2
-          .how-work__item_title
-            | Получите варианты
-        .how-work__item.how-work__item3
-          .how-work__item_title
-              | Пользуйтесь нашей поддержкой
-        .how-work__item.how-work__item4
-          .how-work__item_title
-            | Поставьте конечную цель
-        .how-work__item.how-work__item5
-          .how-work__item_title
-            | Вместе добъемся результатов      
+        .how-work__item-wrapper
+          .how-work__item.how-work__item1
+            .how-work__item_title
+              | Свяжитесь с нами
+        .how-work__item-wrapper
+          .how-work__item.how-work__item2
+            .how-work__item_title
+              | Получите варианты
+        .how-work__item-wrapper
+          .how-work__item.how-work__item3
+            .how-work__item_title
+                | Пользуйтесь нашей поддержкой
+        .how-work__item-wrapper
+          .how-work__item.how-work__item4
+            .how-work__item_title
+              | Поставьте конечную цель
+        .how-work__item-wrapper
+          .how-work__item.how-work__item5
+            .how-work__item_title
+              | Вместе добъемся результатов      
 
   .rewiews
     .container
-      h2.rewiews__title Отзывы
+      h2.rewiews__title Отзывы:
       .rewiews__list
         - @rewiews.each do |item|
           .rewiews__item

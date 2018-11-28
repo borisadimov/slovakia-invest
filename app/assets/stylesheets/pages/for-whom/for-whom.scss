@@ -99,50 +99,57 @@ a.circle:hover .circle-2 {
   height: 86px;
 }
 
-// a.circle:hover .circle-1 {
-//  animation: outside 0.3s linear;
-// }
+@media (max-width: 1024px) {
+  .for-whom__description {
+    margin-left: 17px;
+    font-size: 13px;
+    width: 66%;
+  }
+}
+@media (max-width: 767px) {
+  .for-whom_line1 {
+    display: block;
+    
+    margin-top: 50px;
+  }
+  .for-whom_line2 {
+    display: block;
+    
+    margin-top: 10px;
+    
+  }
+  .for-whom_block {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 700px;
+  }
+  .for-whom__description {
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  h2.for-whom__title {
+    margin-top: 40px;
 
-// a.circle:hover .circle-2 {
-//  animation: inside 0.3s linear;
-// }
+    font-size: 37px;
+    text-align: center;
+    line-height: 40px;
+  }
 
-// a.circle:hover .circle-color {
-//  animation: round 0.3s linear;
-// }
+  .for-whom_line1 {
+    flex-flow: row wrap;
+    
+  }
 
-// @keyframes outside {
-//  from {
-//   width: 91px;
-//   height: 91px;
-//  }
-//  to {
-//   width: 95px;
-//   height: 95px;
-//  }
-// }
+  .for-whom_line2 {
+    flex-flow: row wrap;
+    margin-top: 0;
+  }
+}
 
-// @keyframes inside {
-//  from {
-//   width: 83px;
-//   height: 83px;
-//  }
-
-//  to {
-//   width: 86px;
-//   height: 86px;
-//  }
-// }
-
-// @keyframes round {
-//  from {
-//   width: 74px;
-//   height: 74px;
-//  }
-
-//  to {
-//   width: 69px;
-//   height: 69px;
-//  }
-// }
+@media (max-width: 576px) {
+  .for-whom_block {
+    margin-top: 30px;
+  }
+}
 

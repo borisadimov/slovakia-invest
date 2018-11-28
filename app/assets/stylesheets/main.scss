@@ -72,6 +72,7 @@ h2 {
   line-height: normal;
   font-size: 24px;
   color: #ffffff;
+  border: none;
 
   cursor: pointer;
 
@@ -170,5 +171,12 @@ h2 {
     height: 3px;
     background: #000000;
     border-radius: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

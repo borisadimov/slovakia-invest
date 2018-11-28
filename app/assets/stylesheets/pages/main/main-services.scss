@@ -152,9 +152,6 @@
   }
 }
 
-
-
-
 .services.active {
   @for $i from 1 through 4 {
     .services-item__card:nth-child(#{$i}) {
@@ -175,5 +172,37 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .services-wrapper {
+    justify-content: space-around;
+  }
+
+  .services-item__card {
+    padding: 22px 25px 0px 30px;
+    max-width: 350px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+}
+
+@media (max-width: 991px) {
+  .services-item__title a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-item__card {
+    margin-top: 25px;
   }
 }
