@@ -24,5 +24,62 @@ h2.guarantee-title {
 	font-size: 48px;
 	margin-top: 62px;
 }
-	
+
+@media (max-width: 1024px) {
+	.features-item h2 {
+		font-size: 58px;
+	}
+
+	.features-item p {
+		max-width: 225px;
+		width: 100%;
+	}
+}
+@media (max-width: 991px) {
+	.features-item h2 {
+		font-size: 48px;
+	}
+
+	.features-item p {
+		width: 88%;
+	}
+}
+
+@media (max-width: 768px) {
+	.features {
+		padding-bottom: 40px;
+	}
+
+	.features-wrap {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		padding-top: 40px;
+	}
+
+	.features-item {
+		max-width: 280px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.features-item p {
+		width: 100%;
+		max-width: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 602px) {
+	.features-item {
+		text-align: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.features-wrap {
+		flex-flow: row wrap;
+	}
+}
 
