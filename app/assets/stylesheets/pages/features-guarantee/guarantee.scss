@@ -82,4 +82,25 @@
   min-height: 40px;
  }
 }
+@media (max-width: 424px) {
+ h1.page__title {
+  font-size: 51px;
+ }
+ h2.any-questions__title {
+  font-size: 37px;
+ }
+ .btn .any-questions__btn {
+  font-size: 21px;
+ }
+ .more-articles-items {
+  flex-direction: column;
+  padding-left: 0;
+ }
+ .item-page__story {
+  display: none;
+ }
+ .item-page__item-title {
+  font-size: 34px;
+ }
+}
 
