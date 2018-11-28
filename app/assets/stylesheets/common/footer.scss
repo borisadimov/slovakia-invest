@@ -245,6 +245,10 @@
     height: 25px;
   }
 
+  .footer__dispatch, .footer__pages {
+    padding-right: 0;
+  }
+
   .footer__contacts-item-description {
     word-break: break-word;
   }
@@ -256,5 +260,4 @@
   .footer__pages {
     max-width: 400px;
   }
-
 }
