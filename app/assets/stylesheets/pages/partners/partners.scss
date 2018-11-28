@@ -134,8 +134,14 @@ h2.partners-header__title {
 
 	.partners__wrapper {
  		margin-top: 45px;
-	 }
+	}
  	.partners__item {
 		margin-top: 30px;
- 	}
+	}
+	 
+	.partners-header__btn {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
