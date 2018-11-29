@@ -118,7 +118,7 @@
         = render 'partials/share'
     / = render 'partials/item-story', locals={stories: @stories}
   = render 'partials/footer'
-  / .overlay
-  / = render 'partials/popup', locals={contacts: @contacts}
+  .overlay.hidden
+  = render 'partials/popup', locals={contacts: @contacts}
   
 

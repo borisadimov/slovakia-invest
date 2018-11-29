@@ -1,25 +1,26 @@
-.popup
+.popup.hidden
   .container.popup-container
-    - @contacts.each do |contact|
-      .popup-contact
-        .popup-contact__img
-          = image_tag contact[:img]
-        .popup-contact__text
-          .popup-contact__name
-            = contact[:name]
-          .popup-contact__profession
-            = contact[:profession]
-          - contact[:contacts_item].each do |element|
-              - if element[:type] == 'phone'
-                .popup-contact__item
-                  .popup-contact__item-name
-                    = element[:name]
-                  a(href="tel:#{element[:link]}" class=".popup-contact__item-data")
-                    = element[:text]
-              - elsif element[:type] == 'email'
-                .popup-contact__item
-                  a(href="mailto:#{element[:text]}" class=".popup-contact__item-data")
-                    = element[:text]
+    .popup-content-wrapper
+      - @contacts.each do |contact|
+        .popup-contact
+          .popup-contact__img
+            = image_tag contact[:img]
+          .popup-contact__text
+            .popup-contact__name
+              = contact[:name]
+            .popup-contact__profession
+              = contact[:profession]
+            - contact[:contacts_item].each do |element|
+                - if element[:type] == 'phone'
+                  .popup-contact__item
+                    .popup-contact__item-name
+                      = element[:name]
+                    a(href="tel:#{element[:link]}" class=".popup-contact__item-data")
+                      = element[:text]
+                - elsif element[:type] == 'email'
+                  .popup-contact__item
+                    a(href="mailto:#{element[:text]}" class=".popup-contact__item-data")
+                      = element[:text]
 
               
               

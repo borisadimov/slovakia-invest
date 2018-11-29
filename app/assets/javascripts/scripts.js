@@ -42,7 +42,22 @@ $( document ).ready(function() {
     languageArrowBoard.toggleClass('active')
     language.toggleClass('active')
   })
-  
+
+  var btnQuestions = $('.any-questions__btn')
+  var overlay = $('.overlay')
+  var popup = $('.popup')
+
+  btnQuestions.click(function() {
+    popup.toggleClass('hidden')
+    overlay.toggleClass('hidden')
+  })
+
+  overlay.click(function() {
+    popup.toggleClass('hidden')
+    overlay.toggleClass('hidden')
+  })
+
+  //sliders
   var rewiewSlider = $('.rewiews__list')
   rewiewSlider.slick({
     infinite: true,
@@ -56,8 +71,25 @@ $( document ).ready(function() {
           slidesToScroll: 1
         }
       }
-  ]
+    ]
   });
+
+
+  var popupSlider = $('.popup-content-wrapper')
+  popupSlider.slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
   
   // scroll magic
   
