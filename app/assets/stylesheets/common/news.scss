@@ -1,0 +1,40 @@
+h1.page__title.news {
+	color: #000000;
+ 	text-align: left;
+	 max-width: 866px;
+	 width: 100%;
+	 font-size: 60px;
+	 padding-top: 45px;
+	 padding-left: 59px;
+}
+
+.news-page__nav {
+	display: flex;
+	// padding-left: 59px;
+}
+.cols {
+	padding-left: 69px;
+}
+
+.cols a {
+	display: block;
+	color: #333333;
+	width: 162px;
+}
+
+.search-wrap {
+	margin-left: 69px;
+	margin-top: 77px;
+	display: flex;
+
+}
+
+.search-img {
+	margin-top: 14px;
+	margin-left: 76px;
+}
+
+.news__content {
+	display: flex;
+	justify-content: space-around;
+}

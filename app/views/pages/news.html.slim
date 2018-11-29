@@ -11,14 +11,52 @@
   .page__main-wrapper
     .page__content.page__content-no-sidebar
       .container
-        h1.page__title
+        h1.page__title.news
           | Новости из Словакии: все, что касается вашего бизнеса и проживания
         .news-page__img-wrapper
-          = image_tag "blog-foto.jpg"
+          / = image_tag "blog-foto.jpg"
         .news-page__nav
-          .news-page__nav-title
-            | Метки
+          .news-page__nav-col1.cols
+            a href="#"
+              | Все 
+            a href="#"
+              | Иммиграция
+            a href="#"
+              | ВНЖ для бизнеса
+            a href="#"
+              | ВНЖ для работы
+                     
+
+
+          .news-page__nav-col2.cols
+            a href="#"
+              | ВНЖ для семьи
+            a href="#"
+              | ВНЖ для учебы
+            a href="#"
+              | Другие ВНЖ
+            a href="#"
+              | Виза ПМЖ
+
+          .news-page__nav-col3.cols
+            a href="#"
+              | Гражданство
+            a href="#"
+              | Лизинг
+            a href="#"
+              | Исследование рынка
+            a href="#"
+              | Словацкий язык
+        .search-wrap
+          .search-title
+            h2
+              | Поиск
+          .search-img
+            = image_tag "search.png"        
+
           = render 'partials/item-links', locals={links: @links}
         = render 'partials/item-news', locals={news: @news}
-        = render 'partials/pagination'
+        = render 'partials/item-news', locals={news: @news}
+        = render 'partials/item-news', locals={news: @news}
+        / = render 'partials/pagination'
   = render 'partials/footer'
