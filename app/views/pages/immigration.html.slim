@@ -35,19 +35,18 @@
 .item-page
   = render 'partials/header'
   .item-page__header
-      .container.container-relative
-        .item-page__header-logo
-            = image_tag("immigration-header-logo")
-        .item-page__header-content
-          h1.page__title
-            | Иммиграция
-          p.page-description
-            | ВНЖ позволяет иммигрировать и проживать в какой-либо стране дольше, чем это возможно по визе. Тогда как шенгенская виза дает возможность находиться на территории  Словакии и Шенгенского пространства не больше, чем 90 дней в течение шести месяцев. Получение вида на жительство позволяет его владельцу проживать в Словакии непрерывно в течение всего срока его действия, а также беспрепятственно находится в странах Шенгена до 90 дней. 
-        .item-page__header-nav       
-          = render 'partials/item-links', locals={links: @links}   
+    .container.container-relative
+      .item-page__header-logo
+          = image_tag("immigration-header-logo")
+      .item-page__header-content
+        h1.page__title
+          | Иммиграция
+        p.page-description
+          | ВНЖ позволяет иммигрировать и проживать в какой-либо стране дольше, чем это возможно по визе. Тогда как шенгенская виза дает возможность находиться на территории  Словакии и Шенгенского пространства не больше, чем 90 дней в течение шести месяцев. Получение вида на жительство позволяет его владельцу проживать в Словакии непрерывно в течение всего срока его действия, а также беспрепятственно находится в странах Шенгена до 90 дней. 
+      .item-page__header-nav       
+        = render 'partials/item-links', locals={links: @links}   
           
   .item-page__main-wrapper.page__main-wrapper
-    
     .container
       .block-detail
         h2.block-detail_title
@@ -59,22 +58,22 @@
           .container
             .item-page__video-wrapper
               iframe[src="https://www.youtube.com/embed/tDoLUCKvLWk"]
+    .container
+      = render 'partials/features', locals={features: @features}
+    .item-page__news
       .container
-        = render 'partials/features', locals={features: @features}
-      .item-page__news
-        .container
-          .item-page__item-title
-            | Программы
-          = render 'partials/item-news', locals={news: @news}
-          
-      = render 'partials/rewiews', locals={rewiews: @rewiews}
-      
-      .any-questions
-        .container
-          h2.any-questions__title
-            | Есть вопросы?
-          .btn.any-questions__btn
-            | Связаться с нами  
+        .item-page__item-title
+          | Программы
+        = render 'partials/item-news', locals={news: @news}
+        
+    = render 'partials/rewiews', locals={rewiews: @rewiews}
+    
+    .any-questions
+      .container
+        h2.any-questions__title
+          | Есть вопросы?
+        .btn.any-questions__btn
+          | Связаться с нами  
 
     .more-articles-wrapper
       .container
@@ -92,7 +91,6 @@
               | Бухучет и отчетность
             a href="#"
               |  Начисление зарплаты
-
 
           .more-articles-item
             a href="#"
@@ -114,11 +112,11 @@
             a href="#"
               | Налогооблажение недвижимости
 
-      .item-page__share
-        = render 'partials/share'
+      / .item-page__share
+      /   = render 'partials/share'
     / = render 'partials/item-story', locals={stories: @stories}
   = render 'partials/footer'
-  .overlay.hidden
+  .overlay
   = render 'partials/popup', locals={contacts: @contacts}
   
 
