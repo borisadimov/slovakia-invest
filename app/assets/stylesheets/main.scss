@@ -174,10 +174,14 @@ h2 {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 576px) {
   .container {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .btn {
