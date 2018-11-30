@@ -10,7 +10,6 @@ h1.page__title.news {
 
 .news-page__nav {
 	display: flex;
-	// padding-left: 59px;
 }
 .cols {
 	padding-left: 69px;
@@ -39,7 +38,10 @@ h1.page__title.news {
 	justify-content: space-around;
 }
 
-
+.news__content {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (max-width: 1024px) {
 	.news__content {
@@ -50,6 +52,10 @@ h1.page__title.news {
 	h1.page__title.news {
 		font-size: 43px;
 	}
+
+	.news__content {
+		flex-flow: row wrap;
+		}
 }
 
 @media (max-width: 767px) {
@@ -68,6 +74,7 @@ h1.page__title.news {
 		max-width: 500px;
 	}
 	.news__item-text {
+		max-width: 500px;
 		margin: auto;
 		padding: 5px;
 	}

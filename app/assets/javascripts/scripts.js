@@ -43,20 +43,6 @@ $( document ).ready(function() {
     language.toggleClass('active')
   })
 
-  var btnQuestions = $('.any-questions__btn')
-  var overlay = $('.overlay')
-  var popup = $('.popup')
-
-  btnQuestions.click(function() {
-    popup.toggleClass('hidden')
-    overlay.toggleClass('hidden')
-  })
-
-  overlay.click(function() {
-    popup.toggleClass('hidden')
-    overlay.toggleClass('hidden')
-  })
-
   //sliders
   var rewiewSlider = $('.rewiews__list')
   rewiewSlider.slick({
@@ -91,8 +77,23 @@ $( document ).ready(function() {
     ]
   })
   
+  // open popup
+  var btnQuestions = $('.any-questions__btn')
+  var overlay = $('.overlay')
+  var popup = $('.popup')
+
+  btnQuestions.click(function() {
+    popup.toggleClass('hidden')
+    overlay.toggleClass('hidden')
+    popupSlider.slick('setPosition')
+  })
+
+  overlay.click(function() {
+    popup.toggleClass('hidden')
+    overlay.toggleClass('hidden')
+  })
+
   // scroll magic
-  
   var controller = new ScrollMagic.Controller();
   
   var sceneServices = new ScrollMagic.Scene({triggerElement: ".services"})

@@ -15,19 +15,11 @@
                   .popup-contact__item
                     .popup-contact__item-name
                       = element[:name]
-<<<<<<< HEAD
-                    a(href="tel:#{element[:link]}" class="popup-contact__item-data")
-                      = element[:text]
-                - elsif element[:type] == 'email'
-                  .popup-contact__item
-                    a(href="mailto:#{element[:text]}" class="popup-contact__item-data")
-=======
                     a(href="tel:#{element[:link]}" class=".popup-contact__item-data")
                       = element[:text]
                 - elsif element[:type] == 'email'
                   .popup-contact__item
                     a(href="mailto:#{element[:text]}" class=".popup-contact__item-data")
->>>>>>> add popup slider
                       = element[:text]
 
               
