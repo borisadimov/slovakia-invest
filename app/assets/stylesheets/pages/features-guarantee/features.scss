@@ -56,12 +56,17 @@ h2.guarantee-title {
 		flex-flow: row wrap;
 		justify-content: space-around;
 		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 
 	.features-item {
 		max-width: 280px;
 		width: 100%;
 		margin-bottom: 20px;
+	}
+
+	.features-item:last-child {
+		margin-bottom: 0;
 	}
 
 	.features-item p {
