@@ -58,11 +58,17 @@
             a href="#"
               | Словацкий язык
         .search-wrap
-          .search-title
-            h2
-              | Поиск
-          .search-img
-            = image_tag "search.png"        
+          .search-top
+            .search-title
+              h2
+                | Поиск
+            .search-img
+              = image_tag "search.png"  
+          .search-form
+            form action="#" 
+              input type="text" name="search" placeholder="Поиск"  
+              button.search-btn.btn
+                | Поиск
 
           / = render 'partials/item-links', locals={links: @links}
         = render 'partials/item-news', locals={news: @news}
