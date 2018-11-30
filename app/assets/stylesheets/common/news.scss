@@ -1,11 +1,10 @@
 h1.page__title.news {
 	color: #000000;
  	text-align: left;
-	 max-width: 866px;
-	 width: 100%;
-	 font-size: 60px;
-	 padding-top: 45px;
-	 padding-left: 59px;
+	max-width: 866px;
+	width: 100%;
+	font-size: 60px;
+	padding-top: 45px;
 }
 
 .news-page__nav {
@@ -13,6 +12,10 @@ h1.page__title.news {
 }
 .cols {
 	padding-left: 69px;
+
+	&:first-child {
+		padding-left: 0;
+	}
 }
 
 .cols a {
@@ -21,8 +24,11 @@ h1.page__title.news {
 	width: 162px;
 }
 
+.news-page .news__item {
+	margin-bottom: 60px;
+}
+
 .search-wrap {
-	margin-left: 69px;
 	margin-top: 77px;
 	display: flex;
 
@@ -35,12 +41,17 @@ h1.page__title.news {
 
 .news__content {
 	display: flex;
-	justify-content: space-around;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-left: -15px;
+	margin-right: -15px;
 }
 
-.news__content {
-  display: flex;
-  justify-content: space-between;
+.news__item {
+	max-width: 336px;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 @media (max-width: 1024px) {
