@@ -122,7 +122,20 @@
   }
 }
 
+.item-page .rewiews {
+  background: #ffffff;
+}
+
+.item-page .rewiews__list {
+  padding-bottom: 50px;
+}
+
 @media (max-width: 768px) {
+  .rewiews {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
   .rewiews .container {
     padding-left: 0;
     padding-right: 0;
@@ -138,7 +151,7 @@
     padding-top: 10px;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 
   .rewiews__item {
@@ -170,5 +183,10 @@
 
   .rewiews .slick-next {
     right: 35px;
+  }
+
+
+  .item-page .rewiews__list {
+    padding-bottom: 15px;
   }
 }
