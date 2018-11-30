@@ -78,19 +78,33 @@ $( document ).ready(function() {
   })
   
   // open popup
+  var body = $('body')
   var btnQuestions = $('.any-questions__btn')
   var overlay = $('.overlay')
+  var popupOverlay = $('.overlay-popup')
   var popup = $('.popup')
+  var popupClose = $('.popup-close')
+
+  var togglePopup = function() {
+    popup.toggleClass('hidden')
+    popup.toggleClass('visible')
+    overlay.toggleClass('hidden')
+    overlay.toggleClass('visible')
+    body.toggleClass('scroll-remove')
+  }
 
   btnQuestions.click(function() {
-    popup.toggleClass('hidden')
-    overlay.toggleClass('hidden')
+    togglePopup()
     popupSlider.slick('setPosition')
   })
-
+  popupOverlay.click(function() {
+    togglePopup()
+  })
   overlay.click(function() {
-    popup.toggleClass('hidden')
-    overlay.toggleClass('hidden')
+    togglePopup()
+  })
+  popupClose.click(function() {
+    togglePopup()
   })
 
   // scroll magic
