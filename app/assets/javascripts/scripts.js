@@ -189,3 +189,10 @@ $( document ).ready(function() {
     })
   })
 })
+
+var searchWrapper = $('.search-wrap')
+if (searchWrapper.length > 0) {
+  $('.search-img').click(function() {
+    searchWrapper.toggleClass('open-search')
+  })
+}
