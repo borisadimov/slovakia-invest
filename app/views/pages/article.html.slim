@@ -1,14 +1,16 @@
-.blog-page
+.article-page
   = render 'partials/header'
-  .page__main-wrapper
+  .aticle__main-wrapper
     .page__content.about-us__main.page__content-no-sidebar
-      .container
-        .blog-page__img
-        h1.page__title.blog-page__title
+      .article-page__container
+        h1.article-page__title
           | Стипендиальная программа «Я уже здесь!»  
-          .blog-page__name
-            | (27.09.2018 6:51:51)
-        .blog-page__content
+        .article-page__name
+          | Автор статьи: Милан Курота 
+            
+          |  (27.09.2018 6:51:51)
+
+        .article-page__content
           p
             | Фонд Алёны Куротовой предоставляет уникальную возможность подать заявление об оплате полуинтенсивного курса словацкого или английского языков в языковой школе iCan (даты проведения курсов: 17.09.2018 – 19.12.2018), если вы соответствуете следующим условиям:
           ul.list
@@ -38,27 +40,39 @@
           p
             | Внимание: заявки принимаются до 15.10.2018.
         
-        .blog-page__autor
-          | Автор статьи: Милан Курота
-        .blog-page__autor-text
-          | Все тексты, изображения, знаки, сведения и другая информация подчиняются словацкому закону № 618/2003 об авторском праве и смежных правах (Авторский закон). Использование текстов, изображений, знаков, сведений и другой информации возможно только с письменного согласия группы компаний SlovakiaInvest.
-        form.blog-page_form action="post"
-          .blog-page__form-title.blog-page__form-title-comment
+        .blog-page__form-title.blog-page__form-title-comment
             | Комментарии
+        .block-page__wrapper
+          .blog-page__autor
+            .block-page__autor-name
+              | Kate
+            .block-page__autor-profession
+              | profession  
+            .block-page__autor-date
+              | 15.10.2018 20:35  
+          .blog-page__autor-text
+            | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, предложить свои услуги или товар из другой страны потенциальным партнерам в Словакии, заниматься здесь бизнесом или учиться, или же Вы уже живете или занимаетесь бизнесом в Словакии, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях, касающихся Словакии и развития бизнеса в других странах ЕС.
+        form.blog-page_form action="post"
+          
           .blog-page__form-title.blog-page__form-title-add
             | Добавить комментарий
-          .blog-page__form-input-wrapper
-            .blog-page__form-input-text
-              | Ваше имя
-            input type="text" name="name"
-          .blog-page__form-input-wrapper
-            .blog-page__form-input-text
-              | Ваш e-mail (будет виден только администраторам сайта)
-            input type="email" name="email"
-          .blog-page__form-input-wrapper
-            .blog-page__form-input-text
-              | Комментарий
-            textarea name="comment"
+          .blog-page__form
+            .blog-wrapper
+              .blog-page__form-input-name
+                input type="text" name="name" placeholder="Имя и Фамилия" id="name"
+          
+              .blog-page__form-input-email
+                input type="email" name="email" placeholder="Email" id="email"
+              .blog-page__form-footnote
+                | (будет виден только администраторам сайта)
+  
+          
+            .blog-page__form-input-comment
+              textarea name="comment" placeholder="Комментарий" id="comment"
+              input type="checkbox" class="checkbox" id="checkbox"
+              label for="checkbox"
+                | Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
+ 
           .btn.btn__dispatch
-            | Добавить
+            | Отправить
   = render 'partials/footer'
