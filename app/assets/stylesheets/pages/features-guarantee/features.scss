@@ -19,10 +19,12 @@
   }
 .features-item p {
 	font-size: 14px;
+	// color: #023FFF;
   }
 h2.guarantee-title {
 	font-size: 48px;
 	margin-top: 62px;
+	margin-bottom: 60px;
 }
 
 @media (max-width: 1024px) {
@@ -55,6 +57,7 @@ h2.guarantee-title {
 		flex-flow: row wrap;
 		justify-content: space-around;
 		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 
 	.features-item {
@@ -63,11 +66,19 @@ h2.guarantee-title {
 		margin-bottom: 20px;
 	}
 
+	.features-item:last-child {
+		margin-bottom: 0;
+	}
+
 	.features-item p {
 		width: 100%;
 		max-width: 100%;
 		margin-top: 0;
 		margin-bottom: 0;
+	}
+
+	h2.guarantee-title {
+		margin-bottom: 10px;
 	}
 }
 

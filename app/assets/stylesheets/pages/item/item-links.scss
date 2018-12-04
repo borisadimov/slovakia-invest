@@ -1,23 +1,17 @@
-.item-page__header-nav {
-  
-  mix-blend-mode: normal;
-}
 .item-page__links .container {
   display: flex;
+  flex-flow: row wrap;
   padding-top: 93px;
-  margin-left: 62px;
-  
 }
 
 .item-page__links a {
-  font-style: Semibold, Regular, Bold;
-  font-size: 14px;
-  margin-right: 10px;
+  display: block;
+  flex: 1 0 auto;
   padding: 10px;
-  
-  color: #ffffff;
+
+  font-size: 14px;
   text-align: center;
-  
+  color: #ffffff;
 }
 .item-page__links a:hover {
   background: rgba(246, 246, 246, 0.2);

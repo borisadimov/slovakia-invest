@@ -42,7 +42,8 @@ $( document ).ready(function() {
     languageArrowBoard.toggleClass('active')
     language.toggleClass('active')
   })
-  
+
+  //sliders
   var rewiewSlider = $('.rewiews__list')
   rewiewSlider.slick({
     infinite: true,
@@ -56,11 +57,57 @@ $( document ).ready(function() {
           slidesToScroll: 1
         }
       }
-  ]
+    ]
   });
+
+
+  var popupSlider = $('.popup-content-wrapper')
+  popupSlider.slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
   
+  // open popup
+  var body = $('body')
+  var btnQuestions = $('.any-questions__btn')
+  var overlay = $('.overlay')
+  var popupOverlay = $('.overlay-popup')
+  var popup = $('.popup')
+  var popupClose = $('.popup-close')
+
+  var togglePopup = function() {
+    popup.toggleClass('hidden')
+    popup.toggleClass('visible')
+    overlay.toggleClass('hidden')
+    overlay.toggleClass('visible')
+    body.toggleClass('scroll-remove')
+  }
+
+  btnQuestions.click(function() {
+    togglePopup()
+    popupSlider.slick('setPosition')
+  })
+  popupOverlay.click(function() {
+    togglePopup()
+  })
+  overlay.click(function() {
+    togglePopup()
+  })
+  popupClose.click(function() {
+    togglePopup()
+  })
+
   // scroll magic
-  
   var controller = new ScrollMagic.Controller();
   
   var sceneServices = new ScrollMagic.Scene({triggerElement: ".services"})
@@ -131,6 +178,7 @@ $( document ).ready(function() {
       submenuBackground.height(heightSubmenu)
       submenu.height(heightSubmenu)
     })
+    
     $(item).mouseleave(function(evt) {
       var submenu = $(item).find('.submenu-wrapper')
 
@@ -158,3 +206,10 @@ $( document ).ready(function() {
     }
   });
 })
+
+var searchWrapper = $('.search-wrap')
+if (searchWrapper.length > 0) {
+  $('.search-img').click(function() {
+    searchWrapper.toggleClass('open-search')
+  })
+}

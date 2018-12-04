@@ -21,8 +21,8 @@ body {
 .container {
   max-width: 1440px;
   width: 100%;
-  padding-left: 52/1440 * 100%;
-  padding-right: 52/1440 * 100%;
+  padding-left: 68px;
+  padding-right: 68px;
   margin: 0 auto;
 }
 
@@ -55,11 +55,6 @@ h2 {
 
 .page__content-no-sidebar {
   width: 100%;
-}
-
-.page__content-no-sidebar .container {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 
@@ -174,10 +169,34 @@ h2 {
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.popup.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay.visible {
+  opacity: 0.8;
+}
+
+.scroll-remove {
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 52/1440 * 100%;
+    padding-right: 52/1440 * 100%;
+  }
+}
+
 @media (max-width: 576px) {
   .container {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .btn {

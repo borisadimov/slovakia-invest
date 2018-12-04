@@ -106,7 +106,7 @@ a.circle:hover .circle-2 {
     width: 66%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .for-whom_line1 {
     display: block;
     
@@ -119,12 +119,48 @@ a.circle:hover .circle-2 {
     
   }
   .for-whom_block {
+    justify-content: flex-start;
+    align-items: center;
+
     margin: auto;
     margin-top: 50px;
     max-width: 700px;
   }
+
   .for-whom__description {
+    width: 100%;
+  }
+
+  a.circle {
+    flex: 0 1 auto;
+    margin-right: 30px;
+  }
+
+  .circle-color {
+    width: 55px;
+    height: 55px;
+  }
+
+  .circle-1 {
+    width: 76px;
+    height: 76px;
+  }
+
+  .circle-2 {
+    width: 66px;
+    height: 66px;
+  }
+
+  .for-whom__description {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     margin-left: 0;
+
+  }
+
+  h2.for-whom__title {
+    margin-top: 40px;
   }
 }
 @media (max-width: 576px) {

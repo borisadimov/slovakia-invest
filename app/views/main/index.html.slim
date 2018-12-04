@@ -44,6 +44,7 @@
                   li.services-item__item
                     a href="#"
                       = item
+
   .about-company
     .container
       .about-company__text
@@ -54,8 +55,10 @@
           | Узнайте подробнее о нас
       .about-company__img
   section.features 
+
     .container
       = render 'partials/features', locals={features: @features}
+
     .container
       h2.guarantee-title Мы гарантируем:
       .guarantee-wrapper
@@ -163,21 +166,7 @@
             .how-work__item_title
               | Вместе добъемся результатов      
 
-  .rewiews
-    .container
-      h2.rewiews__title Отзывы:
-      .rewiews__list
-        - @rewiews.each do |item|
-          .rewiews__item
-            .rewiews__item-img
-              = image_tag item[:img]
-            .rewiews__item-card
-              .rewiews__item-title
-                = item[:title]
-              .rewiews__item-profession
-                = item[:profession]
-              .rewiews__item-description
-                = item[:description]
+  = render 'partials/rewiews', locals={rewiews: @rewiews}
 
   .partners-header
     .container

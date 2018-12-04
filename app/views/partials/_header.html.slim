@@ -24,13 +24,15 @@
                       a href=sub_item[:link]
                         = sub_item[:text]
         .submenu-background
-    .language
-      .language__title
-        .language-arrow
-          .language-arrow__img
-        - @language.each do |name|
-          li.language__item(class=name[:text])
-            a.language__item-img href=name[:link]
+    .header__right-container
+      .language
+        .language__title
+          .language-arrow
+            .language-arrow__img
+          - @language.each do |name|
+            li.language__item(class=name[:text])
+              a.language__item-img href=name[:link]
+      a(href="/pages/about-us.html" class="header-info")
     .burger
       .burger-line
       .burger-line

@@ -17,6 +17,7 @@
 .header .container {
   padding-left: 14px;
   display: flex;
+  justify-content: space-between;
   flex-flow: row nowrap;
   align-items: center;
 }
@@ -112,6 +113,19 @@
   height: 0;
 }
 
+.header-info {
+  flex: 1 0 auto;
+
+  display: block;
+  max-width: 27px;
+  width: 27px;
+  height: 27px;
+  background: image-url('icon-info.svg') no-repeat center/contain;
+  margin-left: 20px;
+
+  cursor: pointer;
+}
+
 .header__nav-item:hover .submenu-wrapper {
   transition: all 0.3s ease-in;
 }
@@ -168,14 +182,15 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  margin-right: 1%;
+  // margin-right: 1%;
+  margin-left: 15px;
 }
 
 .language__title {
   position: relative;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row-reverse nowrap;
   justify-content: flex-start;
   align-items: center;
 }
@@ -269,6 +284,12 @@
   background: image-url('lang-slovak.svg') no-repeat center/cover;
 }
 
+.header__right-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
 .burger {
   display: none;
   flex-flow: column nowrap;
@@ -316,6 +337,14 @@
 
   .burger {
     display: flex;
+  }
+
+  .header-info {
+    display: none;
+  }
+
+  .header__right-container {
+    margin-left: auto;
   }
 } 
 
