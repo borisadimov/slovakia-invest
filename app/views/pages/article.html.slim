@@ -2,7 +2,8 @@
   = render 'partials/header'
   .aticle__main-wrapper
     .page__content.about-us__main.page__content-no-sidebar
-      .article-page__container
+      .container.article-page__container
+        a(onclick="javascript:history.back(); return false;" class="article-page__back")
         h1.article-page__title
           | Стипендиальная программа «Я уже здесь!»  
         .article-page__name
@@ -53,19 +54,16 @@
           .blog-page__autor-text
             | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, предложить свои услуги или товар из другой страны потенциальным партнерам в Словакии, заниматься здесь бизнесом или учиться, или же Вы уже живете или занимаетесь бизнесом в Словакии, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях, касающихся Словакии и развития бизнеса в других странах ЕС.
         form.blog-page_form action="post"
-          
           .blog-page__form-title.blog-page__form-title-add
             | Добавить комментарий
           .blog-page__form
             .blog-wrapper
               .blog-page__form-input-name
                 input type="text" name="name" placeholder="Имя и Фамилия" id="name"
-          
               .blog-page__form-input-email
                 input type="email" name="email" placeholder="Email" id="email"
-              .blog-page__form-footnote
-                | (будет виден только администраторам сайта)
-  
+                .blog-page__form-footnote
+                  | (будет виден только администраторам сайта)
           
             .blog-page__form-input-comment
               textarea name="comment" placeholder="Комментарий" id="comment"
@@ -76,3 +74,4 @@
           .btn.btn__dispatch
             | Отправить
   = render 'partials/footer'
+  = render 'partials/menu'
