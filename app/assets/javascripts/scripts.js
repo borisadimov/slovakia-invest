@@ -140,4 +140,21 @@ $( document ).ready(function() {
       submenu.height(0)
     })
   })
+
+  $(".footer__dispatch").validate({
+    rules: {
+      email: {
+        required: true
+      }
+    },
+    messages: {
+      email: {
+        required: 'common!',
+        email: 'email common'
+      }
+    },
+    submitHandler: function(form) {
+     
+    }
+  });
 })
