@@ -31,12 +31,62 @@ h1.page__title.news {
 .search-wrap {
 	margin-top: 77px;
 	display: flex;
+	flex-flow: column nowrap;
+}
 
+.search-form {
+	max-height: 0;
+	overflow: hidden;
+
+	transition: max-height 0.3s linear;
+}
+
+.open-search .search-form { 
+	max-height: 200px;
+}	
+
+.search-top {
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 .search-img {
 	margin-top: 14px;
 	margin-left: 76px;
+
+	cursor: pointer;
+}
+
+.search-form form {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	margin-top: 20px;
+}
+
+.search-form input {
+	max-width: 352px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 31px;
+
+	border: 1px solid #B8C5FF;
+	border-radius: 2px;
+
+	font-size: 14px;
+}
+
+.search-btn {
+	max-width: 233px;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+
+	font-size: 20px;
 }
 
 .news__content {
