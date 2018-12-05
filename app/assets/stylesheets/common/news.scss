@@ -119,7 +119,7 @@ h1.page__title.news {
 		}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.cols {
 		padding-left: 0;
 		margin: auto;
@@ -143,7 +143,13 @@ h1.page__title.news {
 		font-size: 13px;
 	}
 
+	.search-form input {
+		max-width: 100%;
+	}
 
+	.search-btn {
+		margin: 25px auto 0 auto;
+	}
 }
 
 @media (max-width: 576px) {

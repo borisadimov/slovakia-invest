@@ -181,18 +181,72 @@ $( document ).ready(function() {
     
     $(item).mouseleave(function(evt) {
       var submenu = $(item).find('.submenu-wrapper')
-
       timerId = setTimeout(function() {
         submenuBackground.height(0)
       }, 400)
       submenu.height(0)
     })
   })
-})
 
-var searchWrapper = $('.search-wrap')
-if (searchWrapper.length > 0) {
-  $('.search-img').click(function() {
-    searchWrapper.toggleClass('open-search')
-  })
-}
+
+  //search
+  // var searchWrapper = $('.search-wrap')
+  // if (searchWrapper.length > 0) {
+  //   $('.search-img').click(function() {
+  //     searchWrapper.toggleClass('open-search')
+  //   })
+  // }
+
+  // validation
+  $(".footer__dispatch").validate({
+    rules: {
+      email: {
+        required: true
+      },
+      checkbox: {
+        required: true
+      }
+    },
+    messages: {
+      email: {
+        required: 'this field is required',
+        email: 'Please enter a valid email address.'
+      }
+    },
+    submitHandler: function(form) {
+     console.log('submit')
+     form.submit()
+    }
+  });
+
+
+  if ($(".blog-page_form").length > 0) {
+    $(".blog-page_form").validate({
+      rules: {
+        name: {
+          required: true
+        },
+        email: {
+          required: true
+        },
+        comment: {
+          required: true
+        },
+        checkbox: {
+          required: true
+        }
+      },
+
+      messages: {
+        email: {
+          required: 'this field is required',
+          email: 'Please enter a valid email address.'
+        }
+      },
+      submitHandler: function(form) {
+      console.log('submit')
+      form.submit()
+      }
+    });
+  }
+})
