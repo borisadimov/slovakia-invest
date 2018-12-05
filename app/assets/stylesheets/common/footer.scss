@@ -65,6 +65,33 @@
   background: none;
 }
 
+
+.footer__dispatch-email-wrapper {
+  position: relative;
+}
+
+form label.error {
+  position: absolute;
+  top: -13px;
+  left: 0;
+
+  color: #FA1E4A;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.footer__dispatch-checkbox-wrapper label.error {
+  top: -15px;
+}
+
+.footer__dispatch-checkbox-wrapper input.error ~ .footer__custom-checkbox {
+  border: 1px solid #FA1E4A;
+}
+
+.footer__dispatch-email.error {
+  border-bottom: 1px solid rgba(250, 30, 74, 0.2);
+}
+
 .footer__dispatch-checkbox-wrapper {
   position: relative;
 
@@ -104,40 +131,22 @@
   &::after {
     content: '';
     position: absolute;
-    left: 7px;
-    top: 11px;
-    transform: rotate(-45deg);
-
-    display: block;
-    width: 17px;
-    height: 2px;
-    background: #000000;
-  }
-  &::before {
-    content: '';
-    position: absolute;
+    top: 2px;
     left: 2px;
-    top: 13px;
-    transform: rotate(45deg);
-
-    display: block;
-    width: 9px;
-    height: 2px;
-    background: #000000;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: opacity .3s linear;
+    background: image-url('/assets/tick.svg') no-repeat center/contain;
   }
 }
 
 .footer__dispatch-checkbox-wrapper input {
-  display: none;
-}
-
-.footer__dispatch-checkbox-wrapper input + .footer__custom-checkbox::after,
-.footer__dispatch-checkbox-wrapper input + .footer__custom-checkbox::before {
+  position: absolute;
   opacity: 0;
 }
 
-.footer__dispatch-checkbox-wrapper input:checked + .footer__custom-checkbox::after,
-.footer__dispatch-checkbox-wrapper input:checked + .footer__custom-checkbox::before {
+.footer__dispatch-checkbox-wrapper input:checked ~ .footer__custom-checkbox::after {
   opacity: 1;
 }
 

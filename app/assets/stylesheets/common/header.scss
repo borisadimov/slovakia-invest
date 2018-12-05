@@ -9,8 +9,6 @@
 
   font-size: 16px;
   color: #ffffff;
-
-  border-bottom: 1px solid #dad7d7 ;
   background: #ffffff;
 }
 
@@ -151,7 +149,7 @@
 .submenu-background {
   position: absolute;
   z-index: 2;
-  top: 100%;
+  top: 45px;
   left: -100vw;
   width: 200vw;
   height: 0;
@@ -159,7 +157,15 @@
   background: #ffffff;
 
   transition: all 0.4s linear;
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #dad7d7;
 }
+
+.submenu-background.active {
+  border-bottom-width: 1px;
+} 
 
 .submenu li {
   position: relative;
@@ -182,7 +188,6 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  // margin-right: 1%;
   margin-left: 15px;
 }
 
@@ -347,6 +352,12 @@
     margin-left: auto;
   }
 } 
+
+@media (max-width: 1024px) {
+  .header {
+    border-bottom: 1px solid #dad7d7;
+  }
+}
 
 @media (max-width: 600px) {
   .header {
