@@ -47,6 +47,18 @@
   margin-top: 56px;
 }
 
+.blog-page_form label.error {
+  top: -16px;
+}
+
+.blog-page__form-textarea-wrapper{
+  position: relative;
+}
+
+.blog-page__form-textarea-wrapper label.error {
+  top: 25px;
+}
+
 .blog-page__form {
   position: relative;
   max-width: 721px;
@@ -135,7 +147,6 @@
 }
 
 .blog-page_form .checkbox {
-  display: none;
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -143,7 +154,7 @@
   margin-top: 41px;
 }
 
-.blog-page_form .checkbox+label {
+.blog-page_form .checkbox ~ label {
   position: relative;
   display: block;
   padding: 0 0 0 40px;
@@ -156,7 +167,7 @@
   color: rgba(69, 68, 94, 0.5);
 }
 
-.blog-page_form .checkbox+label:before {
+.blog-page_form .checkbox~label:before {
   content: '';
   position: absolute;
   top: 1px;
@@ -167,7 +178,7 @@
   transition: .6s;
 }
 
-.blog-page_form .checkbox+label:after {
+.blog-page_form .checkbox~label:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -182,8 +193,26 @@
   background: image-url('tick.svg') no-repeat center/contain;
 }
 
-.blog-page_form .checkbox:checked+label:after {
+.blog-page_form .checkbox:checked~label:after {
   opacity: 1;
+}
+
+.blog-page__form-checkbox-wrapper {
+  position: relative;
+}
+
+.blog-page__form-checkbox-wrapper label.error {
+  position: absolute;
+  padding-left: 0;
+  color: #FA1E4A;
+}
+
+.blog-page_form .checkbox ~ label.error:before {
+  display: none;
+}
+
+.blog-page_form .checkbox ~ label.error:after {
+  display: none;
 }
 
 .btn__dispatch {
@@ -210,6 +239,18 @@
   .blog-page_form .btn__dispatch {
     margin-top: 40px;
   }
+
+  // .blog-page_form label.error {
+  //   top: -9px;
+  // }
+
+  // .blog-page__form-textarea-wrapper label.error {
+  //   top: 21px;
+  // }
+
+  // .blog-page__form-checkbox-wrapper label.error {
+  //   top: -13px;
+  // }
 }
 
 @media (max-width: 576px) {
@@ -238,28 +279,17 @@
   .btn__dispatch {
     width: 250px;
   }
+
+  .blog-page__form-textarea-wrapper label.error {
+    top: 15px;
+  }
 }
 
 @media (max-width: 424px) {
-  .blog-page__form-footnote {
-    left: 0vw;
-    top: 110px;
-    line-height: 9px;
-    font-size: 6px;
-  }
-  .blog-wrapper {
-    font-size: 11px;
-  }
-  #comment {
-    font-size: 11px;
-  }
   .blog-page__form-title-add {
     text-align: center;
   }
-  label {
-    font-size: 7px;
-    line-height: 10px; 
-  }
+
   .btn__dispatch {
     width: 162px;
     font-size: 19px;

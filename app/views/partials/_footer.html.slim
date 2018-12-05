@@ -33,12 +33,13 @@ footer.footer
               = image_tag("partner_6") 
   .container
     .footer__top-wrapper
-      form.footer__dispatch.footer__item-container(method="post")
+      form.footer__dispatch.footer__item-container(action="#" method="post")
         .footer__dispatch-title
           | подпишись на рассылку
-        input.footer__dispatch-email type="email" name="email" placeholder="Электронная почта"/
+        .footer__dispatch-email-wrapper
+          input.footer__dispatch-email type="email" name="email" placeholder="Электронная почта"
         label.footer__dispatch-checkbox-wrapper
-          input type="checkbox"
+          input type="checkbox" name="checkbox"
           span.footer__custom-checkbox
           span.footer__custom-checkbox-text Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
         button.btn.btn__dispatch 
