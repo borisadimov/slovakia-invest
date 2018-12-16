@@ -1,0 +1,55 @@
+.item-page__video-wrapper:after {
+ display: none;
+}
+
+.item-page__header-investment {
+ .container-relative {
+  position: relative;
+ }
+
+ background: linear-gradient(219.65deg, rgba(49, 192, 123, 0.43) 14.29%, #31C07B 74.04%);
+ mix-blend-mode: normal;
+}
+
+
+.item-page__header-logo_investment {
+ position: absolute;
+ left: 50px;
+ top: -22px;
+ z-index: 0;
+}
+
+.item-page__header-logo_investment img {
+ opacity: 0.4;
+}
+
+.item-page__header-nav_investment a {
+ max-width: 174px;
+ text-align: inherit;
+ margin-left: 51px;
+}
+
+.item-page__header-content {
+ padding-top: 27px;
+ margin-left: 131px;
+}
+
+
+@media (max-width: 767px) {
+ .item-page__header-content {
+  margin-left: 0;
+ }
+ .item-page__header-content {
+  margin-left: 0;
+ }
+
+ .item-page__header-nav_investment a {
+  margin-left: 0;
+  margin: auto;
+ } 
+
+ .item-page__header-logo_investment img {
+  display: none;
+ }
+}
+
