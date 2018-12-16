@@ -3,7 +3,8 @@
  {title: 'Образование', link: '#', submenu: [{text: 'Образование в Словакии', link: '#'}, {text: 'Словацкий язык', link: '#'}, {text: 'Другие языки', link: '#'}, {text: 'Нострификация диплома', link: '#'}]},
  {title: 'Инвестиции', link: '#', submenu: [{text: 'Анализ инвестиционной среды', link: '#'}, {text: 'Холдинговая компания', link: '#'}, {text: 'Инвестиционные проекты', link: '#'}, {text: 'Исследование рынка', link: '#'}, {text: 'Инвестирование в промышленность', link: '#'}, {text: 'Объекты недвижимости', link: '#'}, {text: 'Тур по объектам недвижимости', link: '#'}, {text: 'Налогообложение недвижимости', link: '#'}, {text: 'Ипотечный кредит', link: '#'}]},
  {title: 'Другие услуги', link: '#', submenu: [{text: 'Водительские права', link: '#'}, {text: 'Открытие банковского счета', link: '#'}, {text: 'Услуги переводчика', link: '#'}, {text: 'Трансфер', link: '#'}, {text: 'Резервация гостиниц и апартаментов', link: '#'}, {text: 'Лизинг', link: '#'}, {text: 'Сбережения и пенсия', link: '#'}]},
- {title: 'Цены', link: '/pages/price.html', submenu: []}]
+ {title: 'Еще', link: '', submenu: [{text: 'Цены', link: '/pages/price.html'}, {text: 'Полезная информация', link: '/pages/news.html'}, {text: 'О нас', link: '/pages/about-us.html'}]}]
+/  {title: 'Цены', link: '/pages/price.html'},
 
 - @language = [{text: 'russian', link: '#'}, {text: 'ukrainian', link: '#'}, {text: 'english', link: '#'}, {text: 'slovak', link: '#'}]
 
@@ -32,7 +33,7 @@
           - @language.each do |name|
             li.language__item(class=name[:text])
               a.language__item-img href=name[:link]
-      a(href="/pages/about-us.html" class="header-info")
+      / a(href="/pages/about-us.html" class="header-info")
     .burger
       .burger-line
       .burger-line
