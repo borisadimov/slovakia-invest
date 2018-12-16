@@ -138,11 +138,6 @@
   .how-work__item {
     width: 180px;
     height: 180px;
-
-    &:hover {
-      width: 200px;
-      height: 200px;
-    }
   }
 
   .how-work__item-wrapper:nth-child(1)::after {
