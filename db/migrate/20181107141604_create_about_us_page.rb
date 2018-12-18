@@ -2,8 +2,7 @@ class CreateAboutUsPage < ActiveRecord::Migration[5.0]
   def change
     create_table :about_us_pages do |t|
       t.integer :singleton_guard
-      t.string :title_ru, :title_en, :title_uk
-      t.text :text_ru, :text_en, :text_uk
+      t.text :content_ru, :content_en, :content_uk
 
       t.timestamps
     end

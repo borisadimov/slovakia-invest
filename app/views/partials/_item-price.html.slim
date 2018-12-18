@@ -7,15 +7,8 @@
             .item-page__price-item-title
               span
                 = price.title
-            div class=(['item-page__price-item-description', price.package.present? ? nil : 'dots'])
+            .item-page__price-item-description.dots
               span
                 = price.description
-              - unless price.package.present?
-                span.item-page__price-item-cost
-                  = price.value
-            - if price.package.present?
-              .item-page__price-item-package-wrapper
-                span.item-page__price-item-package
-                  = I18n.t("prices.packages.#{price.package}")
-                span.item-page__price-item-cost
-                  = price.value
+              span.item-page__price-item-cost
+                = price.value

@@ -10,19 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181109102226) do
+ActiveRecord::Schema.define(version: 20181219141843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "about_us_pages", force: :cascade do |t|
     t.integer  "singleton_guard"
-    t.string   "title_ru"
-    t.string   "title_en"
-    t.string   "title_uk"
-    t.text     "text_ru"
-    t.text     "text_en"
-    t.text     "text_uk"
+    t.text     "content_ru"
+    t.text     "content_en"
+    t.text     "content_uk"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
@@ -64,9 +61,9 @@ ActiveRecord::Schema.define(version: 20181109102226) do
     t.string   "title_ru"
     t.string   "title_en"
     t.string   "title_uk"
-    t.text     "text_ru"
-    t.text     "text_en"
-    t.text     "text_uk"
+    t.text     "content_ru"
+    t.text     "content_en"
+    t.text     "content_uk"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "slug"
@@ -151,6 +148,13 @@ ActiveRecord::Schema.define(version: 20181109102226) do
 
   create_table "footers", force: :cascade do |t|
     t.integer "singleton_guard"
+    t.string  "bratislava_phone"
+    t.string  "moscow_phone"
+    t.string  "kiev_phone"
+    t.string  "vk_link"
+    t.string  "facebook_link"
+    t.string  "gplus_link"
+    t.string  "youtube_link"
     t.index ["singleton_guard"], name: "index_footers_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -166,71 +170,28 @@ ActiveRecord::Schema.define(version: 20181109102226) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
-  create_table "landing_page_items", force: :cascade do |t|
-    t.integer  "block_type"
+  create_table "landing_pages", force: :cascade do |t|
+    t.integer  "singleton_guard"
     t.string   "title_ru"
     t.string   "title_en"
     t.string   "title_uk"
-    t.string   "description_ru"
-    t.string   "description_en"
-    t.string   "description_uk"
-    t.string   "logo"
-    t.integer  "landing_page_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["landing_page_id"], name: "index_landing_page_items_on_landing_page_id", using: :btree
+    t.string   "subtitle_ru"
+    t.string   "subtitle_en"
+    t.string   "subtitle_uk"
+    t.text     "about_block_text_ru"
+    t.text     "about_block_text_en"
+    t.text     "about_block_text_uk"
+    t.string   "about_block_image"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
   end
 
-  create_table "landing_pages", force: :cascade do |t|
-    t.integer  "singleton_guard"
-    t.string   "cooperation_title_ru"
-    t.string   "cooperation_title_en"
-    t.string   "cooperation_title_uk"
-    t.string   "about_title_ru"
-    t.string   "about_title_en"
-    t.string   "about_title_uk"
-    t.text     "about_text_ru"
-    t.text     "about_text_en"
-    t.text     "about_text_uk"
-    t.string   "services_title_ru"
-    t.string   "services_title_en"
-    t.string   "services_title_uk"
-    t.text     "services_text_ru"
-    t.text     "services_text_en"
-    t.text     "services_text_uk"
-    t.string   "how_work_title_ru"
-    t.string   "how_work_title_en"
-    t.string   "how_work_title_uk"
-    t.text     "how_work_text_ru"
-    t.text     "how_work_text_en"
-    t.text     "how_work_text_uk"
-    t.string   "profits_title_ru"
-    t.string   "profits_title_en"
-    t.string   "profits_title_uk"
-    t.text     "profits_text_ru"
-    t.text     "profits_text_en"
-    t.text     "profits_text_uk"
-    t.string   "for_whom_title_ru"
-    t.string   "for_whom_title_en"
-    t.string   "for_whom_title_uk"
-    t.text     "for_whom_text_ru"
-    t.text     "for_whom_text_en"
-    t.text     "for_whom_text_uk"
-    t.string   "reviews_title_ru"
-    t.string   "reviews_title_en"
-    t.string   "reviews_title_uk"
-    t.text     "reviews_text_ru"
-    t.text     "reviews_text_en"
-    t.text     "reviews_text_uk"
-    t.string   "partners_title_ru"
-    t.string   "partners_title_en"
-    t.string   "partners_title_uk"
-    t.text     "partners_text_ru"
-    t.text     "partners_text_en"
-    t.text     "partners_text_uk"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
+  create_table "partners", force: :cascade do |t|
+    t.string  "logo"
+    t.string  "url"
+    t.integer "footer_id"
+    t.index ["footer_id"], name: "index_partners_on_footer_id", using: :btree
   end
 
   create_table "posts", force: :cascade do |t|
@@ -255,8 +216,7 @@ ActiveRecord::Schema.define(version: 20181109102226) do
     t.string   "description_ru"
     t.string   "description_en"
     t.string   "description_uk"
-    t.integer  "package"
-    t.integer  "value"
+    t.string   "value"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.index ["article_id"], name: "index_prices_on_article_id", using: :btree
@@ -269,6 +229,7 @@ ActiveRecord::Schema.define(version: 20181109102226) do
     t.string   "description_ru"
     t.string   "description_en"
     t.string   "description_uk"
+    t.string   "link"
     t.text     "text_ru"
     t.text     "text_en"
     t.text     "text_uk"
@@ -284,22 +245,18 @@ ActiveRecord::Schema.define(version: 20181109102226) do
     t.string   "title_ru"
     t.string   "title_en"
     t.string   "title_uk"
-    t.text     "text_ru"
-    t.text     "text_en"
-    t.text     "text_uk"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.text     "description_ru"
+    t.text     "description_en"
+    t.text     "description_uk"
+    t.text     "content_ru"
+    t.text     "content_en"
+    t.text     "content_uk"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "slug"
     t.string   "videolink_ru"
     t.string   "videolink_en"
     t.string   "videolink_uk"
-  end
-
-  create_table "social_network_links", force: :cascade do |t|
-    t.string  "url"
-    t.string  "logo"
-    t.integer "footer_id"
-    t.index ["footer_id"], name: "index_social_network_links_on_footer_id", using: :btree
   end
 
   create_table "user_callbacks", force: :cascade do |t|
@@ -315,7 +272,6 @@ ActiveRecord::Schema.define(version: 20181109102226) do
   add_foreign_key "articles", "services"
   add_foreign_key "comments", "posts"
   add_foreign_key "employees", "services"
-  add_foreign_key "landing_page_items", "landing_pages"
+  add_foreign_key "partners", "footers"
   add_foreign_key "prices", "articles"
-  add_foreign_key "social_network_links", "footers"
 end

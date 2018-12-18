@@ -48,6 +48,7 @@ gem 'friendly_id'
 gem 'carrierwave-base64'
 gem 'mini_magick'
 gem 'kaminari'
+gem 'activeadmin_froala_editor'
 
 
 group :development, :test do

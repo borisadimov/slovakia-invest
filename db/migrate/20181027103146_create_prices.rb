@@ -4,8 +4,7 @@ class CreatePrices < ActiveRecord::Migration[5.0]
       t.references :article, index: true, foreign_key: true
       t.string :title_ru, :title_en, :title_uk
       t.string :description_ru, :description_en, :description_uk
-      t.integer :package
-      t.integer :value
+      t.string :value
 
       t.timestamps
     end

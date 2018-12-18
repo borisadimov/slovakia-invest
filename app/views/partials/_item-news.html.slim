@@ -4,11 +4,6 @@
       .news__item-text
         .news__item-text-title
           = post.title
-          span
-            | 
-            = item[:name]
-            | 
         .news__item-text-description
-          = item[:description]
-          a href=item[:link]
-            | подробнее
+          = post.short_text
+          = link_to I18n.t('posts.more'), post_path(post)

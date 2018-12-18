@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def news
-    @posts = Post.page(params[:page] || 1).per(3)
+    @posts = Post.page(params[:page] || 1).per(9)
     @articles = Article.where.not(post_ids: [])
   end
 

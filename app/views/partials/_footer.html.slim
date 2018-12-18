@@ -1,92 +1,71 @@
 
 
-- @pages = [{text: 'Полезная информация', link: '/pages/news.html'}, {text:'Контакты', link: '/pages/contacts.html'}, {text:'О нас', link: '/pages/about-us.html'}]
-
 footer.footer
-  .partners-content  
-    .container  
-      h2.partners__title Партнеры
-      .partners__wrapper
-        .partners__item
-          a href='#'
-            .partners__item-img
-             = image_tag("partner_1")
-        .partners__item
-          a href='#'
-            .partners__item-img
-             = image_tag("partner_2")
-        .partners__item
-          a href='#'
-            .partners__item-img
-              = image_tag("partner_3")
-        .partners__item
-          a href='#'
-            .partners__item-img
-              = image_tag("partner_4")
-        .partners__item
-          a href='#'
-            .partners__item-img
-              = image_tag("partner_5")   
-        .partners__item
-          a href='#'
-            .partners__item-img
-              = image_tag("partner_6") 
+  - unless @footer.partners.blank?
+    .partners-content  
+      .container  
+        h2.partners__title = I18n.t('footer.partners.title')
+        .partners__wrapper
+          - @footer.partners.each do |partner|
+            .partners__item
+              a href==partner.url
+                .partners__item-img
+                  = image_tag(partner.logo.url)
+
   .container
     .footer__top-wrapper
       form.footer__dispatch.footer__item-container(action="#" method="post")
         .footer__dispatch-title
-          | подпишись на рассылку
+          = I18n.t('footer.form.title')
         .footer__dispatch-email-wrapper
-          input.footer__dispatch-email type="email" name="email" placeholder="Электронная почта"
+          input.footer__dispatch-email type="email" name="email" placeholder== I18n.t('footer.form.email')
         label.footer__dispatch-checkbox-wrapper
           input type="checkbox" name="checkbox"
           span.footer__custom-checkbox
-          span.footer__custom-checkbox-text Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
+          span.footer__custom-checkbox-text = I18n.t('footer.form.terms')
         button.btn.btn__dispatch 
-            | Подписаться
+            = I18n.t('footer.form.submit')
       .footer__contacts.footer__item-container
-        .footer__contacts-item
-          .footer__contacts-item-title
-            | Адрес
-          .footer__contacts-item-description
-            | Lazaretska 8, 81101, bratislava, Slovakia
-        .footer__contacts-item
-          .footer__contacts-item-title
-            | E-mail
-          a.footer__contacts-item-description(href="mailto:slovakiainvest@slovakiainvest.sk")
-            | slovakiainvest@slovakiainvest.sk
+        - @footer.contacts.each do |contact|
+          .footer__contacts-item
+            .footer__contacts-item-title
+              = I18n.t("contacts.types.#{contact.contact_type}")
+            .footer__contacts-item-description
+              = contact.value
         .footer__contacts-item
           .footer__contacts-item-title
             | Bratislava
-          a.footer__contacts-item-description(href="tel:421232144901")
-            | +421 2 321 44 901
+          a.footer__contacts-item-description(href="tel:#{@footer.bratislava_phone}")
+            = @footer.bratislava_phone
         .footer__contacts-item
           .footer__contacts-item-title
             | Москва
-          a.footer__contacts-item-description(href="tel:74995044421")
-            | +7-499-504-4421
+          a.footer__contacts-item-description(href="tel:#{@footer.moscow_phone}")
+            = @footer.moscow_phone
         .footer__contacts-item
           .footer__contacts-item-title
             | Київ
-          a.footer__contacts-item-description(href="tel:380443610772")
-            | +38-044-361-07-72
-        .footer__contacts-item
-          .footer__contacts-item-title
-            | Fax
-          a.footer__contacts-item-description(href="tel:421252921319")
-            | +421 2 5292 1319
+          a.footer__contacts-item-description(href="tel:#{@footer.kiev_phone}")
+            = @footer.kiev_phone
         .footer__contacts-item.footer__contacts-socials
           .footer__contacts-item-title
-            | Мы в сети
+            = I18n.t('footer.socials.title')
           .footer__contacts-item-description
-            = render 'partials/socials'
+            .socials
+              .socials-item.vk
+                = link_to '', @footer.vk_link
+              .socials-item.fb
+                = link_to '', @footer.facebook_link
+              .socials-item.gp
+                = link_to '', @footer.gplus_link
+              .socials-item.youtube
+                = link_to '', @footer.youtube_link
         .footer__pages
-          - @pages.each do |item|
-            .footer__pages-item
-              a href=item[:link] 
-                = item[:text]
+          .footer__pages-item
+            = link_to I18n.t('footer.pages.news'), news_pages_path
+          .footer__pages-item
+            = link_to I18n.t('footer.pages.contacts'), contacts_pages_path
+          .footer__pages-item
+            = link_to I18n.t('footer.pages.about_us'), about_us_pages_path
     .footer__autor
-      | Все тексты, изображения, знаки, сведения и другая информация подчиняются словацкому закону № 618/2003 об авторском праве и смежных правах (Авторский закон). Использование текстов, изображений, знаков, сведений и другой информации возможно только с письменного согласия группы компаний SlovakiaInvest.
-    
-
-          
+      = I18n.t('footer.copyright')

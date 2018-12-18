@@ -1,5 +1,4 @@
 .item-page__links
   .container
-    - @links.each do |item|
-      a[href="#{item[:link]}"]
-        = item[:name]
+    - links.each do |link|
+      = link_to link.title, article_path(link)

@@ -1,5 +1,5 @@
 class AboutUsPage < ApplicationRecord
   include Page
 
-  translates :title, :text
+  translates :content
 end
