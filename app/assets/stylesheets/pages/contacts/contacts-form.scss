@@ -86,6 +86,10 @@
  background: url(tick.svg) no-repeat center/contain;
 }
 
+.contacts-form_checkbox__wrapper .checkbox:checked ~ label:after {
+  opacity: 1;
+}
+
 .contacts-page__form-btn-wrapper {
   display: flex;
   flex-flow: row wrap;
