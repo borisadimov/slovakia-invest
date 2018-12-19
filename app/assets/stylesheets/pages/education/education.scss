@@ -18,16 +18,20 @@
 
 .item-page__header-logo_education {
  position: absolute;
- left: 0;
- top: 44px;
+ left: -40px;
+ top: -85px;
  z-index: 0;
 }
 
 .item-page__header-logo_education img {
- opacity: 0.4;
+ opacity: 0.2;
+ width: 550px;
+ height: 550px;
 }
 
 .item-page__header-content {
+ position: relative;
+ z-index: 2;
  padding-top: 27px;
  margin-left: 131px;
 }

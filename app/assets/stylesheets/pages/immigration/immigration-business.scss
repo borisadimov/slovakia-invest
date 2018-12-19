@@ -14,7 +14,6 @@
 
 .prices {
  margin-top: 45px;
- padding-left: 95px;
 }
 
 .prices-cards__wrapper {
@@ -46,15 +45,19 @@
 }
 .prices-card:nth-child(2):hover {
  top: -10px;
- box-shadow: 10px 12px 44px rgba(69, 183, 191, 0.7);
+ box-shadow: 10px 12px 44px rgba(76, 97, 244, 0.7);
+ 
+ 
 }
 .prices-card:nth-child(3):hover {
  top: -10px;
- box-shadow: 10px 12px 44px rgba(246, 139, 49, 0.7);
+ box-shadow: 10px 12px 44px rgba(69, 183, 191, 0.7);
+ 
 }
 .prices-card:nth-child(4):hover {
  top: -10px;
- box-shadow: 10px 12px 44px rgba(49, 192, 123, 1);
+ box-shadow: 10px 12px 44px rgba(246, 139, 49, 0.7);
+ 
 }
 
 .prices-card:after {

@@ -35,7 +35,6 @@ p.page-description {
  }
 .block-detail {
  margin-top: 63px;
- margin-left: 77px;
 }
 h2.block-detail_title {
  font-family: Montserrat; 
@@ -52,8 +51,12 @@ p.block-detail_description {
 
 .item-page__video-wrapper {
  max-width: 793px;
- margin-left: 32px;
+ 
  margin-top: 20px;
+}
+
+.item-page__video .container {
+  padding-left: 0;
 }
 
 .item-page__news {
@@ -108,6 +111,13 @@ h2.more-articles-title {
  color: #8A9FC2;
 
 }
+
+
+// @media (max-width: 1284px) {
+//   .item-page__video-wrapper {
+//     margin-left: -39px;
+//   }
+// }
 
 @media (max-width: 1024px) {
   .more-articles-items {
