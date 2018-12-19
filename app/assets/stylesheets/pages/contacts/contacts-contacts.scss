@@ -111,13 +111,14 @@
   margin-top: 115px;
 }
 
-.contacts-page__blocks-wrapper {
+.contacts-page__blocks-wrapper ul {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
 }
 
 .contacts-page__blocks-wrapper a {
+  display: inline-block;
   width: 250px;
 }
 .contacts-page__blocks {
@@ -149,34 +150,32 @@
   transition: opacity 0.3s linear;
 }
 
-.contacts-page__blocks-wrapper a:nth-child(1) img {
+.contacts-page__blocks-wrapper li:nth-child(1) img {
   height: 121px;
   max-width: 82px;
 }
 
-.contacts-page__blocks-wrapper a:nth-child(2) img {
+.contacts-page__blocks-wrapper li:nth-child(2) img {
   max-width: 110px;
   right: 9px;
   top: -11px;
 }
 
-.contacts-page__blocks-wrapper a:nth-child(3) img {
+.contacts-page__blocks-wrapper li:nth-child(3) img {
   right: 10px;
   top: -23px;
   max-width: 141px;
   height: 126px;
 }
 
-.contacts-page__blocks-wrapper a:nth-child(4) img {
+.contacts-page__blocks-wrapper li:nth-child(4) img {
   height: 101px;
   top: 0;
 }
 
-.contacts-page__blocks-wrapper a:nth-child(5) img {
+.contacts-page__blocks-wrapper li:nth-child(5) img {
   display: none;
 }
-
-
 
 .contacts-page__block:hover {
   height: 120px;
@@ -184,9 +183,6 @@
       opacity: 0.4;
   }
 }
-
-
-
 
 .contacts-page__block-title {
   font-weight: bold;

@@ -238,7 +238,6 @@ $( document ).ready(function() {
   }
 
   if ($(".contacts-page__form").length > 0) {
-    console.log($(".contacts-page__form"))
     $(".contacts-page__form").validate({
       rules: {
         name: {
@@ -263,5 +262,10 @@ $( document ).ready(function() {
       form.submit()
       }
     });
+  }
+
+  // tabs
+  if ($('.tabs').length > 0) {
+    $('.tabs').tabs({})
   }
 })
