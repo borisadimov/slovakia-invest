@@ -188,15 +188,6 @@ $( document ).ready(function() {
     })
   })
 
-
-  //search
-  // var searchWrapper = $('.search-wrap')
-  // if (searchWrapper.length > 0) {
-  //   $('.search-img').click(function() {
-  //     searchWrapper.toggleClass('open-search')
-  //   })
-  // }
-
   // validation
   $(".footer__dispatch").validate({
     rules: {
@@ -219,7 +210,6 @@ $( document ).ready(function() {
     }
   });
 
-
   if ($(".blog-page_form").length > 0) {
     $(".blog-page_form").validate({
       rules: {
@@ -229,7 +219,32 @@ $( document ).ready(function() {
         email: {
           required: true
         },
-        comment: {
+        checkbox: {
+          required: true
+        }
+      },
+
+      messages: {
+        email: {
+          required: 'this field is required',
+          email: 'Please enter a valid email address.'
+        }
+      },
+      submitHandler: function(form) {
+      console.log('submit')
+      form.submit()
+      }
+    });
+  }
+
+  if ($(".contacts-page__form").length > 0) {
+    console.log($(".contacts-page__form"))
+    $(".contacts-page__form").validate({
+      rules: {
+        name: {
+          required: true
+        },
+        email: {
           required: true
         },
         checkbox: {

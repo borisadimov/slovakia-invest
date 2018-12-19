@@ -19,7 +19,9 @@
   padding-right: 23px;
   padding-left: 10px;
   padding-bottom: 30px;
+
   font-size: 13px;
+  font-weight: bold;
 }
 
 .page__content {
@@ -104,30 +106,15 @@
   margin-top: 20px;
 }
 
-
-.contacts-page__contacts-office-type_text.email::after {
-  // background: url('./letter.svg') no-repeat center/contain;
-}
-
-.contacts-page__contacts-office-type_text.phone::after {
-  // background: url('./phone.svg') no-repeat center/contain;
-}
-
-.contacts-page__contacts-office-type_text.fax::after {
-  // background: url('./fax.svg') no-repeat center/contain;
-}
-
 .contacts-page h1.page__title {
   color: #000000;
   margin-top: 115px;
 }
 
-
 .contacts-page__blocks-wrapper {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-
 }
 
 .contacts-page__blocks-wrapper a {
@@ -138,6 +125,8 @@
   
 }
 .contacts-page__block {
+  position: relative;
+
   display: flex;
   align-items: flex-end;
   max-width: 250px;
@@ -145,9 +134,7 @@
   height: 100px;
   margin-top: 20px;
   background: linear-gradient(228.08deg, rgba(2, 63, 255, 0.43) 14.29%, #4E6CCB 74.04%);
-  mix-blend-mode: normal;
   border-radius: 8px;
-  position: relative;
   padding-bottom: 10px;
   transition: height 0.3s linear;
 }
@@ -155,12 +142,41 @@
 .contacts-page__block img {
   opacity: 0;
   max-width: 93px;
-  padding-right: 12px;
+  height: 120px;
   position: absolute;
-  left: 146px;
-  top: 6px;
+  right: 20px;
+  top: 1px;
   transition: opacity 0.3s linear;
 }
+
+.contacts-page__blocks-wrapper a:nth-child(1) img {
+  height: 121px;
+  max-width: 82px;
+}
+
+.contacts-page__blocks-wrapper a:nth-child(2) img {
+  max-width: 110px;
+  right: 9px;
+  top: -11px;
+}
+
+.contacts-page__blocks-wrapper a:nth-child(3) img {
+  right: 10px;
+  top: -23px;
+  max-width: 141px;
+  height: 126px;
+}
+
+.contacts-page__blocks-wrapper a:nth-child(4) img {
+  height: 101px;
+  top: 0;
+}
+
+.contacts-page__blocks-wrapper a:nth-child(5) img {
+  display: none;
+}
+
+
 
 .contacts-page__block:hover {
   height: 120px;
@@ -188,17 +204,19 @@
   flex-flow: row wrap;
   margin-top: 87px;
 }
+
 .contacts-faces_item__name {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  line-height: 62px;
   font-size: 24px;
 }
 
-.contacts-faces_item__post {
-  margin-top: -26px;
+.contacts-faces_item__tel a,
+.contacts-faces_item__mobile a {
+  color: #000000;
 }
+
 
 .contacts-faces_item__skype {
   margin-top: 15px;
@@ -208,13 +226,8 @@
   margin-top: 103px;
 }
 
-
-@media (max-width: 1284px) {
-
-}
-
-@media (max-width: 1024px) {
-
+.contacts-faces_item {
+  font-weight: bold;
 }
 
 @media (max-width: 991px) {
