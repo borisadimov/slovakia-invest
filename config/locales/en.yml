@@ -4,11 +4,11 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t 'hello'
+#     I18n.t "hello"
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%= t("hello") %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -20,4 +20,130 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  available_locales:
+    ru: "Russian"
+    en: "English"
+    uk: "Ukranian"
+    sk: "Slovak"
+  header_menu:
+    more:
+      title: "More"
+      items:
+        about_us: "About us"
+        prices: "Prices"
+        news: "Useful information"
+  landing:
+    contact_us_button: "Contact Us"
+    about_us_block:
+      title: "About company"
+      link: "Learn more about us"
+    features_block:
+      years: "years"
+      items: [
+        "The guarantee of obtaining a residence permit in Slovakia or a full refund",
+        "In the market of accounting services",
+        "We provide migration services to Slovakia",
+        "Our clients paid for our accounting errors or in the migration police"
+      ]
+    guarantees_block:
+      title: "We guarantee"
+      items: [
+        { title: "Trouble-free obtaining a residence permit", description: "For ten years, our clients have not received a single refusal in the migration service." },
+        { title: "Honesty and decency", description: "We openly provide all information without hiding details and future commitments." },
+        { title: "Individual approach", description: "We will solve any non-standard question or problem, based on your needs." },
+        { title: "Availability", description: "We are always there, you can contact in any convenient way." }
+      ]
+    for_whom_block:
+      title: "Who are our services for"
+      items: [
+        "Registration of residence permit in Slovakia for business, work, study or family reunification, with the prospect of obtaining permanent residence and citizenship.",
+        "Full business support, including a full range of accounting services, filing reports, payroll, solving any unusual situations.",
+        "Investment projects and general analysis of the investment environment. Ready working business offers and turnkey business search.",
+        "Slovak education, preparation for university entrance, higher education, Russian language for children in Slovakia.",
+        "Real estate in Slovakia: purchase, sale, rental of residential and non-residential real estate, real estate investments.",
+        "Other services for business, work, study and just life in Slovakia. Contact us, we will not leave you!"
+      ]
+    how_work_block:
+      title: "How we are working"
+      items: [
+        "Contact us",
+        "Get options",
+        "Use our support",
+        "Set your goal",
+        "Together we will achieve results"
+      ]
+    contact_us_block:
+      title: "First consultation for free"
+      button: "Contact us"
+  reviews:
+    title: "Reviews"
+  pages:
+    posts: "Programs"
+    any_questions_block:
+      title: "Have questions"
+      button: "Contact Us"
+    more: "More articles"
+  prices:
+    title: "Prices"
+    all_prices: "All prices"
+  posts:
+    headline: "News from Slovakia: everything related to your business and residence"
+    tags: "Tags"
+    more: "more"
+    author: "Post Author"
+    copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
+    comments:
+      headline: "Comments"
+      form:
+        headline: "Add comment"
+        name: "Your name"
+        email: "Your e-mail (will be visible only to site administrators)"
+        comment: "Comment"
+        submit: "Add"
+  contacts:
+    title: "Contacts"
+    types:
+      phone: "Phone"
+      email: "E-mail"
+      fax: "Fax"
+      address: "Address"
+      skype: "Skype"
+    form:
+      name: "Your first and last name"
+      email: "Your email"
+      phone: "Your phone"
+      source: "How did you hear about us"
+      source_types:
+        not_specified: "Not specified"
+        advertising: "Advertising"
+        search_system: "Search system"
+        other: "Other"
+      text: "Additional suggestions"
+      submit: "Submit"
+  footer:
+    partners:
+      title: "Partners"
+    form:
+      title: "Sign up for the newsletter"
+      email: "Email"
+      terms: "I accept the terms of the personal data processing policy and hereby I consent to the processing of my personal data"
+      submit: "Subscribe"
+    socials:
+      title: "Our Socials"
+    pages:
+      about_us: "About us"
+      news: "Useful information"
+      contacts: "Contacts"
+    copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
+  menu:
+    pages:
+      main: "Main page"
+      reviews: "Reviews"
+      about_us: "About us"
+      news: "Useful information"
+      contacts: "Contacts"
+      prices: "Prices"
+  time:
+    formats:
+      default: "%Y.%m.%d %H:%M:%S"
+    

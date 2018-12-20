@@ -2,20 +2,13 @@
   .container
     .item-page__price-content-wrapper
       .item-page__price-content
-        - locals[:price].each do |item|
+        - prices.each do |price|
           .item-page__price-item
             .item-page__price-item-title
               span
-                = item[:name]
-            div class=(['item-page__price-item-description', item[:package].empty? ? 'dots' : nil ])
+                = price.title
+            .item-page__price-item-description.dots
               span
-                = item[:description]  
-              - if item[:package].empty?
-                span.item-page__price-item-cost
-                  = item[:cost]
-            - if !item[:package].empty?
-              .item-page__price-item-package-wrapper
-                span.item-page__price-item-package
-                  = item[:package]
-                span.item-page__price-item-cost
-                  = item[:cost]
+                = price.description
+              span.item-page__price-item-cost
+                = price.value

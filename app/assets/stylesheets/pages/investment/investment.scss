@@ -2,7 +2,7 @@
  display: none;
 }
 
-.item-page__header-investment {
+.item-page__header-investments {
  .container-relative {
   position: relative;
  }
@@ -12,18 +12,18 @@
 }
 
 
-.item-page__header-logo_investment {
+.item-page__header-logo_investments {
  position: absolute;
  left: 50px;
  top: -22px;
  z-index: 0;
 }
 
-.item-page__header-logo_investment img {
+.item-page__header-logo_investments img {
  opacity: 0.4;
 }
 
-.item-page__header-nav_investment a {
+.item-page__header-nav_investments a {
  max-width: 174px;
  text-align: inherit;
  margin-left: 51px;
@@ -43,12 +43,12 @@
   margin-left: 0;
  }
 
- .item-page__header-nav_investment a {
+ .item-page__header-nav_investments a {
   margin-left: 0;
   margin: auto;
  } 
 
- .item-page__header-logo_investment img {
+ .item-page__header-logo_investments img {
   display: none;
  }
 }

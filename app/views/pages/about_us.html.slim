@@ -1,0 +1,7 @@
+.about-us
+  = render 'partials/header'
+  .page__main-wrapper
+    .page__content.page__content-no-sidebar
+      .container
+        h1.page__title
+        = @about_us_page.content.html_safe

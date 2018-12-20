@@ -1,25 +1,16 @@
 .item-page__story
   .container
     .item-page__item-title
-      | Истории клиентов
+      = I18n.t('pages.stories')
     .item-page__story-content
-      - @stories.each do |item|
+      - reviews.each do |review|
         .item-page__story-content-item
-          = image_tag item[:avatar], class:"item-page__story-content-avatar"
+          = image_tag review.avatar.url || 'user.svg', class:"item-page__story-content-avatar"
           .item-page__story-content-text-wrapper
             .item-page__story-content-text
-              = item[:text]
+              = review.text
             .item-page__story-content-name-wrapper
               .item-page__story-content-name
-                = item[:name]
-              .name-links__wrapper
-                .name-link
-                  a.fb href="#"
-                .name-link
-                  a.od href="#"
-                .name-link
-                  a.vk href="#"
+                = review.name
               .item-page__story-content-position
-                = item[:position]
-    a.item-page__story-more.more href="#"
-      | Еще отзывы
+                = review.description

@@ -1,42 +1,15 @@
 .menu
   .menu-wrapper.container
     ul.menu-list
-      li
-        a.menu-item__link(href="#")
-          | Главная
-      li
-        a.menu-item__link(href="#")
-          | Иммиграция
-      li
-        a.menu-item__link(href="#")
-          | Бизнес
-      li
-        a.menu-item__link(href="#")
-          | Образование
-      li
-        a.menu-item__link(href="#")
-          | Инвестиции 
-      li
-        a.menu-item__link(href="#")
-          | Другие услуги
+      li = link_to I18n.t('menu.pages.main'), root_path, class: 'menu-item__link'
+      - @menu_services.each do |service|
+        li = link_to service.title, service_path(service), class: 'menu-item__link'
     ul.menu-list
-      li
-        a.menu-item__link(href="#")
-          | Цены
-      li
-        a.menu-item__link(href="#")
-          | Отзывы 
-      li
-        a.menu-item__link(href="#")
-          | Полезная информация
-      li
-        a.menu-item__link(href="#")
-          | О нас 
-      li
-        a.menu-item__link(href="#")
-          | Контакты 
+      li = link_to I18n.t('menu.pages.prices'), prices_pages_path, class: 'menu-item__link'
+      li = link_to I18n.t('menu.pages.reviews'), '', class: 'menu-item__link'
+      li = link_to I18n.t('menu.pages.news'), news_pages_path, class: 'menu-item__link'
+      li = link_to I18n.t('menu.pages.about_us'), about_us_pages_path, class: 'menu-item__link'
+      li = link_to I18n.t('menu.pages.contacts'), contacts_pages_path, class: 'menu-item__link'
       li.menu-item__soc
         .menu-item__link
           = render 'partials/socials'
-  / .menu__banner
-    

@@ -1,0 +1,11 @@
+div class=("item-page__header-#{service.slug}")
+  .container.container-relative
+    div class=("item-page__header-logo_#{service.slug}")
+        = image_tag("#{service.slug}-header-logo")
+    .item-page__header-content
+      h1.page__title
+        = service.title
+      p.page-description
+        = service.description
+    div class=("item-page__header-nav_#{service.slug}")       
+      = render 'partials/item-links', links: service.articles

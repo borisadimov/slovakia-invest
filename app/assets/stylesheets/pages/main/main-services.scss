@@ -8,6 +8,12 @@
   justify-content: space-between;
 }
 
+.services__description {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 .services-item {
   display: flex;
   flex-flow: row nowrap;

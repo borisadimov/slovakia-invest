@@ -1,0 +1,79 @@
+.item-page
+  = render 'partials/service-header', service: @article.service
+          
+  .item-page__main-wrapper.page__main-wrapper
+    .container
+        .block-detail
+          = @article.content.html_safe
+    
+  - unless @article.prices.blank?
+    .prices
+      .container
+        h2.prices-title
+          = I18n.t('prices.title')
+
+        .prices-cards__wrapper
+          - @article.prices.first(4).each do |price|
+            .prices-card
+              h3.prices-card_title
+                = price.title
+              p.prices-card_subtitle
+                = price.description
+              span.price-total
+                = price.value
+
+        .prices-allprices
+          .allprices
+            = I18n.t('prices.all_prices')   
+          .prices-down  
+            = image_tag("down-button-black")  
+
+        .prices-wrapper
+          - @article.prices.each_slice((@article.prices.size / 2.0).round) do |slice|
+            .prices-block
+              - slice.each do |price|
+                .prices-item
+                  .prices-item__left
+                    h3.prices-item__title
+                      = price.title + ':'
+                    p.prices-item__description
+                      = price.description
+                  .prices-item__right    
+                    span.price-total
+                      = price.value
+
+  - unless @article.posts.blank?
+      .item-page__news
+        .container
+          .item-page__item-title
+            = I18n.t('pages.posts')
+          = render 'partials/item-news', posts: @article.posts.first(3)   
+
+  .immigration-business__contacts
+    .container
+      h2.immigration-business__contacts-title
+        = I18n.t('contacts.title')
+      .business__contacts-wrapper
+        - @article.service.employees.first(2).each do |employee|
+          .business__contacts-item
+            .contacts-item__img
+              = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts"
+            .contacts-item__name
+              = employee.name
+            .contacts-item__post.customize
+              = employee.position
+            - employee.contacts.each do |contact|
+              .contacts-item__tel.customize
+                = I18n.t("contacts.types.#{contact.contact_type}") + ': ' + contact.value
+
+    .more-articles-wrapper
+      .container
+        h2.more-articles-title
+          = I18n.t('pages.more')
+        .more-articles-items
+          - @more_articles.each_slice(5) do |slice|
+            .more-articles-item
+              - slice.each do |article|
+                = link_to article.title, article_path(article)
+
+  = render 'partials/menu'

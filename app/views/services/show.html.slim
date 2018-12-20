@@ -1,0 +1,39 @@
+.item-page
+  = render 'partials/service-header', service: @service
+          
+  .item-page__main-wrapper.page__main-wrapper
+    .container
+      .block-detail
+        = @service.content.html_safe if @service.content.present?
+        
+    - unless @service.posts.blank?
+      .item-page__news
+        .container
+          .item-page__item-title
+            = I18n.t('pages.posts')
+          = render 'partials/item-news', posts: @service.posts.first(3)
+        
+    = render 'partials/reviews', reviews: @service.reviews
+    
+    .any-questions
+      .container
+        h2.any-questions__title
+          = I18n.t('pages.any_questions_block.title') + '?'
+        .btn.any-questions__btn
+          = I18n.t('pages.any_questions_block.button')
+
+    .more-articles-wrapper
+      .container
+        h2.more-articles-title
+          = I18n.t('pages.more')
+        .more-articles-items
+          - @more_articles.each_slice(5) do |slice|
+            .more-articles-item
+              - slice.each do |article|
+                = link_to article.title, article_path(article)
+
+  = render 'partials/menu'
+  .overlay.hidden
+  = render 'partials/popup', employees: @service.employees
+  
+

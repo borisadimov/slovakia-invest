@@ -41,9 +41,14 @@ gem 'metamagic'
 gem 'active_admin_theme'
 gem 'slim-rails'
 
-
 gem 'devise'
-
+gem 'traco'
+gem 'subdomain_locale'
+gem 'friendly_id'
+gem 'carrierwave-base64'
+gem 'mini_magick'
+gem 'kaminari'
+gem 'activeadmin_froala_editor'
 
 
 group :development, :test do
