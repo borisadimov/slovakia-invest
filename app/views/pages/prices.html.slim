@@ -6,8 +6,15 @@
           | Прайслист Наши расценки
         h2.service-title
           | Услуга
-        h3.service-global.first
-          | Фирма в Словакии    
+        / h3.service-global.first
+        /     | Фирма в Словакии 
+
+        .service-global__line  
+          .service-global__title
+            | Фирма в Словакии
+          .service-global__cross          
+
+
         .price-page__content
           / - @services.each_with_index do |service, index|
           /   - unless service.prices.blank?
