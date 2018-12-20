@@ -5,11 +5,11 @@
         h1.page__title
           = I18n.t('prices.title')
         .price-page__content
-          - @services.each_with_index do |service, index|
-            - unless service.prices.blank?
-              div(class="price-page__item price-page__item-#{index}")
-                .price-page__item-title.drop-down__title
-                  = image_tag "down-button-black.svg"
-                  = service.title
-                .price-page__item-content
-                  = render 'partials/item-price', prices: service.prices
+          / - @services.each_with_index do |service, index|
+          /   - unless service.prices.blank?
+          /     div(class="price-page__item price-page__item-#{index}")
+          /       .price-page__item-title.drop-down__title
+          /         = image_tag "down-button-black.svg"
+          /         = service.title
+          /       .price-page__item-content
+          /         = render 'partials/item-price', prices: service.prices
