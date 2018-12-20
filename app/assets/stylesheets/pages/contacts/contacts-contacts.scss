@@ -140,6 +140,18 @@
   transition: height 0.3s linear;
 }
 
+.contacts-page__block.block-business img {
+  max-width: 132px;
+  left: 127px;
+  top: -3px;
+}
+
+.contacts-page__block.block-education img {
+  // max-width: 180px;
+  // top: -28px;
+  // left: 82px;
+}
+
 .contacts-page__block img {
   opacity: 0;
   max-width: 93px;
