@@ -1,181 +1,99 @@
-- @features = [{number_from: '0', number_to: '100', value: '%', text: 'Гарантия получения ВНЖ в Словакии или полный возврат денег'},
-  {number_from: '0', number_to: '25', value: 'лет', text: 'На рынке бухгалтерских услуг'},
-  {number_from: '0', number_to: '10', value: 'лет', text: 'Оказываем миграционные услуги в Словакию'},
-  {number_from: '0', number_to: '0', value: '€', text: 'Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции'}]
-- @services_nav = [{title: 'Иммиграция', items: ['ВНЖ для бизнеса', 'ВНЖ для работы', 'ВНЖ для учебы', 'Виза', 'ПМЖ', 'Гражданство']},
- {title: 'Бизнес', items: ['Учреждение фирмы', 'Банковский счет', 'Бухучет и отчетность', 'Начисление зарплаты', 'Аудит', 'Другие обязательства', 'Регистрация торговой марки']},
- {title: 'Образование', items: ['Образование в Словакии', 'Словацкий язык', 'Другие языки', 'Нострификация диплома']},
- {title: 'Инвестиции', items: ['Анализ инвестиционной среды', 'Холдинговая компания', 'Инвестиционные проекты', 'Исследование рынка', 'Инвестирование в промышленность', 'Объекты недвижимости', 'Тур по объектам недвижимости', 'Налогообложение недвижимости', 'Ипотечный кредит']}]
-- @how_work = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.']
-- @profit = [{title: 'Выгода 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Выгода 2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Выгода 3', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Выгода 4', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
-- @rewiews = [{title: 'Иван', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Александр', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Чак', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Александр', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Иван', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-{title: 'Чак', img: 'manager.jpg', profession: 'profession', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}]
+- @features = [{number_from: '0', number_to: '100', value: '%'},
+  {number_from: '0', number_to: '25', value: I18n.t('landing.features_block.years')},
+  {number_from: '0', number_to: '10', value: I18n.t('landing.features_block.years')},
+  {number_from: '0', number_to: '0', value: '€'}]
+- @guarantees = [{img: "house.png"}, {img: "shield.png"}, {img: "human.png"}, {img: "star.png"}]
 
 .main-page
-  = render 'partials/header'
   .main-header
     .main-header__placeholder
       = video_tag("video.mp4", "video.ogv", autoplay: "true", loop: "true", muted: "true", class: 'main-header__video', poster: "top.jpg")
     .main-header__container.container
-      .main-header__title
-        | Добро пожаловать в Словакию
-      .main-header__sub-title
-        | Иммиграция. Бизнес. Инвестиции. Образование.
-      .btn.main-header__btn
-        | Связаться с нами
+      .main-header__title = @landing_page.title
+      .main-header__sub-title = @landing_page.subtitle
+      .btn.main-header__btn = I18n.t('landing.contact_us_button')
   .services
     .container
       .services-wrapper
-        - @services_nav.each_with_index do |item, index|
+        - @services.first(4).each_with_index do |service, index|
           .services-item__card
             div(class="services-item__icon services-item__icon-#{index}")
             .services-item__title
-              a href="#"
-                = item[:title]
+              = link_to service.title, service_path(service)
             ul.services-item__list
-              - item[:items].each_with_index do |item, index|
+              - service.articles.each do |article|
                   li.services-item__item
-                    a href="#"
-                      = item
+                    = link_to article.title, article_path(article)
 
   .about-company
     .container
       .about-company__text
-        h2.about-company__tite О компании:
+        h2.about-company__tite
+          = I18n.t('landing.about_us_block.title') + ':'
         .about-company__description 
-          | Группа компаний SlovakiaInvest является одним из ведущих игроков на словацком рынке услуг для иностранных клиентов. Независимо от того, хотите ли вы перебраться в Словакию, заниматься здесь бизнесом, получить высшее образование или работать, в нашем лице вы нашли партнера, который поможет вам в ваших намерениях. Мы поможет вам в иммиграции в Словакию законным путем с соблюдением всех требований словацкого и европейского законодательства, что даст вам возможность получения вида на жительство в Словакии, в дальнейшем постоянного места жительства и, в случае необходимости, и получения гражданства.
-        a.about-company__link(href="#")
-          | Узнайте подробнее о нас
+          = @landing_page.about_block_text
+        = link_to I18n.t('landing.about_us_block.link'), about_us_pages_path, class: 'about-company__link'
       .about-company__img
+  
   section.features 
-
     .container
       = render 'partials/features', locals={features: @features}
 
     .container
-      h2.guarantee-title Мы гарантируем:
+      h2.guarantee-title = I18n.t('landing.guarantees_block.title') + ':'
       .guarantee-wrapper
-        .guarantee-block
-          = image_tag("house.png")
-          h3.guarantee-block_title 
-            | Безотказное получение ВНЖ
-          .guarantee-block_descr
-            | За десять лет наши клиенты не получили ни одного отказа в миграционной службе.  
+        - @guarantees.each_with_index do |guarantee, index|
+          .guarantee-block
+            = image_tag(guarantee[:img])
+            h3.guarantee-block_title
+              = I18n.t('landing.guarantees_block.items')[index][:title]
+            .guarantee-block_descr
+              = I18n.t('landing.guarantees_block.items')[index][:description]
 
-        .guarantee-block
-          = image_tag("shield.png")
-          h3.guarantee-block_title 
-            | Честность и порядочность
-          .guarantee-block_descr
-            | Мы открыто предоставляем всю информацию, не утаивая деталей и будущих обязательств.
-
-        .guarantee-block
-          = image_tag("human.png")
-          h3.guarantee-block_title 
-            | Индивидуальный подход
-          .guarantee-block_descr
-            | Решим любой нестандартный вопрос или проблему, исходя из Ваших потребностей.
-
-        .guarantee-block
-          = image_tag("star.png")
-          h3.guarantee-block_title 
-            | Доступность 
-      
-          .guarantee-block_descr
-            | Мы всегда рядом, Вы можете связаться любым удобным Вам способом.
   section
     .container
       h2.for-whom__title
-        | Для кого наши услуги:
+        = I18n.t('landing.for_whom_block.title') + ':'
       .for-whom
         .for-whom_line1
-          .for-whom_block
-            a.circle href="#"
-              .circle-1
-                .circle-2
-                  .circle-color
-            .for-whom__description
-              | Оформление внж в Словакии для бизнеса, работы учебы или воссоединения семьи, с перспективой получения пмж и гражданства.
-          .for-whom_block
-            a.circle href="#"
-              .circle-1
-                .circle-2
-                  .circle-color
-            .for-whom__description
-              | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
-          .for-whom_block
-            a.circle href="#"
-              .circle-1
-                .circle-2
-                  .circle-color
-            .for-whom__description
-              | Полная поддержка бизнеса, включая весь спектр бухгалтерских услуг, сдача отчетности, начисление зарплат, решение любых нестандартных ситуаций.
+          - I18n.t('landing.for_whom_block.items')[0..2].each do |item|
+            .for-whom_block
+              a.circle href="#"
+                .circle-1
+                  .circle-2
+                    .circle-color
+              .for-whom__description
+                = item
 
         .for-whom_line2
-          .for-whom_block
-            a.circle href="#"
-              .circle-1
-                .circle-2
-                  .circle-color
-            .for-whom__description
-              | Помощь в покупке недвижимости и получении ипотечного кредита.
-          .for-whom_block
-            a.circle href="#"
-              .circle-1
-                .circle-2
-                  .circle-color
-            .for-whom__description
-              | Инвестиции и исследование рынка.
-          .for-whom_block
-            a.circle href="#"
-              .circle-1
-                .circle-2
-                  .circle-color 
-            .for-whom__description
-              | Инвестиции и исследование рынка.
+          - I18n.t('landing.for_whom_block.items')[3..5].each do |item|
+            .for-whom_block
+              a.circle href="#"
+                .circle-1
+                  .circle-2
+                    .circle-color
+              .for-whom__description
+                = item
 
   .how-work
     .container
-      h2.how-work__title Как мы работаем:
+      h2.how-work__title = I18n.t('landing.how_work_block.title') + ':'
       .how-work__items
-        .how-work__item-wrapper
-          .how-work__item.how-work__item1
-            .how-work__item_title
-              | Свяжитесь с нами
-        .how-work__item-wrapper
-          .how-work__item.how-work__item2
-            .how-work__item_title
-              | Получите варианты
-        .how-work__item-wrapper
-          .how-work__item.how-work__item3
-            .how-work__item_title
-                | Пользуйтесь нашей поддержкой
-        .how-work__item-wrapper
-          .how-work__item.how-work__item4
-            .how-work__item_title
-              | Поставьте конечную цель
-        .how-work__item-wrapper
-          .how-work__item.how-work__item5
-            .how-work__item_title
-              | Вместе добъемся результатов      
+        - I18n.t('landing.how_work_block.items').each_with_index do |item, index|
+          .how-work__item-wrapper
+            div class=("how-work__item how-work__item#{index + 1}")
+              .how-work__item_title
+                = item
 
-  = render 'partials/rewiews', locals={rewiews: @rewiews}
+  = render 'partials/reviews', reviews: @landing_page.reviews
 
   .partners-header
     .container
       h2.partners-header__title
-        | Первая консультация бесплатно
+        = I18n.t('landing.contact_us_block.title')
       .btn.partners-header__btn
-        | Связаться с нами       
+        = I18n.t('landing.contact_us_block.button')
         
-  = render 'partials/footer'
   = render 'partials/menu'
 
   

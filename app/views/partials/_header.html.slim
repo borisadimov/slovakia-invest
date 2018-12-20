@@ -1,37 +1,33 @@
-- @main_nav = [{title: 'Иммиграция', link: '/pages/immigration.html', submenu: [{text: 'ВНЖ для бизнеса', link: '/pages/immigration-business.html'}, {text: 'ВНЖ для работы', link: '#'}, {text: 'ВНЖ для учебы', link: '#'}, {text: 'Виза', link: '#'}, {text: 'ПМЖ', link: '#'}, {text: 'Гражданство', link: '#'}]},
- {title: 'Бизнес', link: '/pages/business.html', submenu: [{text: 'Учреждение фирмы', link: '#'}, {text: 'Банковский счет', link: '#'}, {text: 'Бухучет и отчетность', link: '#'}, {text: 'Начисление зарплаты', link: '#'}, {text: 'Аудит', link: '#'}, {text: 'Другие обязательства', link: '#'}, {text: 'Регистрация торговой марки', link: '#'}]},
- {title: 'Образование', link: '/pages/education.html', submenu: [{text: 'Образование в Словакии', link: '#'}, {text: 'Словацкий язык', link: '#'}, {text: 'Другие языки', link: '#'}, {text: 'Нострификация диплома', link: '#'}]},
- {title: 'Инвестиции', link: '/pages/investment.html', submenu: [{text: 'Анализ инвестиционной среды', link: '#'}, {text: 'Холдинговая компания', link: '#'}, {text: 'Инвестиционные проекты', link: '#'}, {text: 'Исследование рынка', link: '#'}, {text: 'Инвестирование в промышленность', link: '#'}, {text: 'Объекты недвижимости', link: '#'}, {text: 'Тур по объектам недвижимости', link: '#'}, {text: 'Налогообложение недвижимости', link: '#'}, {text: 'Ипотечный кредит', link: '#'}]},
- {title: 'Другие услуги', link: '#', submenu: [{text: 'Водительские права', link: '#'}, {text: 'Открытие банковского счета', link: '#'}, {text: 'Услуги переводчика', link: '#'}, {text: 'Трансфер', link: '#'}, {text: 'Резервация гостиниц и апартаментов', link: '#'}, {text: 'Лизинг', link: '#'}, {text: 'Сбережения и пенсия', link: '#'}]},
- {title: 'Еще', link: '#', submenu: [{text: 'Цены', link: '/pages/price.html'}, {text: 'Полезная информация', link: '/pages/news.html'}, {text: 'Контакты', link: '/pages/contacts.html'}, {text: 'О нас', link: '/pages/about-us.html'}]}]
-
-- @language = [{text: 'russian', link: '#'}, {text: 'ukrainian', link: '#'}, {text: 'english', link: '#'}, {text: 'slovak', link: '#'}]
-
 .header
   .container
     a.logo.header__logo  href="/"
     nav.header__nav
       ul
-        - @main_nav.each_with_index do |item, index|
+        - @menu_services.each do |service|
           li.header__nav-item
-            a.header__nav-item-link(href=item[:link])
-              = item[:title]
-            - if !item[:submenu].empty?
+            = link_to service.title, service_path(service), class: 'header__nav-item-link'
+            - unless service.articles.blank?
               .submenu-wrapper
                 ul.submenu
-                  - item[:submenu].each do |sub_item|
+                  - service.articles.each do |article|
                     li
-                      a href=sub_item[:link]
-                        = sub_item[:text]
+                      = link_to article.title, article_path(article)
+        li.header__nav-item 
+          = link_to I18n.t('header_menu.more.title'), href: '#', class: 'header__nav-item-link'
+          .submenu-wrapper
+            ul.submenu
+              li = link_to I18n.t('header_menu.more.items.prices'), prices_pages_path
+              li = link_to I18n.t('header_menu.more.items.news'), news_pages_path
+              li = link_to I18n.t('header_menu.more.items.about_us'), about_us_pages_path
         .submenu-background
     .header__right-container
       .language
         .language__title
           .language-arrow
             .language-arrow__img
-          - @language.each do |name|
-            li.language__item(class=name[:text])
-              a.language__item-img href=name[:link]
+          - I18n.available_locales.insert(0, I18n.locale).uniq.each do |locale|
+            li.language__item(class=locale.to_s)
+              = link_to '', params.permit.merge(locale: locale), class: 'language__item-img'
       / a(href="/pages/about-us.html" class="header-info")
     .burger
       .burger-line

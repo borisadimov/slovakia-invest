@@ -1,0 +1,16 @@
+.rewiews
+    .container
+      h2.rewiews__title = I18n.t('reviews.title') + ':'
+      .rewiews__list
+        - reviews.each do |review|
+          .rewiews__item
+            a href=(review.link)
+              .rewiews__item-img
+                = image_tag review.avatar.present? ? review.avatar.url : 'manager.jpg'
+            .rewiews__item-card
+              .rewiews__item-title
+                = review.name
+              .rewiews__item-profession
+                = review.description
+              .rewiews__item-description
+                = review.text

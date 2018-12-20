@@ -1,0 +1,42 @@
+.page__main-wrapper
+  .page__content.about-us__main.page__content-no-sidebar
+    .container
+      .blog-page__img
+      h1.page__title.blog-page__title
+        = @post.title
+        .blog-page__date
+          | (
+          = l @post.created_at, format: :default
+          | )
+      .blog-page__content
+        = @post.text
+      
+      .blog-page__autor
+        = "#{I18n.t('posts.author')}: #{@post.author}"
+      .blog-page__autor-text
+        = I18n.t('posts.copyright')
+
+      .blog-page_form.blog-page__form-title.blog-page__form-title-comment
+          = I18n.t('posts.comments.headline')
+      - @post.comments.each do |comment|
+        .blog-page__autor
+          = "#{comment.author} (#{l comment.created_at, format: :default})"
+        .blog-page__autor-text
+          = comment.text
+
+      = form_tag "#{@post.id}/comments", class: 'blog-page_form'
+        .blog-page__form-title.blog-page__form-title-add
+          = I18n.t('posts.comments.form.headline')
+        .blog-page__form-input-wrapper
+          .blog-page__form-input-text
+            = I18n.t('posts.comments.form.name')
+          input type="text" name="author" required=true
+        .blog-page__form-input-wrapper
+          .blog-page__form-input-text
+            = I18n.t('posts.comments.form.email')
+          input type="email" name="email" required=true
+        .blog-page__form-input-wrapper
+          .blog-page__form-input-text
+            = I18n.t('posts.comments.form.comment')
+          textarea name="text" required=true
+        = submit_tag I18n.t('posts.comments.form.submit'), class: 'btn btn__dispatch'
