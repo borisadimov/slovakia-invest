@@ -3,7 +3,11 @@
     .page__content.page__content-no-sidebar
       .container
         h1.page__title
-          = I18n.t('prices.title')
+          | Прайслист Наши расценки
+        h2.service-title
+          | Услуга
+        h3.service-global.first
+          | Фирма в Словакии    
         .price-page__content
           / - @services.each_with_index do |service, index|
           /   - unless service.prices.blank?
@@ -13,3 +17,153 @@
           /         = service.title
           /       .price-page__item-content
           /         = render 'partials/item-price', prices: service.prices
+          .service-block
+            .service-name
+              | Покупка готового бизнеса
+            .service-price
+              | 5%
+          .service-block      
+            .service-name
+              | Регистрация в качестве индивидуального предпринимателя
+            .service-price  
+              | 799 €
+          .service-block      
+            .service-name
+              | Регистрация фирмы: общества с ограниченной ответственностью
+            .service-price 
+              | 899 € 
+          .service-block      
+            .service-name
+              | Регистрация фирмы: акционерное общество
+            .service-price
+              | 1 999 €  
+          .service-block    
+            .service-name
+              | Регистрация фирмы: Простое акционерное общество
+            .service-price
+              | 1 499 €  
+          .service-block    
+            .service-name
+              | ООО - не плательщик НДС
+            .service-price
+              | 999 €  
+          .service-block        
+            .service-name
+              | ООО - плательщик НДС
+            .service-price
+              | 3 999 €  
+          .service-block    
+            .service-name
+              | Печать/Штамп
+            .service-price
+              | 49 €  
+          .service-block    
+            .service-name
+              | Дополнительных 10 видов деятельности
+            .service-price
+              | 19 €  
+          .service-block    
+            .service-name
+              | Лицензированный вид деятельности
+            .service-price
+              | 49 €  
+          .service-block    
+            .service-name
+              | Изменение в торговом реестре
+            .service-price
+              | 199 €  
+          .service-block    
+            .service-name
+              | Регистрация в налоговой инспекции / страховой компании
+            .service-price
+              | 49 €  
+          .service-block    
+            .service-name
+              | Регистрация в качестве плательщика НДС
+            .service-price
+              | 399 €  
+          .service-block    
+            .service-name
+              | Регистрация EOIR (для экспорта/импорта с/в ЕС)
+            .service-price
+              | 49 €  
+          .service-block    
+            .service-name
+              | Исполнение обязательства по уведомлению отдельных учреждений
+            .service-price
+              | 15 €  
+          .service-block    
+            .service-name
+              | Ликвидация ООО, минимальная стоимость
+            .service-price
+              | 899 €  
+          .service-block    
+            .service-name
+              | Прекращение деятельности в качестве индивидуального предпринимателя
+            .service-price
+              | 499 €  
+          .service-block      
+            .service-name
+              | Юридический адрес после одного года (на один год)
+            .service-price
+              | 249 € 
+          .service-block    
+            .service-name
+              | Получение корреспонденции, свыше 5 писем/месяц, за письмо
+            .service-price
+              | 0,50 €  
+        
+        .service-global__wrapper
+          .service-global__line 
+            .service-global__title
+              | Иммиграция в Словакию: ВНЖ и ПМЖ
+            .service-global__cross
+
+          .service-global__line 
+            .service-global__title
+              | Открытие банковских счетов в Словакии
+            .service-global__cross
+
+          .service-global__line 
+            .service-global__title
+              | Языковые курсы в Словакии
+            .service-global__cross
+
+          .service-global__line 
+            .service-global__title
+              | Бухгалтерские и аудиторские услуги в Словакии
+            .service-global__cross
+
+          .service-global__line 
+            .service-global__title
+              | Начисление зарплаты в Словакии
+            .service-global__cross
+
+          .service-global__line  
+            .service-global__title
+              | Недвижимость в Словакии
+            .service-global__cross          
+
+
+
+      
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            
+            
+           
+           
+            
+            
+            
+             
+            
+
