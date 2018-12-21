@@ -9,7 +9,9 @@ class PagesController < ApplicationController
   end
 
   def news
-    @posts = Post.page(params[:page] || 1).per(9)
+    @posts = Post.by_title(params[:title])
+    @posts = @posts.by_article(params[:article]) if params[:article].present?
+    @posts = @posts.page(params[:page] || 1).per(9)
     @articles = Article.where.not(post_ids: [])
   end
 

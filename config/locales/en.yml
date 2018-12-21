@@ -92,6 +92,10 @@ en:
     more: "more"
     author: "Post Author"
     copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
+    search:
+      title: "Search"
+      button: "Find"
+      placeholder: "Search"
     comments:
       headline: "Comments"
       form:
