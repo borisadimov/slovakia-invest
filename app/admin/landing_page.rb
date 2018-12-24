@@ -3,14 +3,14 @@ ActiveAdmin.register LandingPage do
                 :subtitle_ru, :subtitle_en, :subtitle_uk,
                 :about_block_text_ru, :about_block_text_en, :about_block_text_uk,
                 features_attributes: [
-                  :id,
+                  :id, :order,
                   :from, :to,
                   :unit_ru, :unit_en, :unit_uk,
                   :description_ru, :description_en, :description_uk,
                   :_destroy
                 ],
                 reviews_attributes: [
-                  :id,
+                  :id, :order,
                   :name_ru, :name_en, :name_uk,
                   :description_ru, :description_en, :description_uk,
                   :text_ru, :text_en, :text_uk,
@@ -62,6 +62,7 @@ ActiveAdmin.register LandingPage do
       f.has_many :features,
                   new_record: 'Add Feature',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :from
         b.input :to
         b.input :unit_ru
@@ -77,6 +78,7 @@ ActiveAdmin.register LandingPage do
       f.has_many :reviews,
                   new_record: 'Add Review',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :avatar, as: :file, hint: b.object.avatar.present? ? image_tag(b.object.avatar.url) : content_tag(:span, 'no avatar yet')
         b.input :link
         b.input :name_ru

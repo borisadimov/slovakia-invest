@@ -9,4 +9,6 @@ class Article < ApplicationRecord
   accepts_nested_attributes_for :prices, allow_destroy: true
 
   translates :title, :content
+
+  default_scope { order(order: :asc) }
 end

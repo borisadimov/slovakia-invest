@@ -48,6 +48,7 @@ ActiveAdmin.register ContactsPage do
       f.has_many :contacts,
                   new_record: 'Add Contact',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :contact_type, as: :select, collection: Contact.contact_types.keys
         b.input :value
       end

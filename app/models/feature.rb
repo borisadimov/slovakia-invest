@@ -4,4 +4,6 @@ class Feature < ApplicationRecord
   validates :from, :to, presence: true
 
   translates :unit, :description
+
+  default_scope { order(order: :asc) }
 end

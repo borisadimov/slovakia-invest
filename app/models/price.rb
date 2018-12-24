@@ -4,4 +4,6 @@ class Price < ApplicationRecord
   translates :title, :description
 
   enum package: [:lite, :medium, :vip]
+
+  default_scope { order(order: :asc) }
 end

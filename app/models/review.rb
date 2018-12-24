@@ -4,4 +4,6 @@ class Review < ApplicationRecord
   mount_base64_uploader :avatar, ReviewAvatarUploader
 
   translates :name, :description, :text
+
+  default_scope { order(order: :asc) }
 end
