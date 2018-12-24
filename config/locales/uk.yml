@@ -62,6 +62,8 @@ uk:
       title: "Є питання"
       button: "Зв'язатися з нами"
     more: "Ще статті"
+    contacts:
+      title: "Контакти"
   prices:
     title: "Ціни"
     all_prices: "Всі ціни"
@@ -84,7 +86,9 @@ uk:
         comment: "Коментар"
         submit: "Додати"
   contacts:
-    title: "Контакти"
+    title: "Контакти: як з нами зв'язатися"
+    office_contacts:
+      title: "Офіс SlovakiaInvest"
     types:
       phone: "Тел"
       email: "E-mail"
@@ -92,16 +96,13 @@ uk:
       address: "Адреса"
       skype: "Skype"
     form:
-      name: "Ваше ім'я та прізвище"
-      email: "Ваш email"
-      phone: "Ваш телефон"
+      name: "Iм'я та прізвище"
+      email: "Email"
+      email_tip: "буде видно тільки адміністраторам сайту"
+      phone: "Телефон"
       source: "Як Ви дізналися про нас"
-      source_types:
-        not_specified: "Не вказано"
-        advertising: "Реклама"
-        search_system: "Пошукова система"
-        other: "Iнше"
       text: "Додаткові побажання"
+      terms: "Я приймаю уловия політики обробки персональних даних і справжнім даю згоду на обробку моїх персональних даних"
       submit: "Надіслати"
   footer:
     partners:

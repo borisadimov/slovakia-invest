@@ -62,11 +62,15 @@ ru:
       title: "Есть вопросы"
       button: "Связаться с нами"
     more: "Еще статьи"
+    contacts:
+      title: "Контакты"
   prices:
     title: "Цены"
     all_prices: "Все цены"
   contacts:
-    title: "Контакты"
+    title: "Контакты: как с нами связаться"
+    office_contacts:
+      title: "Офис SlovakiaInvest"
     types:
       phone: "Тел"
       email: "E-mail"
@@ -74,16 +78,13 @@ ru:
       address: "Адрес"
       skype: "Skype"
     form:
-      name: "Ваше имя и фамилия"
-      email: "Ваш email"
-      phone: "Ваш телефон"
+      name: "Имя и Фамилия"
+      email: "Email"
+      email_tip: "будет виден только администраторам сайта"
+      phone: "Телефон"
       source: "Как Вы узнали о нас"
-      source_types:
-        not_specified: "Не указано"
-        advertising: "Реклама"
-        search_system: "Поисковая система"
-        other: "Другое"
       text: "Дополнительные пожелания"
+      terms: "Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных"
       submit: "Отправить"
   posts:
     headline: "Новости из Словакии: все, что касается вашего бизнеса и проживания"

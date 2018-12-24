@@ -83,6 +83,8 @@ en:
       title: "Have questions"
       button: "Contact Us"
     more: "More articles"
+    contacts:
+      title: "Contacts"     
   prices:
     title: "Prices"
     all_prices: "All prices"
@@ -105,7 +107,9 @@ en:
         comment: "Comment"
         submit: "Add"
   contacts:
-    title: "Contacts"
+    title: "Contacts: how to contact us"
+    office_contacts:
+      title: "Office SlovakiaInvest"
     types:
       phone: "Phone"
       email: "E-mail"
@@ -113,16 +117,13 @@ en:
       address: "Address"
       skype: "Skype"
     form:
-      name: "Your first and last name"
-      email: "Your email"
-      phone: "Your phone"
+      name: "First and last name"
+      email: "Email"
+      email_tip: "will be visible only to site administrators"
+      phone: "Phone"
       source: "How did you hear about us"
-      source_types:
-        not_specified: "Not specified"
-        advertising: "Advertising"
-        search_system: "Search system"
-        other: "Other"
       text: "Additional suggestions"
+      terms: "I accept the terms of the personal data processing policy and hereby I consent to the processing of my personal data"
       submit: "Submit"
   footer:
     partners:
