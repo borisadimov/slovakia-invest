@@ -51,7 +51,8 @@
                   = I18n.t("contacts.types.#{contact_type.first}")
                 .contacts-page__contacts-office-link
                   = contact_type.second.first.value
-                - contact_type.second.drop(1).each do |contact|
+              - contact_type.second.drop(1).each do |contact|
+                li.contacts-page__contacts-office-item
                   .contacts-page__contacts-office-type_text.email
                   .contacts-page__contacts-office-link
                     = contact.value
@@ -90,3 +91,5 @@
               span
               button.btn.btn__dispatch.contacts-page__form-btn
                 = I18n.t('contacts.form.submit')
+  
+  = render 'partials/menu'
