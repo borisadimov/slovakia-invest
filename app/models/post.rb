@@ -6,6 +6,9 @@ class Post < ApplicationRecord
 
   translates :title, :text, :author
 
+  scope :by_title, ->(title) { where("posts.title_#{I18n.locale} ILIKE ?", "%#{title}%") }
+  scope :by_article, ->(article) { joins(:articles).where(articles: {id: article}).distinct }
+
   def short_text
     text[0..255] + (text.length > 256 ? '...' : '')
   end
