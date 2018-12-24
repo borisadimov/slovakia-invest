@@ -2,6 +2,13 @@ ActiveAdmin.register Service do
   permit_params :title_ru, :description_ru, :content_ru,
                 :title_en, :description_en, :content_en,
                 :title_uk, :description_uk, :content_uk,
+                features_attributes: [
+                  :id,
+                  :from, :to,
+                  :unit_ru, :unit_en, :unit_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :_destroy
+                ],
                 reviews_attributes: [
                   :id,
                   :avatar,
@@ -42,6 +49,21 @@ ActiveAdmin.register Service do
           f.input :description_uk
           f.input :content_uk, as: :froala_editor
         end
+      end
+    end
+
+    f.inputs 'Features' do
+      f.has_many :features,
+                  new_record: 'Add Feature',
+                  allow_destroy: true do |b|
+        b.input :from
+        b.input :to
+        b.input :unit_ru
+        b.input :unit_en
+        b.input :unit_uk
+        b.input :description_ru
+        b.input :description_en
+        b.input :description_uk
       end
     end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181222111647) do
+ActiveRecord::Schema.define(version: 20181224114628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -144,6 +144,22 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["page_type", "page_id"], name: "index_facts_on_page_type_and_page_id", using: :btree
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.integer  "from",             null: false
+    t.integer  "to",               null: false
+    t.string   "unit_ru"
+    t.string   "unit_en"
+    t.string   "unit_uk"
+    t.string   "description_ru"
+    t.string   "description_en"
+    t.string   "description_uk"
+    t.string   "featureable_type"
+    t.integer  "featureable_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["featureable_type", "featureable_id"], name: "index_features_on_featureable_type_and_featureable_id", using: :btree
   end
 
   create_table "footers", force: :cascade do |t|

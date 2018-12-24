@@ -1,11 +1,11 @@
 
 .features-wrap
-  - @features.each_with_index do |item, index|
-    .features-item data-to=item[:number_to]
+  - features.each do |feature|
+    .features-item data-to=(feature.to)
       h2
         span 
-          = item[:number_from]
+          = feature.from
         = ' '
-        = item[:value]
+        = feature.unit
       p 
-        = I18n.t("landing.features_block.items")[index]
+        = feature.description

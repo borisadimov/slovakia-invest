@@ -2,6 +2,13 @@ ActiveAdmin.register LandingPage do
   permit_params :title_ru, :title_en, :title_uk,
                 :subtitle_ru, :subtitle_en, :subtitle_uk,
                 :about_block_text_ru, :about_block_text_en, :about_block_text_uk,
+                features_attributes: [
+                  :id,
+                  :from, :to,
+                  :unit_ru, :unit_en, :unit_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :_destroy
+                ],
                 reviews_attributes: [
                   :id,
                   :name_ru, :name_en, :name_uk,
@@ -48,6 +55,21 @@ ActiveAdmin.register LandingPage do
           f.input :subtitle_uk
           f.input :about_block_text_uk
         end
+      end
+    end
+
+    f.inputs 'Features' do
+      f.has_many :features,
+                  new_record: 'Add Feature',
+                  allow_destroy: true do |b|
+        b.input :from
+        b.input :to
+        b.input :unit_ru
+        b.input :unit_en
+        b.input :unit_uk
+        b.input :description_ru
+        b.input :description_en
+        b.input :description_uk
       end
     end
 
