@@ -64,7 +64,8 @@
               = employee.position
             - employee.contacts.each do |contact|
               .contacts-item__tel.customize
-                = I18n.t("contacts.types.#{contact.contact_type}") + ': ' + contact.value
+                = I18n.t("contacts.types.#{contact.contact_type}") + ': '
+                = contact_url(contact)
 
     .more-articles-wrapper
       .container

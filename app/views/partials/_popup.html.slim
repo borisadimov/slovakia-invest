@@ -16,5 +16,4 @@
                 .popup-contact__item
                   .popup-contact__item-name
                     = I18n.t("contacts.types.#{contact.contact_type}") + ': '
-                  a.popup-contact__item-data
-                    = contact.value
+                  = contact_url(contact, { class: 'popup-contact__item-data' })

@@ -37,7 +37,8 @@
                     = employee.position
                   - employee.contacts.each do |contact|
                     .contacts-faces_item__tel.customize
-                      = I18n.t("contacts.types.#{contact.contact_type}") + ': ' + contact.value
+                      = I18n.t("contacts.types.#{contact.contact_type}") + ': '
+                      = contact_url(contact)
 
     .contacts-page__contacts
       .container
@@ -50,12 +51,12 @@
                 .contacts-page__contacts-office-type_text.email
                   = I18n.t("contacts.types.#{contact_type.first}")
                 .contacts-page__contacts-office-link
-                  = contact_type.second.first.value
+                  = contact_url(contact_type.second.first, { class: 'contacts-page__contacts-office-link' })
               - contact_type.second.drop(1).each do |contact|
                 li.contacts-page__contacts-office-item
                   .contacts-page__contacts-office-type_text.email
                   .contacts-page__contacts-office-link
-                    = contact.value
+                    = contact_url(contact, { class: 'contacts-page__contacts-office-link' })
 
         .contacts-page__contacts-map
           script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByUg22uv5jdTNNL6lD50kut7Lyt8QAB0A" 
