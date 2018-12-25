@@ -16,6 +16,6 @@ class PagesController < ApplicationController
   end
 
   def prices
-    @services = Service.includes(:prices).all
+    @services = Service.has_prices.includes(:prices).all
   end
 end

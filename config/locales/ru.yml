@@ -66,8 +66,8 @@ ru:
     contacts:
       title: "Контакты"
   prices:
-    title: "Цены"
-    all_prices: "Все цены"
+    title: "Прайслист. Наши расценки"
+    service: "Услуга"
   contacts:
     title: "Контакты: как с нами связаться"
     office_contacts:
