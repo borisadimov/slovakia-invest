@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181222111647) do
+ActiveRecord::Schema.define(version: 20181224125207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.string   "videolink_ru"
     t.string   "videolink_en"
     t.string   "videolink_uk"
+    t.integer  "order"
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
   end
 
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.string   "has_contacts_type"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "order"
     t.index ["has_contacts_type", "has_contacts_id"], name: "index_contacts_on_has_contacts_type_and_has_contacts_id", using: :btree
   end
 
@@ -131,6 +133,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.integer  "service_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "order"
     t.index ["service_id"], name: "index_employees_on_service_id", using: :btree
   end
 
@@ -144,6 +147,23 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["page_type", "page_id"], name: "index_facts_on_page_type_and_page_id", using: :btree
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.integer  "from",             null: false
+    t.integer  "to",               null: false
+    t.string   "unit_ru"
+    t.string   "unit_en"
+    t.string   "unit_uk"
+    t.string   "description_ru"
+    t.string   "description_en"
+    t.string   "description_uk"
+    t.string   "featureable_type"
+    t.integer  "featureable_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "order"
+    t.index ["featureable_type", "featureable_id"], name: "index_features_on_featureable_type_and_featureable_id", using: :btree
   end
 
   create_table "footers", force: :cascade do |t|
@@ -191,6 +211,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.string  "logo"
     t.string  "url"
     t.integer "footer_id"
+    t.integer "order"
     t.index ["footer_id"], name: "index_partners_on_footer_id", using: :btree
   end
 
@@ -219,6 +240,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.string   "value"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "order"
     t.index ["article_id"], name: "index_prices_on_article_id", using: :btree
   end
 
@@ -238,6 +260,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.integer  "reviewable_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "order"
     t.index ["reviewable_type", "reviewable_id"], name: "index_reviews_on_reviewable_type_and_reviewable_id", using: :btree
   end
 
@@ -257,6 +280,7 @@ ActiveRecord::Schema.define(version: 20181222111647) do
     t.string   "videolink_ru"
     t.string   "videolink_en"
     t.string   "videolink_uk"
+    t.integer  "order"
   end
 
   create_table "user_callbacks", force: :cascade do |t|

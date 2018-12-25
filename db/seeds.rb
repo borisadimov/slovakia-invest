@@ -21,16 +21,19 @@ content = "<p><strong><span style=\"font-size: 48px;\">Иммиграция в �
 
 services = [
   {
+    order: 1,
     title_ru: 'Иммиграция', title_en: 'Immigration', title_uk: 'Iмміграція',
     description_ru: desc_ru, description_en: desc_en, description_uk: desc_uk,
     content_ru: content, content_en: content, content_uk: content,
     reviews_attributes: [
       {
+        order: 1,
         name_ru: 'Александр Илларионов', name_en: 'Alexander Illarionov', name_uk: 'Олександр Ілларіонов',
         description_ru: 'Предприниматель', description_en: 'Entrepreneur', description_uk: 'Підприємець',
         text_ru: lorem, text_en: lorem, text_uk: lorem
       },
       {
+        order: 2,
         name_ru: 'Александр Николаенко', name_en: 'Alexander Nikolayenko', name_uk: 'Олександр Ніколаєнко',
         description_ru: 'Предприниматель', description_en: 'Entrepreneur', description_uk: 'Підприємець',
         text_ru: lorem, text_en: lorem, text_uk: lorem
@@ -38,126 +41,140 @@ services = [
     ],
     articles: [
       {
+        order: 1,
         title_ru: 'ВНЖ для бизнеса', title_en: 'Residence permit for business', title_uk: 'ВНЖ для бізнесу',
         content_ru: content, content_en: content, content_uk: content,
         prices_attributes: [
           {
+            order: 1,
             title_ru: 'Первый ВНЖ', title_en: 'First residence permit', title_uk: 'Перший ВНЖ',
             description_ru: 'предпринимательская деятельность', description_en: 'business activity', description_uk: 'підприємницька діяльність',
             value: '1699 €'
           },
           {
+            order: 2,
             title_ru: 'Продление ВНЖ', title_en: 'Extension of residence permit', title_uk: 'Продовження ВНЖ',
             description_ru: 'предпринимательская деятельность', description_en: 'business activity', description_uk: 'підприємницька діяльність',
             value: '249 €'
           },
           {
+            order: 3,
             title_ru: 'Продление ВНЖ', title_en: 'Extension of residence permit', title_uk: 'Продовження ВНЖ',
             description_ru: 'предпринимательская деятельность', description_en: 'business activity', description_uk: 'підприємницька діяльність',
             value: '249 €'
           },
           {
+            order: 4,
             title_ru: 'Продление ВНЖ', title_en: 'Extension of residence permit', title_uk: 'Продовження ВНЖ',
             description_ru: 'предпринимательская деятельность', description_en: 'business activity', description_uk: 'підприємницька діяльність',
             value: '249 €'
           },
           {
+            order: 5,
             title_ru: 'Продление ВНЖ', title_en: 'Extension of residence permit', title_uk: 'Продовження ВНЖ',
             description_ru: 'предпринимательская деятельность', description_en: 'business activity', description_uk: 'підприємницька діяльність',
             value: '249 €'
           }
         ]
       },
-      { title_ru: 'ВНЖ для работы', title_en: 'Residence permit for work', title_uk: 'ВНЖ для роботи' },
-      { title_ru: 'ВНЖ для учебы', title_en: 'Residence permit for study', title_uk: 'ВНЖ для навчання' },
-      { title_ru: 'Виза', title_en: 'Visa', title_uk: 'Віза' },
-      { title_ru: 'ПМЖ', title_en: 'Permanent residence', title_uk: 'ПМЖ' },
-      { title_ru: 'Гражданство', title_en: 'Citizenship', title_uk: 'Громадянство' }
+      { order: 2, title_ru: 'ВНЖ для работы', title_en: 'Residence permit for work', title_uk: 'ВНЖ для роботи' },
+      { order: 3, title_ru: 'ВНЖ для учебы', title_en: 'Residence permit for study', title_uk: 'ВНЖ для навчання' },
+      { order: 4, title_ru: 'Виза', title_en: 'Visa', title_uk: 'Віза' },
+      { order: 5, title_ru: 'ПМЖ', title_en: 'Permanent residence', title_uk: 'ПМЖ' },
+      { order: 6, title_ru: 'Гражданство', title_en: 'Citizenship', title_uk: 'Громадянство' }
     ]
   },
   {
+    order: 2,
     title_ru: 'Бизнес', title_en: 'Business', title_uk: 'Бізнес',
     description_ru: desc_ru, description_en: desc_en, description_uk: desc_uk,
     content_ru: content, content_en: content, content_uk: content,
     articles: [
-      { title_ru: 'Учреждение фирмы', title_en: 'Company establishment', title_uk: 'Установа фірми' },
-      { title_ru: 'Банковский счет', title_en: 'Bank account', title_uk: 'Банківський рахунок' },
-      { title_ru: 'Бухучет и отчетность', title_en: 'Accounting and Reporting', title_uk: 'Бухоблік і звітність' },
-      { title_ru: 'Начисление зарплаты', title_en: 'Payroll', title_uk: 'Нарахування зарплатні' },
-      { title_ru: 'Аудит', title_en: 'Audit', title_uk: 'Аудит' },
-      { title_ru: 'Другие обязательства', title_en: 'Other obligations', title_uk: 'Iнші зобов\'язання' },
-      { title_ru: 'Регистрация торговой марки', title_en: 'Trademark Registration', title_uk: 'Реєстрація торгової марки' }
+      { order: 1, title_ru: 'Учреждение фирмы', title_en: 'Company establishment', title_uk: 'Установа фірми' },
+      { order: 2, title_ru: 'Банковский счет', title_en: 'Bank account', title_uk: 'Банківський рахунок' },
+      { order: 3, title_ru: 'Бухучет и отчетность', title_en: 'Accounting and Reporting', title_uk: 'Бухоблік і звітність' },
+      { order: 4, title_ru: 'Начисление зарплаты', title_en: 'Payroll', title_uk: 'Нарахування зарплатні' },
+      { order: 5, title_ru: 'Аудит', title_en: 'Audit', title_uk: 'Аудит' },
+      { order: 6, title_ru: 'Другие обязательства', title_en: 'Other obligations', title_uk: 'Iнші зобов\'язання' },
+      { order: 7, title_ru: 'Регистрация торговой марки', title_en: 'Trademark Registration', title_uk: 'Реєстрація торгової марки' }
     ]
   },
   {
+    order: 3,
     title_ru: 'Образование', title_en: 'Education', title_uk: 'Освіта',
     description_ru: desc_ru, description_en: desc_en, description_uk: desc_uk,
     content_ru: content, content_en: content, content_uk: content,
     articles: [
-      { title_ru: 'Образование в Словакии', title_en: 'Education in Slovakia', title_uk: 'Освіта в Словаччині' },
-      { title_ru: 'Словацкий язык', title_en: 'Slovak language', title_uk: 'Словацька мова' },
-      { title_ru: 'Другие языки', title_en: 'Other languages', title_uk: 'Інші мови' },
-      { title_ru: 'Нострификация диплома', title_en: 'Diploma nostrification', title_uk: 'Нострифікація диплома' }
+      { order: 1, title_ru: 'Образование в Словакии', title_en: 'Education in Slovakia', title_uk: 'Освіта в Словаччині' },
+      { order: 2, title_ru: 'Словацкий язык', title_en: 'Slovak language', title_uk: 'Словацька мова' },
+      { order: 3, title_ru: 'Другие языки', title_en: 'Other languages', title_uk: 'Інші мови' },
+      { order: 4, title_ru: 'Нострификация диплома', title_en: 'Diploma nostrification', title_uk: 'Нострифікація диплома' }
     ]
   },
   {
+    order: 4,
     title_ru: 'Инвестиции', title_en: 'Investments', title_uk: 'Iнвестиції',
     description_ru: desc_ru, description_en: desc_en, description_uk: desc_uk,
     content_ru: content, content_en: content, content_uk: content,
     articles: [
-      { title_ru: 'Анализ инвестиционной среды', title_en: 'Investment environment analysis', title_uk: 'Аналіз інвестиційного середовища' },
-      { title_ru: 'Холдинговая компания', title_en: 'Holding company', title_uk: 'Холдингова компанія' },
-      { title_ru: 'Инвестиционные проекты', title_en: 'Investment projects', title_uk: 'Інвестиційні проекти' },
-      { title_ru: 'Исследование рынка', title_en: 'Market research', title_uk: 'Дослідження ринку' },
-      { title_ru: 'Инвестирование в промышленность', title_en: 'Investing in industry', title_uk: 'Інвестування в промисловість' },
-      { title_ru: 'Объекты недвижимости', title_en: 'Real estate', title_uk: 'Об\'єкт нерухомості' },
-      { title_ru: 'Тур по объектам недвижимости', title_en: 'Property Tour', title_uk: 'Тур по об\'єктах нерухомості' },
-      { title_ru: 'Налогообложение недвижимости', title_en: 'Property Taxation', title_uk: 'Оподаткування нерухомості' },
-      { title_ru: 'Ипотечниый кредит', title_en: 'Mortgage', title_uk: 'Іпотечний кредит' }
+      { order: 1, title_ru: 'Анализ инвестиционной среды', title_en: 'Investment environment analysis', title_uk: 'Аналіз інвестиційного середовища' },
+      { order: 2, title_ru: 'Холдинговая компания', title_en: 'Holding company', title_uk: 'Холдингова компанія' },
+      { order: 3, title_ru: 'Инвестиционные проекты', title_en: 'Investment projects', title_uk: 'Інвестиційні проекти' },
+      { order: 4, title_ru: 'Исследование рынка', title_en: 'Market research', title_uk: 'Дослідження ринку' },
+      { order: 5, title_ru: 'Инвестирование в промышленность', title_en: 'Investing in industry', title_uk: 'Інвестування в промисловість' },
+      { order: 6, title_ru: 'Объекты недвижимости', title_en: 'Real estate', title_uk: 'Об\'єкт нерухомості' },
+      { order: 7, title_ru: 'Тур по объектам недвижимости', title_en: 'Property Tour', title_uk: 'Тур по об\'єктах нерухомості' },
+      { order: 8, title_ru: 'Налогообложение недвижимости', title_en: 'Property Taxation', title_uk: 'Оподаткування нерухомості' },
+      { order: 9, title_ru: 'Ипотечниый кредит', title_en: 'Mortgage', title_uk: 'Іпотечний кредит' }
     ]
   },
   {
+    order: 5,
     title_ru: 'Другие услуги', title_en: 'Other services', title_uk: 'Інші послуги',
     description_ru: desc_ru, description_en: desc_en, description_uk: desc_uk,
     content_ru: content, content_en: content, content_uk: content,
     articles: [
-      { title_ru: 'Водительские права', title_en: 'Driver\'s license', title_uk: 'Водійські права' },
-      { title_ru: 'Открытие банковского счета', title_en: 'Opening a bank account', title_uk: 'Відкриття банківського рахунку' },
-      { title_ru: 'Услуги переводчика', title_en: 'Translation services', title_uk: 'Послуги перекладача' },
-      { title_ru: 'Трансфер', title_en: 'Transfer', title_uk: 'Трансфер' },
-      { title_ru: 'Резервация гостиниц и апартаментов', title_en: 'Hotel and apartment reservation', title_uk: 'Резервація готелів та апартаментів' },
-      { title_ru: 'Лизинг', title_en: 'Leasing', title_uk: 'Лізинг' },
-      { title_ru: 'Сбережения и пенсия', title_en: 'Savings and pension', title_uk: 'Заощадження та пенсія' },
+      { order: 1, title_ru: 'Водительские права', title_en: 'Driver\'s license', title_uk: 'Водійські права' },
+      { order: 2, title_ru: 'Открытие банковского счета', title_en: 'Opening a bank account', title_uk: 'Відкриття банківського рахунку' },
+      { order: 3, title_ru: 'Услуги переводчика', title_en: 'Translation services', title_uk: 'Послуги перекладача' },
+      { order: 4, title_ru: 'Трансфер', title_en: 'Transfer', title_uk: 'Трансфер' },
+      { order: 5, title_ru: 'Резервация гостиниц и апартаментов', title_en: 'Hotel and apartment reservation', title_uk: 'Резервація готелів та апартаментів' },
+      { order: 6, title_ru: 'Лизинг', title_en: 'Leasing', title_uk: 'Лізинг' },
+      { order: 7, title_ru: 'Сбережения и пенсия', title_en: 'Savings and pension', title_uk: 'Заощадження та пенсія' },
     ]
   }
 ]
 
 contacts = [
-  { contact_type: 'skype', value: 'SlovakiaInvest6' },
-  { contact_type: 'phone', value: '+421-2-321-44-901' },
-  { contact_type: 'email', value: 'Office@SlovakiaInvest.sk' }
+  { order: 1, contact_type: 'skype', value: 'SlovakiaInvest6' },
+  { order: 2, contact_type: 'phone', value: '+421-2-321-44-901' },
+  { order: 3, contact_type: 'email', value: 'Office@SlovakiaInvest.sk' }
 ]
 
 employees = [
   {
+    order: 1,
     name_ru: 'Светлана Коновалова', name_en: 'Svetlana Konovalova', name_uk: 'Світлана Коновалова',
     position_ru: 'Офис-менеджер', position_en: 'Office Manager', position_uk: 'Офіс менеджер',
     description_ru: 'Вопросы по бухучету', description_en: 'Questions about accounting', description_uk: 'Вопросы по бухучету',
     contacts_attributes: contacts
   },
   {
+    order: 2,
     name_ru: 'Татьяна Морозова', name_en: 'Tatyana Morozova', name_uk: 'Татьяна Морозова',
     position_ru: 'Офис-менеджер', position_en: 'Office Manager', position_uk: 'Офіс менеджер',
     description_ru: 'Вопросы по бухучету', description_en: 'Questions about accounting', description_uk: 'Вопросы по бухучету',
     contacts_attributes: contacts
   },
   {
+    order: 3,
     name_ru: 'Оксана Шаровская', name_en: 'Oksana Sharovskaya', name_uk: 'Оксана Шаровська',
     position_ru: 'Менеджер по работе с клиентами', position_en: 'Customer Service Manager', position_uk: 'Менеджер по роботі з клієнтами',
     description_ru: 'Вопросы по бухучету', description_en: 'Questions about accounting', description_uk: 'Вопросы по бухучету',
     contacts_attributes: contacts
   },
   {
+    order: 4,
     name_ru: 'Михаела Мелова', name_en: 'Michaela Melova', name_uk: 'Михаела Мелова',
     position_ru: 'Менеджер по работе с клиентами', position_en: 'Customer Service Manager', position_uk: 'Менеджер по роботі з клієнтами',
     description_ru: 'Вопросы по бухучету', description_en: 'Questions about accounting', description_uk: 'Вопросы по бухучету',
@@ -171,12 +188,12 @@ LandingPage.create(
   subtitle_ru: 'Иммиграция. Бизнес. Инвестиции. Образование.', subtitle_en: 'Immigration. Business. Investments. Education.', subtitle_uk: 'Імміграція. Бізнес. Інвестиції. Освіта.',
   about_block_text_ru: lorem, about_block_text_en: lorem, about_block_text_uk: lorem,
   reviews_attributes: [
-    {link: '#', name_ru: 'Иван', name_en: 'Іван', name_uk: 'Іван', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-    {link: '#', name_ru: 'Александр', name_en: 'Alexander', name_uk: 'Олександр', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-    {link: '#', name_ru: 'Чак', name_en: 'Chuck', name_uk: 'Чак', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-    {link: '#', name_ru: 'Александр', name_en: 'Alexander', name_uk: 'Олександр', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-    {link: '#', name_ru: 'Иван', name_en: 'Іван', name_uk: 'Іван', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
-    {link: '#', name_ru: 'Чак', name_en: 'Chuck', name_uk: 'Чак', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}
+    {order: 1, link: '#', name_ru: 'Иван', name_en: 'Іван', name_uk: 'Іван', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+    {order: 2, link: '#', name_ru: 'Александр', name_en: 'Alexander', name_uk: 'Олександр', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+    {order: 3, link: '#', name_ru: 'Чак', name_en: 'Chuck', name_uk: 'Чак', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+    {order: 4, link: '#', name_ru: 'Александр', name_en: 'Alexander', name_uk: 'Олександр', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+    {order: 5, link: '#', name_ru: 'Иван', name_en: 'Іван', name_uk: 'Іван', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'},
+    {order: 6, link: '#', name_ru: 'Чак', name_en: 'Chuck', name_uk: 'Чак', avatar: 'manager.jpg', description: 'profession', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolor repudiandae nobis illum soluta eveniet.'}
   ]
 )
 

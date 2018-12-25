@@ -12,4 +12,6 @@ class Post < ApplicationRecord
   def short_text
     text[0..255] + (text.length > 256 ? '...' : '')
   end
+
+  default_scope { order(created_at: :desc) }
 end

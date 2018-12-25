@@ -214,14 +214,12 @@
   font-size: 24px;
 }
 
-.contacts-faces_item__tel a,
-.contacts-faces_item__mobile a {
+.contacts-faces_item__tel a {
   color: #000000;
 }
 
-
-.contacts-faces_item__skype {
-  margin-top: 15px;
+.contacts-faces_item__tel div {
+  display: inline-block;
 }
 
 .contacts-form__wrapper {

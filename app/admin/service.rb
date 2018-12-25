@@ -1,9 +1,17 @@
 ActiveAdmin.register Service do
-  permit_params :title_ru, :description_ru, :content_ru,
+  permit_params :order,
+                :title_ru, :description_ru, :content_ru,
                 :title_en, :description_en, :content_en,
                 :title_uk, :description_uk, :content_uk,
+                features_attributes: [
+                  :id, :order,
+                  :from, :to,
+                  :unit_ru, :unit_en, :unit_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :_destroy
+                ],
                 reviews_attributes: [
-                  :id,
+                  :id, :order,
                   :avatar,
                   :link,
                   :name_ru, :name_en, :name_uk,
@@ -19,6 +27,10 @@ ActiveAdmin.register Service do
   end
 
   form do |f|
+    f.inputs 'Order' do
+      f.input :order
+    end
+
     tabs do
       tab 'Russian' do
         f.inputs do
@@ -45,10 +57,27 @@ ActiveAdmin.register Service do
       end
     end
 
+    f.inputs 'Features' do
+      f.has_many :features,
+                  new_record: 'Add Feature',
+                  allow_destroy: true do |b|
+        b.input :order
+        b.input :from
+        b.input :to
+        b.input :unit_ru
+        b.input :unit_en
+        b.input :unit_uk
+        b.input :description_ru
+        b.input :description_en
+        b.input :description_uk
+      end
+    end
+
     f.inputs 'Reviews' do
       f.has_many :reviews,
                   new_record: 'Add Review',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :link
         b.input :avatar, as: :file, hint: b.object.avatar.present? ? image_tag(b.object.avatar.url) : content_tag(:span, 'no avatar yet')
         b.input :name_ru

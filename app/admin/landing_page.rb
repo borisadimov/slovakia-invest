@@ -2,8 +2,15 @@ ActiveAdmin.register LandingPage do
   permit_params :title_ru, :title_en, :title_uk,
                 :subtitle_ru, :subtitle_en, :subtitle_uk,
                 :about_block_text_ru, :about_block_text_en, :about_block_text_uk,
+                features_attributes: [
+                  :id, :order,
+                  :from, :to,
+                  :unit_ru, :unit_en, :unit_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :_destroy
+                ],
                 reviews_attributes: [
-                  :id,
+                  :id, :order,
                   :name_ru, :name_en, :name_uk,
                   :description_ru, :description_en, :description_uk,
                   :text_ru, :text_en, :text_uk,
@@ -51,10 +58,27 @@ ActiveAdmin.register LandingPage do
       end
     end
 
+    f.inputs 'Features' do
+      f.has_many :features,
+                  new_record: 'Add Feature',
+                  allow_destroy: true do |b|
+        b.input :order
+        b.input :from
+        b.input :to
+        b.input :unit_ru
+        b.input :unit_en
+        b.input :unit_uk
+        b.input :description_ru
+        b.input :description_en
+        b.input :description_uk
+      end
+    end
+
     f.inputs 'Reviews' do
       f.has_many :reviews,
                   new_record: 'Add Review',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :avatar, as: :file, hint: b.object.avatar.present? ? image_tag(b.object.avatar.url) : content_tag(:span, 'no avatar yet')
         b.input :link
         b.input :name_ru

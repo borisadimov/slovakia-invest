@@ -35,9 +35,10 @@
         = link_to I18n.t('landing.about_us_block.link'), about_us_pages_path, class: 'about-company__link'
       .about-company__img
   
-  section.features 
-    .container
-      = render 'partials/features', locals={features: @features}
+  - unless @landing_page.features.blank?
+    section.features 
+      .container
+        = render 'partials/features', features: @landing_page.features
 
     .container
       h2.guarantee-title = I18n.t('landing.guarantees_block.title') + ':'
