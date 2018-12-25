@@ -87,8 +87,8 @@ en:
     contacts:
       title: "Contacts"     
   prices:
-    title: "Prices"
-    all_prices: "All prices"
+    title: "Pricelist. Our Prices"
+    service: "Service"
   posts:
     headline: "News from Slovakia: everything related to your business and residence"
     tags: "Tags"
