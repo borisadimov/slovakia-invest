@@ -15,4 +15,6 @@ class Service < ApplicationRecord
   translates :title, :description, :content
 
   default_scope { order(order: :asc) }
+
+  scope :has_prices, -> { joins(:prices).distinct }
 end
