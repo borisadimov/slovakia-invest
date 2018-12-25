@@ -7,4 +7,6 @@ class Employee < ApplicationRecord
   translates :name, :position, :description
 
   mount_base64_uploader :avatar, EmployeeAvatarUploader
+
+  default_scope { order(order: :asc) }
 end

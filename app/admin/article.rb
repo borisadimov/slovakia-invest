@@ -1,10 +1,11 @@
 ActiveAdmin.register Article do
-  permit_params :title_ru, :title_en, :title_uk,
+  permit_params :order,
+                :title_ru, :title_en, :title_uk,
                 :content_ru, :content_en, :content_uk,
                 :service_id,
                 post_ids: [],
                 prices_attributes: [
-                  :id,
+                  :id, :order,
                   :title_ru, :title_en, :title_uk,
                   :description_ru, :description_en, :description_uk,
                   :value,
@@ -18,6 +19,10 @@ ActiveAdmin.register Article do
   end
 
   form do |f|
+    f.inputs 'Order' do
+      f.input :order
+    end
+
     tabs do
       tab 'Russian' do
         f.inputs do
@@ -45,6 +50,7 @@ ActiveAdmin.register Article do
       f.has_many :prices,
                  new_record: 'Add Price',
                  allow_destroy: true do |b|
+        b.input :order
         b.input :title_ru
         b.input :description_ru
         b.input :title_en

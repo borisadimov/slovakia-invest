@@ -31,7 +31,7 @@ footer.footer
             .footer__contacts-item-title
               = I18n.t("contacts.types.#{contact.contact_type}")
             .footer__contacts-item-description
-              = contact.value
+              = contact_url(contact, { class: 'footer__contacts-item-description' })
         .footer__contacts-item
           .footer__contacts-item-title
             | Bratislava

@@ -1,4 +1,9 @@
 module ApplicationHelper
+  CONTACT_URL_MAP = {
+    phone: 'tel',
+    email: 'mailto'
+  }.freeze
+
   def youtube_embed(youtube_url)
     if youtube_url[/youtu\.be\/([^\?]*)/] || youtube_url [/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
 
@@ -18,5 +23,15 @@ module ApplicationHelper
       %Q{<iframe src="https://player.vimeo.com/video/#{ youtube_id }" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>}
     end
 
+  end
+
+  def contact_url(contact, attributes={})
+    url_type = CONTACT_URL_MAP[contact.contact_type.to_sym]
+    attributes_html = attributes.map { |key, value| "#{key}=\"#{value}\"" }.join(' ')
+    if url_type.present?
+      %Q{<a href="#{url_type}:#{contact.value}" #{attributes_html}>#{contact.value}</a>}.html_safe
+    else
+      %Q{<div #{attributes_html}>#{contact.value}</div>}.html_safe
+    end
   end
 end

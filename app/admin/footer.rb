@@ -1,7 +1,6 @@
 ActiveAdmin.register Footer do
   permit_params :bratislava_phone, :moscow_phone, :kiev_phone,
                 contacts_attributes: [:id, :contact_type, :value, :_destroy],
-                social_network_links_attributes: [:id, :url, :logo, :_destroy],
                 partners_attributes: [:id, :url, :logo, :_destroy]
 
   menu label: 'Footer Settings', url: -> { url_for [:admin, :footer] }
@@ -27,6 +26,7 @@ ActiveAdmin.register Footer do
       f.has_many :partners,
                   new_record: 'Add Partner',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :url
         b.input :logo, as: :file, hint: b.object.logo.present? ? image_tag(b.object.logo.url) : content_tag(:span, 'no logo yet')
       end
@@ -34,15 +34,9 @@ ActiveAdmin.register Footer do
       f.has_many :contacts,
                   new_record: 'Add Contact',
                   allow_destroy: true do |b|
+        b.input :order
         b.input :contact_type, as: :select, collection: Contact.contact_types.keys
         b.input :value
-      end
-
-      f.has_many :social_network_links,
-                  new_record: 'Add Network Link',
-                  allow_destroy: true do |b|
-        b.input :url
-        b.input :logo, as: :file, hint: b.object.logo.present? ? image_tag(b.object.logo.url) : content_tag(:span, 'no logo yet')
       end
     end
 

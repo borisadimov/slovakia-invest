@@ -1,5 +1,6 @@
 ActiveAdmin.register Employee do
-  permit_params :name_ru, :name_en, :name_uk,
+  permit_params :order,
+                :name_ru, :name_en, :name_uk,
                 :position_ru, :position_en, :position_uk,
                 :description_ru, :description_en, :description_uk,
                 :avatar,
@@ -7,6 +8,10 @@ ActiveAdmin.register Employee do
                 contacts_attributes: [:id, :contact_type, :value, :_destroy]
 
   form do |f|
+    f.inputs 'Order' do
+      f.input :order
+    end
+
     tabs do
       tab 'Russian' do
         f.inputs do

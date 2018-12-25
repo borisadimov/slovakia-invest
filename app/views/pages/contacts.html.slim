@@ -9,218 +9,55 @@
     .container
       .page__content.page__content-no-sidebar
         h1.page__title
-          | Контакты: как с нами связаться
+           = I18n.t('contacts.title')
     .tabs
       .contacts-page__blocks
         .container
           .contacts-page__blocks-wrapper
             ul
-              li
-                a href="#tab-1"
-                  .contacts-page__block
-                    .contacts-page__block-title
-                      | Иммиграция
-                    = image_tag "immigration-contacts.svg" 
-              li
-                a href="#tab-2"     
-                  .contacts-page__block
-                    .contacts-page__block-title
-                      | Бизнес
-                    = image_tag "biznes.svg" 
-              li
-                a href="#tab-3"
-                  .contacts-page__block
-                    .contacts-page__block-title
-                      | Образование
-                    = image_tag "obrazov.svg" 
-              li
-                a href="#tab-4"
-                  .contacts-page__block
-                    .contacts-page__block-title
-                      | Инвестиции
-                    = image_tag "investment-contacts.svg" 
-              li
-                a href="#tab-5"
-                  .contacts-page__block
-                    .contacts-page__block-title
-                      | Другие услуги
-                    = image_tag "immigration-contacts.svg"       
+              - @services.each_with_index do |service, index|
+                li
+                  a href="#tab-#{index + 1}"
+                    .contacts-page__block
+                      .contacts-page__block-title
+                        = service.title
+                      = image_tag "#{service.slug}.svg" 
 
-      .contacts-faces(id="tab-1")
-        .container
-          .contacts-faces_wrapper
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции    
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk     
-
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции    
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk
-
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции    
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk    
-
-      .contacts-faces(id="tab-2")
-        .container
-          .contacts-faces_wrapper
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции    5
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk   
-
-      .contacts-faces(id="tab-3")
-        .container
-          .contacts-faces_wrapper
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова123
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции    
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk    
-
-      .contacts-faces(id="tab-4")
-        .container
-          .contacts-faces_wrapper
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова1
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции  1  
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk 
-        
-      .contacts-faces(id="tab-5")
-        .container
-          .contacts-faces_wrapper
-            .contacts-faces_item
-              .contacts-faces_item__img
-                = image_tag("icon-contacts.png")
-              .contacts-faces_item__name
-                | Екатерина Деменкова1
-              .contacts-faces_item__post.customize
-                | Зам. директора по иммиграции 1000 
-              .contacts-faces_item__skype.customize
-                | Skype: slovakiainvest.ru
-              .contacts-faces_item__tel.customize
-                | Тел.:
-                a< href="tel:+421232144901"
-                  | +421-2-321-44-901
-              .contacts-faces_item__mobile.customize
-                | Моб.:
-                a< href="tel:+421232144901"
-                  | +421-908-292-115
-              a.contacts-faces_item__mail.customize href="mailto:Ekaterina.Pleshanova@slovakiainvest.sk" 
-                | Ekaterina.Pleshanova@slovakiainvest.sk 
-    
+      - @services.each_with_index do |service, index|
+        .contacts-faces(id="tab-#{index + 1}")
+          .container
+            .contacts-faces_wrapper
+              - service.employees.each do |employee|
+                .contacts-faces_item
+                  .contacts-faces_item__img
+                    = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts.png"
+                  .contacts-faces_item__name
+                    = employee.name
+                  .contacts-faces_item__post.customize
+                    = employee.position
+                  - employee.contacts.each do |contact|
+                    .contacts-faces_item__tel.customize
+                      = I18n.t("contacts.types.#{contact.contact_type}") + ': '
+                      = contact_url(contact)
 
     .contacts-page__contacts
       .container
         .contacts-page__contacts-office
           .contacts-page__contacts-office-title
-            | Офис SlovakiaInvest
+            = I18n.t('contacts.office_contacts.title')
           ul
-            - @contacts_office.each do |item|
+            - @contacts_page.contacts.group_by(&:contact_type).each do |contact_type|
               li.contacts-page__contacts-office-item
-                  div(class="contacts-page__contacts-office-type_text #{item[:type]}")
-                    = item[:type_text]
-                  - if item[:type] == "email" 
-                    a(class="contacts-page__contacts-office-link" href="mailto:#{item[:link]}")
-                      = item[:link]
-                  - elsif item[:type] == "phone"
-                    a(class="contacts-page__contacts-office-link" href="tel:#{item[:link]}")
-                      = item[:link]
-                  - else
-                    div(class="contacts-page__contacts-office-link")
-                      = item[:link]
+                .contacts-page__contacts-office-type_text.email
+                  = I18n.t("contacts.types.#{contact_type.first}")
+                .contacts-page__contacts-office-link
+                  = contact_url(contact_type.second.first, { class: 'contacts-page__contacts-office-link' })
+              - contact_type.second.drop(1).each do |contact|
+                li.contacts-page__contacts-office-item
+                  .contacts-page__contacts-office-type_text.email
+                  .contacts-page__contacts-office-link
+                    = contact_url(contact, { class: 'contacts-page__contacts-office-link' })
+
         .contacts-page__contacts-map
           script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByUg22uv5jdTNNL6lD50kut7Lyt8QAB0A" 
           div.contacts-page__contacts-map-canvas-wrapper style="overflow:hidden;" 
@@ -229,28 +66,31 @@
               #gmap_canvas img max-width:none!important;background:none!important 
           javascript:
             function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(48.14745610000001,17.117556899999954),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.14745610000001,17.117556899999954)});infowindow = new google.maps.InfoWindow({content:'<strong>Lazaretská 6778/8</strong><br>Lazaretská 6778/8, 811 08 Bratislava, Словакия<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+    
     .contacts-form
       .container
-        form.contacts-page__form(method="post")
+        = form_tag user_callbacks_path, class: 'contacts-page__form'
           .contacts-form_left
             .contacts-input-wrapper
-              input type="text" name="name" placeholder="Имя и Фамилия"
+              input type="text" name="name" placeholder=(I18n.t('contacts.form.name'))
             .contacts-email
-              input type="email" name="email" placeholder="Email"
+              input type="email" name="email" placeholder=(I18n.t('contacts.form.email'))
               p.contacts-email__absolute
-                | (будет виден только администраторам сайта)
+                = '(' + I18n.t('contacts.form.email_tip') + ')'
             .contacts-input-wrapper
-              input type="phone" name="phone" placeholder="Телефон"
+              input type="phone" name="phone" placeholder=(I18n.t('contacts.form.phone'))
             .contacts-textarea
-              textarea name="how" cols="48" rows="8" placeholder="Как вы узнали о нас?"
+              textarea name="source" cols="48" rows="8" placeholder=(I18n.t('contacts.form.source'))
           .contacts-form_right   
-            textarea name="more" cols="80" rows="12" placeholder="Дополнительные пожелания, сведения, сообщение или предложение"
+            textarea name="text" cols="80" rows="12" placeholder=(I18n.t('contacts.form.text'))
             .contacts-form_checkbox__wrapper
-              input type="checkbox" class="checkbox" id="checkbox" name="checkbox"
+              input type="checkbox" class="checkbox" id="checkbox" name="checkbox" required=true
               label for="checkbox"
-                | Я принимаю уловия политики обработки персональных данных и настоящим даю согласие на обработку моих персональных данных
+                = I18n.t('contacts.form.terms')
 
             .contacts-page__form-btn-wrapper
               span
               button.btn.btn__dispatch.contacts-page__form-btn
-                | Отправить
+                = I18n.t('contacts.form.submit')
+  
+  = render 'partials/menu'

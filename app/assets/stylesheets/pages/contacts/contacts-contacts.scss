@@ -92,20 +92,6 @@
   padding-left: 6px;
 }
 
-.contacts-page__contacts-office-item:nth-child(5){
-  margin-top: 40px;
-}
-
-.contacts-page__contacts-office-item:nth-child(8) {
-  margin-top: 20px;
-}
-.contacts-page__contacts-office-item:nth-child(9) {
-  margin-top: 20px;
-}
-.contacts-page__contacts-office-item:nth-child(10) {
-  margin-top: 20px;
-}
-
 .contacts-page h1.page__title {
   color: #000000;
   margin-top: 115px;
@@ -138,6 +124,18 @@
   border-radius: 8px;
   padding-bottom: 10px;
   transition: height 0.3s linear;
+}
+
+.contacts-page__block.block-business img {
+  max-width: 132px;
+  left: 127px;
+  top: -3px;
+}
+
+.contacts-page__block.block-education img {
+  // max-width: 180px;
+  // top: -28px;
+  // left: 82px;
 }
 
 .contacts-page__block img {
@@ -196,9 +194,17 @@
 
 .contacts-faces_wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-flow: row wrap;
   margin-top: 87px;
+  margin-left: -4%;
+  margin-right: -4%;
+}
+
+.contacts-faces_item {
+  padding-right: 4%;
+  padding-left: 4%;
+  margin-bottom: 30px;
 }
 
 .contacts-faces_item__name {
@@ -208,14 +214,12 @@
   font-size: 24px;
 }
 
-.contacts-faces_item__tel a,
-.contacts-faces_item__mobile a {
+.contacts-faces_item__tel a {
   color: #000000;
 }
 
-
-.contacts-faces_item__skype {
-  margin-top: 15px;
+.contacts-faces_item__tel div {
+  display: inline-block;
 }
 
 .contacts-form__wrapper {

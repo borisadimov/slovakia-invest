@@ -5,6 +5,11 @@
     .container
       .block-detail
         = @service.content.html_safe if @service.content.present?
+
+    - unless @service.features.blank?
+      section.features 
+        .container
+          = render 'partials/features', features: @service.features
         
     - unless @service.posts.blank?
       .item-page__news
