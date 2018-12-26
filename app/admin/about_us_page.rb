@@ -1,5 +1,5 @@
 ActiveAdmin.register AboutUsPage do
-  permit_params :content_ru, :content_en, :content_uk
+  permit_params :content_ru, :content_en, :content_uk, :content_sk
 
   menu label: 'About Us', url: -> { url_for [:admin, :about_us_page] }
 
@@ -30,6 +30,12 @@ ActiveAdmin.register AboutUsPage do
       tab 'Ukranian' do
         f.inputs do
           f.input :content_uk, as: :froala_editor
+        end
+      end
+
+      tab 'Slovak' do
+        f.inputs do
+          f.input :content_sk, as: :froala_editor
         end
       end
     end

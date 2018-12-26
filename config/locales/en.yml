@@ -89,6 +89,7 @@ en:
   prices:
     title: "Pricelist. Our Prices"
     service: "Service"
+    all_prices: "All prices"
   posts:
     headline: "News from Slovakia: everything related to your business and residence"
     tags: "Tags"

@@ -3,6 +3,7 @@ ActiveAdmin.register Service do
                 :title_ru, :description_ru, :content_ru,
                 :title_en, :description_en, :content_en,
                 :title_uk, :description_uk, :content_uk,
+                :title_sk, :description_sk, :content_sk,
                 features_attributes: [
                   :id, :order,
                   :from, :to,
@@ -55,6 +56,14 @@ ActiveAdmin.register Service do
           f.input :content_uk, as: :froala_editor
         end
       end
+
+      tab 'Slovak' do
+        f.inputs do
+          f.input :title_sk
+          f.input :description_sk
+          f.input :content_sk, as: :froala_editor
+        end
+      end
     end
 
     f.inputs 'Features' do
@@ -67,9 +76,11 @@ ActiveAdmin.register Service do
         b.input :unit_ru
         b.input :unit_en
         b.input :unit_uk
+        b.input :unit_sk
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
+        b.input :description_sk
       end
     end
 
@@ -83,12 +94,15 @@ ActiveAdmin.register Service do
         b.input :name_ru
         b.input :name_en
         b.input :name_uk
+        b.input :name_sk
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
+        b.input :description_sk
         b.input :text_ru
         b.input :text_en
         b.input :text_uk
+        b.input :text_sk
       end
     end
 

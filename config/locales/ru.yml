@@ -68,6 +68,7 @@ ru:
   prices:
     title: "Прайслист. Наши расценки"
     service: "Услуга"
+    all_prices: "Все цены"
   contacts:
     title: "Контакты: как с нами связаться"
     office_contacts:

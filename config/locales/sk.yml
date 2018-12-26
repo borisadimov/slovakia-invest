@@ -1,0 +1,127 @@
+sk:
+  available_locales:
+    ru: "Ruský"
+    sk: "Angličtina"
+    uk: "Ukrajinský"
+    sk: "Slovenský"
+  header_menu:
+    more:
+      title: "Viac"
+      items:
+        about_us: "O nás"
+        prices: "Ceny"
+        news: "Užitočné informácie"
+        contacts: "Kontakty"
+  landing:
+    contact_us_button: "Kontaktujte nás"
+    about_us_block:
+      title: "O spoločnosti"
+      link: "Viac informácií o nás"
+    guarantees_block:
+      title: "Garantujeme"
+      items: [
+        {title: "Bezpečné získanie povolenia na pobyt",  description: "Na desať rokov naši klienti nedostali v migračnej službe jediné odmietnutie." },
+        {title: "Čestnosť a slušnosť",  description: "Otvorene poskytujeme všetky informácie bez toho, aby sme schovávali podrobnosti a budúce záväzky." },
+        {title: "Individuálny prístup",  description: "Vyriešime akékoľvek neštandardné otázky alebo problémy podľa vašich potrieb." },
+        {title: "Dostupnosť",  description: "Vždy sme tu, môžete sa s vami pohodlne spojiť." }
+      ]
+    for_whom_block:
+      title: "Pre koho naše služby"
+      items: [
+        "Registrácia povolenia na pobyt na Slovensku na podnikanie, štúdium alebo zlúčenie rodiny s perspektívou získania trvalého pobytu a občianstva.",
+        "Úplná podpora podnikania vrátane kompletného rozsahu účtovníckych služieb, podávanie správ, mzdovej agendy, riešenie akýchkoľvek neštandardných situácií.",
+        "Investičné projekty a všeobecná analýza investičného prostredia, pripravené pracovné obchodné návrhy a podnikové vyhľadávanie na kľúč",
+        "Slovenská výchova, príprava na vstup do vysokých škôl, vysokoškolské vzdelávanie, ruština pre deti na Slovensku.",
+        "Nehnuteľnosti na Slovensku: nákup, predaj, prenájom bytových a nebytových nehnuteľností, investície do nehnuteľností.",
+        "Ďalšie služby pre podnikanie, prácu, štúdium a spravodlivý život na Slovensku. Kontaktujte nás, nebudeme vás opúšťať!"
+      ]
+    how_work_block:
+      title: "Ako pracujeme"
+      items: [
+        "Kontaktujte nás",
+        "Získať možnosti",
+        "Vychutnajte si našu podporu",
+        "Nastaviť koncový cieľ",
+        "Spoločne budeme dosahovať výsledky"
+      ]
+    contact_us_block:
+      title: "Prvá konzultácia zdarma"
+      button: "Kontaktujte nás"
+  reviews:
+    title: "Recenzie"
+  pages:
+    posts: "Programy"
+    any_questions_block:
+      title: "Akékoľvek otázky"
+      button: "Kontaktujte nás"
+    more: "Ďalšie články"
+    contacts:
+      title: "Kontakty"
+  prices:
+    title: "Cenník našich cien"
+    služba: "Služba"
+    all_prices: "Všetky ceny"
+  contacts:
+    title: "Kontakty: ako nás kontaktovať"
+    office_contacts:
+      title: "Úrad SlovakiaInvest"
+    types:
+      phone: "telefón"
+      email: "E-mail"
+      fax: "Fax"
+      address: "Adresa"
+      skype: "skype"
+    form:
+      name: "Krstné meno a priezvisko"
+      email: "E-mail"
+      email_tip: "budú viditeľné iba pre správcov webu"
+      phone: "Telefón"
+      source: "Ako ste sa o nás dozvedeli"
+      text: "Ďalšie želania"
+      terms: "Súhlasím s podmienkami spracovania osobných údajov a týmto súhlasím so spracovaním mojich osobných údajov"
+      submit: "Odoslať"
+  posts:
+    headline: "Novinky zo Slovenska: všetko, čo súvisí s vašim podnikaním a pobytom"
+    tags: "Tagy"
+    more: "viac informácií"
+    author: "Autor článku"
+    copyright: "Všetky texty, obrazy, označenia, informácie a iné informácie podliehajú zákonu č. 618/2003 o autorskom práve a súvisiacich právach (Autorské právo) .Používanie textov, obrázkov, značiek, informácií a iných informácií je možné len s písomným súhlasom skupiny spoločností SlovakiaInvest. "
+    search:
+      title: "Vyhľadávanie"
+      button: Nájsť
+      placeholder: "Vyhľadávanie"
+    comments:
+      headline: "Komentáre"
+      form:
+        headline: "Pridať komentár"
+        name: "Vaše meno"
+        email: "Váš e-mail (bude viditeľný len pre správcov webu)"
+        comment: "Komentár"
+        submit: "Pridať"
+  footer:
+    partners:
+      title: "Partneri"
+    form:
+      title: "Prihláste sa k odberu noviniek"
+      email: "E-mail"
+      terms: "Súhlasím s podmienkami spracovania osobných údajov a týmto súhlasím so spracovaním mojich osobných údajov"
+      submit: "Odoberať"
+    socials:
+      title: "Sme online"
+    pages:
+      about_us: "O nás"
+      news: "Užitočné informácie"
+      contacts: "Kontakty"
+    copyright: "Všetky texty, obrazy, označenia, informácie a iné informácie podliehajú zákonu č. 618/2003 o autorskom práve a súvisiacich právach (Autorské právo) .Používanie textov, obrázkov, značiek, informácií a iných informácií je možné len s písomným súhlasom skupiny spoločností slovákiaInvest. "
+  menu:
+    pages:
+      main: "Domov"
+      reviews: "Recenzie"
+      about_us: "O nás"
+      news: "Užitočné informácie"
+      contacts: "Kontakty"
+      prices: "Ceny"
+  time:
+    formats:
+      long: "% H:% M:% S% d-% m-% Y"
+      default: "% d.% m.% Y% H:% M:% S"
