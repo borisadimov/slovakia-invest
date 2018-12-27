@@ -1,19 +1,19 @@
 ActiveAdmin.register LandingPage do
-  permit_params :title_ru, :title_en, :title_uk,
-                :subtitle_ru, :subtitle_en, :subtitle_uk,
-                :about_block_text_ru, :about_block_text_en, :about_block_text_uk,
+  permit_params :title_ru, :title_en, :title_uk, :title_sk,
+                :subtitle_ru, :subtitle_en, :subtitle_uk, :subtitle_sk,
+                :about_block_text_ru, :about_block_text_en, :about_block_text_uk, :about_block_text_sk,
                 features_attributes: [
                   :id, :order,
                   :from, :to,
-                  :unit_ru, :unit_en, :unit_uk,
-                  :description_ru, :description_en, :description_uk,
+                  :unit_ru, :unit_en, :unit_uk, :unit_sk,
+                  :description_ru, :description_en, :description_uk, :description_sk,
                   :_destroy
                 ],
                 reviews_attributes: [
                   :id, :order,
-                  :name_ru, :name_en, :name_uk,
-                  :description_ru, :description_en, :description_uk,
-                  :text_ru, :text_en, :text_uk,
+                  :name_ru, :name_en, :name_uk, :name_sk,
+                  :description_ru, :description_en, :description_uk, :description_sk,
+                  :text_ru, :text_en, :text_uk, :text_sk,
                   :avatar,
                   :_destroy
                 ]
@@ -56,6 +56,14 @@ ActiveAdmin.register LandingPage do
           f.input :about_block_text_uk
         end
       end
+
+      tab 'Slovak' do
+        f.inputs do
+          f.input :title_sk
+          f.input :subtitle_sk
+          f.input :about_block_text_sk
+        end
+      end
     end
 
     f.inputs 'Features' do
@@ -68,9 +76,11 @@ ActiveAdmin.register LandingPage do
         b.input :unit_ru
         b.input :unit_en
         b.input :unit_uk
+        b.input :unit_sk
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
+        b.input :description_sk
       end
     end
 
@@ -84,12 +94,15 @@ ActiveAdmin.register LandingPage do
         b.input :name_ru
         b.input :name_en
         b.input :name_uk
+        b.input :name_sk
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
+        b.input :description_sk
         b.input :text_ru
         b.input :text_en
         b.input :text_uk
+        b.input :text_sk
       end
     end
 
