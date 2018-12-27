@@ -89,8 +89,10 @@ en:
       form:
         title: "Add comment"
         name: "Your name"
-        email: "Your e-mail (will be visible only to site administrators)"
+        email: "Your e-mail"
+        email_tip: "will be visible only to site administrators"
         comment: "Comment"
+        terms: "I accept the terms of the personal data processing policy and hereby I consent to the processing of my personal data"
         submit: "Add"
   footer:
     partners:
