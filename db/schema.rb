@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181226111632) do
+ActiveRecord::Schema.define(version: 20181227123417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -244,9 +244,9 @@ ActiveRecord::Schema.define(version: 20181226111632) do
     t.string   "description_en"
     t.string   "description_uk"
     t.string   "link"
-    t.text     "text_ru"
-    t.text     "text_en"
-    t.text     "text_uk"
+    t.string   "text_ru"
+    t.string   "text_en"
+    t.string   "text_uk"
     t.string   "avatar"
     t.string   "reviewable_type"
     t.integer  "reviewable_id"
