@@ -7,7 +7,7 @@
     .main-header__container.container
       .main-header__title = @landing_page.title
       .main-header__sub-title = @landing_page.subtitle
-      .btn.main-header__btn = I18n.t('landing.contact_us_button')
+      a.btn.main-header__btn href="/pages/contacts" = I18n.t('landing.contact_us_button')
   .services
     .container
       .services-wrapper
@@ -88,7 +88,7 @@
     .container
       h2.partners-header__title
         = I18n.t('landing.contact_us_block.title')
-      .btn.partners-header__btn
+      a.btn.partners-header__btn href="/pages/contacts"
         = I18n.t('landing.contact_us_block.button')
         
   = render 'partials/menu'

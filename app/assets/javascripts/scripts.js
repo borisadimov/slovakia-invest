@@ -268,4 +268,18 @@ $( document ).ready(function() {
   if ($('.tabs').length > 0) {
     $('.tabs').tabs({})
   }
+
+  // accordion price
+
+  if ($('.accordion').length > 0) {
+    var acc = $(".accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function () {
+        this.classList.toggle("active");
+        $(this).next().toggle("show");
+      }
+    }
+  }
 })
