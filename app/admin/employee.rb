@@ -1,8 +1,8 @@
 ActiveAdmin.register Employee do
   permit_params :order,
-                :name_ru, :name_en, :name_uk,
-                :position_ru, :position_en, :position_uk,
-                :description_ru, :description_en, :description_uk,
+                :name_ru, :name_en, :name_uk, :name_sk,
+                :position_ru, :position_en, :position_uk, :position_sk,
+                :description_ru, :description_en, :description_uk, :description_sk,
                 :avatar,
                 :service_id,
                 contacts_attributes: [:id, :contact_type, :value, :_destroy]
@@ -34,6 +34,14 @@ ActiveAdmin.register Employee do
           f.input :name_uk
           f.input :position_uk
           f.input :description_uk
+        end
+      end
+
+      tab 'Slovak' do
+        f.inputs do
+          f.input :name_sk
+          f.input :position_sk
+          f.input :description_sk
         end
       end
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181224125207) do
+ActiveRecord::Schema.define(version: 20181226111632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.text     "content_uk"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.text     "content_sk"
     t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -57,20 +58,19 @@ ActiveRecord::Schema.define(version: 20181224125207) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.integer  "service_id",   null: false
+    t.integer  "service_id", null: false
     t.string   "title_ru"
     t.string   "title_en"
     t.string   "title_uk"
     t.text     "content_ru"
     t.text     "content_en"
     t.text     "content_uk"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "slug"
-    t.string   "videolink_ru"
-    t.string   "videolink_en"
-    t.string   "videolink_uk"
     t.integer  "order"
+    t.string   "title_sk"
+    t.text     "content_sk"
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
   end
 
@@ -104,18 +104,9 @@ ActiveRecord::Schema.define(version: 20181224125207) do
 
   create_table "contacts_pages", force: :cascade do |t|
     t.integer  "singleton_guard"
-    t.string   "page_title_ru"
-    t.string   "page_title_en"
-    t.string   "page_title_uk"
-    t.string   "employees_title_ru"
-    t.string   "employees_title_en"
-    t.string   "employees_title_uk"
-    t.string   "contacts_title_ru"
-    t.string   "contacts_title_en"
-    t.string   "contacts_title_uk"
     t.string   "map_coords"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["singleton_guard"], name: "index_contacts_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -134,19 +125,10 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "order"
+    t.string   "name_sk"
+    t.string   "position_sk"
+    t.string   "description_sk"
     t.index ["service_id"], name: "index_employees_on_service_id", using: :btree
-  end
-
-  create_table "facts", force: :cascade do |t|
-    t.string   "text_ru"
-    t.string   "text_en"
-    t.string   "text_uk"
-    t.string   "logo"
-    t.string   "page_type"
-    t.integer  "page_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["page_type", "page_id"], name: "index_facts_on_page_type_and_page_id", using: :btree
   end
 
   create_table "features", force: :cascade do |t|
@@ -163,6 +145,8 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "order"
+    t.string   "unit_sk"
+    t.string   "description_sk"
     t.index ["featureable_type", "featureable_id"], name: "index_features_on_featureable_type_and_featureable_id", using: :btree
   end
 
@@ -204,6 +188,9 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.string   "about_block_image"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.string   "title_sk"
+    t.string   "subtitle_sk"
+    t.text     "about_block_text_sk"
     t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -227,6 +214,9 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.string   "author_uk"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "title_sk"
+    t.text     "text_sk"
+    t.string   "author_sk"
   end
 
   create_table "prices", force: :cascade do |t|
@@ -241,6 +231,8 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "order"
+    t.string   "title_sk"
+    t.string   "description_sk"
     t.index ["article_id"], name: "index_prices_on_article_id", using: :btree
   end
 
@@ -261,6 +253,9 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "order"
+    t.string   "name_sk"
+    t.string   "description_sk"
+    t.string   "text_sk"
     t.index ["reviewable_type", "reviewable_id"], name: "index_reviews_on_reviewable_type_and_reviewable_id", using: :btree
   end
 
@@ -277,10 +272,10 @@ ActiveRecord::Schema.define(version: 20181224125207) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "slug"
-    t.string   "videolink_ru"
-    t.string   "videolink_en"
-    t.string   "videolink_uk"
     t.integer  "order"
+    t.string   "title_sk"
+    t.text     "description_sk"
+    t.text     "content_sk"
   end
 
   create_table "user_callbacks", force: :cascade do |t|
