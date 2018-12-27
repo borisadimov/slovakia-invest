@@ -47,6 +47,41 @@ REVIEWS = [
   }
 ]
 
+FEATURES = [
+  {
+    order: 1, from: 0, to: 100,
+    unit_ru: '%', unit_en: '%', unit_uk: '%', unit_sk: '%',
+    description_ru: 'Гарантия получения ВНЖ в Словакии или полный возврат денег',
+    description_en: 'Guarantee of obtaining a residence permit in Slovakia or a full refund',
+    description_uk: 'Гарантія отримання ВНЖ в Словаччині чи повне повернення грошей',
+    description_sk: 'Záruka na získanie povolenia na pobyt na Slovensku alebo plnej náhrady'
+  },
+  {
+    order: 2, from: 0, to: 25,
+    unit_ru: 'лет', unit_en: 'years', unit_uk: 'рокiв', unit_sk: 'rokov',
+    description_ru: 'На рынке бухгалтерских услуг',
+    description_en: 'In the market of accounting services',
+    description_uk: 'На ринку бухгалтерських послуг',
+    description_sk: 'Na trhu účtovníckych služieb'
+  },
+  {
+    order: 3, from: 0, to: 10,
+    unit_ru: 'лет', unit_en: 'years', unit_uk: 'рокiв', unit_sk: 'rokov',
+    description_ru: 'Оказываем миграционные услуги в Словакию',
+    description_en: 'We provide migration services to Slovakia',
+    description_uk: 'Надаємо міграційні послуги в Словаччину',
+    description_sk: 'Poskytujeme migračné služby na Slovensku'
+  },
+  {
+    order: 4, from: 0, to: 0,
+    unit_ru: '€', unit_en: '€', unit_uk: '€', unit_sk: '€',
+    description_ru: 'Заплатили штрафы наши клиенты за наши ошибки при ведении бухгалтерского учета или в миграционной полиции',
+    description_en: 'Our clients paid fines for our accounting errors or in the migration police',
+    description_uk: 'Заплатили штрафи наші клієнти за наші помилки при веденні бухгалтерського обліку або в міграційній поліції',
+    description_sk: 'Naši klienti platili pokuty za naše chyby v účtovníctve alebo v migračnej polícii'
+  }
+]
+
 PRICES = [
   {
     order: 1,
@@ -136,6 +171,7 @@ def generate_services_attributes(services)
       description_ru: DESC_RU, description_en: DESC_EN, description_uk: DESC_UK, description_sk: DESC_SK,
       content_ru: CONTENT, content_en: CONTENT, content_uk: CONTENT, content_sk: CONTENT,
       reviews_attributes: REVIEWS,
+      features_attributes: FEATURES,
       articles: generate_articles_attributes(service[:articles])
     }
   end
@@ -207,6 +243,7 @@ LandingPage.create(
   title_ru: 'Добро пожаловать в Словакию', title_en: 'Welcome to Slovakia', title_uk: 'Ласкаво просимо в Словаччину', title_sk: 'Vitajte na Slovensku',
   subtitle_ru: 'Иммиграция. Бизнес. Инвестиции. Образование.', subtitle_en: 'Immigration. Business. Investments. Education.', subtitle_uk: 'Імміграція. Бізнес. Інвестиції. Освіта.', subtitle_sk: 'Imigrácie. Business. Investíciu. Vzdelávanie.',
   about_block_text_ru: LOREM, about_block_text_en: LOREM, about_block_text_uk: LOREM, about_block_text_sk: LOREM,
+  features_attributes: FEATURES,
   reviews_attributes: REVIEWS
 )
 
