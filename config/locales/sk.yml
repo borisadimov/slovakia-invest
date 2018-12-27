@@ -89,8 +89,10 @@ sk:
       form:
         title: "Pridať komentár"
         name: "Vaše meno"
-        email: "Váš e-mail (bude viditeľný len pre správcov webu)"
+        email: "Váš e-mail"
+        email_tip: "budú viditeľné iba pre správcov webu"
         comment: "Komentár"
+        terms: "Súhlasím s podmienkami spracovania osobných údajov a týmto súhlasím so spracovaním mojich osobných údajov"
         submit: "Pridať"
   footer:
     partners:
