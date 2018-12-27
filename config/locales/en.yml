@@ -1,30 +1,4 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  available_locales:
-    ru: "Russian"
-    en: "English"
-    uk: "Ukranian"
-    sk: "Slovak"
   header_menu:
     more:
       title: "More"
@@ -38,14 +12,6 @@ en:
     about_us_block:
       title: "About company"
       link: "Learn more about us"
-    features_block:
-      years: "years"
-      items: [
-        "The guarantee of obtaining a residence permit in Slovakia or a full refund",
-        "In the market of accounting services",
-        "We provide migration services to Slovakia",
-        "Our clients paid for our accounting errors or in the migration police"
-      ]
     guarantees_block:
       title: "We guarantee"
       items: [
@@ -90,24 +56,6 @@ en:
     title: "Pricelist. Our Prices"
     service: "Service"
     all_prices: "All prices"
-  posts:
-    headline: "News from Slovakia: everything related to your business and residence"
-    tags: "Tags"
-    more: "more"
-    author: "Post Author"
-    copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
-    search:
-      title: "Search"
-      button: "Find"
-      placeholder: "Search"
-    comments:
-      headline: "Comments"
-      form:
-        headline: "Add comment"
-        name: "Your name"
-        email: "Your e-mail (will be visible only to site administrators)"
-        comment: "Comment"
-        submit: "Add"
   contacts:
     title: "Contacts: how to contact us"
     office_contacts:
@@ -127,6 +75,23 @@ en:
       text: "Additional suggestions"
       terms: "I accept the terms of the personal data processing policy and hereby I consent to the processing of my personal data"
       submit: "Submit"
+  posts:
+    title: "News from Slovakia: everything related to your business and residence"
+    more: "more"
+    author: "Post Author"
+    copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
+    search:
+      title: "Search"
+      button: "Find"
+      placeholder: "Search"
+    comments:
+      title: "Comments"
+      form:
+        title: "Add comment"
+        name: "Your name"
+        email: "Your e-mail (will be visible only to site administrators)"
+        comment: "Comment"
+        submit: "Add"
   footer:
     partners:
       title: "Partners"
@@ -152,5 +117,4 @@ en:
       prices: "Prices"
   time:
     formats:
-      default: "%Y.%m.%d %H:%M:%S"
-    
+      default: "%Y.%m.%d %H:%M:%S"  

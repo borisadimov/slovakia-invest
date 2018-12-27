@@ -17,7 +17,7 @@
         = I18n.t('posts.copyright')
 
       .blog-page_form.blog-page__form-title.blog-page__form-title-comment
-          = I18n.t('posts.comments.headline')
+          = I18n.t('posts.comments.title')
       - @post.comments.each do |comment|
         .blog-page__autor
           = "#{comment.author} (#{l comment.created_at, format: :default})"
@@ -26,7 +26,7 @@
 
       = form_tag "#{@post.id}/comments", class: 'blog-page_form'
         .blog-page__form-title.blog-page__form-title-add
-          = I18n.t('posts.comments.form.headline')
+          = I18n.t('posts.comments.form.title')
         .blog-page__form-input-wrapper
           .blog-page__form-input-text
             = I18n.t('posts.comments.form.name')

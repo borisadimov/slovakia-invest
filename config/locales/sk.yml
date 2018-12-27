@@ -1,9 +1,4 @@
 sk:
-  available_locales:
-    ru: "Ruský"
-    sk: "Angličtina"
-    uk: "Ukrajinský"
-    sk: "Slovenský"
   header_menu:
     more:
       title: "Viac"
@@ -81,8 +76,7 @@ sk:
       terms: "Súhlasím s podmienkami spracovania osobných údajov a týmto súhlasím so spracovaním mojich osobných údajov"
       submit: "Odoslať"
   posts:
-    headline: "Novinky zo Slovenska: všetko, čo súvisí s vašim podnikaním a pobytom"
-    tags: "Tagy"
+    title: "Novinky zo Slovenska: všetko, čo súvisí s vašim podnikaním a pobytom"
     more: "viac informácií"
     author: "Autor článku"
     copyright: "Všetky texty, obrazy, označenia, informácie a iné informácie podliehajú zákonu č. 618/2003 o autorskom práve a súvisiacich právach (Autorské právo) .Používanie textov, obrázkov, značiek, informácií a iných informácií je možné len s písomným súhlasom skupiny spoločností SlovakiaInvest. "
@@ -91,9 +85,9 @@ sk:
       button: Nájsť
       placeholder: "Vyhľadávanie"
     comments:
-      headline: "Komentáre"
+      title: "Komentáre"
       form:
-        headline: "Pridať komentár"
+        title: "Pridať komentár"
         name: "Vaše meno"
         email: "Váš e-mail (bude viditeľný len pre správcov webu)"
         comment: "Komentár"
@@ -123,5 +117,5 @@ sk:
       prices: "Ceny"
   time:
     formats:
-      long: "% H:% M:% S% d-% m-% Y"
-      default: "% d.% m.% Y% H:% M:% S"
+      long: "%H:%M:%S %d-%m-%Y"
+      default: "%d.%m.%Y %H:%M:%S"
