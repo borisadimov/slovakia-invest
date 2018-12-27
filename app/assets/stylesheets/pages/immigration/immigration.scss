@@ -35,18 +35,19 @@ p.page-description {
  }
 .block-detail {
  margin-top: 63px;
-}
-h2.block-detail_title {
- font-family: Montserrat; 
- font-style: Bold; 
- font-size: 48px;
-}
-p.block-detail_description {
- margin-top: 67px;
- font-style: Regular; 
- font-size: 16px; 
- max-width: 779px;
- width: 100%;
+
+ h2 {
+  font-family: Montserrat; 
+  font-style: Bold; 
+  font-size: 48px;
+ }
+ p {
+  margin-top: 67px;
+  font-style: Regular; 
+  font-size: 16px; 
+  max-width: 779px;
+  width: 100%;
+ }
 }
 
 .item-page__video-wrapper {
