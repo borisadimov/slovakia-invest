@@ -3,7 +3,6 @@
 }
  
  .container-relative {
-  
   position: relative;
 }
 
@@ -12,10 +11,9 @@
  left: 54px;
  top: 105px;
 }
-.item-page__header-content {
- 
-}
 
-.item-page__header-nav_other-services {
-
+@media (max-width: 768px) {
+  .item-page__header-logo_other-services {
+    display: none;
+  }
 }
