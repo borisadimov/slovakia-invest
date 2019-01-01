@@ -20,6 +20,9 @@
 1. rake db:setup
 2. rake db:migrate
 
+### Database restart
+* rails db:drop db:create db:migrate db:seed
+
 #### Deployment instructions
 * cap production deploy
 * bundle exec cap production deploy

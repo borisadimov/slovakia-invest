@@ -71,6 +71,7 @@ h2 {
   line-height: normal;
   font-size: 24px;
   color: #ffffff;
+  text-align: center;
   border: none;
 
   cursor: pointer;
@@ -187,6 +188,10 @@ h2 {
 }
 
 .scroll-remove {
+  overflow: hidden;
+}
+
+.container-relative {
   overflow: hidden;
 }
 
