@@ -121,6 +121,8 @@ span.price-total {
  max-width: 302px;
  justify-content: flex-start;
  margin-top: 39px;
+ 
+ cursor: pointer;
 }
 .prices-down {
  width: 15px;
@@ -162,9 +164,13 @@ span.price-total {
   display: inline-block;
 }
 
+.accordion-container {
+  display: none;
+}
+
 .prices-wrapper {
  display: flex;
- margin-top: 110px;
+ margin-top: 50px;
 }
 .prices-block {
  max-width: 500px;
