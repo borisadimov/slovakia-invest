@@ -121,11 +121,22 @@ span.price-total {
  max-width: 302px;
  justify-content: flex-start;
  margin-top: 39px;
+ 
+ cursor: pointer;
 }
+
 .prices-down {
  width: 15px;
- margin-left: 58px;
+ margin-left: 20px;
  margin-top: 4px;
+}
+
+.prices-down img {
+  transition: transform 0.3s linear;
+}
+
+.active .prices-down img {
+  transform: rotate(180deg);
 }
 
 .business__contacts-wrapper {
@@ -162,9 +173,13 @@ span.price-total {
   display: inline-block;
 }
 
+.accordion-container {
+  display: none;
+}
+
 .prices-wrapper {
  display: flex;
- margin-top: 110px;
+ margin-top: 50px;
 }
 .prices-block {
  max-width: 500px;
@@ -262,6 +277,16 @@ p.prices-item__description {
  }
  .immigration-business__contacts-title {
   text-align: center;
+ }
+
+ .prices-allprices {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
  }
 }
 

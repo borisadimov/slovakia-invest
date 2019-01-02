@@ -22,25 +22,25 @@
               span.price-total
                 = price.value
 
-        .prices-allprices
+        .prices-allprices.accordion
           .allprices
             = I18n.t('prices.all_prices')   
           .prices-down  
             = image_tag("down-button-black")  
-
-        .prices-wrapper
-          - @article.prices.each_slice((@article.prices.size / 2.0).round) do |slice|
-            .prices-block
-              - slice.each do |price|
-                .prices-item
-                  .prices-item__left
-                    h3.prices-item__title
-                      = price.title + ':'
-                    p.prices-item__description
-                      = price.description
-                  .prices-item__right    
-                    span.price-total
-                      = price.value
+        .accordion-container   
+          .prices-wrapper
+            - @article.prices.each_slice((@article.prices.size / 2.0).round) do |slice|
+              .prices-block
+                - slice.each do |price|
+                  .prices-item
+                    .prices-item__left
+                      h3.prices-item__title
+                        = price.title + ':'
+                      p.prices-item__description
+                        = price.description
+                    .prices-item__right    
+                      span.price-total
+                        = price.value
 
   - unless @article.posts.blank?
       .item-page__news
