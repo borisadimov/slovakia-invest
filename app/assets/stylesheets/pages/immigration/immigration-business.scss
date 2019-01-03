@@ -15,9 +15,6 @@
 .prices {
  margin-top: 45px;
 }
-.item-page__header-content {
-  
-}
 
 .prices-cards__wrapper {
  display: flex;
@@ -190,8 +187,12 @@ span.price-total {
 }
 .prices-item {
  display: flex;
- border-bottom: 1px solid #000000;
+ flex-flow: row nowrap;
+ justify-content: space-between;
  margin-top: 20px;
+ padding-right: 20px;
+
+ border-bottom: 1px solid #000000;
 }
 
 .prices-item:nth-child(3) {
@@ -205,12 +206,19 @@ p.prices-item__description {
 }
 
 .prices-item__right {
- margin-left: 93px;
+ flex: 1 0 auto;
+ margin-left: 40px;
 }
 
-@media (max-width: 1284px) {
- 
+.prices-item__right span {
+  display: block;
+  text-align: right;
 }
+
+.immigration-business__contacts {
+  margin-top: 40px;
+}
+
 @media (max-width: 1024px) {
  .prices {
   padding-left: 0;
@@ -235,21 +243,31 @@ p.prices-item__description {
  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
  .item-page__video-wrapper:after {
   display: none;
  }
  .prices-wrapper {
   flex-flow: row wrap;
  }
+
+ .prices-block {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
  .prices-block:nth-child(2) {
-  margin-left: 0;
+  margin-left: auto;
  }
  .prices-wrapper {
   margin: auto;
  }
  .business__contacts-item:nth-child(2) {
   margin-left: 35px;
+ }
+
+ .prices-item:nth-child(3) {
+   border-bottom: 1px solid #000000;
  }
 }
 

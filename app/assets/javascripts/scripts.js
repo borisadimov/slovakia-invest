@@ -266,7 +266,10 @@ $( document ).ready(function() {
 
   // tabs
   if ($('.tabs').length > 0) {
-    $('.tabs').tabs({})
+    $('.tabs').tabs({
+      hide: 'fadeOut',
+      show: 'fadeIn'
+    })
   }
 
   // accordion price
