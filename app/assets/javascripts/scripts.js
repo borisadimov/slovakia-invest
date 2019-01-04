@@ -273,7 +273,6 @@ $( document ).ready(function() {
   }
 
   // accordion price
-
   if ($('.accordion').length > 0) {
     var acc = $(".accordion");
     var i;
@@ -283,6 +282,18 @@ $( document ).ready(function() {
         this.classList.toggle("active");
         $(this).next().toggle("show");
       }
+    }
+  }
+
+  // header animation
+  console.log( $('.item-page__header-logo'))
+  if (($('.item-page__header-logo').length > 0)) {
+    $('.item-page__header-logo').addClass('fade-in-left')
+
+    if (($('.item-page__links').length > 0)) {
+      setTimeout(function() {
+        $('.item-page__links').addClass('animate')
+      }, 1300)
     }
   }
 })
