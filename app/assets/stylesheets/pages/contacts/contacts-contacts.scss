@@ -132,11 +132,6 @@
   top: -3px;
 }
 
-.contacts-page__block.block-education img {
-  // max-width: 180px;
-  // top: -28px;
-  // left: 82px;
-}
 
 .contacts-page__block img {
   opacity: 0;
@@ -172,13 +167,21 @@
 }
 
 .contacts-page__blocks-wrapper li:nth-child(5) img {
-  display: none;
+  height: 50px;
+  top: 12px;
 }
 
 .contacts-page__block:hover {
   height: 120px;
     img {
       opacity: 0.4;
+  }
+}
+
+.contacts-page .ui-tabs-nav .ui-state-active .contacts-page__block {
+  height: 120px;
+  img {
+    opacity: 0.4;
   }
 }
 
@@ -202,6 +205,8 @@
 }
 
 .contacts-faces_item {
+  max-width: 350px;
+  width: 100%;
   padding-right: 4%;
   padding-left: 4%;
   margin-bottom: 30px;

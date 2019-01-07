@@ -14,11 +14,13 @@ h3.service-global.first {
 }
 
 .price-page__content {
- max-width: 690px;
- padding: 21px 27px 17px 27px;
- border: 1px solid #B8C5FF;
- box-sizing: border-box;
- margin-top: 36px;
+  display: none;
+
+  max-width: 690px;
+  padding: 21px 27px 17px 27px;
+  border: 1px solid #B8C5FF;
+  box-sizing: border-box;
+  margin-top: 36px;
 }
 
 .service-block {
@@ -48,6 +50,8 @@ h3.service-global:after {
  line-height: 28px;
  font-size: 20px;
  margin-top: 48px;
+
+ cursor: pointer;
 }
 
 .service-global__wrapper {
@@ -85,5 +89,6 @@ h3.service-global:after {
  border: 1px solid #B8C5FF;
 }
 
-
-
+.service-global__line.active .service-global__cross::after {
+  display: none;
+}

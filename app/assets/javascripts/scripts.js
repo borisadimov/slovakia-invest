@@ -266,6 +266,34 @@ $( document ).ready(function() {
 
   // tabs
   if ($('.tabs').length > 0) {
-    $('.tabs').tabs({})
+    $('.tabs').tabs({
+      hide: 'fadeOut',
+      show: 'fadeIn'
+    })
+  }
+
+  // accordion price
+  if ($('.accordion').length > 0) {
+    var acc = $(".accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function () {
+        this.classList.toggle("active");
+        $(this).next().toggle("show");
+      }
+    }
+  }
+
+  // header animation
+  console.log( $('.item-page__header-logo'))
+  if (($('.item-page__header-logo').length > 0)) {
+    $('.item-page__header-logo').addClass('fade-in-left')
+
+    if (($('.item-page__links').length > 0)) {
+      setTimeout(function() {
+        $('.item-page__links').addClass('animate')
+      }, 1300)
+    }
   }
 })

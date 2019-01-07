@@ -45,7 +45,7 @@
 }
 .prices-card:nth-child(2):hover {
  top: -10px;
- box-shadow: 10px 12px 44px rgba(76, 97, 244, 0.7);
+ box-shadow: 10px 12px 44px rgba(203, 78, 123, 0.7);
  
  
 }
@@ -118,11 +118,22 @@ span.price-total {
  max-width: 302px;
  justify-content: flex-start;
  margin-top: 39px;
+ 
+ cursor: pointer;
 }
+
 .prices-down {
  width: 15px;
- margin-left: 58px;
+ margin-left: 20px;
  margin-top: 4px;
+}
+
+.prices-down img {
+  transition: transform 0.3s linear;
+}
+
+.active .prices-down img {
+  transform: rotate(180deg);
 }
 
 .business__contacts-wrapper {
@@ -159,9 +170,13 @@ span.price-total {
   display: inline-block;
 }
 
+.accordion-container {
+  display: none;
+}
+
 .prices-wrapper {
  display: flex;
- margin-top: 110px;
+ margin-top: 50px;
 }
 .prices-block {
  max-width: 500px;
@@ -172,8 +187,12 @@ span.price-total {
 }
 .prices-item {
  display: flex;
- border-bottom: 1px solid #000000;
+ flex-flow: row nowrap;
+ justify-content: space-between;
  margin-top: 20px;
+ padding-right: 20px;
+
+ border-bottom: 1px solid #000000;
 }
 
 .prices-item:nth-child(3) {
@@ -187,12 +206,19 @@ p.prices-item__description {
 }
 
 .prices-item__right {
- margin-left: 93px;
+ flex: 1 0 auto;
+ margin-left: 40px;
 }
 
-@media (max-width: 1284px) {
- 
+.prices-item__right span {
+  display: block;
+  text-align: right;
 }
+
+.immigration-business__contacts {
+  margin-top: 40px;
+}
+
 @media (max-width: 1024px) {
  .prices {
   padding-left: 0;
@@ -217,21 +243,31 @@ p.prices-item__description {
  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
  .item-page__video-wrapper:after {
   display: none;
  }
  .prices-wrapper {
   flex-flow: row wrap;
  }
+
+ .prices-block {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
  .prices-block:nth-child(2) {
-  margin-left: 0;
+  margin-left: auto;
  }
  .prices-wrapper {
   margin: auto;
  }
  .business__contacts-item:nth-child(2) {
   margin-left: 35px;
+ }
+
+ .prices-item:nth-child(3) {
+   border-bottom: 1px solid #000000;
  }
 }
 
@@ -259,6 +295,16 @@ p.prices-item__description {
  }
  .immigration-business__contacts-title {
   text-align: center;
+ }
+
+ .prices-allprices {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
  }
 }
 

@@ -14,8 +14,29 @@
   font-size: 14px;
   text-align: center;
   color: #ffffff;
+  opacity: 0;
 }
+
 .item-page__links a:hover {
   background: rgba(246, 246, 246, 0.2);
 }
 
+
+
+@for $i from 1 through 18 { 
+  .item-page__links.animate a:nth-child(#{$i}) {
+    animation: fadeInBottom 0.15s ease-in #{$i * 0.15s} 1 forwards;
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
