@@ -47,6 +47,7 @@ gem 'carrierwave-base64'
 gem 'kaminari'
 gem 'activeadmin_froala_editor'
 gem 'froala-editor-sdk'
+gem 'geocoder'
 
 
 group :development, :test do
