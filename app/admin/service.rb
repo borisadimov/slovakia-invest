@@ -37,7 +37,7 @@ ActiveAdmin.register Service do
         f.inputs do
           f.input :title_ru
           f.input :description_ru
-          f.input :content_ru, as: :froala_editor
+          f.input :content_ru, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
 
@@ -45,7 +45,7 @@ ActiveAdmin.register Service do
         f.inputs do
           f.input :title_en
           f.input :description_en
-          f.input :content_en, as: :froala_editor
+          f.input :content_en, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
 
@@ -53,7 +53,7 @@ ActiveAdmin.register Service do
         f.inputs do
           f.input :title_uk
           f.input :description_uk
-          f.input :content_uk, as: :froala_editor
+          f.input :content_uk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
 
@@ -61,7 +61,7 @@ ActiveAdmin.register Service do
         f.inputs do
           f.input :title_sk
           f.input :description_sk
-          f.input :content_sk, as: :froala_editor
+          f.input :content_sk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
     end
