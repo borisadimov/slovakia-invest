@@ -17,8 +17,9 @@
           .item-page__item-title
             = I18n.t('pages.posts')
           = render 'partials/item-news', posts: @service.posts.first(3)
-        
-    = render 'partials/reviews', reviews: @service.reviews
+
+    - unless @service.reviews.blank?   
+      = render 'partials/reviews', reviews: @service.reviews
     
     .any-questions
       .container

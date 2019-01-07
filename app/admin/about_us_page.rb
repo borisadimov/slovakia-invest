@@ -17,25 +17,25 @@ ActiveAdmin.register AboutUsPage do
     tabs do
       tab 'Russian' do
         f.inputs do
-          f.input :content_ru, as: :froala_editor
+          f.input :content_ru, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
 
       tab 'English' do
         f.inputs do
-          f.input :content_en, as: :froala_editor
+          f.input :content_en, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
 
       tab 'Ukranian' do
         f.inputs do
-          f.input :content_uk, as: :froala_editor
+          f.input :content_uk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
 
       tab 'Slovak' do
         f.inputs do
-          f.input :content_sk, as: :froala_editor
+          f.input :content_sk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
     end

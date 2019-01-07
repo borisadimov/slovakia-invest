@@ -9,7 +9,7 @@
         = "(#{l @post.created_at, format: :default})"
       
       .article-page__content
-        = @post.text
+        = @post.text.html_safe if @post.text.present?
 
       .blog-page__form-title.blog-page__form-title-comment
         = I18n.t('posts.comments.title')

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
+  post 'upload_image', to: 'upload#upload_image'
+
   resources :pages, only: [], shallow: true do
     collection do
       get :about_us
