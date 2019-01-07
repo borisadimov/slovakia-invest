@@ -10,7 +10,7 @@ ActiveAdmin.register Post do
       tab 'Russian' do
         f.inputs do
           f.input :title_ru
-          f.input :text_ru
+          f.input :text_ru, as: :froala_editor
           f.input :author_ru
         end
       end
@@ -18,7 +18,7 @@ ActiveAdmin.register Post do
       tab 'English' do
         f.inputs do
           f.input :title_en
-          f.input :text_en
+          f.input :text_en, as: :froala_editor
           f.input :author_en
         end
       end
@@ -26,7 +26,7 @@ ActiveAdmin.register Post do
       tab 'Ukranian' do
         f.inputs do
           f.input :title_uk
-          f.input :text_uk
+          f.input :text_uk, as: :froala_editor
           f.input :author_uk
         end
       end
@@ -34,7 +34,7 @@ ActiveAdmin.register Post do
       tab 'Slovak' do
         f.inputs do
           f.input :title_sk
-          f.input :text_sk
+          f.input :text_sk, as: :froala_editor
           f.input :author_sk
         end
       end
