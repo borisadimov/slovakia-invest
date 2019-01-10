@@ -31,58 +31,61 @@
 a.circle {
   position: relative;
   flex: 1 0 auto;
-
   display: block;
   width: 74px;
   height: 74px;
+  
+ 
 }
 
-.circle-1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+// .circle-1 {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 91px;
+//   height: 91px;
+//   border-radius: 50%;
+//   border: 1px solid #9598AE;
+//   box-sizing: border-box;
+//   transition: width 0.3s linear, height 0.3s linear;
+//   background: linear-gradient(180deg, rgba(64, 61, 236, 0.29) 0%, #FF00F5 100%);
+// }
+// .circle-2 {
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  transform: translate(-50%, -50%);
 
-  width: 91px;
-  height: 91px;
+//  width: 83px;
+//  height: 83px;
+//  border-radius: 50%;
+//  border: 1px solid #9598AE;
+//  box-sizing: border-box;
 
-  border-radius: 50%;
-  border: 1px solid #9598AE;
-  box-sizing: border-box;
-
-  transition: width 0.3s linear, height 0.3s linear;
-}
-.circle-2 {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
-
- width: 83px;
- height: 83px;
- border-radius: 50%;
- border: 1px solid #9598AE;
- box-sizing: border-box;
-
- transition: width 0.3s linear, height 0.3s linear;
-}
+//  transition: width 0.3s linear, height 0.3s linear;
+// }
 .circle-color {
  position: absolute;
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- 
  display: flex;
  justify-content: center;
  align-items: center;
  width: 74px;
  height: 74px;
  border-radius: 50%;
- background: #AE1926;
+ 
  box-sizing: border-box;
-
  transition: width 0.3s linear, height 0.3s linear;
 }
+
+.circle-color {
+  background: linear-gradient(180deg, rgba(64, 61, 236, 0.29) 0%, #FF00F5 100%);
+}
+
+
 
 a.circle:hover .circle-color {
   width: 68px;
