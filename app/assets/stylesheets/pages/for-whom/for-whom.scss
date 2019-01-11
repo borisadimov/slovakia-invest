@@ -38,43 +38,16 @@ a.circle {
  
 }
 
-// .circle-1 {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 91px;
-//   height: 91px;
-//   border-radius: 50%;
-//   border: 1px solid #9598AE;
-//   box-sizing: border-box;
-//   transition: width 0.3s linear, height 0.3s linear;
-//   background: linear-gradient(180deg, rgba(64, 61, 236, 0.29) 0%, #FF00F5 100%);
-// }
-// .circle-2 {
-//  position: absolute;
-//  top: 50%;
-//  left: 50%;
-//  transform: translate(-50%, -50%);
-
-//  width: 83px;
-//  height: 83px;
-//  border-radius: 50%;
-//  border: 1px solid #9598AE;
-//  box-sizing: border-box;
-
-//  transition: width 0.3s linear, height 0.3s linear;
-// }
 .circle-color {
  position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ transform-origin: center;
  display: flex;
  justify-content: center;
  align-items: center;
- width: 74px;
- height: 74px;
  border-radius: 50%;
  color: #ffffff;
  font-family: Montserrat;
@@ -84,13 +57,10 @@ a.circle {
  font-size: 48px;
  box-sizing: border-box;
  transition: transform 0.3s linear;
-
 }
+
 a.circle:hover .circle-color {
-  transform: scale(0.9) translate(-50%, -50%);
-  // transform: scaleY(0.5);
-  // width: 68px;
-  // height: 68px;
+  transform: scale(0.9);
 }
 
 .for-whom_line1 .for-whom_block:first-child .circle-color {
