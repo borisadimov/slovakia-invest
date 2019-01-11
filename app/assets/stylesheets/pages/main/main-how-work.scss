@@ -133,10 +133,6 @@
 }
 
 @media (max-width: 1440px) {
-  .how-work__items {
-    justify-content: center;
-  }
-
   .how-work__item {
     width: 180px;
     height: 180px;
@@ -171,6 +167,10 @@
 }
 
 @media (max-width: 1024px) {
+  .how-work__items {
+    justify-content: center;
+  }
+
   .how-work__items .how-work__item-wrapper {
     padding-top: 0;
     margin-right: 0;

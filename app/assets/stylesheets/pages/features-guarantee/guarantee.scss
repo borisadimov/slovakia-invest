@@ -1,6 +1,6 @@
 .guarantee-wrapper {
  display: flex;
- justify-content: space-between;
+ justify-content: flex-start;
  max-width: 1400px;
  width: 100%;
  align-items: baseline;
@@ -10,10 +10,16 @@
 .guarantee-block {
  max-width: 240px;
  width: 100%;
- 
+ margin-left: 5%;
+
+ &:first-child {
+   margin-left: 0;
+ }
  
 }
 .guarantee-block_title {
+  margin-bottom: 27px;
+
  display: block;
  font-size: 28px;
  line-height: 36px;
@@ -48,6 +54,7 @@
  .guarantee-block {
   width: 400px;
   margin-top: 40px;
+  margin-left: 0;
  }
  .guarantee-block_title {
   font-size: 19px;

@@ -7,21 +7,26 @@
 }
 .for-whom_line1 {
  display: flex;
- justify-content: space-between;
+ justify-content: flex-start;
  margin-top: 118px;
  width: 100%;
 }
 .for-whom_line2 {
  width: 100%;
  display: flex;
- justify-content: space-between;
+ justify-content: flex-start;
  margin-top: 127px; 
 }
 
 .for-whom_block {
- display: flex;
- max-width: 320px;
- width: 100%;
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  margin-left: 5%;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 .for-whom__description {
  max-width: 900px;
@@ -34,8 +39,6 @@ a.circle {
   display: block;
   width: 74px;
   height: 74px;
-  
- 
 }
 
 .circle-color {
