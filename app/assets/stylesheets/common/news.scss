@@ -3,7 +3,8 @@ h1.page__title.news {
  	text-align: left;
 	max-width: 866px;
 	width: 100%;
-	font-size: 60px;
+	font-size: 48px;
+	font-weight: bold;
 	padding-top: 45px;
 }
 
@@ -90,16 +91,21 @@ h1.page__title.news {
 .news__content {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
-	margin-left: -15px;
-	margin-right: -15px;
+	justify-content: flex-start;
+	margin-left: -3%;
+	margin-right: -3%;
 }
 
 .news__item {
-	max-width: 336px;
+	box-sizing: content-box;
+	max-width: 320px;
 	width: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 3%;
+	padding-right: 3%;
+
+	&:first-child {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 1024px) {

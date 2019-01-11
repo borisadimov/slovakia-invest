@@ -6,13 +6,13 @@
 }
 
 h2.partners-header__title {
- width: 789px;
+ width: 525px;
  color: #000000;
  font-family: Montserrat;
  font-style: normal;
  font-weight: bold;
  line-height: 62px;
- font-size: 60px;
+ font-size: 48px;
  
 }
 
@@ -21,6 +21,9 @@ h2.partners-header__title {
  width: 100%;
  padding: 18px 63px;
  margin-top: 73px;
+}
+.partners-header__btn.btn {
+	font-size: 22px;
 }
 
 .partners-content {

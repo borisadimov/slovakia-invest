@@ -5,7 +5,7 @@
 }
 .features-wrap {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	max-width: 1400px;
 	width: 100%;
 	padding-top: 80px;
@@ -13,6 +13,11 @@
 .features-item {
 	max-width: 240px;
 	width: 100%;
+	margin-left: 5%;
+
+	&:first-child {
+		margin-left: 0;
+	} 
  }
 .features-item h2 {
 	font-size: 70px;
@@ -30,6 +35,7 @@ h2.guarantee-title {
 @media (max-width: 1024px) {
 	.features-item h2 {
 		font-size: 58px;
+		line-height: 40px;
 	}
 
 	.features-item p {
@@ -64,6 +70,7 @@ h2.guarantee-title {
 		max-width: 280px;
 		width: 100%;
 		margin-bottom: 20px;
+		margin-left: 0;
 	}
 
 	.features-item:last-child {

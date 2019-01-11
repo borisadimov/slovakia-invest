@@ -107,7 +107,6 @@
   z-index: 10;
   width: auto;
 
-  transition: all 0.3s ease-out;
   height: 0;
 }
 
@@ -124,10 +123,6 @@
   cursor: pointer;
 }
 
-.header__nav-item:hover .submenu-wrapper {
-  transition: all 0.3s ease-in;
-}
-
 .header__nav-item .submenu {
   padding-top: 35px;
   padding-bottom: 25px;
@@ -136,13 +131,13 @@
 
 .header__nav-item .submenu a {
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.22s ease-out;
 }
 
 .header__nav-item:hover .submenu a {
   pointer-events: auto;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out 0.4s; 
+  transition: opacity 0.22s ease-in-out 0.22s; 
 }
 
 
@@ -156,7 +151,7 @@
 
   background: #ffffff;
 
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
 
   border-bottom-style: solid;
   border-bottom-width: 1px;

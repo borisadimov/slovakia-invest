@@ -7,21 +7,26 @@
 }
 .for-whom_line1 {
  display: flex;
- justify-content: space-between;
+ justify-content: flex-start;
  margin-top: 118px;
  width: 100%;
 }
 .for-whom_line2 {
  width: 100%;
  display: flex;
- justify-content: space-between;
+ justify-content: flex-start;
  margin-top: 127px; 
 }
 
 .for-whom_block {
- display: flex;
- max-width: 320px;
- width: 100%;
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  margin-left: 5%;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 .for-whom__description {
  max-width: 900px;
@@ -31,73 +36,75 @@
 a.circle {
   position: relative;
   flex: 1 0 auto;
-
   display: block;
   width: 74px;
   height: 74px;
 }
 
-.circle-1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 91px;
-  height: 91px;
-
-  border-radius: 50%;
-  border: 1px solid #9598AE;
-  box-sizing: border-box;
-
-  transition: width 0.3s linear, height 0.3s linear;
-}
-.circle-2 {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
-
- width: 83px;
- height: 83px;
- border-radius: 50%;
- border: 1px solid #9598AE;
- box-sizing: border-box;
-
- transition: width 0.3s linear, height 0.3s linear;
-}
 .circle-color {
  position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- 
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ transform-origin: center;
  display: flex;
  justify-content: center;
  align-items: center;
- width: 74px;
- height: 74px;
  border-radius: 50%;
- background: #AE1926;
+ color: #ffffff;
+ font-family: Montserrat;
+ font-style: normal;
+ font-weight: bold;
+ line-height: 62px;
+ font-size: 48px;
  box-sizing: border-box;
-
- transition: width 0.3s linear, height 0.3s linear;
+ transition: transform 0.3s linear;
 }
 
 a.circle:hover .circle-color {
-  width: 68px;
-  height: 68px;
+  transform: scale(0.9);
 }
 
-a.circle:hover .circle-1 {
-  width: 98px;
-  height: 98px;
+.for-whom_line1 .for-whom_block:first-child .circle-color {
+  background: linear-gradient(180deg, rgba(64, 61, 236, 0.29) 0%, #FF00F5 100%);
+  opacity: 0.8;
+  box-shadow: 0px 0px 44px #DADADA;
 }
 
-a.circle:hover .circle-2 {
-  width: 86px;
-  height: 86px;
+.for-whom_line1 .for-whom_block:nth-child(2) .circle-color {
+  background: linear-gradient(180deg, rgba(195, 151, 100, 0.2) 0%, #FB07C5 100%);
+  mix-blend-mode: normal;
+  opacity: 0.8;
 }
+
+.for-whom_line1 .for-whom_block:nth-child(3) .circle-color {
+  background: linear-gradient(180deg, rgba(51, 194, 142, 0.2) 0%, #4C71F3 100%);
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+
+.for-whom_line2 .for-whom_block:first-child .circle-color {
+  background: linear-gradient(180deg, rgba(9, 174, 226, 0.28) 0%, #F66A04 100%);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.for-whom_line2 .for-whom_block:nth-child(2) .circle-color {
+  background: linear-gradient(180deg, rgba(79, 113, 213, 0.17) 0%, #12CA8D 100%);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.for-whom_line2 .for-whom_block:nth-child(3) .circle-color {
+  background: linear-gradient(180deg, rgba(76, 97, 244, 0.523862) 0%, #CA8012 100%);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+
+
+
 
 @media (max-width: 1024px) {
   .for-whom__description {

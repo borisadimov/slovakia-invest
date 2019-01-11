@@ -64,22 +64,23 @@
   font-family: $font-montserrat;
   font-weight: bold;
   line-height: 62px;
-  font-size: 60px;
+  font-size: 48px;
 
   color: #FFFFFF;
 }
 
 .main-header__sub-title {
   line-height: 28px;
-  font-size: 16px;
-
+  font-size: 23px;
+  font-family: Montserrat;
   color: #FFFFFF;
 }
 
 .main-header__btn {
-  margin-top: 55px;
+  margin-top: 36px;
   padding: 13px 54px;
   align-self: flex-start;
+  font-family: Montserrat;
 }
 
 @media (max-width: 768px) {
