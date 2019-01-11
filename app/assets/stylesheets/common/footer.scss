@@ -124,8 +124,8 @@ form label.error {
   display: block;
   width: 26px;
   height: 26px;
-  border: 1px solid #000000;
-
+  background: #C3C6DF;
+  border-radius: 2px;
   &::after {
     content: '';
     position: absolute;
