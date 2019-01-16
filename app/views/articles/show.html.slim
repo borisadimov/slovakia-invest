@@ -26,7 +26,7 @@
           .allprices
             = I18n.t('prices.all_prices')   
           .prices-down  
-            = image_tag("down-button-black")  
+            = image_tag(asset_path('down-button-black'))
         .accordion-container   
           .prices-wrapper
             - @article.prices.each_slice((@article.prices.size / 2.0).round) do |slice|
