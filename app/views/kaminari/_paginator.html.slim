@@ -10,5 +10,9 @@
   .pagination
     ul
       - each_page do |page|
-        li.pagination__item
-          == page_tag page
+        - if page.current?
+          li.pagination__item-current
+            .number == page
+        - else
+          li.pagination__item
+            == page_tag page
