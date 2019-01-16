@@ -1,7 +1,7 @@
 ActiveAdmin.register Post do
-  permit_params :title_ru, :title_en, :title_uk, :title_sk,
-                :text_ru, :text_en, :text_uk, :text_sk,
-                :author_ru, :author_en, :author_uk, :author_sk,
+  permit_params :title_ru, :title_en, :title_uk,
+                :text_ru, :text_en, :text_uk,
+                :author_ru, :author_en, :author_uk,
                 :meta_title_ru, :meta_title_en, :meta_title_uk,
                 :meta_description_ru, :meta_description_en, :meta_description_uk,
                 article_ids: [],
@@ -45,14 +45,6 @@ ActiveAdmin.register Post do
         f.inputs 'Meta' do
           f.input :meta_title_uk
           f.input :meta_description_uk
-        end
-      end
-
-      tab 'Slovak' do
-        f.inputs do
-          f.input :title_sk
-          f.input :text_sk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
-          f.input :author_sk
         end
       end
     end

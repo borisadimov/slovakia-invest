@@ -1,15 +1,15 @@
 ActiveAdmin.register Article do
   permit_params :order,
-                :title_ru, :title_en, :title_uk, :title_sk,
-                :content_ru, :content_en, :content_uk, :content_sk,
+                :title_ru, :title_en, :title_uk,
+                :content_ru, :content_en, :content_uk,
                 :meta_title_ru, :meta_title_en, :meta_title_uk,
                 :meta_description_ru, :meta_description_en, :meta_description_uk,
                 :service_id,
                 post_ids: [],
                 prices_attributes: [
                   :id, :order,
-                  :title_ru, :title_en, :title_uk, :title_sk,
-                  :description_ru, :description_en, :description_uk, :description_sk,
+                  :title_ru, :title_en, :title_uk,
+                  :description_ru, :description_en, :description_uk,
                   :value,
                   :_destroy
                 ]
@@ -61,13 +61,6 @@ ActiveAdmin.register Article do
           f.input :meta_description_uk
         end
       end
-
-      tab 'Slovak' do
-        f.inputs do
-          f.input :title_sk
-          f.input :content_sk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
-        end
-      end
     end
 
     f.inputs 'Prices' do
@@ -81,8 +74,6 @@ ActiveAdmin.register Article do
         b.input :description_en
         b.input :title_uk
         b.input :description_uk
-        b.input :title_sk
-        b.input :description_sk
         b.input :value
       end
     end

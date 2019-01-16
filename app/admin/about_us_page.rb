@@ -1,5 +1,5 @@
 ActiveAdmin.register AboutUsPage do
-  permit_params :content_ru, :content_en, :content_uk, :content_sk,
+  permit_params :content_ru, :content_en, :content_uk,
                 :meta_title_ru, :meta_title_en, :meta_title_uk,
                 :meta_description_ru, :meta_description_en, :meta_description_uk
 
@@ -47,12 +47,6 @@ ActiveAdmin.register AboutUsPage do
         f.inputs 'Meta' do
           f.input :meta_title_uk
           f.input :meta_description_uk
-        end
-      end
-
-      tab 'Slovak' do
-        f.inputs do
-          f.input :content_sk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
       end
     end

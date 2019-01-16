@@ -32,8 +32,6 @@ class ApplicationController < ActionController::Base
           I18n.locale = :ru
         when 'UA'
           I18n.locale = :uk
-        when 'SK'
-          I18n.locale = :sk
         else
           I18n.locale = :en
       end
