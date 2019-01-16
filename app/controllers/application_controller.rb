@@ -7,6 +7,13 @@ class ApplicationController < ActionController::Base
     I18n.locale = :en
   end
 
+  def set_meta_tags(resource)
+    @meta_tags = {
+      title: resource.meta_title,
+      description: resource.meta_description
+    }
+  end
+
   private
 
   def fetch_services
@@ -25,8 +32,6 @@ class ApplicationController < ActionController::Base
           I18n.locale = :ru
         when 'UA'
           I18n.locale = :uk
-        when 'SK'
-          I18n.locale = :sk
         else
           I18n.locale = :en
       end

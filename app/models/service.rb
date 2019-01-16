@@ -12,7 +12,7 @@ class Service < ApplicationRecord
   accepts_nested_attributes_for :reviews, allow_destroy: true
   accepts_nested_attributes_for :features, allow_destroy: true
 
-  translates :title, :description, :content
+  translates :title, :description, :content, :meta_title, :meta_description
 
   default_scope { order(order: :asc) }
 
