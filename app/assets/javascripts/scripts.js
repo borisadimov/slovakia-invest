@@ -183,7 +183,7 @@ $( document ).ready(function() {
       var submenu = $(item).find('.submenu-wrapper')
       timerId = setTimeout(function() {
         submenuBackground.height(0)
-      }, 400)
+      }, 300)
       submenu.height(0)
     })
   })
@@ -286,7 +286,6 @@ $( document ).ready(function() {
   }
 
   // header animation
-  console.log( $('.item-page__header-logo'))
   if (($('.item-page__header-logo').length > 0)) {
     $('.item-page__header-logo').addClass('fade-in-left')
 

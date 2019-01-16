@@ -1,19 +1,21 @@
 ActiveAdmin.register LandingPage do
-  permit_params :title_ru, :title_en, :title_uk, :title_sk,
-                :subtitle_ru, :subtitle_en, :subtitle_uk, :subtitle_sk,
-                :about_block_text_ru, :about_block_text_en, :about_block_text_uk, :about_block_text_sk,
+  permit_params :title_ru, :title_en, :title_uk,
+                :subtitle_ru, :subtitle_en, :subtitle_uk,
+                :about_block_text_ru, :about_block_text_en, :about_block_text_uk,
+                :meta_title_ru, :meta_title_en, :meta_title_uk,
+                :meta_description_ru, :meta_description_en, :meta_description_uk,
                 features_attributes: [
                   :id, :order,
                   :from, :to,
-                  :unit_ru, :unit_en, :unit_uk, :unit_sk,
-                  :description_ru, :description_en, :description_uk, :description_sk,
+                  :unit_ru, :unit_en, :unit_uk,
+                  :description_ru, :description_en, :description_uk,
                   :_destroy
                 ],
                 reviews_attributes: [
                   :id, :order,
-                  :name_ru, :name_en, :name_uk, :name_sk,
-                  :description_ru, :description_en, :description_uk, :description_sk,
-                  :text_ru, :text_en, :text_uk, :text_sk,
+                  :name_ru, :name_en, :name_uk,
+                  :description_ru, :description_en, :description_uk,
+                  :text_ru, :text_en, :text_uk,
                   :avatar,
                   :_destroy
                 ]
@@ -39,6 +41,11 @@ ActiveAdmin.register LandingPage do
           f.input :subtitle_ru
           f.input :about_block_text_ru
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_ru
+          f.input :meta_description_ru
+        end
       end
 
       tab 'English' do
@@ -46,6 +53,11 @@ ActiveAdmin.register LandingPage do
           f.input :title_en
           f.input :subtitle_en
           f.input :about_block_text_en
+        end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_en
+          f.input :meta_description_en
         end
       end
 
@@ -55,13 +67,10 @@ ActiveAdmin.register LandingPage do
           f.input :subtitle_uk
           f.input :about_block_text_uk
         end
-      end
 
-      tab 'Slovak' do
-        f.inputs do
-          f.input :title_sk
-          f.input :subtitle_sk
-          f.input :about_block_text_sk
+        f.inputs 'Meta' do
+          f.input :meta_title_uk
+          f.input :meta_description_uk
         end
       end
     end
@@ -76,11 +85,9 @@ ActiveAdmin.register LandingPage do
         b.input :unit_ru
         b.input :unit_en
         b.input :unit_uk
-        b.input :unit_sk
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
-        b.input :description_sk
       end
     end
 
@@ -94,15 +101,12 @@ ActiveAdmin.register LandingPage do
         b.input :name_ru
         b.input :name_en
         b.input :name_uk
-        b.input :name_sk
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
-        b.input :description_sk
         b.input :text_ru
         b.input :text_en
         b.input :text_uk
-        b.input :text_sk
       end
     end
 

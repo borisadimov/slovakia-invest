@@ -1,9 +1,8 @@
-ActiveAdmin.register ContactsPage do
+ActiveAdmin.register PricesPage do
   permit_params :meta_title_ru, :meta_title_en, :meta_title_uk,
-                :meta_description_ru, :meta_description_en, :meta_description_uk,
-                contacts_attributes: [:id, :contact_type, :value, :_destroy]
-
-  menu label: 'Contacts', url: -> { url_for [:admin, :contacts_page] }
+                :meta_description_ru, :meta_description_en, :meta_description_uk
+  
+  menu label: 'Prices', url: -> { url_for [:admin, :prices_page] }
 
   actions :show, :edit, :update
 
@@ -11,7 +10,7 @@ ActiveAdmin.register ContactsPage do
     defaults singleton: true
 
     def resource
-      @resource ||= ContactsPage.instance
+      @resource ||= PricesPage.instance
     end
   end
 
@@ -39,19 +38,9 @@ ActiveAdmin.register ContactsPage do
       end
     end
 
-    f.inputs 'Contacts' do
-      f.has_many :contacts,
-                  new_record: 'Add Contact',
-                  allow_destroy: true do |b|
-        b.input :order
-        b.input :contact_type, as: :select, collection: Contact.contact_types.keys
-        b.input :value
-      end
-    end
-
-    f.actions do
+    actions do
       action :submit
-      cancel_link [:admin, :contacts_page]
+      cancel_link [:admin, :prices_page]
     end
   end
 end

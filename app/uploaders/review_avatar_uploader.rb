@@ -1,3 +1,3 @@
 class ReviewAvatarUploader < ImageUploader
-  process resize_to_fit: [60, 60]
+  process resize_to_fill: [220, 220]
 end
