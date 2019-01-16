@@ -2,6 +2,8 @@ ActiveAdmin.register Post do
   permit_params :title_ru, :title_en, :title_uk, :title_sk,
                 :text_ru, :text_en, :text_uk, :text_sk,
                 :author_ru, :author_en, :author_uk, :author_sk,
+                :meta_title_ru, :meta_title_en, :meta_title_uk,
+                :meta_description_ru, :meta_description_en, :meta_description_uk,
                 article_ids: [],
                 comments_attributes: [:id, :author, :email, :text, :_destroy]
 
@@ -13,6 +15,11 @@ ActiveAdmin.register Post do
           f.input :text_ru, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
           f.input :author_ru
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_ru
+          f.input :meta_description_ru
+        end
       end
 
       tab 'English' do
@@ -21,6 +28,11 @@ ActiveAdmin.register Post do
           f.input :text_en, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
           f.input :author_en
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_en
+          f.input :meta_description_en
+        end
       end
 
       tab 'Ukranian' do
@@ -28,6 +40,11 @@ ActiveAdmin.register Post do
           f.input :title_uk
           f.input :text_uk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
           f.input :author_uk
+        end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_uk
+          f.input :meta_description_uk
         end
       end
 

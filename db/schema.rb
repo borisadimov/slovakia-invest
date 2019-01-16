@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181227123417) do
+ActiveRecord::Schema.define(version: 20190116053937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,15 @@ ActiveRecord::Schema.define(version: 20181227123417) do
     t.text     "content_ru"
     t.text     "content_en"
     t.text     "content_uk"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.text     "content_sk"
+    t.string   "meta_title_ru"
+    t.string   "meta_title_en"
+    t.string   "meta_title_uk"
+    t.string   "meta_description_ru"
+    t.string   "meta_description_en"
+    t.string   "meta_description_uk"
     t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -58,19 +64,25 @@ ActiveRecord::Schema.define(version: 20181227123417) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.integer  "service_id", null: false
+    t.integer  "service_id",          null: false
     t.string   "title_ru"
     t.string   "title_en"
     t.string   "title_uk"
     t.text     "content_ru"
     t.text     "content_en"
     t.text     "content_uk"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "slug"
     t.integer  "order"
     t.string   "title_sk"
     t.text     "content_sk"
+    t.string   "meta_title_ru"
+    t.string   "meta_title_en"
+    t.string   "meta_title_uk"
+    t.string   "meta_description_ru"
+    t.string   "meta_description_en"
+    t.string   "meta_description_uk"
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
   end
 
@@ -105,8 +117,14 @@ ActiveRecord::Schema.define(version: 20181227123417) do
   create_table "contacts_pages", force: :cascade do |t|
     t.integer  "singleton_guard"
     t.string   "map_coords"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "meta_title_ru"
+    t.string   "meta_title_en"
+    t.string   "meta_title_uk"
+    t.string   "meta_description_ru"
+    t.string   "meta_description_en"
+    t.string   "meta_description_uk"
     t.index ["singleton_guard"], name: "index_contacts_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -191,7 +209,24 @@ ActiveRecord::Schema.define(version: 20181227123417) do
     t.string   "title_sk"
     t.string   "subtitle_sk"
     t.text     "about_block_text_sk"
+    t.string   "meta_title_ru"
+    t.string   "meta_title_en"
+    t.string   "meta_title_uk"
+    t.string   "meta_description_ru"
+    t.string   "meta_description_en"
+    t.string   "meta_description_uk"
     t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
+  end
+
+  create_table "news_pages", force: :cascade do |t|
+    t.integer "singleton_guard"
+    t.string  "meta_title_ru"
+    t.string  "meta_title_en"
+    t.string  "meta_title_uk"
+    t.string  "meta_description_ru"
+    t.string  "meta_description_en"
+    t.string  "meta_description_uk"
+    t.index ["singleton_guard"], name: "index_news_pages_on_singleton_guard", unique: true, using: :btree
   end
 
   create_table "partners", force: :cascade do |t|
@@ -212,11 +247,17 @@ ActiveRecord::Schema.define(version: 20181227123417) do
     t.string   "author_ru"
     t.string   "author_en"
     t.string   "author_uk"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "title_sk"
     t.text     "text_sk"
     t.string   "author_sk"
+    t.string   "meta_title_ru"
+    t.string   "meta_title_en"
+    t.string   "meta_title_uk"
+    t.string   "meta_description_ru"
+    t.string   "meta_description_en"
+    t.string   "meta_description_uk"
   end
 
   create_table "prices", force: :cascade do |t|
@@ -234,6 +275,17 @@ ActiveRecord::Schema.define(version: 20181227123417) do
     t.string   "title_sk"
     t.string   "description_sk"
     t.index ["article_id"], name: "index_prices_on_article_id", using: :btree
+  end
+
+  create_table "prices_pages", force: :cascade do |t|
+    t.integer "singleton_guard"
+    t.string  "meta_title_ru"
+    t.string  "meta_title_en"
+    t.string  "meta_title_uk"
+    t.string  "meta_description_ru"
+    t.string  "meta_description_en"
+    t.string  "meta_description_uk"
+    t.index ["singleton_guard"], name: "index_prices_pages_on_singleton_guard", unique: true, using: :btree
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -269,13 +321,19 @@ ActiveRecord::Schema.define(version: 20181227123417) do
     t.text     "content_ru"
     t.text     "content_en"
     t.text     "content_uk"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "slug"
     t.integer  "order"
     t.string   "title_sk"
     t.text     "description_sk"
     t.text     "content_sk"
+    t.string   "meta_title_ru"
+    t.string   "meta_title_en"
+    t.string   "meta_title_uk"
+    t.string   "meta_description_ru"
+    t.string   "meta_description_en"
+    t.string   "meta_description_uk"
   end
 
   create_table "user_callbacks", force: :cascade do |t|

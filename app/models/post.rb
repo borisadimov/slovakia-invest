@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
   accepts_nested_attributes_for :comments, allow_destroy: true
 
-  translates :title, :text, :author
+  translates :title, :text, :author, :meta_title, :meta_description
 
   scope :by_title, ->(title) { where("posts.title_#{I18n.locale} ILIKE ?", "%#{title}%") }
   scope :by_article, ->(article) { joins(:articles).where(articles: {id: article}).distinct }

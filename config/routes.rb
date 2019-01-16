@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resource :contacts_page, only: [:show, :edit, :update]
     resource :about_us_page, only: [:show, :edit, :update]
     resource :footer, only: [:show, :edit, :update]
+    resource :news_page, only: [:show, :edit, :update]
+    resource :prices_page, only: [:show, :edit, :update]
   end
 
   ActiveAdmin.routes(self)

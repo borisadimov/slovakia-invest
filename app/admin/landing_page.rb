@@ -1,6 +1,8 @@
 ActiveAdmin.register LandingPage do
   permit_params :title_ru, :title_en, :title_uk, :title_sk,
                 :subtitle_ru, :subtitle_en, :subtitle_uk, :subtitle_sk,
+                :meta_title_ru, :meta_title_en, :meta_title_uk,
+                :meta_description_ru, :meta_description_en, :meta_description_uk,
                 :about_block_text_ru, :about_block_text_en, :about_block_text_uk, :about_block_text_sk,
                 features_attributes: [
                   :id, :order,
@@ -39,6 +41,11 @@ ActiveAdmin.register LandingPage do
           f.input :subtitle_ru
           f.input :about_block_text_ru
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_ru
+          f.input :meta_description_ru
+        end
       end
 
       tab 'English' do
@@ -47,6 +54,11 @@ ActiveAdmin.register LandingPage do
           f.input :subtitle_en
           f.input :about_block_text_en
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_en
+          f.input :meta_description_en
+        end
       end
 
       tab 'Ukranian' do
@@ -54,6 +66,11 @@ ActiveAdmin.register LandingPage do
           f.input :title_uk
           f.input :subtitle_uk
           f.input :about_block_text_uk
+        end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_uk
+          f.input :meta_description_uk
         end
       end
 

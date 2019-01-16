@@ -4,6 +4,8 @@ ActiveAdmin.register Service do
                 :title_en, :description_en, :content_en,
                 :title_uk, :description_uk, :content_uk,
                 :title_sk, :description_sk, :content_sk,
+                :meta_title_ru, :meta_title_en, :meta_title_uk,
+                :meta_description_ru, :meta_description_en, :meta_description_uk,
                 features_attributes: [
                   :id, :order,
                   :from, :to,
@@ -39,6 +41,11 @@ ActiveAdmin.register Service do
           f.input :description_ru
           f.input :content_ru, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_ru
+          f.input :meta_description_ru
+        end
       end
 
       tab 'English' do
@@ -47,6 +54,11 @@ ActiveAdmin.register Service do
           f.input :description_en
           f.input :content_en, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
         end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_en
+          f.input :meta_description_en
+        end
       end
 
       tab 'Ukranian' do
@@ -54,6 +66,11 @@ ActiveAdmin.register Service do
           f.input :title_uk
           f.input :description_uk
           f.input :content_uk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
+        end
+
+        f.inputs 'Meta' do
+          f.input :meta_title_uk
+          f.input :meta_description_uk
         end
       end
 
