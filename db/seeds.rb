@@ -197,7 +197,7 @@ services = generate_services_attributes([
     ]
   },
   {
-    ru: 'Образование', en: 'Education', uk: 'Освіта'
+    ru: 'Образование', en: 'Education', uk: 'Освіта',
     articles: [
       { ru: 'Образование в Словакии', en: 'Education in Slovakia', uk: 'Освіта в Словаччині' },
       { ru: 'Словацкий язык', en: 'Slovak language', uk: 'Словацька мова', },
