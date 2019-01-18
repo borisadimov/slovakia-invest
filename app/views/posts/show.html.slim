@@ -1,6 +1,7 @@
 .aticle__main-wrapper
   .page__content.about-us__main.page__content-no-sidebar
     .container.article-page__container
+      a(onclick="javascript:history.back(); return false;" class="article-page__back")
       h1.article-page__title
         = @post.title
       .article-page__name
