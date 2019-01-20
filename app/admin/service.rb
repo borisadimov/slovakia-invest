@@ -100,13 +100,13 @@ ActiveAdmin.register Service do
         b.input :name_ru
         b.input :name_en
         b.input :name_uk
-ß        b.input :description_ru
+        b.input :description_ru
         b.input :description_en
         b.input :description_uk
-ß        b.input :text_ru
+        b.input :text_ru
         b.input :text_en
         b.input :text_uk
-ß      end
+      end
     end
 
     f.actions
