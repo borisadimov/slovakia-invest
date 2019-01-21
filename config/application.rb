@@ -17,5 +17,6 @@ module Slovakia
     config.i18n.enforce_available_locales = true
     config.i18n.available_locales = [:en, :ru, :uk]
     config.default_locale = :en
+    config.exceptions_app = self.routes
   end
 end

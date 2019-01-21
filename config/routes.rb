@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # Errors
+  get '/401', to: 'errors#unauthorized'
+  get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#error'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   namespace :admin do
