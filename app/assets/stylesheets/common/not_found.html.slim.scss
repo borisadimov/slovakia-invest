@@ -1,0 +1,36 @@
+.item-page {
+ height: 650px;
+ text-align: center;
+
+}
+
+.not-found_title h1 {
+ font-size: 160px;
+ margin-bottom: 22px;
+}
+
+.not-found_description {
+ font-size: 20px;
+ margin-bottom: 30px;
+}
+.not-found_back {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #AE1926;
+  padding: 17px;
+  border-radius: 63px;
+  margin: auto;
+  color: #ffffff;
+}
+.not-found_back a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+
+@media (max-width: 337px) {
+  .not-found_title h1 {
+    font-size: 128px;
+  }
+  
+}
