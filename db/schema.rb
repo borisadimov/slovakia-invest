@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190116063341) do
+ActiveRecord::Schema.define(version: 20190121124044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -244,6 +244,9 @@ ActiveRecord::Schema.define(version: 20190116063341) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "description_ru"
+    t.string   "description_en"
+    t.string   "description_uk"
   end
 
   create_table "prices", force: :cascade do |t|

@@ -256,12 +256,15 @@ Footer.create(
 (1..20).each do |index|
   Post.create(
     title_ru: "Тестовый пост #{index}",
+    description_ru: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in elementum arcu. Etiam eu ante metus. Duis nibh odio, aliquam sed ullamcorper placerat, fermentum eu risus. Donec ultricies elementum eros sit amet faucibus. Sed diam nunc, mollis sit amet nulla.',
     text_ru: LOREM,
     author_ru: 'Иван Иванов',
     title_en: "Test Post #{index}",
+    description_en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in elementum arcu. Etiam eu ante metus. Duis nibh odio, aliquam sed ullamcorper placerat, fermentum eu risus. Donec ultricies elementum eros sit amet faucibus. Sed diam nunc, mollis sit amet nulla.',
     text_en: LOREM,
     author_en: 'John Doe',
     title_uk: "Тестовий пост #{index}",
+    description_uk: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in elementum arcu. Etiam eu ante metus. Duis nibh odio, aliquam sed ullamcorper placerat, fermentum eu risus. Donec ultricies elementum eros sit amet faucibus. Sed diam nunc, mollis sit amet nulla.',
     text_uk: LOREM,
     author_uk: 'Егор Шульган'
   )

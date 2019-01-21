@@ -1,5 +1,6 @@
 ActiveAdmin.register Post do
   permit_params :title_ru, :title_en, :title_uk,
+                :description_ru, :description_en, :description_uk,
                 :text_ru, :text_en, :text_uk,
                 :author_ru, :author_en, :author_uk,
                 :meta_title_ru, :meta_title_en, :meta_title_uk,
@@ -12,6 +13,7 @@ ActiveAdmin.register Post do
       tab 'Russian' do
         f.inputs do
           f.input :title_ru
+          f.input :description_ru
           f.input :text_ru, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
           f.input :author_ru
         end
@@ -25,6 +27,7 @@ ActiveAdmin.register Post do
       tab 'English' do
         f.inputs do
           f.input :title_en
+          f.input :description_en
           f.input :text_en, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
           f.input :author_en
         end
@@ -38,6 +41,7 @@ ActiveAdmin.register Post do
       tab 'Ukranian' do
         f.inputs do
           f.input :title_uk
+          f.input :description_uk
           f.input :text_uk, as: :froala_editor, input_html: {data: {options: {imageUploadURL: '/upload_image'}}}
           f.input :author_uk
         end
