@@ -1,7 +1,7 @@
 div class=("item-page__header-#{service.slug}")
   .container.container-relative
     div class=("item-page__header-logo item-page__header-logo_#{service.slug}")
-        = image_tag(asset_path("#{service.slug}-header-logo"))
+        = image_tag("#{service.slug}-header-logo.png")
     .item-page__header-content
       h1.page__title
         = service.title
