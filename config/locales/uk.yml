@@ -121,3 +121,7 @@ uk:
     formats:
       long: "%H:%M:%S %d-%m-%Y "
       default: "%d.%m.%Y %H:%M:%S"
+  errors:
+    not_found:
+      text: "Сторінку не знайдено"
+      link: "Повернутися на головну"

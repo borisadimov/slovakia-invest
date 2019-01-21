@@ -1,2 +1,10 @@
 .item-page
-  h1 404
+  .not-found_title  
+    h1 
+      | 404
+  .not-found_description
+    = I18n.t('errors.not_found.text')
+
+  .not-found_back
+    a href="/"
+      = I18n.t('errors.not_found.link')

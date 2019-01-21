@@ -120,3 +120,7 @@ en:
   time:
     formats:
       default: "%Y.%m.%d %H:%M:%S"  
+  errors:
+    not_found:
+      text: "Page not found"
+      link: "Go back to the main page"    
