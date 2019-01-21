@@ -29,7 +29,7 @@
             = image_tag('down-button-black.svg')
         .accordion-container   
           .prices-wrapper
-            - @article.prices.each_slice((@article.prices.size / 2.0).round) do |slice|
+            - @article.prices.each_slice((@article.prices.size).round) do |slice|
               .prices-block
                 - slice.each do |price|
                   .prices-item

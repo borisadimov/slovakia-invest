@@ -1,14 +1,14 @@
 .features {
 	position: relative;
 	background-color: #F7F8FB;
-	padding-bottom: 104px;
+	padding-bottom: 50px;
 }
 .features-wrap {
 	display: flex;
 	justify-content: flex-start;
 	max-width: 1400px;
 	width: 100%;
-	padding-top: 80px;
+	padding-top: 69px;
 }
 .features-item {
 	max-width: 240px;
@@ -18,8 +18,11 @@
 	&:first-child {
 		margin-left: 0;
 	} 
- }
+	}
 .features-item h2 {
+	font-size: 33px;
+}
+.features-item h2 span {
 	font-size: 70px;
   }
 .features-item p {
