@@ -29,12 +29,11 @@
  top: 0;
  max-width: 250px;
  width: 100%;
- min-height: 363px;
- padding: 22px 26px 46px 26px;
+ min-height: 350px;
+ padding: 22px 26px 40px 26px;
  background: image-url('card-bg.png') no-repeat center/cover;
  border-radius: 8px;
  color: #ffffff;
- // opacity: 0;
  transform: translateY(20px);
  transition: top 0.3s linear,
  box-shadow 0.3s linear;
@@ -91,15 +90,16 @@
 
 
 h3.prices-card_title {
- max-width: 124px;
  width: 100%;
  font-family: Montserrat;
  font-weight: bold;
- line-height: 40px;
- font-size: 30px;
+ line-height: 30px;
+ font-size: 24px;
 }
 p.prices-card_subtitle {
  max-width: 122px;
+ margin-top: 0;
+ margin-bottom: 0;
  line-height: 24px;
  font-size: 14px;
 }
@@ -109,7 +109,7 @@ span.price-total {
  font-style: normal;
  font-weight: bold;
  line-height: 40px;
- font-size: 30px;
+ font-size: 28px;
  
 }
 
@@ -139,6 +139,10 @@ span.price-total {
 .business__contacts-wrapper {
  display: flex;
  justify-content: flex-start;
+ margin-right: -3%;
+ margin-left: -3%;
+ margin-top: 30px;
+ padding-bottom: 38px;
 }
 
 .contacts-item__img {
@@ -167,16 +171,12 @@ span.price-total {
  color: #000000;
 }
 
-.business__contacts-wrapper {
- margin-top: 30px;
- padding-bottom: 38px;
-}
-.business__contacts-item:nth-child(2) {
- margin-left: 250px;
+.business__contacts-item {
+  font-weight: bold;
 }
 
-.contacts-item__post {
- margin-top: -26px;
+.business__contacts-item:nth-child(2) {
+ margin-left: 250px;
 }
 
 .contacts-item__tel div {
@@ -189,18 +189,20 @@ span.price-total {
 
 .prices-wrapper {
  display: flex;
+ flex-flow: row wrap;
  margin-top: 50px;
 }
 .prices-block {
-//  max-width: 500px;
  width: 100%;
  display: flex;
  flex-flow: row wrap;
  justify-content: flex-start;
 }
-.prices-block:nth-child(2) {
- margin-left: 80px;
+
+.prices-block:last-child .prices-item {
+  border-bottom: none;
 }
+
 .prices-item {
  display: flex;
  flex-flow: row nowrap;
@@ -210,14 +212,10 @@ span.price-total {
  margin-top: 20px;
  padding-right: 20px;
  border-bottom: 1px solid #000000;
-}
-.prices-item:nth-child(2n+2) {
-  margin-left: 60px;
-}
 
-
-.prices-item:last-child {
- border: none;
+ &:nth-child(1) {
+   margin-right: 60px;
+ }
 }
 
 p.prices-item__description {
@@ -273,12 +271,13 @@ p.prices-item__description {
  }
  .prices-item {
    max-width: 442px;
-   margin: auto;
+   margin-left: auto;
+   margin-top: 10px;
+   margin-right: auto;
  }
- .prices-item:nth-child(2n+2) {
-   margin-left: 0px;
-   margin: auto;
-   
+
+ .prices-item:nth-child(1) {
+   margin-right: auto;
  }
 }
 
@@ -317,9 +316,21 @@ p.prices-item__description {
  h2.prices-title {
   text-align: center;
  }
+
+ .contacts-item__img {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
  .business__contacts-wrapper {
   flex-flow: row wrap;
+  justify-content: center;
  }
+
+ .contacts-faces_item {
+  text-align: center;
+ }
+
  .business__contacts-item:nth-child(2) {
   margin-left: auto;
   margin-top: 20px;
