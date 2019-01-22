@@ -29,7 +29,7 @@
             = image_tag('down-button-black.svg')
         .accordion-container   
           .prices-wrapper
-            - @article.prices.each_slice((@article.prices.size).round) do |slice|
+            - @article.prices.each_slice((@article.prices.size / 2).round) do |slice|
               .prices-block
                 - slice.each do |price|
                   .prices-item
@@ -55,15 +55,15 @@
         = I18n.t('pages.contacts.title')
       .business__contacts-wrapper
         - @article.service.employees.first(2).each do |employee|
-          .business__contacts-item
+          .contacts-faces_item
             .contacts-item__img
               = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts"
-            .contacts-item__name
+            .contacts-faces_item__name
               = employee.name
-            .contacts-item__post.customize
+            .contacts-faces_item__post.customize
               = employee.position
             - employee.contacts.each do |contact|
-              .contacts-item__tel.customize
+              .contacts-faces_item__tel.customize
                 = I18n.t("contacts.types.#{contact.contact_type}") + ': '
                 = contact_url(contact)
 
