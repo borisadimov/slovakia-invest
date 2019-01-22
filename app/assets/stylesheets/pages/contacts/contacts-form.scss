@@ -97,7 +97,7 @@
  height: 20px;
  opacity: 0;
  transition: opacity .3s linear;
- background: url(tick.svg) no-repeat center/contain;
+ background: image-url('tick.svg') no-repeat center/contain;
 }
 
 .contacts-form_checkbox__wrapper .checkbox:checked ~ label:after {
@@ -119,10 +119,6 @@ button.btn.btn__dispatch.contacts-page__form-btn {
 .contacts-input-wrapper {
   position: relative;
 }
-
-@media (max-width: 1284px) {}
-
-@media (max-width: 1024px) {}
 
 @media (max-width: 991px) {
   .contacts-form_right textarea {
@@ -149,10 +145,6 @@ button.btn.btn__dispatch.contacts-page__form-btn {
   .btn.btn__dispatch.contacts-page__form-btn {
     margin: auto;
   }
-}
-
-@media (max-width: 576px) {
-  
 }
 
 @media (max-width: 424px) {
