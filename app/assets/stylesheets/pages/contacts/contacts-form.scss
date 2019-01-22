@@ -2,7 +2,8 @@
   display: flex;
   justify-content: flex-start;
   font-size: 14px;
-  margin-top: 103px;
+  padding-top: 103px;
+  padding-bottom: 103px;
 }
 
 .contacts-page__form .error {
@@ -108,7 +109,6 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  margin-bottom: 36px;
 }
 
 button.btn.btn__dispatch.contacts-page__form-btn {
