@@ -1,0 +1,22 @@
+.cookie-item {
+  position: fixed;
+  top: 890px;
+  width: 100%;
+  background: #AE1926;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.8;
+  z-index: 100;
+}
+.cookie-item_up {
+  padding: 1px;
+  a {
+    margin-left: 10px;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #000000;
+  }
+}
+
