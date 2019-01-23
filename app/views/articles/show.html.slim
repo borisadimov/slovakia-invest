@@ -54,7 +54,7 @@
       h2.immigration-business__contacts-title
         = I18n.t('pages.contacts.title')
       .business__contacts-wrapper
-        - @article.service.employees.first(2).each do |employee|
+        - @article.employees.each do |employee|
           .contacts-faces_item
             .contacts-item__img
               = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts"
