@@ -45,7 +45,7 @@ uk:
   reviews:
     title: "Відгуки"
   pages:
-    posts: "Програми"
+    posts: "Новини"
     any_questions_block:
       title: "Є питання"
       button: "Зв'язатися з нами"

@@ -45,7 +45,7 @@ ru:
   reviews:
     title: "Отзывы"
   pages:
-    posts: "Программы"
+    posts: "Новости"
     any_questions_block:
       title: "Есть вопросы"
       button: "Связаться с нами"
