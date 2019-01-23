@@ -8,10 +8,7 @@ ruby "2.4.1"
 
 gem 'rails', '~> 5.0.2'
 gem 'pg'
-# gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
-# gem 'uglifier', '>= 1.3.0'
-# gem 'uglifier', '>= 1.3.0', require: 'uglifier'
 gem 'uglifier', '~> 2.6.1'
 gem 'coffee-rails', '~> 4.2'
 gem 'normalize-rails', '~> 4.1.1'
@@ -25,15 +22,15 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "flutie"
 gem 'inline_svg'
-# gem 'redis', '~> 3.0'
-# gem 'bcrypt', '~> 3.1.7'
 gem 'json'
 gem 'bigdecimal'
 gem 'remodal-rails', '~> 1.1.1'
+
 #IMAGES
 gem 'carrierwave'
 gem 'mini_magick'
 gem "awesome_print", require: "ap"
+
 # ACTIVE ADMIN
 gem 'activeadmin', '~> 1.0.0'
 gem 'metamagic'

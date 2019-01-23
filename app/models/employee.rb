@@ -1,4 +1,5 @@
 class Employee < ApplicationRecord
+  has_and_belongs_to_many :articles
   belongs_to :service
   has_many :contacts, as: :has_contacts, dependent: :destroy
 

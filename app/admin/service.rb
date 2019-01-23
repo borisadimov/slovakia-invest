@@ -5,6 +5,7 @@ ActiveAdmin.register Service do
                 :title_uk, :description_uk, :content_uk,
                 :meta_title_ru, :meta_title_en, :meta_title_uk,
                 :meta_description_ru, :meta_description_en, :meta_description_uk,
+                post_ids: [],
                 features_attributes: [
                   :id, :order,
                   :from, :to,
@@ -107,6 +108,10 @@ ActiveAdmin.register Service do
         b.input :text_en
         b.input :text_uk
       end
+    end
+
+    f.inputs 'Associations' do
+      f.input :post_ids, as: :select, input_html: { multiple: true, class: 'chosen-select' }, collection: Post.all
     end
 
     f.actions

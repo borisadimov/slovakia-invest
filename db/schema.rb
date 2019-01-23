@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190121124044) do
+ActiveRecord::Schema.define(version: 20190123140745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,11 +83,30 @@ ActiveRecord::Schema.define(version: 20190121124044) do
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
   end
 
+  create_table "articles_employees", id: false, force: :cascade do |t|
+    t.integer "article_id",  null: false
+    t.integer "employee_id", null: false
+    t.index ["article_id", "employee_id"], name: "index_articles_employees_on_article_id_and_employee_id", using: :btree
+    t.index ["employee_id", "article_id"], name: "index_articles_employees_on_employee_id_and_article_id", using: :btree
+  end
+
   create_table "articles_posts", id: false, force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "post_id",    null: false
     t.index ["article_id", "post_id"], name: "index_articles_posts_on_article_id_and_post_id", using: :btree
     t.index ["post_id", "article_id"], name: "index_articles_posts_on_post_id_and_article_id", using: :btree
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type", using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -247,6 +266,13 @@ ActiveRecord::Schema.define(version: 20190121124044) do
     t.string   "description_ru"
     t.string   "description_en"
     t.string   "description_uk"
+  end
+
+  create_table "posts_services", id: false, force: :cascade do |t|
+    t.integer "post_id",    null: false
+    t.integer "service_id", null: false
+    t.index ["post_id", "service_id"], name: "index_posts_services_on_post_id_and_service_id", using: :btree
+    t.index ["service_id", "post_id"], name: "index_posts_services_on_service_id_and_post_id", using: :btree
   end
 
   create_table "prices", force: :cascade do |t|

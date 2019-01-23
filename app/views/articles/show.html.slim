@@ -22,25 +22,26 @@
               span.price-total
                 = price.value
 
-        .prices-allprices.accordion
-          .allprices
-            = I18n.t('prices.all_prices')   
-          .prices-down  
-            = image_tag('down-button-black.svg')
-        .accordion-container   
-          .prices-wrapper
-            - @article.prices.each_slice(2) do |slice|
-              .prices-block
-                - slice.each do |price|
-                  .prices-item
-                    .prices-item__left
-                      h3.prices-item__title
-                        = price.title
-                      p.prices-item__description
-                        = price.description
-                    .prices-item__right    
-                      span.price-total
-                        = price.value
+        - if @article.prices.count > 4
+          .prices-allprices.accordion
+            .allprices
+              = I18n.t('prices.all_prices')   
+            .prices-down  
+              = image_tag('down-button-black.svg')
+          .accordion-container   
+            .prices-wrapper
+              - @article.prices.each_slice(2) do |slice|
+                .prices-block
+                  - slice.each do |price|
+                    .prices-item
+                      .prices-item__left
+                        h3.prices-item__title
+                          = price.title
+                        p.prices-item__description
+                          = price.description
+                      .prices-item__right    
+                        span.price-total
+                          = price.value
 
   - unless @article.posts.blank?
       .item-page__news
@@ -49,23 +50,24 @@
             = I18n.t('pages.posts')
           = render 'partials/item-news', posts: @article.posts.first(3)   
 
-  .immigration-business__contacts
-    .container
-      h2.immigration-business__contacts-title
-        = I18n.t('pages.contacts.title')
-      .business__contacts-wrapper
-        - @article.service.employees.first(2).each do |employee|
-          .contacts-faces_item
-            .contacts-item__img
-              = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts"
-            .contacts-faces_item__name
-              = employee.name
-            .contacts-faces_item__post.customize
-              = employee.position
-            - employee.contacts.each do |contact|
-              .contacts-faces_item__tel.customize
-                = I18n.t("contacts.types.#{contact.contact_type}") + ': '
-                = contact_url(contact)
+  - unless @article.employees.blank?
+    .immigration-business__contacts
+      .container
+        h2.immigration-business__contacts-title
+          = I18n.t('pages.contacts.title')
+        .business__contacts-wrapper
+          - @article.employees.each do |employee|
+            .contacts-faces_item
+              .contacts-item__img
+                = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts"
+              .contacts-faces_item__name
+                = employee.name
+              .contacts-faces_item__post.customize
+                = employee.position
+              - employee.contacts.each do |contact|
+                .contacts-faces_item__tel.customize
+                  = I18n.t("contacts.types.#{contact.contact_type}") + ': '
+                  = contact_url(contact)
 
     .more-articles-wrapper
       .container

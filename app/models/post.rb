@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   has_and_belongs_to_many :articles
+  has_and_belongs_to_many :services
   has_many :comments, dependent: :destroy
 
   accepts_nested_attributes_for :comments, allow_destroy: true

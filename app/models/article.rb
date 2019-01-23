@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   friendly_id :title, use: :slugged
 
   has_and_belongs_to_many :posts
+  has_and_belongs_to_many :employees
   belongs_to :service
   has_many :prices, dependent: :destroy
 
