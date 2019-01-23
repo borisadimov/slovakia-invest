@@ -295,4 +295,8 @@ $( document ).ready(function() {
       }, 1300)
     }
   }
+  $('#cookieAccept').on('click', function(){
+    $('.cookie-item').toggle();
+  })
 })
+
