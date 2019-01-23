@@ -6,6 +6,7 @@ ActiveAdmin.register Article do
                 :meta_description_ru, :meta_description_en, :meta_description_uk,
                 :service_id,
                 post_ids: [],
+                employee_ids: [],
                 prices_attributes: [
                   :id, :order,
                   :title_ru, :title_en, :title_uk,
@@ -80,7 +81,8 @@ ActiveAdmin.register Article do
 
     f.inputs 'Associations' do
       f.input :service_id, as: :select, collection: Service.all.map { |s| [s.title, s.id] }, include_blank: false
-      f.input :post_ids, as: :check_boxes, collection: Post.all
+      f.input :post_ids, as: :select, input_html: { multiple: true, class: 'chosen-select' }, collection: Post.all
+      f.input :employee_ids, as: :select, input_html: { multiple: true, class: 'chosen-select' }, collection: Employee.all
     end
 
     f.actions
