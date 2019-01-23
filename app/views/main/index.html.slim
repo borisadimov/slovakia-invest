@@ -25,7 +25,7 @@
     .container
       .about-company__text
         h2.about-company__tite
-          = I18n.t('landing.about_us_block.title') + ':'
+          = I18n.t('landing.about_us_block.title')
         .about-company__description 
           = @landing_page.about_block_text
         = link_to I18n.t('landing.about_us_block.link'), about_us_pages_path, class: 'about-company__link'
@@ -37,7 +37,7 @@
         = render 'partials/features', features: @landing_page.features
 
     .container
-      h2.guarantee-title = I18n.t('landing.guarantees_block.title') + ':'
+      h2.guarantee-title = I18n.t('landing.guarantees_block.title')
       .guarantee-wrapper
         - @guarantees.each_with_index do |guarantee, index|
           .guarantee-block
@@ -50,7 +50,7 @@
   section
     .container
       h2.for-whom__title
-        = I18n.t('landing.for_whom_block.title') + ':'
+        = I18n.t('landing.for_whom_block.title')
       .for-whom
         .for-whom_line1
           - I18n.t('landing.for_whom_block.items')[0..2].each_with_index do |item, index|
@@ -72,7 +72,7 @@
 
   .how-work
     .container
-      h2.how-work__title = I18n.t('landing.how_work_block.title') + ':'
+      h2.how-work__title = I18n.t('landing.how_work_block.title')
       .how-work__items
         - I18n.t('landing.how_work_block.items').each_with_index do |item, index|
           .how-work__item-wrapper

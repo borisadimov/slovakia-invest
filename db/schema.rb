@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190123122802) do
+ActiveRecord::Schema.define(version: 20190123140745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -266,6 +266,13 @@ ActiveRecord::Schema.define(version: 20190123122802) do
     t.string   "description_ru"
     t.string   "description_en"
     t.string   "description_uk"
+  end
+
+  create_table "posts_services", id: false, force: :cascade do |t|
+    t.integer "post_id",    null: false
+    t.integer "service_id", null: false
+    t.index ["post_id", "service_id"], name: "index_posts_services_on_post_id_and_service_id", using: :btree
+    t.index ["service_id", "post_id"], name: "index_posts_services_on_service_id_and_post_id", using: :btree
   end
 
   create_table "prices", force: :cascade do |t|
