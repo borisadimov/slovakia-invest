@@ -1,7 +1,8 @@
 .cookie-item {
   position: fixed;
-  top: 890px;
+  // top: 800px;
   // top: 715px;
+  bottom: 0;
   width: 100%;
   background: #AE1926;
   color: #ffffff;
@@ -17,7 +18,7 @@
     text-decoration: underline;
   }
   a:hover {
-    color: #000000;
+    text-decoration: none;
   }
 }
 
