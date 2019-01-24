@@ -295,4 +295,15 @@ $( document ).ready(function() {
       }, 1300)
     }
   }
+
+  // cookie
+  if (localStorage.getItem('cookieClosed') === 'true') {
+    $('.cookie-item').addClass('hidden');
+  }
+  
+  $('#cookieAccept').on('click', function() {
+    localStorage.setItem('cookieClosed', 'true')
+    $('.cookie-item').addClass('hidden');
+  })
 })
+
