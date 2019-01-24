@@ -105,9 +105,12 @@
       / .item-page__share
       /   = render 'partials/share'
     / = render 'partials/item-story', locals={stories: @stories}
+  = render 'partials/cookies'
   = render 'partials/footer'
+  
   = render 'partials/menu'
   .overlay.hidden
   = render 'partials/popup', locals={contacts: @contacts}
+  
   
 
