@@ -88,7 +88,19 @@
         = I18n.t('landing.contact_us_block.title')
       a.btn.partners-header__btn href="/pages/contacts"
         = I18n.t('landing.contact_us_block.button')
+
+            
+
+  / .cookie-item 
+  /   .cookie-item_up
+  /     p.cookie-item_up
+  /       | Этот сайт использует файлы cookie. При посещении Вы с этим выражаете свое согласие.
+  /       a href="#" id="cookieAccept"
+  /         | Принимаю 
+           
+    
+          
         
   = render 'partials/menu'
-
+  = render 'partials/cookies'
   
