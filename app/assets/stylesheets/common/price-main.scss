@@ -25,10 +25,49 @@ h3.service-global.first {
 }
 
 .service-block {
- display: flex;
- justify-content: space-between;
- margin: 10px;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    bottom: 28px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dotted #000000;
+  }
 }
+
+.service-text {
+  position: relative;
+  padding-right: 10px;
+
+  z-index: 3;
+  background: #ffffff;
+}
+
+.service-price {
+  position: relative;
+  z-index: 3;
+  padding-left: 10px;
+
+  background: #ffffff;
+  font-weight: bold;
+}
+
+.service-name {
+  font-weight: bold;
+}
+
+.service-description {
+  font-size: 14px;
+}
+
 h3.service-global:after {
  content: '';
  display: block;
@@ -91,4 +130,21 @@ h3.service-global:after {
 
 .service-global__line.active .service-global__cross::after {
   display: none;
+}
+
+@media (max-width: 576px) {
+  .price-page__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .service-block {
+    margin-left: 0;
+    margin-right: 0;
+    flex-flow: column wrap;
+  }
+
+  .service-price {
+    padding-left: 0;
+  }
 }
