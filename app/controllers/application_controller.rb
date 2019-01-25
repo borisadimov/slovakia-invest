@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_user_locale
-    unless session[:locale_seted]
+    unless session[:locale_seted] && !request.location.present?
       country_code = request.location.country_code
       case country_code
         when 'RU'
