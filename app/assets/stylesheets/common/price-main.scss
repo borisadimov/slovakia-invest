@@ -30,17 +30,6 @@ h3.service-global.first {
   flex-flow: row nowrap;
   justify-content: space-between;
   margin: 10px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    bottom: 28px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    border-bottom: 1px dotted #000000;
-  }
 }
 
 .service-text {
