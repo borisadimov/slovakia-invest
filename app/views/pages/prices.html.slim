@@ -16,8 +16,11 @@
             .price-page__content
               - service.prices.each do |price|
                 .service-block
-                  .service-name
-                    = price.title
+                  .service-text
+                    .service-name
+                      = price.title
+                    .service-description
+                      = price.description  
                   .service-price
                     = price.value
   = render 'partials/menu'
