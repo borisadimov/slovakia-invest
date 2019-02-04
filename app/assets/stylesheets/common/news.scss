@@ -96,6 +96,15 @@ h1.page__title.news {
 	margin-right: -3%;
 }
 
+.item-page .news__content {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.item-page .news__content.active {
+	opacity: 1;
+}
+
 .news__item {
 	box-sizing: content-box;
 	max-width: 320px;
