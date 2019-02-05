@@ -46,7 +46,8 @@ gem 'kaminari'
 gem 'activeadmin_froala_editor'
 gem 'froala-editor-sdk'
 gem 'geocoder'
-
+gem 'sitemap_generator'
+gem 'whenever', require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri
