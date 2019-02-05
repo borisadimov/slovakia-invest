@@ -201,8 +201,36 @@ span.price-total {
   position: relative;
 }
 
+.custom-text-accordion {
+  margin-bottom: 30px;
+}
+
+.custom-text-accordion-wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
 .custom-text-accordion__line {
   position: relative;
+  font-weight: 800;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.custom-text-accordion__content {
+  padding: 21px 27px 17px 27px;
+  border: 1px solid #B8C5FF;
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-right: 35px;
+}
+
+.custom-text-accordion__line.active .service-global__cross {
+  transform: rotate(45deg);
+}
+
+.custom-text-accordion__content {
+  display: none;
 }
 
 .accordion-container {
