@@ -197,6 +197,14 @@ span.price-total {
   display: inline-block;
 }
 
+.accordion {
+  position: relative;
+}
+
+.custom-text-accordion__line {
+  position: relative;
+}
+
 .accordion-container {
   display: none;
 }

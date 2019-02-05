@@ -119,14 +119,16 @@ $( document ).ready(function() {
     })
 
     function scrollMagicAddClass(className) {
-      var scene = new ScrollMagic.Scene({triggerElement: className})
-        .offset(-100)
-        .addTo(controller)
-        // .addIndicators()
-        .setClassToggle(className, "active")
-        .on('enter', function(e) {
-          scene.remove()
-      })  
+      if ($(className).length > 0) {
+        var scene = new ScrollMagic.Scene({triggerElement: className})
+          .offset(-100)
+          .addTo(controller)
+          // .addIndicators()
+          .setClassToggle(className, "active")
+          .on('enter', function(e) {
+            scene.remove()
+        })  
+      }
     }
   
     scrollMagicAddClass(".services")
@@ -137,6 +139,19 @@ $( document ).ready(function() {
     if ($('.item-page').length > 0) {
       scrollMagicAddClass(".news__content")
     }
+  
+  // sticky
+  var backButton = $('.article-page__back')
+
+  if (backButton.length > 0) {
+    var container = $('.article-page__container')
+    var scene = new ScrollMagic.Scene({triggerElement: ".article-page__container", duration: container.height() - 65})
+      .triggerHook("onLeave")
+      .offset(-100)
+      .setPin(".article-page__back")
+      // .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+  }
   
   //video
   var headerVideo = $('.main-header__video')
@@ -260,10 +275,35 @@ $( document ).ready(function() {
     var acc = $(".accordion");
     var i;
     
+    var scenes = {}
     for (i = 0; i < acc.length; i++) {
-      acc[i].onclick = function () {
+      acc[i].dataset.id = i
+
+      acc[i].onclick = function() {
         this.classList.toggle("active");
         $(this).next().toggle("show");
+
+        var elementId = this.dataset.id
+        var container = this.nextSibling;
+				
+        var cross = this.querySelector(".service-global__cross")
+
+        if (this.classList.contains('active')) {
+          setTimeout(function() {
+            var scene = new ScrollMagic.Scene({triggerElement: container, duration: container.offsetHeight})
+              .triggerHook("onLeave")
+              .offset(-150)
+              .setPin(cross)
+              // .addIndicators()
+              .addTo(controller);
+  
+              scenes[elementId] = scene
+          }, 500)
+        }
+        
+        if (scenes[elementId]) {
+          scenes[elementId].destroy(true)
+        }
       }
     }
   }
