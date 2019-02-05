@@ -8,6 +8,7 @@ require 'capistrano/rails'
 require 'capistrano/passenger'
 require 'capistrano/bundler'
 require 'capistrano/rbenv'
+require 'capistrano/sitemap_generator'
 set :rbenv_type, :user
 set :rbenv_ruby, '2.4.1'
 set :rbenv_path, '/home/deploy/.rbenv/'
