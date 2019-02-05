@@ -12,11 +12,33 @@
  width: 100%;
  margin-left: 5%;
 
+ transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+
  &:first-child {
    margin-left: 0;
  }
- 
 }
+
+.guarantee-block:nth-child(-n+2) {
+  opacity: 0;
+  transform: translateX(-100%)
+}
+
+.guarantee-wrapper.active .guarantee-block {
+  opacity: 1;
+  transform: translateX(0)
+}
+
+.guarantee-block:nth-child(n+3) {
+  opacity: 0;
+  transform: translateX(100%)
+}
+
+.guarantee-wrapper.active .guarantee-block {
+  opacity: 1;
+  transform: translateX(0)
+}
+
 .guarantee-block_title {
   margin-bottom: 27px;
 

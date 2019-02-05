@@ -88,10 +88,15 @@ h3.service-global:after {
 }
 
 .service-global__cross {
- width: 30px;
- height: 30px;
- position: relative;
- cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transform: translateX(0) rotate(0);
+  transition: transform 0.4s ease-out;
 }
 
 .service-global__cross:before {
@@ -117,14 +122,33 @@ h3.service-global:after {
  border: 1px solid #B8C5FF;
 }
 
-.service-global__line.active .service-global__cross::after {
-  display: none;
+.service-global__line.active .service-global__cross {
+  transform: translateX(60px) rotate(45deg) 
+}
+
+@media (max-width: 768px) {
+  .service-global__line.active .service-global__cross {
+    transform: translateX(40px) rotate(45deg) 
+  }
 }
 
 @media (max-width: 576px) {
   .price-page__content {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  
+  .service-global__line.active .service-global__cross {
+    transform: translateX(15px) rotate(45deg) 
+  }
+
+  .service-global__line {
+    margin-right: 21px;
+  }
+
+  .price-page__content {
+    margin-right: 21px;
   }
 
   .service-block {

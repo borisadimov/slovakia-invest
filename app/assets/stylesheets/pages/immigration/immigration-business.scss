@@ -19,7 +19,9 @@
 .prices-cards__wrapper {
  display: flex;
  justify-content: flex-start;
+ padding-top: 20px;
 }
+
 .prices-card {
  display: flex;
  justify-content: flex-start;
@@ -37,26 +39,37 @@
  transform: translateY(20px);
  transition: top 0.3s linear,
  box-shadow 0.3s linear;
+
+ opacity: 0;
 }
+
+.prices-cards__wrapper.active {
+  @for $i from 1 through 4 {
+    .prices-card:nth-child(#{$i}) {
+      animation-delay: calc(#{$i} * 0.3s);
+    }
+  }
+  .prices-card {
+    animation: fadein 0.3s forwards ease-in;
+  }
+}
+
 .prices-card:nth-child(1):hover {
  top: -10px;
  box-shadow: 10px 12px 44px rgba(76, 97, 244, 0.7);
 }
+
 .prices-card:nth-child(2):hover {
  top: -10px;
- box-shadow: 10px 12px 44px rgba(203, 78, 123, 0.7);
- 
- 
+ box-shadow: 10px 12px 44px rgba(203, 78, 123, 0.7); 
 }
 .prices-card:nth-child(3):hover {
  top: -10px;
  box-shadow: 10px 12px 44px rgba(69, 183, 191, 0.7);
- 
 }
 .prices-card:nth-child(4):hover {
  top: -10px;
  box-shadow: 10px 12px 44px rgba(246, 139, 49, 0.7);
- 
 }
 
 .prices-card:after {
@@ -182,6 +195,42 @@ span.price-total {
 
 .contacts-item__tel div {
   display: inline-block;
+}
+
+.accordion {
+  position: relative;
+}
+
+.custom-text-accordion {
+  margin-bottom: 30px;
+}
+
+.custom-text-accordion-wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+.custom-text-accordion__line {
+  position: relative;
+  font-weight: 800;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.custom-text-accordion__content {
+  padding: 21px 27px 17px 27px;
+  border: 1px solid #B8C5FF;
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-right: 35px;
+}
+
+.custom-text-accordion__line.active .service-global__cross {
+  transform: rotate(45deg);
+}
+
+.custom-text-accordion__content {
+  display: none;
 }
 
 .accordion-container {
