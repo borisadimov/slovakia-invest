@@ -76,9 +76,11 @@
   display: block;
   width: 100%;
   white-space: nowrap;
+  font-weight: 450;
+  opacity: 0.8;
 
   &:hover {
-    font-weight: bold;
+    opacity: 1;
   }
 }
 
@@ -138,6 +140,14 @@
   pointer-events: auto;
   opacity: 1;
   transition: opacity 0.22s ease-in-out 0.22s; 
+}
+
+.submenu a {
+  font-weight: normal;
+}
+
+.submenu a:hover {
+  font-weight: 450;
 }
 
 
