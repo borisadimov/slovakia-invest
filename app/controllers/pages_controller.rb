@@ -11,10 +11,8 @@ class PagesController < ApplicationController
   end
 
   def news
-    @posts = Post.by_title(params[:title])
-    @posts = @posts.by_article(params[:article]) if params[:article].present?
-    @posts = @posts.page(params[:page] || 1).per(9)
-    @articles = Article.where.not(post_ids: [])
+    @posts = Post.smart_search(query: params[:query], article_id: params[:article], page: params[:page])
+    @articles = Post.related_articles
     @news_page = NewsPage.instance
     set_meta_tags(@news_page)
   end
