@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190123140745) do
+ActiveRecord::Schema.define(version: 20190207211640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,20 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+  end
+
+  create_table "additional_texts", force: :cascade do |t|
+    t.integer  "order"
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.string   "title_uk"
+    t.string   "text_ru"
+    t.string   "text_en"
+    t.string   "text_uk"
+    t.integer  "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_additional_texts_on_service_id", using: :btree
   end
 
   create_table "admin_users", force: :cascade do |t|
@@ -95,6 +109,18 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.integer "post_id",    null: false
     t.index ["article_id", "post_id"], name: "index_articles_posts_on_article_id_and_post_id", using: :btree
     t.index ["post_id", "article_id"], name: "index_articles_posts_on_post_id_and_article_id", using: :btree
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type", using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -341,6 +367,7 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "additional_texts", "services"
   add_foreign_key "articles", "services"
   add_foreign_key "comments", "posts"
   add_foreign_key "employees", "services"

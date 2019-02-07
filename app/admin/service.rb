@@ -6,6 +6,12 @@ ActiveAdmin.register Service do
                 :meta_title_ru, :meta_title_en, :meta_title_uk,
                 :meta_description_ru, :meta_description_en, :meta_description_uk,
                 post_ids: [],
+                additional_texts_attributes: [
+                  :id, :order,
+                  :title_ru, :title_en, :title_uk,
+                  :text_ru, :text_en, :text_uk,
+                  :_destroy
+                ],
                 features_attributes: [
                   :id, :order,
                   :from, :to,
@@ -104,6 +110,20 @@ ActiveAdmin.register Service do
         b.input :description_ru
         b.input :description_en
         b.input :description_uk
+        b.input :text_ru
+        b.input :text_en
+        b.input :text_uk
+      end
+    end
+
+    f.inputs 'Additional Texts' do
+      f.has_many :additional_texts,
+                 new_record: 'Add Additional Text',
+                 allow_destroy: true do |b|
+        b.input :order
+        b.input :title_ru
+        b.input :title_en
+        b.input :title_uk
         b.input :text_ru
         b.input :text_en
         b.input :text_uk
