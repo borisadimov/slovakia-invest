@@ -58,6 +58,7 @@ ru:
     all_prices: "Все цены"
   contacts:
     title: "Контакты: как с нами связаться"
+    management: "Менеджмент"
     office_contacts:
       title: "Офис SlovakiaInvest"
     types:

@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def about_us
     @about_us_page = AboutUsPage.instance
+    @employees = Employee.all
     set_meta_tags(@about_us_page)
   end
 
