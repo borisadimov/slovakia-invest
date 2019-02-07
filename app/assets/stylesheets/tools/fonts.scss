@@ -61,3 +61,10 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("☺"), font-url('Montserrat-SemiBold.woff') format("woff"), font-url('Montserrat-SemiBold.woff2') format("woff2"), font-url('Montserrat-SemiBold.ttf') format("truetype"), font-url('Montserrat-SemiBold.svg') format("svg");
+  font-weight: 450;
+  font-style: normal;
+}

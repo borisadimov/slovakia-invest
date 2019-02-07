@@ -6,10 +6,10 @@
 
       h1.article-page__title
         = @post.title
-      .article-page__name
+      / .article-page__name
         = "#{I18n.t('posts.author')}: #{@post.author}"
       .article-page__name
-        = "(#{l @post.created_at, format: :default})"
+        = "#{l @post.created_at, format: :default}"
       
       .article-page__content
         = @post.text.html_safe if @post.text.present?

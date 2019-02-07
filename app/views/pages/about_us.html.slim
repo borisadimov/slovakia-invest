@@ -5,6 +5,63 @@
       .container
         h1.page__title
         = @about_us_page.content.html_safe if @about_us_page.content.present?
-
+      .container
+        .contacts-faces_wrapper
+          .contacts-faces_item
+            .contacts-faces_item__img
+              = image_tag "icon-contacts.png"
+            .contacts-faces_item__name
+              = 'name'
+            .contacts-faces_item__post.customize
+              = 'position'
+            .contacts-faces_item__tel.customize
+              | Skype: SlovakiaInvest6
+            .contacts-faces_item__tel.customize
+              | Phone: +421-2-321-44-901
+            .contacts-faces_item__tel.customize
+              | E-mail: Office@SlovakiaInvest.sk
+            / - employee.contacts.each do |contact|
+              .contacts-faces_item__tel.customize
+                = I18n.t("contacts.types.#{contact.contact_type}") + ': '
+                = contact_url(contact)
+          .contacts-faces_item
+            .contacts-faces_item__img
+              = image_tag "icon-contacts.png"
+            .contacts-faces_item__name
+              = 'name'
+            .contacts-faces_item__post.customize
+              = 'position'
+            .contacts-faces_item__tel.customize
+              | Skype: SlovakiaInvest6
+            .contacts-faces_item__tel.customize
+              | Phone: +421-2-321-44-901
+            .contacts-faces_item__tel.customize
+              | E-mail: Office@SlovakiaInvest.sk
+          .contacts-faces_item
+            .contacts-faces_item__img
+              = image_tag "icon-contacts.png"
+            .contacts-faces_item__name
+              = 'name'
+            .contacts-faces_item__post.customize
+              = 'position'
+            .contacts-faces_item__tel.customize
+              | Skype: SlovakiaInvest6
+            .contacts-faces_item__tel.customize
+              | Phone: +421-2-321-44-901
+            .contacts-faces_item__tel.customize
+              | E-mail: Office@SlovakiaInvest.sk
+          .contacts-faces_item
+            .contacts-faces_item__img
+              = image_tag "icon-contacts.png"
+            .contacts-faces_item__name
+              = 'name'
+            .contacts-faces_item__post.customize
+              = 'position'
+            .contacts-faces_item__tel.customize
+              | Skype: SlovakiaInvest6
+            .contacts-faces_item__tel.customize
+              | Phone: +421-2-321-44-901
+            .contacts-faces_item__tel.customize
+              | E-mail: Office@SlovakiaInvest.sk
   = render 'partials/menu'
   = render 'partials/cookies'
