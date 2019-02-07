@@ -48,6 +48,8 @@ gem 'froala-editor-sdk'
 gem 'geocoder'
 gem 'sitemap_generator'
 gem 'whenever', require: false
+gem 'searchkick', github: 'ankane/searchkick'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
