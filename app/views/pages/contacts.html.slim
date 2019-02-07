@@ -16,7 +16,7 @@
                   a href="#tab-#{index + 1}"
                     .contacts-page__block
                       .contacts-page__block-title
-                        = service.title
+                        = index == 4 ? I18n.t("contacts.management") : service.title
                       = image_tag "#{service.slug}.svg" 
 
       - @services.each_with_index do |service, index|
