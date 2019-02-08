@@ -6,7 +6,7 @@ ActiveAdmin.register ContactsPage do
                 :meta_keywords, :og_type, :og_image, :og_url,
                 contacts_attributes: [:id, :contact_type, :value, :_destroy]
 
-  menu label: 'Contacts', url: -> { url_for [:admin, :contacts_page] }
+  menu label: 'Contacts', url: -> { url_for [:admin, :contacts_page] }, parent: 'Pages'
 
   actions :show, :edit, :update
 

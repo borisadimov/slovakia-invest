@@ -5,7 +5,7 @@ en:
       items:
         about_us: "About us"
         prices: "Prices"
-        news: "Useful information"
+        news: "News"
         contacts: "Contacts"
   landing:
     contact_us_button: "Contact Us"
@@ -107,7 +107,7 @@ en:
       title: "Our Socials"
     pages:
       about_us: "About us"
-      news: "Useful information"
+      news: "News"
       contacts: "Contacts"
     copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
   menu:
@@ -115,7 +115,7 @@ en:
       main: "Main page"
       reviews: "Reviews"
       about_us: "About us"
-      news: "Useful information"
+      news: "News"
       contacts: "Contacts"
       prices: "Prices"
   time:

@@ -7,6 +7,8 @@ ActiveAdmin.register Employee do
                 :service_id,
                 contacts_attributes: [:id, :contact_type, :value, :_destroy]
 
+  menu priority: 3
+
   form do |f|
     f.inputs 'Order' do
       f.input :order

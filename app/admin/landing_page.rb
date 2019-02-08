@@ -24,7 +24,7 @@ ActiveAdmin.register LandingPage do
                 ]
 
 
-  menu label: 'Landing', url: -> { url_for [:admin, :landing_page] }
+  menu label: 'Landing', url: -> { url_for [:admin, :landing_page] }, parent: 'Pages'
 
   actions :show, :edit, :update
 

@@ -6,7 +6,7 @@ ActiveAdmin.register AboutUsPage do
                 :og_description_ru, :og_description_en, :og_description_uk,
                 :meta_keywords, :og_type, :og_image, :og_url
 
-  menu label: 'About Us', url: -> { url_for [:admin, :about_us_page] }
+  menu label: 'About Us', url: -> { url_for [:admin, :about_us_page] }, parent: 'Pages'
 
   actions :show, :edit, :update
 

@@ -11,6 +11,8 @@ ActiveAdmin.register Post do
                 article_ids: [],
                 comments_attributes: [:id, :author, :email, :text, :_destroy]
 
+  menu priority: 4
+
   form do |f|
     tabs do
       tab 'Russian' do

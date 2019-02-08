@@ -5,7 +5,7 @@ ActiveAdmin.register PricesPage do
                 :og_description_ru, :og_description_en, :og_description_uk,
                 :meta_keywords, :og_type, :og_image, :og_url
   
-  menu label: 'Prices', url: -> { url_for [:admin, :prices_page] }
+  menu label: 'Prices', url: -> { url_for [:admin, :prices_page] }, parent: 'Pages'
 
   actions :show, :edit, :update
 

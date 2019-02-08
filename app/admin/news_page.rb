@@ -5,7 +5,7 @@ ActiveAdmin.register NewsPage do
                 :og_description_ru, :og_description_en, :og_description_uk,
                 :meta_keywords, :og_type, :og_image, :og_url
   
-  menu label: 'News', url: -> { url_for [:admin, :news_page] }
+  menu label: 'News', url: -> { url_for [:admin, :news_page] }, parent: 'Pages'
 
   actions :show, :edit, :update
 
