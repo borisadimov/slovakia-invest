@@ -205,6 +205,11 @@
   align-items: center;
 }
 
+.language__title ul {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+
 .language-arrow {
   position: absolute;
   top: 0;
@@ -261,9 +266,9 @@
   padding-bottom: 4px;
   margin-left: 10px;
 
-  &:first-child {
-    margin-left: 0;
-  }
+  // &:first-child {
+  //   margin-left: 0;
+  // }
 }
 
 .language__item-img {
@@ -400,6 +405,10 @@
     width: 60px;
 
     background: #ffffff;
+  }
+
+  .language__title ul {
+    flex-flow: column nowrap;
   }
 
   .language-arrow {
