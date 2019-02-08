@@ -7,5 +7,7 @@ class LandingPage < ApplicationRecord
   accepts_nested_attributes_for :reviews, allow_destroy: true
   accepts_nested_attributes_for :features, allow_destroy: true
 
-  translates :title, :subtitle, :about_block_text, :meta_title, :meta_description
+  translates :title, :subtitle, :about_block_text, :meta_title, :meta_description, :og_title, :og_description
+  
+  mount_base64_uploader :og_image, OgImageUploader
 end

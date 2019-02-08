@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190207211640) do
+ActiveRecord::Schema.define(version: 20190207225113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -94,6 +104,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
   end
 
@@ -155,6 +175,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["singleton_guard"], name: "index_contacts_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -237,6 +267,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -248,6 +288,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string  "meta_description_ru"
     t.string  "meta_description_en"
     t.string  "meta_description_uk"
+    t.string  "meta_keywords"
+    t.string  "og_title_ru"
+    t.string  "og_title_en"
+    t.string  "og_title_uk"
+    t.string  "og_description_ru"
+    t.string  "og_description_en"
+    t.string  "og_description_uk"
+    t.string  "og_type"
+    t.string  "og_image"
+    t.string  "og_url"
     t.index ["singleton_guard"], name: "index_news_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -280,6 +330,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string   "description_ru"
     t.string   "description_en"
     t.string   "description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
   end
 
   create_table "posts_services", id: false, force: :cascade do |t|
@@ -312,6 +372,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string  "meta_description_ru"
     t.string  "meta_description_en"
     t.string  "meta_description_uk"
+    t.string  "meta_keywords"
+    t.string  "og_title_ru"
+    t.string  "og_title_en"
+    t.string  "og_title_uk"
+    t.string  "og_description_ru"
+    t.string  "og_description_en"
+    t.string  "og_description_uk"
+    t.string  "og_type"
+    t.string  "og_image"
+    t.string  "og_url"
     t.index ["singleton_guard"], name: "index_prices_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -355,6 +425,16 @@ ActiveRecord::Schema.define(version: 20190207211640) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
   end
 
   create_table "user_callbacks", force: :cascade do |t|
