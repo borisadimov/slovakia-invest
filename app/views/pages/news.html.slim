@@ -18,7 +18,9 @@
               = image_tag "search.png"  
           .search-form
             = form_tag news_pages_path, method: :get, enforce_utf8: false
-              input type="text" name="query" placeholder=(I18n.t('posts.search.placeholder')) value=(params[:query])
+              .search-form__input-wrapper
+                input type="text" name="query" placeholder=(I18n.t('posts.search.placeholder')) value=(params[:query])
+                a.search-form__input-cross href="/pages/news"
               - if params[:article].present?
                 = hidden_field_tag 'article', params[:article]
               button.search-btn.btn = I18n.t('posts.search.button')
