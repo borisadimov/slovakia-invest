@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190123140745) do
+ActiveRecord::Schema.define(version: 20190207225113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["singleton_guard"], name: "index_about_us_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -43,6 +53,20 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+  end
+
+  create_table "additional_texts", force: :cascade do |t|
+    t.integer  "order"
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.string   "title_uk"
+    t.string   "text_ru"
+    t.string   "text_en"
+    t.string   "text_uk"
+    t.integer  "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_additional_texts_on_service_id", using: :btree
   end
 
   create_table "admin_users", force: :cascade do |t|
@@ -80,6 +104,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["service_id"], name: "index_articles_on_service_id", using: :btree
   end
 
@@ -129,6 +163,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["singleton_guard"], name: "index_contacts_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -211,6 +255,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
     t.index ["singleton_guard"], name: "index_landing_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -222,6 +276,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string  "meta_description_ru"
     t.string  "meta_description_en"
     t.string  "meta_description_uk"
+    t.string  "meta_keywords"
+    t.string  "og_title_ru"
+    t.string  "og_title_en"
+    t.string  "og_title_uk"
+    t.string  "og_description_ru"
+    t.string  "og_description_en"
+    t.string  "og_description_uk"
+    t.string  "og_type"
+    t.string  "og_image"
+    t.string  "og_url"
     t.index ["singleton_guard"], name: "index_news_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -254,6 +318,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string   "description_ru"
     t.string   "description_en"
     t.string   "description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
   end
 
   create_table "posts_services", id: false, force: :cascade do |t|
@@ -286,6 +360,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string  "meta_description_ru"
     t.string  "meta_description_en"
     t.string  "meta_description_uk"
+    t.string  "meta_keywords"
+    t.string  "og_title_ru"
+    t.string  "og_title_en"
+    t.string  "og_title_uk"
+    t.string  "og_description_ru"
+    t.string  "og_description_en"
+    t.string  "og_description_uk"
+    t.string  "og_type"
+    t.string  "og_image"
+    t.string  "og_url"
     t.index ["singleton_guard"], name: "index_prices_pages_on_singleton_guard", unique: true, using: :btree
   end
 
@@ -329,6 +413,16 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.string   "meta_description_ru"
     t.string   "meta_description_en"
     t.string   "meta_description_uk"
+    t.string   "meta_keywords"
+    t.string   "og_title_ru"
+    t.string   "og_title_en"
+    t.string   "og_title_uk"
+    t.string   "og_description_ru"
+    t.string   "og_description_en"
+    t.string   "og_description_uk"
+    t.string   "og_type"
+    t.string   "og_image"
+    t.string   "og_url"
   end
 
   create_table "user_callbacks", force: :cascade do |t|
@@ -341,6 +435,7 @@ ActiveRecord::Schema.define(version: 20190123140745) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "additional_texts", "services"
   add_foreign_key "articles", "services"
   add_foreign_key "comments", "posts"
   add_foreign_key "employees", "services"

@@ -195,7 +195,7 @@
   font-size: 28px;
   color: #FFFFFF;
   width: 100%;
-  padding-left: 35px;
+  text-align: center;
   
 }
 
@@ -206,6 +206,7 @@
   margin-top: 80px;
   margin-left: -3%;
   margin-right: -3%;
+  text-align: center;
 }
 
 .contacts-faces_item {
@@ -215,6 +216,9 @@
   padding-right: 3%;
   padding-left: 3%;
   margin-bottom: 80px;
+  
+  text-align: left;
+  font-weight: bold;
 }
 
 .contacts-faces_item__name {
@@ -239,10 +243,6 @@
 
 .contacts-form__wrapper {
   margin-top: 103px;
-}
-
-.contacts-faces_item {
-  font-weight: bold;
 }
 
 @media (max-width: 768px) {

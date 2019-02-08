@@ -38,8 +38,10 @@
 }
 
 .item-page__header-content {
+  position: relative;
+ z-index: 2;
  padding-top: 27px;
- margin-left: 131px;
+ margin-left: 96px;
 }
 
 

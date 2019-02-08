@@ -10,7 +10,12 @@ class ApplicationController < ActionController::Base
   def set_meta_tags(resource)
     @meta_tags = {
       title: resource.meta_title,
-      description: resource.meta_description
+      description: resource.meta_description,
+      keywords: resource.meta_keywords,
+      og_title: resource.og_title,
+      og_description: resource.og_description,
+      og_image: resource.og_image,
+      og_url: resource.og_url
     }
   end
 

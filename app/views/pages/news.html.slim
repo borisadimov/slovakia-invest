@@ -4,13 +4,11 @@
       .container
         h1.page__title.news
           = I18n.t('posts.title')
-        .news-page__img-wrapper
-          / = image_tag "blog-foto.jpg"
         .news-page__nav
           - @articles.each_slice((@articles.size / 3.0).round).with_index do |slice, index|
             div class=("news-page__nav-col#{index + 1} cols")
               - slice.each do |article|
-                = link_to article.title, request.query_parameters.merge(article: article.id)
+                = link_to article.title, news_pages_path(article: article.id, query: params[:query])
 
         .search-wrap.open-search
           .search-top
@@ -19,8 +17,12 @@
             .search-img
               = image_tag "search.png"  
           .search-form
-            = form_tag request.query_parameters.merge(title: :title), method: :get
-              input type="text" name="title" placeholder=(I18n.t('posts.search.placeholder'))
+            = form_tag news_pages_path, method: :get, enforce_utf8: false
+              .search-form__input-wrapper
+                input type="text" name="query" placeholder=(I18n.t('posts.search.placeholder')) value=(params[:query])
+                a.search-form__input-cross href="/pages/news"
+              - if params[:article].present?
+                = hidden_field_tag 'article', params[:article]
               button.search-btn.btn = I18n.t('posts.search.button')
 
           / = render 'partials/item-links', locals={links: @links}

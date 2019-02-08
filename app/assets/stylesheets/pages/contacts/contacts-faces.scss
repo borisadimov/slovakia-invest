@@ -3,25 +3,6 @@
   margin-bottom: 30px;
 }
 
-.contacts-page__faces-item-dd {
-  margin-bottom: 10px;
-}
-
-.contacts-page__faces-item-dd.active .contacts-page__faces-item-dd-title img {
-  transform: rotate(180deg) translateY(50%);
-}
-
-.contacts-page__faces-item-dd-wrapper {
-  height: 0;
-  overflow: hidden;
-
-  transition: height 0.3s ease-in;
-}
-
-.contacts-page__faces-item-dd-title {
-  cursor: pointer;
-}
-
 
 .contacts-page__faces-item-wrapper {
   display: flex;
@@ -80,7 +61,6 @@
   width: 136px;
   height: 136px;
   border-radius: 50%;
-
   overflow: hidden;
 }
 

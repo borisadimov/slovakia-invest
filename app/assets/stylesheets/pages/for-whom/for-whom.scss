@@ -2,19 +2,22 @@
  max-width: 1400px;
  width: 100%;
 }
+
 .for-whom__title {
  margin-top: 92px;
 }
+
 .for-whom_line1 {
  display: flex;
- justify-content: flex-start;
+ justify-content: space-between;
  margin-top: 118px;
  width: 100%;
 }
+
 .for-whom_line2 {
  width: 100%;
  display: flex;
- justify-content: flex-start;
+ justify-content: space-between;
  margin-top: 127px; 
 }
 
@@ -28,6 +31,30 @@
     margin-left: 0;
   }
 }
+
+.for-whom_block .circle {
+  opacity: 0;
+  transform: translateX(-100%);
+
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+@for $i from 1 through 3 {
+  .for-whom.active .for-whom_line1 .for-whom_block:nth-child(#{$i}) .circle {
+    transition-delay: calc(#{$i* 0.2s});
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@for $i from 1 through 3 {
+  .for-whom.active .for-whom_line2 .for-whom_block:nth-child(#{$i}) .circle {
+    transition-delay: calc(#{$i * 0.2s + 0.6});
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .for-whom__description {
  max-width: 900px;
  width: 100%;

@@ -1,34 +1,6 @@
 $( document ).ready(function() {
-  var addDropDownMenuListener = function(element, buttonElementClass, dropContentClass, contentHeightClass) {
-    const buttonElement = element.querySelector('.' + buttonElementClass)
-    const dropContent = element.querySelector('.' + dropContentClass)
-    const contentHeight = dropContent.querySelector('.' + contentHeightClass).offsetHeight
-  
-    buttonElement.addEventListener('click', function() {
-      if (element.classList.contains('active')) {
-        element.classList.remove('active')
-        dropContent.style.height = 0 + 'px'
-      } else {
-        element.classList.add('active')
-        dropContent.style.height = contentHeight + 'px'
-      }
-    })
-  }
-  
-  var prices = $('.price-page__item')
-  prices.each(function(i, element) {
-    addDropDownMenuListener(element, 'price-page__item-title', 'price-page__item-content', 'item-page__price')
-  })
-  
-  var contacts = $(document.querySelectorAll('.contacts-page__faces-item-dd'))
-  contacts.each(function(i, element) {
-    addDropDownMenuListener(element, 'contacts-page__faces-item-dd-title', 'contacts-page__faces-item-dd-wrapper', 'contacts-page__faces-item-wrapper')
-  })
-  
-  
   var burger = $('.burger')
   var menu = $('.menu')
-  
   burger.click(function() {
     burger.toggleClass('active');
     menu.toggleClass('active');
@@ -110,15 +82,6 @@ $( document ).ready(function() {
   // scroll magic
   var controller = new ScrollMagic.Controller();
   
-  var sceneServices = new ScrollMagic.Scene({triggerElement: ".services"})
-    .offset(-100)
-    .addTo(controller)
-    // .addIndicators()
-    .setClassToggle(".services", "active")
-    .on('enter', function(e) {
-      sceneServices.remove()
-    })
-  
   var sceneFeatures = new ScrollMagic.Scene({triggerElement: ".features"})
     .offset(-200)
     .addTo(controller)
@@ -154,6 +117,41 @@ $( document ).ready(function() {
       })
       sceneFeatures.remove()
     })
+
+    function scrollMagicAddClass(className) {
+      if ($(className).length > 0) {
+        var scene = new ScrollMagic.Scene({triggerElement: className})
+          .offset(-100)
+          .addTo(controller)
+          // .addIndicators()
+          .setClassToggle(className, "active")
+          .on('enter', function(e) {
+            scene.remove()
+        })  
+      }
+    }
+  
+    scrollMagicAddClass(".services")
+    scrollMagicAddClass(".guarantee-wrapper")
+    scrollMagicAddClass(".for-whom")
+    scrollMagicAddClass(".how-work__items")
+    scrollMagicAddClass(".prices-cards__wrapper")
+    if ($('.item-page').length > 0) {
+      scrollMagicAddClass(".news__content")
+    }
+  
+  // sticky
+  var backButton = $('.article-page__back')
+
+  if (backButton.length > 0) {
+    var container = $('.article-page__container')
+    var scene = new ScrollMagic.Scene({triggerElement: ".article-page__container", duration: container.height() - 65})
+      .triggerHook("onLeave")
+      .offset(-100)
+      .setPin(".article-page__back")
+      // .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+  }
   
   //video
   var headerVideo = $('.main-header__video')
@@ -277,10 +275,35 @@ $( document ).ready(function() {
     var acc = $(".accordion");
     var i;
     
+    var scenes = {}
     for (i = 0; i < acc.length; i++) {
-      acc[i].onclick = function () {
+      acc[i].dataset.id = i
+
+      acc[i].onclick = function() {
         this.classList.toggle("active");
         $(this).next().toggle("show");
+
+        var elementId = this.dataset.id
+        var container = this.nextSibling;
+				
+        var cross = this.querySelector(".service-global__cross")
+
+        if (this.classList.contains('active')) {
+          setTimeout(function() {
+            var scene = new ScrollMagic.Scene({triggerElement: container, duration: container.offsetHeight})
+              .triggerHook("onLeave")
+              .offset(-150)
+              .setPin(cross)
+              // .addIndicators()
+              .addTo(controller);
+  
+              scenes[elementId] = scene
+          }, 500)
+        }
+        
+        if (scenes[elementId]) {
+          scenes[elementId].destroy(true)
+        }
       }
     }
   }
@@ -305,5 +328,25 @@ $( document ).ready(function() {
     localStorage.setItem('cookieClosed', 'true')
     $('.cookie-item').addClass('hidden');
   })
-})
 
+
+  // search 
+  var searchForm = $('.search-form form');
+  var searchCross = $('.search-form__input-cross')
+
+  if (searchForm.length > 0) {
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    getParameterByName('query') === null ? 
+      searchCross.addClass('hidden') : 
+      searchCross.removeClass('hidden')
+  }
+})

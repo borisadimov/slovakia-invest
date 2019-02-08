@@ -26,9 +26,10 @@
         .language__title
           .language-arrow
             .language-arrow__img
-          - I18n.available_locales.insert(0, I18n.locale).uniq.each do |locale|
-            li.language__item(class=locale.to_s)
-              = link_to '', params.permit.merge(locale: locale), class: 'language__item-img'
+          ul
+            - I18n.available_locales.insert(0, I18n.locale).uniq.each do |locale|
+              li.language__item(class=locale.to_s)
+                = link_to '', params.permit.merge(locale: locale), class: 'language__item-img'
       / a(href="/pages/about-us.html" class="header-info")
     .burger
       .burger-line

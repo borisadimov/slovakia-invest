@@ -1,5 +1,12 @@
 title = 'Slovakia' + (@meta_tags[:title].present? ? (' | ' + @meta_tags[:title]) : '')
 meta name="description" content=(@meta_tags[:description])
+meta name="keywords" content=(@meta_tags[:keywords])
+meta name="og:title" content=(@meta_tags[:og_title])
+meta name="og:description" content=(@meta_tags[:og_description])
+meta name="og:type" content=(@meta_tags[:og_type])
+meta name="og:url" content=(@meta_tags[:og_url])
+- if @meta_tags[:og_image].present?
+  meta name="og:image" content=(@meta_tags[:og_image].url)
 = csrf_meta_tags 
 meta charset="utf-8"
 meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"

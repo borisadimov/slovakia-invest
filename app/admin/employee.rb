@@ -7,6 +7,8 @@ ActiveAdmin.register Employee do
                 :service_id,
                 contacts_attributes: [:id, :contact_type, :value, :_destroy]
 
+  menu priority: 3
+
   form do |f|
     f.inputs 'Order' do
       f.input :order
@@ -39,7 +41,9 @@ ActiveAdmin.register Employee do
     end
 
     f.inputs do
-      f.input :service_id, as: :select, collection: Service.all.map { |s| [s.title, s.id] }, include_blank: false
+      f.input :service_id, as: :select, collection: [nil] + Service.all.each_with_index.map { |s, index|
+        [index == 4 ? I18n.t('contacts.management') : s.title, s.id]
+      }, include_blank: false
       f.input :avatar, as: :file, hint: f.object.avatar.present? ? image_tag(f.object.avatar.url) : content_tag(:span, 'no avatar yet')
     end
 
