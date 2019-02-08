@@ -3,6 +3,14 @@
 	background-color: #F7F8FB;
 	padding-bottom: 50px;
 }
+.main-page .features-wrap {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1400px;
+	width: 100%;
+	padding-top: 69px;
+}
+
 .features-wrap {
 	display: flex;
 	justify-content: flex-start;
@@ -10,10 +18,12 @@
 	width: 100%;
 	padding-top: 69px;
 }
+
 .features-item {
 	max-width: 240px;
 	width: 100%;
 	margin-left: 5%;
+	
 
 	&:first-child {
 		margin-left: 0;
@@ -21,6 +31,7 @@
 	}
 .features-item h2 {
 	font-size: 33px;
+
 }
 .features-item h2 span {
 	font-size: 70px;
