@@ -7,7 +7,9 @@ class Post < ApplicationRecord
 
   accepts_nested_attributes_for :comments, allow_destroy: true
 
-  translates :title, :description, :text, :author, :meta_title, :meta_description
+  translates :title, :description, :text, :author, :meta_title, :meta_description, :og_title, :og_description
+
+  mount_base64_uploader :og_image, OgImageUploader
 
   scope :by_article, ->(article_id) { joins(:articles).where(articles: {id: article_id}).distinct }
 

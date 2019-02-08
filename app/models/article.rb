@@ -11,7 +11,9 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :prices, allow_destroy: true
 
-  translates :title, :content, :meta_title, :meta_description
+  translates :title, :content, :meta_title, :meta_description, :og_title, :og_description
+
+  mount_base64_uploader :og_image, OgImageUploader
 
   default_scope { order(order: :asc) }
 end

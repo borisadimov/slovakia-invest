@@ -14,7 +14,9 @@ class Service < ApplicationRecord
   accepts_nested_attributes_for :features, allow_destroy: true
   accepts_nested_attributes_for :additional_texts, allow_destroy: true
 
-  translates :title, :description, :content, :meta_title, :meta_description
+  translates :title, :description, :content, :meta_title, :meta_description, :og_title, :og_description
+
+  mount_base64_uploader :og_image, OgImageUploader
 
   default_scope { order(order: :asc) }
 
