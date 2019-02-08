@@ -32,6 +32,8 @@ ActiveAdmin.register Service do
                   :_destroy
                 ]
 
+  menu priority: 1
+
   controller do
     def find_resource
       scoped_collection.friendly.find(params[:id])

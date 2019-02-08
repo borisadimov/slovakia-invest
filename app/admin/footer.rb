@@ -3,7 +3,7 @@ ActiveAdmin.register Footer do
                 contacts_attributes: [:id, :contact_type, :value, :_destroy],
                 partners_attributes: [:id, :url, :logo, :_destroy]
 
-  menu label: 'Footer Settings', url: -> { url_for [:admin, :footer] }
+  menu label: 'Footer Settings', url: -> { url_for [:admin, :footer] }, parent: 'Pages'
 
   actions :show, :edit, :update
 

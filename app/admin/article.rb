@@ -18,6 +18,8 @@ ActiveAdmin.register Article do
                   :_destroy
                 ]
 
+  menu priority: 2
+
   controller do
     def find_resource
       scoped_collection.friendly.find(params[:id])
