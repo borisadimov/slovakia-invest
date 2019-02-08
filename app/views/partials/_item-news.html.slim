@@ -5,7 +5,7 @@
         .news__item-text-title
           = post.title
         .news__item-text-time
-          | 27.09.2018 6:51
+          = "#{l post.created_at, format: :default}"
         .news__item-text-description
           = post.description
           = link_to I18n.t('posts.more'), post_path(post)

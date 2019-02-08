@@ -121,7 +121,7 @@ ru:
   time:
     formats:
       long: "%H:%M:%S %d-%m-%Y "
-      default: "%d.%m.%Y %H:%M:%S"
+      default: "%d.%m.%Y %H:%M"
   errors:
     not_found:
       text: "Страница не найдена"

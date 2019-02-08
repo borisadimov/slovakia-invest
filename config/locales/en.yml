@@ -120,7 +120,7 @@ en:
       prices: "Prices"
   time:
     formats:
-      default: "%Y.%m.%d %H:%M:%S"  
+      default: "%Y.%m.%d %H:%M"  
   errors:
     not_found:
       text: "Page not found"
