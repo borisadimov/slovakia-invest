@@ -5,7 +5,7 @@
     .main-header__placeholder
       = video_tag("video.mp4", "video.ogv", autoplay: "true", loop: "true", muted: "true", class: 'main-header__video', poster: "top.jpg")
     .main-header__container.container
-      .main-header__title = @landing_page.title
+      h1.main-header__title = @landing_page.title
       .main-header__sub-title = @landing_page.subtitle
       a.btn.main-header__btn href="/pages/contacts" = I18n.t('landing.contact_us_button')
   .services

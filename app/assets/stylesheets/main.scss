@@ -45,6 +45,10 @@ h1 {
   line-height: 1.2em;
 }
 
+.main-page h1 {
+  font-size: 48px;
+}
+
 h2 {
   font-size: 48px;
   line-height: 62px;
@@ -202,6 +206,10 @@ span {
 }
 
 @media (max-width: 576px) {
+  .main-page h1 {
+    font-size: 36px;
+  }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
