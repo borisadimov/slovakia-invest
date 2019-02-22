@@ -320,15 +320,13 @@ $( document ).ready(function() {
   }
 
   // cookie
-  if (localStorage.getItem('cookieClosed') === 'true') {
-    $('.cookie-item').addClass('hidden');
+  if (localStorage.getItem('cookieClosed') === null) {
+    $('.cookie-item').addClass('show');
   }
-  
   $('#cookieAccept').on('click', function() {
     localStorage.setItem('cookieClosed', 'true')
     $('.cookie-item').addClass('hidden');
   })
-
 
   // search 
   var searchForm = $('.search-form form');

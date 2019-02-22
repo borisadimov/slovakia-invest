@@ -181,6 +181,10 @@ span {
   visibility: hidden;
 }
 
+.show {
+  display: block;
+}
+
 .popup.visible {
   visibility: visible;
   opacity: 1;
