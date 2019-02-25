@@ -17,26 +17,28 @@ Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  root 'main#index'
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
+    root 'main#index'
 
-  post 'upload_image', to: 'upload#upload_image'
-
-  resources :pages, only: [], shallow: true do
-    collection do
-      get :about_us
-      get :contacts
-      get :news
-      get :prices
+    resources :pages, only: [], shallow: true do
+      collection do
+        get :about_us
+        get :contacts
+        get :news
+        get :prices
+      end
+    end
+  
+    resources :user_callbacks, only: [:create]
+  
+    resources :services, only: :show do
+      resources :articles, only: :show, shallow: true
+    end
+  
+    resources :posts, only: [:show] do
+      resources :comments, only: [:create]
     end
   end
 
-  resources :user_callbacks, only: [:create]
-
-  resources :services, only: :show do
-    resources :articles, only: :show, shallow: true
-  end
-
-  resources :posts, only: [:show] do
-    resources :comments, only: [:create]
-  end
+  post 'upload_image', to: 'upload#upload_image'
 end
