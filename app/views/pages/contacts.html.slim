@@ -32,7 +32,6 @@
                   .contacts-faces_item__post.customize
                     = employee.position
                   - employee.contacts.each do |contact|
-                    / - byebug 
                     .contacts-faces_item__tel.customize
                       - if contact.contact_type == "phone"
                         .contacts-faces_item__tel-top
