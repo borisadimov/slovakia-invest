@@ -22,13 +22,13 @@
 }
 
 .footer__item-container {
-  flex: 0 1 50%;
+  flex: 0 1 37%;
   margin-bottom: 30px;
 }
 
 .footer__dispatch,
 .footer__pages {
-  padding-right: 7%;
+  padding-right: 5%;
 }
 
 .footer__contacts {
@@ -148,9 +148,22 @@ form label.error {
   opacity: 1;
 }
 
-.footer__pages-title, {
+.footer__pages-title {
   margin-bottom: 30px;
   text-transform: uppercase;
+}
+
+.footer__services {
+  padding-left: 1.5%;
+  padding-right: 3.5%;
+}
+
+.footer__service {
+  margin-bottom: 22px;
+}
+
+.footer__service a {
+  color: #3A519A;
 }
 
 .footer__contacts-item {
@@ -207,6 +220,12 @@ form label.error {
   color: #3A519A;
 
   opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
+  .footer__services {
+    display: none;
+  }
 }
 
 @media (max-width: 991px) {

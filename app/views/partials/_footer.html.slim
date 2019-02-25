@@ -25,6 +25,13 @@ footer.footer
           span.footer__custom-checkbox-text = I18n.t('footer.form.terms')
         button.btn.btn__dispatch 
             = I18n.t('footer.form.submit')
+      .footer__services
+        ul
+          - @menu_services.each do |service|
+            li.footer__service
+               = link_to service.title, service_path(service)
+          li.footer__service
+            = link_to I18n.t('header_menu.news.title'), news_pages_path
       .footer__contacts.footer__item-container
         - @footer.contacts.each do |contact|
           .footer__contacts-item
