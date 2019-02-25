@@ -13,6 +13,8 @@
                     li
                       = link_to article.title, article_path(article)
         li.header__nav-item
+          = link_to I18n.t('header_menu.news.title'), news_pages_path
+        li.header__nav-item
           .header__nav-item-link
             = I18n.t('header_menu.more.title')
           .submenu-wrapper
