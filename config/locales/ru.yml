@@ -7,6 +7,8 @@ ru:
         prices: "Цены"
         news: "Новости"
         contacts: "Контакты"
+    news: 
+      title: "Новости"
   landing:
     contact_us_button: "Связаться с нами"
     about_us_block:

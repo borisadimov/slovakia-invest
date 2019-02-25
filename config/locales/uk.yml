@@ -7,6 +7,8 @@ uk:
         prices: "Цiни"
         news: "Новини"
         contacts: "Контакти"
+    news: 
+      title: "Новини"
   landing:
     contact_us_button: "Зв'язатися з нами"
     about_us_block:

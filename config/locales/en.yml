@@ -7,6 +7,8 @@ en:
         prices: "Prices"
         news: "News"
         contacts: "Contacts"
+    news: 
+      title: "News"
   landing:
     contact_us_button: "Contact Us"
     about_us_block:
