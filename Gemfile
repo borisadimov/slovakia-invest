@@ -36,6 +36,7 @@ gem 'activeadmin', '~> 1.0.0'
 gem 'metamagic'
 gem 'active_admin_theme'
 gem 'slim-rails'
+gem 'activeadmin_dynamic_fields'
 
 gem 'devise'
 gem 'traco'
