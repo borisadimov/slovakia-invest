@@ -28,7 +28,7 @@
 }
 
 .item-page__header-logo_investments img {
- opacity: 0.4;
+ opacity: 0.3;
 }
 
 .item-page__links-row {
@@ -39,9 +39,16 @@
 
 .item-page__header-content {
   position: relative;
- z-index: 2;
- padding-top: 27px;
- margin-left: 96px;
+  z-index: 2;
+  padding-top: 27px;
+  margin-left: 96px;
+}
+
+.item-page__header-content h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-weight: 500;
 }
 
 
