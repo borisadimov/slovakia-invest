@@ -23,6 +23,7 @@
   line-height: 15px;
   font-size: 14px;
   color: #FFFFFF;
+  opacity: 0.8;
 
 
   &:nth-child(5n + 1) {
@@ -31,25 +32,5 @@
 }
 
 .item-page__links a:hover {
-  font-weight: 500;
+  opacity: 1;
 }
-
-
-
-// @for $i from 1 through 18 { 
-//   .item-page__links.animate a:nth-child(#{$i}) {
-//     animation: fadeInBottom 0.15s ease-in #{$i * 0.15s} 1 forwards;
-//   }
-// }
-
-// @keyframes fadeInBottom {
-//   0% {
-//     transform: translateY(30%);
-//     opacity: 0;
-//   }
-
-//   100% {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
