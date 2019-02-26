@@ -10,11 +10,6 @@
  background: linear-gradient(218.68deg, rgba(246, 139, 49, 0.43) 14.29%, #F68B31 74.04%);
  mix-blend-mode: normal;
 }
-.item-page__header-nav_education a {
- max-width: 204px;
- width: 100%;
- margin-left: 53px;
-}
 
 .item-page__header-logo_education {
  position: absolute;
@@ -35,10 +30,6 @@
 }
 
 @media (max-width: 767px) {
- .item-page__header-nav_education a {
-  margin-left: 0;
-  margin: auto;
- }
 
  .item-page__header-logo_education img {
   display: none;
