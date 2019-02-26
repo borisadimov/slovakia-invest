@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190207225113) do
+ActiveRecord::Schema.define(version: 20190226010158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,6 +149,7 @@ ActiveRecord::Schema.define(version: 20190207225113) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "order"
+    t.string   "telegram"
     t.index ["has_contacts_type", "has_contacts_id"], name: "index_contacts_on_has_contacts_type_and_has_contacts_id", using: :btree
   end
 
