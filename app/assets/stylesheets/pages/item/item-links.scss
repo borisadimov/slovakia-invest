@@ -1,5 +1,5 @@
 .item-page__links {
-  // margin-left: 46px;
+  padding-bottom: 8px;
 }
 
 .item-page__links .container {
@@ -7,20 +7,31 @@
   z-index: 2;
   display: flex;
   flex-flow: row wrap;
+  max-width: 980px;
+  margin-left: 96px;
   padding-top: 93px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .item-page__links a {
-  display: block;
-  flex: 1 0 auto;
-  padding: 8px;
+  display: inline-block;
+  max-width: 135px;
+  width: 100%;
+  margin-bottom: 24px;
+  margin-left: 73px;
+  line-height: 15px;
   font-size: 14px;
-  text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
+
+
+  &:nth-child(5n + 1) {
+    margin-left: 0;
+  }
 }
 
 .item-page__links a:hover {
-  background: rgba(246, 246, 246, 0.2);
+  font-weight: 500;
 }
 
 
