@@ -1,8 +1,7 @@
 .cookie-item {
   position: fixed;
-  // top: 800px;
-  // top: 715px;
   bottom: 0;
+  display: none;
   width: 100%;
   background: #AE1926;
   color: #ffffff;
@@ -10,12 +9,17 @@
   opacity: 0.8;
   z-index: 100;
 }
+.cookie-item.show {
+  display: block
+}
+
 .cookie-item_up {
   padding: 1px;
   a {
     margin-left: 10px;
     color: #ffffff;
     text-decoration: underline;
+    cursor: pointer;
   }
   a:hover {
     text-decoration: none;

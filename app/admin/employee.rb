@@ -5,7 +5,7 @@ ActiveAdmin.register Employee do
                 :description_ru, :description_en, :description_uk,
                 :avatar,
                 :service_id,
-                contacts_attributes: [:id, :contact_type, :value, :_destroy]
+                contacts_attributes: [:id, :contact_type, :value, :telegram, :_destroy]
 
   menu priority: 3
 
@@ -52,7 +52,8 @@ ActiveAdmin.register Employee do
                   new_record: 'Add Contact',
                   allow_destroy: true do |b|
         b.input :value
-        b.input :contact_type, as: :select, collection: Contact.contact_types.keys
+        b.input :contact_type, as: :select, collection: Contact.contact_types.keys, input_html: { data: { not: 'phone', action: 'hide', target: '.telegram-input' } }
+        b.input :telegram, wrapper_html: { class: 'telegram-input' }
       end
     end
 

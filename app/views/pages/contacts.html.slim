@@ -33,9 +33,22 @@
                     = employee.position
                   - employee.contacts.each do |contact|
                     .contacts-faces_item__tel.customize
-                      = I18n.t("contacts.types.#{contact.contact_type}") + ': '
-                      = contact_url(contact)
-
+                      - if contact.contact_type == "phone"
+                        .contacts-faces_item__tel-top
+                          a(href="tel:#{contact.value}")
+                            = image_tag "icon-cont-mobile"   
+                          = contact.value
+                        .contacts-faces_item__tel-bottom
+                          a(title="Viber" href="viber://add?number=#{contact.value.delete("^0-9")}")
+                            = image_tag "icon-cont-viber"
+                          a(title="WhatsApp" href="whatsapp://send?phone=#{'+' + contact.value.delete("^0-9")}")
+                            = image_tag "icon-cont-whatsup"
+                          a(title="Telegram" href="tg://resolve?domain=#{contact.telegram}")
+                            = image_tag "icon-cont-telegram"
+                      - else
+                        a(title="#{contact.contact_type}" href="#{contact.contact_type}:#{contact.value}") 
+                          = image_tag "icon-cont-#{contact.contact_type}"
+                        = contact.value
     .contacts-page__contacts
       .container
         .contacts-page__contacts-office

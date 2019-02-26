@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_user_locale
-    unless session[:locale_seted] && !request.location.present?
+    if session[:locale].blank? && request.location.present?
       country_code = request.location.country_code
       case country_code
         when 'RU'
@@ -41,7 +41,14 @@ class ApplicationController < ActionController::Base
           I18n.locale = :en
       end
 
-      session[:locale_seted] = true
+      session[:locale] = I18n.locale
+    else
+      I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
+      session[:locale] = I18n.locale
     end
+  end
+
+  def default_url_options
+    { locale: I18n.locale }
   end
 end

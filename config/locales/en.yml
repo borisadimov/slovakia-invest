@@ -7,6 +7,8 @@ en:
         prices: "Prices"
         news: "News"
         contacts: "Contacts"
+    news: 
+      title: "News"
   landing:
     contact_us_button: "Contact Us"
     about_us_block:
@@ -110,6 +112,9 @@ en:
       news: "News"
       contacts: "Contacts"
     copyright: "All texts, images, signs, information and other information are subject to the Slovak law no. 618/2003 on copyright and related rights (Copyright law). The use of texts, images, marks, information and other information is possible only with the written consent of the group of companies SlovakiaInvest."
+  cookies:
+    text: "This site uses cookies. When you visit you express your consent."
+    accept: "Accept"
   menu:
     pages:
       main: "Main page"
