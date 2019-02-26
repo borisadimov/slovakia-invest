@@ -31,10 +31,10 @@
  opacity: 0.4;
 }
 
-.item-page__header-nav_investments a {
- max-width: 156px;
- text-align: inherit;
- margin-left: 51px;
+.item-page__links-row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
 }
 
 .item-page__header-content {
