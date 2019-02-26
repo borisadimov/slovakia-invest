@@ -36,7 +36,7 @@
                       - if contact.contact_type == "phone"
                         .contacts-faces_item__tel-top
                           a(href="tel:#{contact.value}")
-                            = image_tag "icon-cont-mobile"   
+                            = image_tag "icon-cont-mobile.svg"   
                           = contact.value
                         .contacts-faces_item__tel-bottom
                           a(title="Viber" href="viber://add?number=#{contact.value.delete("^0-9")}")

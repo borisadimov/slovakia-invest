@@ -211,7 +211,7 @@
 
 .contacts-faces_item {
   box-sizing: content-box;
-  max-width: 290px;
+  max-width: 280px;
   width: 100%;
   padding-right: 2%;
   padding-left: 2%;
@@ -221,12 +221,16 @@
   font-weight: bold;
 }
 
+.contacts-faces_item__tel {
+  text-align: left;
+}
+
 .contacts-faces_item__name {
   margin-top: 30px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .contacts-faces_item__post {
@@ -279,11 +283,6 @@
 
   .contacts-page__contacts-office-title {
     text-align: center; 
-  }
-
-  .contacts-faces_item__img {
-    margin-left: auto;
-    margin-right: auto;
   }
  
   .contacts-faces_wrapper {
