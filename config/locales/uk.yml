@@ -88,9 +88,9 @@ uk:
       button: "Знайти"
       placeholder: "Пошук"
     comments:
-      headline: "Коментарі"
+      title: "Коментарі"
       form:
-        headline: "Додати коментар"
+        title: "Додати коментар"
         name: "Ваше ім'я"
         email: "Ваш e-mail"
         email_tip: "буде видно тільки адміністраторам сайту"
