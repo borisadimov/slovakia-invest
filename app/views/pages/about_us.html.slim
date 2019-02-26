@@ -11,13 +11,33 @@
           - @employees.each do |employee|
             .contacts-faces_item
               .contacts-faces_item__img
-                = image_tag employee.avatar.url || "icon-contacts.png"
+                = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts.png"
               .contacts-faces_item__name
                 = employee.name
+              .contacts-faces_item__post.customize
+                = employee.position
               - employee.contacts.each do |contact|
                 .contacts-faces_item__tel.customize
-                  = I18n.t("contacts.types.#{contact.contact_type}") + ': '
-                  = contact_url(contact)
+                  - if contact.contact_type == "phone"
+                    .contacts-faces_item__tel-top
+                      a(href="tel:#{contact.value}")
+                        = image_tag "icon-cont-mobile.svg"   
+                      = contact.value
+                    .contacts-faces_item__tel-bottom
+                      a(title="Viber" href="viber://add?number=#{contact.value.delete("^0-9")}")
+                        = image_tag "icon-cont-viber.svg"
+                      a(title="WhatsApp" href="whatsapp://send?phone=#{'+' + contact.value.delete("^0-9")}")
+                        = image_tag "icon-cont-whatsup.svg"
+                      a(title="Telegram" href="tg://resolve?domain=#{contact.telegram}")
+                        = image_tag "icon-cont-telegram.svg"
+                  - elsif contact.contact_type == "email"
+                    a(title="#{contact.contact_type}" href="mailto:#{contact.value}") 
+                      = image_tag "icon-cont-#{contact.contact_type}.svg"
+                    = contact.value
+                  - else
+                    a(title="#{contact.contact_type}" href="#{contact.contact_type}:#{contact.value}") 
+                      = image_tag "icon-cont-#{contact.contact_type}.svg"
+                    = contact.value
 
   = render 'partials/menu'
   = render 'partials/cookies'
