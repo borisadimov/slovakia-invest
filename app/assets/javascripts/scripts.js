@@ -287,18 +287,23 @@ $( document ).ready(function() {
         var container = this.nextSibling;
 				
         var cross = this.querySelector(".service-global__cross")
-
-        if (this.classList.contains('active')) {
-          setTimeout(function() {
+        var thisEl = this
+        var sceneHandler = function(evt) {
+          cross.removeEventListener("transitionend", sceneHandler);
+          if (thisEl.classList.contains('active')) {
             var scene = new ScrollMagic.Scene({triggerElement: container, duration: container.offsetHeight})
               .triggerHook("onLeave")
               .offset(-150)
               .setPin(cross)
               // .addIndicators()
               .addTo(controller);
-  
+
               scenes[elementId] = scene
-          }, 500)
+          }
+        }
+    
+        if (this.classList.contains('active')) {
+          cross.addEventListener("transitionend", sceneHandler);
         }
         
         if (scenes[elementId]) {
