@@ -1,14 +1,15 @@
 .item-page__header-other-services {
  background: linear-gradient(219.65deg, rgba(192, 47, 186, 0.43) 14.29%, #C02FBA 74.04%);
 }
- 
- .container-relative {
+
+.item-page__header-other-services .container-relative {
+  overflow: visible;
   position: relative;
 }
 
 .item-page__header-logo_other-services {
  position: absolute;
- left: 54px;
+ left: 10px;
  top: 105px;
 }
 .item-page__header-nav_other-services .item-page__links a {

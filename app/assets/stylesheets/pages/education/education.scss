@@ -5,6 +5,7 @@
 .item-page__header-education {
  .container-relative {
   position: relative;
+  overflow: visible;
  }
 
  background: linear-gradient(218.68deg, rgba(246, 139, 49, 0.43) 14.29%, #F68B31 74.04%);
@@ -13,10 +14,11 @@
 
 .item-page__header-logo_education {
  position: absolute;
- left: 0px;
- top: -39px;
+ left: -77px;
+ top: -75px;
  z-index: 0;
 }
+
 
 .item-page__header-logo_education img {
  opacity: 0.2;

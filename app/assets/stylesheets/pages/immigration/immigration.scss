@@ -10,7 +10,7 @@
 }
 .item-page__header-logo_immigration {
  position: absolute;
- left: 20px;
+ left: 33px;
  top: -69px;
  z-index: 0;
 }
@@ -20,15 +20,16 @@
 
 h1.page__title {
  font-style: Bold; 
- font-size: 48px;
+ font-size: 62px;
  color: #ffffff;
 }
 p.page-description {
- max-width: 670px;
- width: 100%;
- font-size: 16px;
- color: #ffffff;
- }
+  position: relative;
+  max-width: 670px;
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+}
 .block-detail {
  margin-top: 63px;
 
