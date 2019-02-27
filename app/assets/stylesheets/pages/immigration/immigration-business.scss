@@ -218,7 +218,7 @@ span.price-total {
 }
 
 .custom-text-accordion__content {
-  padding: 21px 27px 17px 27px;
+  padding: 18px 20px 17px 20px;
   border: 1px solid #B8C5FF;
   box-sizing: border-box;
   margin-top: 25px;
@@ -235,6 +235,10 @@ span.price-total {
 
 .accordion-container {
   display: none;
+}
+
+.custom-text-accordion__title {
+  font-size: 40px;
 }
 
 .prices-wrapper {
