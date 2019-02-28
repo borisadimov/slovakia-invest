@@ -47,12 +47,6 @@ p.page-description {
  }
 }
 
-.item-page__video-wrapper {
- max-width: 793px;
- 
- margin-top: 20px;
-}
-
 .item-page__video .container {
   padding-left: 0;
 }
@@ -142,9 +136,6 @@ h2.more-articles-title {
 }
 
 @media (max-width: 991px) {
- .item-page__video-wrapper {
-  margin-left: 0;
- }
  .item-page__links .container {
   margin-left: 0;
  }
@@ -208,10 +199,6 @@ h2.more-articles-title {
 
   .item-page__video {
     padding-bottom: 0;
-  }
-
-  .item-page__video-wrapper iframe {
-    height: 59vw;
   }
 
   h2.any-questions__title {

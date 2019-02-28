@@ -113,18 +113,10 @@
 
       .sitemap__item
         ul.sitemap__big-links
-          li
-            a.sitemap__link-big(href="#")
-              | новости
-          li
-            a.sitemap__link-big(href="#")
-              | Цены
-          li
-            a.sitemap__link-big(href="#")
-              | О нас
-          li
-            a.sitemap__link-big(href="#")
-              | Контакты
+          li = link_to I18n.t('header_menu.more.items.prices'), prices_pages_path
+          li = link_to I18n.t('header_menu.more.items.about_us'), about_us_pages_path
+          li = link_to I18n.t('header_menu.more.items.contacts'), contacts_pages_path
+          li = link_to I18n.t('sitemap'), sitemap_pages_path
 
 
 
