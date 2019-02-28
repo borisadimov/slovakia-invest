@@ -126,7 +126,9 @@ en:
   time:
     formats:
       default: "%Y.%m.%d %H:%M"  
+  sitemap: Site map
   errors:
     not_found:
       text: "Page not found"
-      link: "Go back to the main page"    
+      link: "Go back to the main page"   
+   

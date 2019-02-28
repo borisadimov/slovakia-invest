@@ -127,6 +127,7 @@ uk:
     formats:
       long: "%H:%M:%S %d-%m-%Y "
       default: "%d.%m.%Y %H:%M"
+  sitemap: Карта сайту
   errors:
     not_found:
       text: "Сторінку не знайдено"

@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_meta_tags(resource)
+    unless resource.present?
+      @meta_tags = {}
+      return
+    end
+
     @meta_tags = {
       title: resource.meta_title,
       description: resource.meta_description,

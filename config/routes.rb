@@ -26,6 +26,7 @@ Rails.application.routes.draw do
         get :contacts
         get :news
         get :prices
+        get :sitemap
       end
     end
   
