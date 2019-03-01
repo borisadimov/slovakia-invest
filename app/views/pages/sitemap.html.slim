@@ -1,0 +1,25 @@
+.item-page
+  .container
+    h1.sitemap-title
+      = I18n.t('sitemap')
+    .sitemap__wrapper
+      - @menu_services.each do |service|
+        .sitemap__item
+          .sitemap__links-title
+            = link_to service.title, service_path(service)
+          ul.sitemap__links
+            - service.articles.each do |article|
+              li
+                = link_to article.title, article_path(article), class: 'sitemap__link'
+
+      .sitemap__item
+        ul.sitemap__big-links
+          li = link_to I18n.t('header_menu.more.items.prices'), prices_pages_path
+          li = link_to I18n.t('header_menu.more.items.about_us'), about_us_pages_path
+          li = link_to I18n.t('header_menu.more.items.contacts'), contacts_pages_path
+          li = link_to I18n.t('sitemap'), sitemap_pages_path
+
+
+
+  = render 'partials/menu'
+  = render 'partials/cookies'

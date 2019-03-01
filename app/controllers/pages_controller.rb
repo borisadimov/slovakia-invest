@@ -23,4 +23,8 @@ class PagesController < ApplicationController
     @prices_page = PricesPage.instance
     set_meta_tags(@prices_page)
   end
+
+  def sitemap
+    set_meta_tags(nil)
+  end
 end
