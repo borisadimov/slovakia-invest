@@ -1,115 +1,16 @@
 .item-page
   .container
     h1.sitemap-title
-      | Карта сайта
+      = I18n.t('sitemap')
     .sitemap__wrapper
-      .sitemap__item
-        .sitemap__links-title
-          a(href="#")
-            | Иммиграция
-        ul.sitemap__links
-          li
-            a.sitemap__link(href="#")
-              | ВНЖ для бизнеса
-          li
-            a.sitemap__link(href="#")
-              | ВНЖ для работы
-          li
-            a.sitemap__link(href="#")
-              | ВНЖ для учебы
-          li
-            a.sitemap__link(href="#")
-              | ВНЖ для семьи
-          li
-            a.sitemap__link(href="#")
-              | Другие ВНЖ в Словакии
-          li
-            a.sitemap__link(href="#")
-              | Виза
-          li
-            a.sitemap__link(href="#")
-              | ПМЖ
-          li
-            a.sitemap__link(href="#")
-              | Гражданство
-      .sitemap__item
-        .sitemap__links-title
-          a(href="#")
-            | Бизнес
-        ul.sitemap__links
-          li
-            a.sitemap__link(href="#")
-              | Учреждение фирмы
-          li
-            a.sitemap__link(href="#")
-              | Банковский счет
-          li
-            a.sitemap__link(href="#")
-              | Бухучет и отчетность
-          li
-            a.sitemap__link(href="#")
-              | Начисление зарплаты
-          li
-            a.sitemap__link(href="#")
-              | Аудит
-          li
-            a.sitemap__link(href="#")
-              | Виза
-          li
-            a.sitemap__link(href="#")
-              | Другие обязательства
-      .sitemap__item
-        .sitemap__links-title
-          a(href="#")
-            | Бизнес
-        ul.sitemap__links
-          li
-            a.sitemap__link(href="#")
-              | Учреждение фирмы
-          li
-            a.sitemap__link(href="#")
-              | Банковский счет
-          li
-            a.sitemap__link(href="#")
-              | Бухучет и отчетность
-          li
-            a.sitemap__link(href="#")
-              | Начисление зарплаты
-          li
-            a.sitemap__link(href="#")
-              | Аудит
-          li
-            a.sitemap__link(href="#")
-              | Виза
-          li
-            a.sitemap__link(href="#")
-              | Другие обязательства
-      .sitemap__item
-        .sitemap__links-title
-          a(href="#")
-            | Бизнес
-        ul.sitemap__links
-          li
-            a.sitemap__link(href="#")
-              | Учреждение фирмы
-          li
-            a.sitemap__link(href="#")
-              | Банковский счет
-          li
-            a.sitemap__link(href="#")
-              | Бухучет и отчетность
-          li
-            a.sitemap__link(href="#")
-              | Начисление зарплаты
-          li
-            a.sitemap__link(href="#")
-              | Аудит
-          li
-            a.sitemap__link(href="#")
-              | Виза
-          li
-            a.sitemap__link(href="#")
-              | Другие обязательства
+      - @menu_services.each do |service|
+        .sitemap__item
+          .sitemap__links-title
+            = link_to service.title, service_path(service)
+          ul.sitemap__links
+            - service.articles.each do |article|
+              li
+                = link_to article.title, article_path(article), class: 'sitemap__link'
 
       .sitemap__item
         ul.sitemap__big-links
