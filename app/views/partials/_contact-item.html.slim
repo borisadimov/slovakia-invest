@@ -1,0 +1,34 @@
+.contacts-faces_item
+  .contacts-faces_item__img
+    = image_tag employee.avatar.present? ? employee.avatar.url : "icon-contacts.png"
+  .contacts-faces_item__name
+    = employee.name
+  .contacts-faces_item__post.customize
+    = employee.position
+  - employee.contacts.each do |contact|
+    - if contact.contact_type == "phone"
+      div(class="contacts-faces_item__tel customize #{contact.contact_type}")
+        .contacts-faces_item__tel-top
+          a(href="tel:#{contact.value}")
+            = image_tag "icon-cont-mobile.svg"   
+          .contacts-faces_item__tel-value
+            = contact.value
+        .contacts-faces_item__tel-bottom
+          a(title="Viber" href="viber://add?number=#{contact.value.delete("^0-9")}")
+            = image_tag "icon-cont-viber.svg"
+          a(title="WhatsApp" href="whatsapp://send?phone=#{'+' + contact.value.delete("^0-9")}")
+            = image_tag "icon-cont-whatsup.svg"
+          a(title="Telegram" href="tg://resolve?domain=#{contact.telegram}")
+            = image_tag "icon-cont-telegram.svg"
+    - elsif contact.contact_type == "email"
+      div(class="contacts-faces_item__tel customize #{contact.contact_type}")
+        a(title="#{contact.contact_type}" href="mailto:#{contact.value}") 
+          = image_tag "icon-cont-#{contact.contact_type}.svg"
+        .contacts-faces_item__tel-value
+          = contact.value
+    - else
+      div(class="contacts-faces_item__tel customize #{contact.contact_type}")
+        a(title="#{contact.contact_type}" href="#{contact.contact_type}:#{contact.value}") 
+          = image_tag "icon-cont-#{contact.contact_type}.svg"
+        .contacts-faces_item__tel-value
+          = contact.value
