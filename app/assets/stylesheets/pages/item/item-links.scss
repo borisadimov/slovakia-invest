@@ -8,18 +8,21 @@
   display: flex;
   flex-flow: row wrap;
   max-width: 980px;
-  margin-left: 96px;
+  margin-left: 70px;
+  margin-right: -27px;
   padding-top: 93px;
   padding-left: 0;
   padding-right: 0;
 }
 
 .item-page__links a {
+  box-sizing: content-box;
   display: inline-block;
   max-width: 135px;
   width: 100%;
   margin-bottom: 24px;
-  margin-left: 73px;
+  padding-left: 27px;
+  padding-right: 27px;
   line-height: 15px;
   font-size: 14px;
   color: #FFFFFF;
@@ -33,4 +36,14 @@
 
 .item-page__links a:hover {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .item-page__links a {
+    max-width: 100%;
+    width: auto;
+    margin-left: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
