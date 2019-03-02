@@ -7,7 +7,7 @@ class Service < ApplicationRecord
   has_many :employees
   has_many :reviews, as: :reviewable, dependent: :destroy
   has_many :features, as: :featureable, dependent: :destroy
-  has_many :additional_texts, dependent: :destroy
+  has_many :additional_texts, as: :has_texts, dependent: :destroy
   has_many :prices, through: :articles
 
   accepts_nested_attributes_for :reviews, allow_destroy: true

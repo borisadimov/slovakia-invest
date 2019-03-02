@@ -6,10 +6,12 @@ class Article < ApplicationRecord
 
   has_and_belongs_to_many :posts
   has_and_belongs_to_many :employees
-  belongs_to :service
+  has_many :additional_texts, as: :has_texts, dependent: :destroy
   has_many :prices, dependent: :destroy
+  belongs_to :service
 
   accepts_nested_attributes_for :prices, allow_destroy: true
+  accepts_nested_attributes_for :additional_texts, allow_destroy: true
 
   translates :title, :content, :meta_title, :meta_description, :og_title, :og_description
 

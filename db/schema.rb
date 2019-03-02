@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190226010158) do
+ActiveRecord::Schema.define(version: 20190301172045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,10 +63,11 @@ ActiveRecord::Schema.define(version: 20190226010158) do
     t.string   "text_ru"
     t.string   "text_en"
     t.string   "text_uk"
-    t.integer  "service_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["service_id"], name: "index_additional_texts_on_service_id", using: :btree
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "has_texts_type"
+    t.integer  "has_texts_id"
+    t.index ["has_texts_type", "has_texts_id"], name: "index_additional_texts_on_has_texts_type_and_has_texts_id", using: :btree
   end
 
   create_table "admin_users", force: :cascade do |t|
@@ -436,7 +437,6 @@ ActiveRecord::Schema.define(version: 20190226010158) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "additional_texts", "services"
   add_foreign_key "articles", "services"
   add_foreign_key "comments", "posts"
   add_foreign_key "employees", "services"

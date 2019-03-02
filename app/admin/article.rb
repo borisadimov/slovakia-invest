@@ -16,6 +16,12 @@ ActiveAdmin.register Article do
                   :description_ru, :description_en, :description_uk,
                   :value,
                   :_destroy
+                ],
+                additional_texts_attributes: [
+                  :id, :order,
+                  :title_ru, :title_en, :title_uk,
+                  :text_ru, :text_en, :text_uk,
+                  :_destroy
                 ]
 
   menu priority: 2
@@ -94,6 +100,20 @@ ActiveAdmin.register Article do
         b.input :title_uk
         b.input :description_uk
         b.input :value
+      end
+    end
+
+    f.inputs 'Additional Texts' do
+      f.has_many :additional_texts,
+                 new_record: 'Add Additional Text',
+                 allow_destroy: true do |b|
+        b.input :order
+        b.input :title_ru
+        b.input :title_en
+        b.input :title_uk
+        b.input :text_ru
+        b.input :text_en
+        b.input :text_uk
       end
     end
 
