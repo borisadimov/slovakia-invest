@@ -1,5 +1,5 @@
 class AdditionalText < ApplicationRecord
-  belongs_to :service
+  belongs_to :has_texts, polymorphic: true
 
   translates :title, :text
 

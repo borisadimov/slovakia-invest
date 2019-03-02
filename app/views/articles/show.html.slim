@@ -5,6 +5,18 @@
     .container
         .block-detail
           = @article.content.html_safe if @article.content.present?
+
+  - unless @article.additional_texts.blank?
+      .custom-texts
+        - @article.additional_texts.each do |additional_text|
+          .container.custom-text-accordion
+            .custom-text-accordion-wrapper
+              .custom-text-accordion__line.accordion
+                .custom-text-accordion__title
+                  = additional_text.title
+                .service-global__cross 
+              .custom-text-accordion__content
+                = additional_text.text
     
   - unless @article.prices.blank?
     .prices
@@ -58,6 +70,16 @@
         .business__contacts-wrapper
           - @article.employees.each do |employee|
             = render 'partials/contact-item', employee: employee
+        
+  - @article.additional_texts.each do |additional_text|
+    .container.custom-text-accordion
+      .custom-text-accordion-wrapper
+        .custom-text-accordion__line.accordion
+          .custom-text-accordion__title
+            = additional_text.title
+          .service-global__cross 
+        .custom-text-accordion__content
+          = additional_text.text
 
     .more-articles-wrapper
       .container

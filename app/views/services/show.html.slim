@@ -6,6 +6,18 @@
       .block-detail
         = @service.content.html_safe if @service.content.present?
 
+    - unless @service.additional_texts.blank?
+      .custom-texts
+        - @service.additional_texts.each do |additional_text|
+          .container.custom-text-accordion
+            .custom-text-accordion-wrapper
+              .custom-text-accordion__line.accordion
+                .custom-text-accordion__title
+                  = additional_text.title
+                .service-global__cross 
+              .custom-text-accordion__content
+                = additional_text.text
+
     - unless @service.features.blank?
       section.features 
         .container
@@ -27,15 +39,6 @@
           = I18n.t('pages.any_questions_block.title') + '?'
         .btn.any-questions__btn
           = I18n.t('pages.any_questions_block.button')
-    - @service.additional_texts.each do |additional_text|
-      .container.custom-text-accordion
-        .custom-text-accordion-wrapper
-          .custom-text-accordion__line.accordion
-            .custom-text-accordion__title
-              = additional_text.title
-            .service-global__cross 
-          .custom-text-accordion__content
-            = additional_text.text
 
     .more-articles-wrapper
       .container
