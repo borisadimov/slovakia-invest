@@ -70,16 +70,6 @@
         .business__contacts-wrapper
           - @article.employees.each do |employee|
             = render 'partials/contact-item', employee: employee
-        
-  - @article.additional_texts.each do |additional_text|
-    .container.custom-text-accordion
-      .custom-text-accordion-wrapper
-        .custom-text-accordion__line.accordion
-          .custom-text-accordion__title
-            = additional_text.title
-          .service-global__cross 
-        .custom-text-accordion__content
-          = additional_text.text
 
     .more-articles-wrapper
       .container
